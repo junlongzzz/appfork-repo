@@ -1,10 +1,9 @@
-import cn.hutool.core.date.DateTime
 import cn.hutool.core.date.DateUtil
 import groovy.json.JsonSlurper
 
 static def checkUpdate(version, platform, args) {
-    def v = null
-    def u = [:]
+    def versionDate = null
+    def url = [:]
 
     def response = 'https://store-site-backend-static-ipv4.ak.epicgames.com/freeGamesPromotions?locale=zh-CN&country=CN&allowCountries=CN'.toURL().text
     def object = new JsonSlurper().parseText(response)
@@ -37,13 +36,13 @@ static def checkUpdate(version, platform, args) {
                 for (rule in rules) {
                     // 折扣优惠结束时间在今日之后表示正在进行优惠折扣
                     if (rule.endDate) {
-                        def endDate = DateUtil.parse(rule.endDate).setTimeZone(TimeZone.getDefault())
-                        def nowDate = new Date()
+                        def endDate = DateUtil.parse(rule.endDate).setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"))
+                        def nowDate = DateUtil.date().setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"))
                         if (endDate.isAfter(nowDate)) {
-                            if (v == null) {
-                                v = endDate
-                            } else if (endDate.isAfter(v)) {
-                                v = endDate
+                            if (versionDate == null) {
+                                versionDate = endDate
+                            } else if (endDate.isAfter(versionDate)) {
+                                versionDate = endDate
                             }
                             // 游戏商城链接
                             String slug
@@ -52,7 +51,7 @@ static def checkUpdate(version, platform, args) {
                             } else {
                                 slug = element.productSlug
                             }
-                            u[element.title as String] = "https://store.epicgames.com/zh-CN/p/${slug}".toString()
+                            url[element.title as String] = "https://store.epicgames.com/zh-CN/p/${slug}".toString()
                             flag = true
                             break
                         }
@@ -65,10 +64,10 @@ static def checkUpdate(version, platform, args) {
         }
     }
 
-    if (v) {
+    if (versionDate) {
         return [
-                'version': v.toString(),
-                'url'    : u
+                'version': versionDate.toString(),
+                'url'    : url
         ]
     }
 
