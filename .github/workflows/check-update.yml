@@ -1,6 +1,7 @@
-name: Automatic check AppFork repository update
+name: Automatic check repository update
 
 on:
+  workflow_dispatch:
   schedule:
     # 从0点开始，每6小时5分钟执行一次
     - cron: '5 0/6 * * *'
