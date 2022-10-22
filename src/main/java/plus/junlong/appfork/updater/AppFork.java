@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -55,7 +56,8 @@ public class AppFork implements CommandLineRunner {
     public void run(String... args) {
         log.info("开始软件库同步...");
 
-        File[] manifests = new File(REPO_DIR, "manifests").listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
+        File[] manifests = Paths.get(REPO_DIR + File.separator + "manifests").toFile()
+                .listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
         if (manifests == null) {
             log.error("manifests 为空或不存在该目录");
             return;
@@ -118,7 +120,7 @@ public class AppFork implements CommandLineRunner {
             }
 
             // 检查更新脚本
-            File script = new File(REPO_DIR, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
+            File script = Paths.get(REPO_DIR + File.separator + "scripts" + File.separator + scriptName.toLowerCase() + ".groovy").toFile();
             if (script.exists() && script.isFile()) {
                 try {
                     // groovy脚本运行
