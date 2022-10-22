@@ -15,7 +15,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -56,8 +55,7 @@ public class AppFork implements CommandLineRunner {
     public void run(String... args) {
         log.info("开始软件库同步...");
 
-        File[] manifests = Paths.get(REPO_DIR + File.separator + "manifests").toFile()
-                .listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
+        File[] manifests = new File(REPO_DIR, "manifests").listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
         if (manifests == null) {
             log.error("manifests 为空或不存在该目录");
             return;
@@ -65,8 +63,6 @@ public class AppFork implements CommandLineRunner {
 
         long startTime = System.currentTimeMillis();
 
-        // 脚本缓存
-        Map<String, Script> scriptCache = new LinkedHashMap<>();
         for (File manifest : manifests) {
             JSONObject manifestJson;
             try {
@@ -120,17 +116,11 @@ public class AppFork implements CommandLineRunner {
             }
 
             // 检查更新脚本
-            File script = Paths.get(REPO_DIR + File.separator + "scripts" + File.separator + scriptName.toLowerCase() + ".groovy").toFile();
+            File script = new File(REPO_DIR, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
             if (script.exists() && script.isFile()) {
                 try {
                     // groovy脚本运行
-                    Script updateScript = scriptCache.get(script.getName());
-                    if (updateScript == null) {
-                        GroovyShell groovyShell = new GroovyShell();
-                        updateScript = groovyShell.parse(script);
-                        scriptCache.put(script.getName(), updateScript);
-                    }
-
+                    Script updateScript = new GroovyShell().parse(script);
                     // 执行检测App更新的脚本指定方法
                     Object checkUpdateObj = updateScript.invokeMethod("checkUpdate", new Object[]{version, platform.toLowerCase(), scriptArgs});
                     if (checkUpdateObj instanceof Map<?, ?> checkUpdate) {
