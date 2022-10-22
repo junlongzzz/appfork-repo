@@ -1,0 +1,15 @@
+{
+	"author":"uBlockOrigin Contributors",
+	"name":"uBlock Origin",
+	"logo":"https://avatars.githubusercontent.com/u/18120975?s=200&v=4",
+	"description":"An efficient blocker add-on for various browsers. Fast, potent, and lean.",
+	"category":"network",
+	"version":"upstream",
+	"platform":"extensions",
+	"url":{
+		"Install on FireFox":"https://addons.mozilla.org/addon/ublock-origin/",
+		"Install on Chrome":"https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm",
+		"Install on Microsoft Edge":"https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak"
+	},
+	"homepage":"https://github.com/gorhill/uBlock"
+}

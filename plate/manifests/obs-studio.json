@@ -1,0 +1,29 @@
+{
+	"author":"OBS Studio Contributors",
+	"name":"OBS Studio",
+	"logo":"https://obsproject.com/assets/images/new_icon_small-r.png",
+	"description":"Free and open source software for video recording and live streaming. supports Windows 10 and 11.",
+	"category":"tools",
+	"version":"28.0.3",
+	"platform":"windows",
+	"script":{
+		"args":{
+			"regex":"/releases/tag/([\\d.]+)",
+			"windows":{
+				"Installer (32-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-${version}-Full-Installer-x86.exe",
+				"Zip (64-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-${version}-Full-x64.zip",
+				"Installer (64-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-${version}-Full-Installer-x64.exe",
+				"Zip (32-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-${version}-Full-x86.zip"
+			},
+			"url":"https://api.github.com/repos/obsproject/obs-studio/releases/latest"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"Installer (32-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-28.0.3-Full-Installer-x86.exe",
+		"Zip (64-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-28.0.3-Full-x64.zip",
+		"Installer (64-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-28.0.3-Full-Installer-x64.exe",
+		"Zip (32-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-28.0.3-Full-x86.zip"
+	},
+	"homepage":"https://obsproject.com"
+}

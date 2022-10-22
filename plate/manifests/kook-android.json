@@ -1,0 +1,12 @@
+{
+	"author":"北京逍遥一下科技有限公司",
+	"name":"KOOK(原开黑啦)",
+	"logo":"https://www.kookapp.cn/favicon.ico",
+	"description":"一个好用的语音沟通工具，无广告、不掉线、低占用、不延迟。",
+	"category":"chat",
+	"version":"1.38.0",
+	"platform":"android",
+	"script":"kook",
+	"url":"https://img.kookapp.cn/assets/release/khl_android_release_ci/1008/kook_release_1.38.0.apk",
+	"homepage":"https://www.kookapp.cn"
+}

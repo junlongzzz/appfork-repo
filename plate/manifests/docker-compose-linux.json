@@ -1,0 +1,29 @@
+{
+	"author":"Docker Inc.",
+	"name":"Docker Compose",
+	"logo":"https://docs.docker.com/assets/images/Compose.png",
+	"description":"Docker Compose is a tool for running multi-container applications on Docker defined using the Compose file format.",
+	"category":"development",
+	"version":"2.12.0",
+	"platform":"linux",
+	"script":{
+		"args":{
+			"regex":"/releases/tag/[vV]?([\\d.]+)",
+			"linux":{
+				"armv6":"https://github.com/docker/compose/releases/download/v${version}/docker-compose-linux-armv6",
+				"armv7":"https://github.com/docker/compose/releases/download/v${version}/docker-compose-linux-armv7",
+				"aarch64":"https://github.com/docker/compose/releases/download/v${version}/docker-compose-linux-aarch64",
+				"x86_64":"https://github.com/docker/compose/releases/download/v${version}/docker-compose-linux-x86_64"
+			},
+			"url":"https://api.github.com/repos/docker/compose/releases/latest"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"armv6":"https://github.com/docker/compose/releases/download/v2.12.0/docker-compose-linux-armv6",
+		"armv7":"https://github.com/docker/compose/releases/download/v2.12.0/docker-compose-linux-armv7",
+		"aarch64":"https://github.com/docker/compose/releases/download/v2.12.0/docker-compose-linux-aarch64",
+		"x86_64":"https://github.com/docker/compose/releases/download/v2.12.0/docker-compose-linux-x86_64"
+	},
+	"homepage":"https://docs.docker.com/compose/"
+}

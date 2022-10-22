@@ -1,0 +1,12 @@
+{
+	"author":"北京逍遥一下科技有限公司",
+	"name":"开黑啦",
+	"logo":"https://www.kaiheila.cn/favicon.ico",
+	"description":"专属游戏玩家的文字、语音和组队工具，安全免费、没有广告、低资源占用、高通话质量。",
+	"category":"chat",
+	"version":"1.33.0",
+	"platform":"android",
+	"script":"kaiheila",
+	"url":"https://img.kaiheila.cn/assets/release/khl_android_release_ci/129/kaiheila_release_1.33.0_c2lnbi5hcGs%3D.apk",
+	"homepage":"https://www.kaiheila.cn"
+}

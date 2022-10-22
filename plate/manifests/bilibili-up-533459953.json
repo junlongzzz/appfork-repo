@@ -1,0 +1,18 @@
+{
+	"author":"Junlong",
+	"name":"[B站]刘庸干净又卫生今天更新视频了吗？",
+	"description":"刘庸：干净又卫生嗷，xdm。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
+	"category":"video",
+	"version":"BV13g41187R2",
+	"platform":"other",
+	"script":{
+		"args":{
+			"up_uid":"533459953"
+		},
+		"name":"bilibili-checkpub"
+	},
+	"url":{
+		"街头买个特别难吃的果子 大家有认识的吗 [2022-10-20]":"https://www.bilibili.com/video/BV13g41187R2"
+	},
+	"homepage":"https://space.bilibili.com/533459953"
+}

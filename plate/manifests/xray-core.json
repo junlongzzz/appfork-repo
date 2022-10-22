@@ -1,0 +1,24 @@
+{
+	"author":"Project X Community",
+	"name":"Xray-core",
+	"description":"Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.",
+	"category":"network",
+	"version":"1.6.0",
+	"platform":"windows",
+	"script":{
+		"args":{
+			"regex":"/releases/tag/[vV]?([\\d.]+)",
+			"windows":{
+				"Xray-windows-32.zip":"https://github.com/XTLS/Xray-core/releases/download/v${version}/Xray-windows-32.zip",
+				"Xray-windows-64.zip":"https://github.com/XTLS/Xray-core/releases/download/v${version}/Xray-windows-64.zip"
+			},
+			"url":"https://api.github.com/repos/XTLS/Xray-core/releases/latest"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"Xray-windows-32.zip":"https://github.com/XTLS/Xray-core/releases/download/v1.6.0/Xray-windows-32.zip",
+		"Xray-windows-64.zip":"https://github.com/XTLS/Xray-core/releases/download/v1.6.0/Xray-windows-64.zip"
+	},
+	"homepage":"https://github.com/XTLS/Xray-core"
+}

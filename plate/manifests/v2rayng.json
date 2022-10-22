@@ -1,0 +1,30 @@
+{
+	"author":"2dust",
+	"name":"v2rayNG",
+	"description":"A V2Ray client for Android, support Xray core and v2fly core.",
+	"category":"network",
+	"version":"1.7.20",
+	"platform":"android",
+	"script":{
+		"args":{
+			"regex":"/releases/tag/[vV]?([\\d.]+)",
+			"android":{
+				"x86_64":"https://github.com/2dust/v2rayNG/releases/download/${version}/v2rayNG_${version}_x86_64.apk",
+				"x86":"https://github.com/2dust/v2rayNG/releases/download/${version}/v2rayNG_${version}_x86.apk",
+				"armeabi-v7a":"https://github.com/2dust/v2rayNG/releases/download/${version}/v2rayNG_${version}_armeabi-v7a.apk",
+				"universal":"https://github.com/2dust/v2rayNG/releases/download/${version}/v2rayNG_${version}.apk",
+				"arm64-v8a":"https://github.com/2dust/v2rayNG/releases/download/${version}/v2rayNG_${version}_arm64-v8a.apk"
+			},
+			"url":"https://api.github.com/repos/2dust/v2rayNG/releases/latest"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"x86_64":"https://github.com/2dust/v2rayNG/releases/download/1.7.20/v2rayNG_1.7.20_x86_64.apk",
+		"x86":"https://github.com/2dust/v2rayNG/releases/download/1.7.20/v2rayNG_1.7.20_x86.apk",
+		"armeabi-v7a":"https://github.com/2dust/v2rayNG/releases/download/1.7.20/v2rayNG_1.7.20_armeabi-v7a.apk",
+		"universal":"https://github.com/2dust/v2rayNG/releases/download/1.7.20/v2rayNG_1.7.20.apk",
+		"arm64-v8a":"https://github.com/2dust/v2rayNG/releases/download/1.7.20/v2rayNG_1.7.20_arm64-v8a.apk"
+	},
+	"homepage":"https://github.com/2dust/v2rayNG"
+}

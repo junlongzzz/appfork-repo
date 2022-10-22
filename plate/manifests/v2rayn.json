@@ -1,0 +1,24 @@
+{
+	"author":"2dust",
+	"name":"v2rayN",
+	"description":"A V2Ray client for Windows, support Xray core and v2fly core.",
+	"category":"network",
+	"version":"5.36",
+	"platform":"windows",
+	"script":{
+		"args":{
+			"regex":"/releases/tag/[vV]?([\\d.]+)",
+			"windows":{
+				"v2rayN-Core.zip":"https://github.com/2dust/v2rayN/releases/download/${version}/v2rayN-Core.zip",
+				"v2rayN.zip":"https://github.com/2dust/v2rayN/releases/download/${version}/v2rayN.zip"
+			},
+			"url":"https://api.github.com/repos/2dust/v2rayN/releases/latest"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"v2rayN-Core.zip":"https://github.com/2dust/v2rayN/releases/download/5.36/v2rayN-Core.zip",
+		"v2rayN.zip":"https://github.com/2dust/v2rayN/releases/download/5.36/v2rayN.zip"
+	},
+	"homepage":"https://github.com/2dust/v2rayN"
+}

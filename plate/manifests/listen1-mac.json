@@ -1,0 +1,16 @@
+{
+	"author":"listen1 Contributors",
+	"name":"Listen1",
+	"logo":"https://avatars.githubusercontent.com/u/18599108?v=4",
+	"description":"One for all free music in China.",
+	"category":"music",
+	"version":"2.26.2",
+	"platform":"mac",
+	"script":"listen1",
+	"url":{
+		"listen1_2.26.2_mac_arm64.dmg":"https://github.com/listen1/listen1_desktop/releases/download/v2.26.2/listen1_2.26.2_mac_arm64.dmg",
+		"listen1_2.26.2_mac_universal.dmg":"https://github.com/listen1/listen1_desktop/releases/download/v2.26.2/listen1_2.26.2_mac_universal.dmg",
+		"listen1_2.26.2_mac_x64.dmg":"https://github.com/listen1/listen1_desktop/releases/download/v2.26.2/listen1_2.26.2_mac_x64.dmg"
+	},
+	"homepage":"https://listen1.github.io/listen1"
+}

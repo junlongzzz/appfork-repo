@@ -1,0 +1,15 @@
+{
+	"author":"Docker Inc.",
+	"name":"Docker Desktop",
+	"logo":"https://docs.docker.com/assets/images/engine.svg",
+	"description":"Docker Desktop is an easy-to-install application for your Mac or Windows environment that enables you to build and share containerized applications and microservices.",
+	"category":"development",
+	"version":"4.13.0",
+	"platform":"mac",
+	"script":"docker-desktop",
+	"url":{
+		"Mac with Intel chip":"https://desktop.docker.com/mac/main/amd64/Docker.dmg",
+		"Mac with Apple chip":"https://desktop.docker.com/mac/main/arm64/Docker.dmg"
+	},
+	"homepage":"https://www.docker.com/products/docker-desktop"
+}

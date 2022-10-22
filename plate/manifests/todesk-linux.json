@@ -1,0 +1,19 @@
+{
+	"author":"海南有趣科技有限公司",
+	"name":"ToDesk",
+	"logo":"https://www.todesk.com/dist/img/71cec72.svg",
+	"description":"ToDesk 是一款免费不限速的远程控制软件，支持在内网、外网和移动网络环境下，随时随地发起远程控制。如遇软件使用问题请移步官网查找解决方法。",
+	"category":"tools",
+	"version":"4.3.1.0",
+	"platform":"linux",
+	"script":"todesk",
+	"url":{
+		"Debian/Ubuntu/Mint (x64)":"https://dl.todesk.com/linux/todesk_4.3.1.0_amd64.deb",
+		"Fedora/CentOS/RedHat (x64)":"https://dl.todesk.com/linux/todesk_4.3.1.0_x86_64.rpm",
+		"Arm64 & aarch64 (deb)":"https://dl.todesk.com/linux/todesk_4.3.1.0_aarch64.deb",
+		"Raspberry Pi 4 Arm v7":"https://dl.todesk.com/linux/todesk_4.3.1.0_armv7l.deb",
+		"Arm64 & aarch64 (rpm)":"https://dl.todesk.com/linux/todesk_4.3.1.0_aarch64.rpm",
+		"Arch Linux (x64)":"https://dl.todesk.com/linux/todesk_4.3.1.0_x86_64.pkg.tar.zst"
+	},
+	"homepage":"https://www.todesk.com"
+}

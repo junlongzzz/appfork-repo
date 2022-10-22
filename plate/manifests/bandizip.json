@@ -1,0 +1,19 @@
+{
+	"author":"Bandisoft",
+	"name":"Bandizip",
+	"logo":"https://www.cesafe.com/upp/p/2020-10/2020101000324111901190.png",
+	"description":"Bandizip 是一个强大的多功能压缩文件管理工具，可提供很快的解压缩速度和其他各种实用功能。 这是一个免费的软件，其付费版本更是可以使用更多的实用功能",
+	"category":"tools",
+	"version":"7.27",
+	"platform":"windows",
+	"url":"https://www.bandisoft.com/bandizip/dl.php?web",
+	"script":{
+		"args":{
+			"regex":"v([\\d.]+)</font>",
+			"windows":"https://www.bandisoft.com/bandizip/dl.php?web",
+			"url":"https://www.bandisoft.com/bandizip/history/"
+		},
+		"name":"appfork-check-update"
+	},
+	"homepage":"https://www.bandisoft.com/bandizip/"
+}

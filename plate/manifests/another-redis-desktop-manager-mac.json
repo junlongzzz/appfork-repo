@@ -1,0 +1,14 @@
+{
+	"author":"Qii <shiboqi123@gmail.com>",
+	"name":"Another Redis Desktop Manager",
+	"description":"🚀🚀🚀 更快、更好、更稳定的Redis桌面(GUI)管理客户端，兼容Windows、Mac、Linux，性能出众，轻松加载海量键值。支持HomeBrew安装：brew install --cask another-redis-desktop-manager",
+	"category":"development",
+	"version":"1.5.9",
+	"platform":"mac",
+	"script":"another-redis-desktop-manager",
+	"url":{
+		"arm64":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.5.9/Another-Redis-Desktop-Manager-M1-arm64-1.5.9.dmg",
+		"x86":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.5.9/Another-Redis-Desktop-Manager.1.5.9.dmg"
+	},
+	"homepage":"https://github.com/qishibo/AnotherRedisDesktopManager"
+}

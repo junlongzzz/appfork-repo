@@ -1,0 +1,15 @@
+{
+	"author":"Igor Pavlov",
+	"name":"7-Zip",
+	"logo":"https://www.7-zip.org/7ziplogo.png",
+	"description":"7-Zip是一款拥有极高压缩比的开源压缩软件",
+	"category":"tools",
+	"version":"22.01",
+	"platform":"windows",
+	"url":{
+		"arm64":"https://www.7-zip.org/a/7z2201-arm64.exe",
+		"x64":"https://www.7-zip.org/a/7z2201-x64.exe",
+		"x86":"https://www.7-zip.org/a/7z2201.exe"
+	},
+	"homepage":"https://www.7-zip.org/"
+}

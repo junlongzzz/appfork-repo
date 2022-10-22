@@ -1,0 +1,16 @@
+{
+	"author":"Jan Biniok",
+	"name":"Tampermonkey",
+	"logo":"https://avatars.githubusercontent.com/u/13335464?s=200&v=4",
+	"description":"Tampermonkey is the most popular userscript manager, with over 10 million users. It's available for Chrome, Microsoft Edge, Safari, Opera Next, and Firefox.",
+	"category":"development",
+	"version":"upstream",
+	"platform":"extensions",
+	"url":{
+		"Install on FireFox":"https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/",
+		"Install on Safari":"https://apps.apple.com/app/apple-store/id1482490089",
+		"Install on Chrome":"https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo",
+		"Install on Microsoft Edge":"https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd"
+	},
+	"homepage":"https://www.tampermonkey.net"
+}

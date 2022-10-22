@@ -1,0 +1,18 @@
+{
+	"author":"Junlong",
+	"name":"[B站]GEM邓紫棋工作室今天更新视频了吗？",
+	"description":"邓紫棋！邓紫棋！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
+	"category":"video",
+	"version":"BV1GQ4y1Y7Qf",
+	"platform":"other",
+	"script":{
+		"args":{
+			"up_uid":"429132321"
+		},
+		"name":"bilibili-checkpub"
+	},
+	"url":{
+		"【官方MV】G.E.M.邓紫棋《倒流时间》I'll Be Missing You [2021-12-21]":"https://www.bilibili.com/video/BV1GQ4y1Y7Qf"
+	},
+	"homepage":"https://space.bilibili.com/429132321"
+}

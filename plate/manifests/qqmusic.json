@@ -1,0 +1,11 @@
+{
+	"author":"Tencent",
+	"name":"QQ音乐",
+	"logo":"https://pc3.gtimg.com/softmgr/logo/48/10_48_1539156989.png",
+	"description":"千万高品质曲库尽享，3000万正版歌曲，社交互动分享你的音乐感动。智能推荐遇见喜欢的音乐，多终端云同步设备切换。",
+	"category":"music",
+	"version":"1891",
+	"platform":"windows",
+	"url":"https://dldir1.qq.com/music/clntupate/QQMusic_Setup_1891.exe",
+	"homepage":"https://y.qq.com"
+}

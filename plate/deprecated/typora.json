@@ -1,0 +1,11 @@
+{
+	"author":"appmakes Team",
+	"name":"Typora",
+	"logo":"https://typora.com.cn/img/favicon-128.png",
+	"description":"一款 Markdown 编辑器和阅读器",
+	"category":"实用工具",
+	"version":"1.0.3",
+	"platform":"windows",
+	"url":"https://download.typora.io/windows/typora-setup-x64-1.0.3.exe",
+	"homepage":"https://typora.com.cn"
+}

@@ -1,0 +1,11 @@
+{
+	"author":"Google",
+	"name":"Google Chrome",
+	"logo":"https://www.google.cn/chrome/static/images/chrome-logo.svg",
+	"description":"由 Google 打造的网络浏览器",
+	"category":"network",
+	"version":"106.0.5249.119",
+	"platform":"windows",
+	"url":"https://dl.google.com/release2/chrome/gfu3lptcra3hizbjcq3dbfrdnq_106.0.5249.119/106.0.5249.119_chrome_installer.exe",
+	"homepage":"https://www.google.cn/chrome/index.html"
+}

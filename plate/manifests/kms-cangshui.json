@@ -1,0 +1,10 @@
+{
+	"author":"沧水",
+	"name":"KMS一键激活脚本",
+	"description":"KMS一键激活脚本，支持激活Windows、Office。",
+	"category":"tools",
+	"version":"upstream",
+	"platform":"windows",
+	"url":"https://kms.cangshui.net/kms/KMS-Cangshui.net.bat",
+	"homepage":"https://kms.cangshui.net"
+}

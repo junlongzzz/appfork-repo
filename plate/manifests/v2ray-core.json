@@ -1,0 +1,24 @@
+{
+	"author":"V2Fly Community",
+	"name":"v2ray-core",
+	"description":"A platform for building proxies to bypass network restrictions.",
+	"category":"network",
+	"version":"5.1.0",
+	"platform":"windows",
+	"script":{
+		"args":{
+			"regex":"/releases/tag/[vV]?([\\d.]+)",
+			"windows":{
+				"v2ray-windows-64.zip":"https://github.com/v2fly/v2ray-core/releases/download/v${version}/v2ray-windows-64.zip",
+				"v2ray-windows-32.zip":"https://github.com/v2fly/v2ray-core/releases/download/v${version}/v2ray-windows-32.zip"
+			},
+			"url":"https://api.github.com/repos/v2fly/v2ray-core/releases/latest"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"v2ray-windows-64.zip":"https://github.com/v2fly/v2ray-core/releases/download/v5.1.0/v2ray-windows-64.zip",
+		"v2ray-windows-32.zip":"https://github.com/v2fly/v2ray-core/releases/download/v5.1.0/v2ray-windows-32.zip"
+	},
+	"homepage":"https://github.com/v2fly/v2ray-core"
+}

@@ -1,0 +1,13 @@
+{
+	"author":"Unblock Netease Music 维护小组",
+	"name":"UnblockNeteaseMusic",
+	"description":"Revive unavailable songs for Netease Cloud Music (Refactored & Enhanced version)",
+	"category":"music",
+	"version":"0.27.0",
+	"platform":"windows",
+	"url":{
+		"arm64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.0/unblockneteasemusic-win-arm64.exe",
+		"amd64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.0/unblockneteasemusic-win-x64.exe"
+	},
+	"homepage":"https://github.com/UnblockNeteaseMusic/server"
+}

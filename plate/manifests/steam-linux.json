@@ -1,0 +1,11 @@
+{
+	"author":"Valve",
+	"name":"Steam",
+	"logo":"https://store.steampowered.com/favicon.ico",
+	"description":"Steam 是畅玩游戏、讨论游戏、创造游戏的快乐所在。",
+	"category":"games",
+	"version":"upstream",
+	"platform":"linux",
+	"url":"https://media.st.dl.eccdnx.com/client/installer/steam.deb",
+	"homepage":"https://store.steampowered.com"
+}
