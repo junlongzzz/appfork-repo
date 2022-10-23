@@ -23,7 +23,7 @@ jobs:
         run: mvn -B -DskipTests=true package --file pom.xml
 
       - name: Run updater
-        run: java -jar ./target/appfork-repo-updater.jar
+        run: java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -Djava.security.egd=file:/dev/./urandom -jar ./target/appfork-repo-updater.jar
 
       - name: Commit files
         run: |
