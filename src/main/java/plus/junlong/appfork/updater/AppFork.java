@@ -63,8 +63,8 @@ public class AppFork implements CommandLineRunner {
 
         long startTime = System.currentTimeMillis();
 
+        GroovyShell groovyShell = new GroovyShell();
         for (File manifest : manifests) {
-            log.info("check [{}] update", manifest.getName());
             JSONObject manifestJson;
             try {
                 if (manifest.length() <= 0 || !manifest.canRead() || !manifest.canWrite()) {
@@ -119,10 +119,9 @@ public class AppFork implements CommandLineRunner {
             // 检查更新脚本
             File script = new File(REPO_DIR, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
             if (script.exists() && script.isFile()) {
-                log.info("exec [{}] script", script.getName());
                 try {
                     // groovy脚本运行
-                    Script updateScript = new GroovyShell().parse(script);
+                    Script updateScript = groovyShell.parse(script);
                     // 执行检测App更新的脚本指定方法
                     Object checkUpdateObj = updateScript.invokeMethod("checkUpdate", new Object[]{version, platform.toLowerCase(), scriptArgs});
                     if (checkUpdateObj instanceof Map<?, ?> checkUpdate) {
