@@ -3,7 +3,7 @@
 	"name":"[B站]手工耿今天更新视频了吗？",
 	"description":"大发明家-手工耿。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1N14y1E741",
+	"version":"BV1xP411A7NT",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"做了一个自动敲木鱼的装置 [2022-10-14]":"https://www.bilibili.com/video/BV1N14y1E741"
+		"做了一个木制高脚杯壶 [2022-10-24]":"https://www.bilibili.com/video/BV1xP411A7NT"
 	},
 	"homepage":"https://space.bilibili.com/280793434"
 }
