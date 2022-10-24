@@ -1,0 +1,12 @@
+{
+	"author":"appmakes Team",
+	"name":"Typora",
+	"logo":"https://typoraio.cn/img/favicon-128.png",
+	"description":"一款 Markdown 编辑器和阅读器",
+	"category":"tools",
+	"platform":"mac",
+	"script":"typora",
+	"url":"https://download.typoraio.cn/mac/Typora-1.4.4.dmg",
+	"homepage":"https://typoraio.cn",
+	"version":"1.4.4"
+}
