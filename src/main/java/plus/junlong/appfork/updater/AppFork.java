@@ -14,7 +14,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
-import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -70,7 +69,7 @@ public class AppFork implements CommandLineRunner {
                 if (manifest.length() <= 0 || !manifest.canRead() || !manifest.canWrite()) {
                     throw new RuntimeException("清单文件为空或无读写权限");
                 }
-                manifestJson = JSON.parseObject(FileUtil.readString(manifest, StandardCharsets.UTF_8));
+                manifestJson = JSON.parseObject(FileUtil.readUtf8String(manifest));
                 if (manifestJson == null || manifestJson.isEmpty()) {
                     throw new RuntimeException("清单文件解析为空");
                 }
