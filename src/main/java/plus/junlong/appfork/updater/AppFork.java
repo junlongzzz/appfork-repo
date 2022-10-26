@@ -1,7 +1,6 @@
 package plus.junlong.appfork.updater;
 
 import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.io.file.FileNameUtil;
 import cn.hutool.core.util.ReUtil;
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson2.JSON;
@@ -21,7 +20,7 @@ import java.util.Map;
 @Slf4j
 public class AppFork implements CommandLineRunner {
 
-    private static final String REPO_DIR = "plate-test";
+    private static final String REPO_DIR = "plate";
 
     private static final Map<String, String> platforms = new LinkedHashMap<>();
     private static final Map<String, String> categories = new LinkedHashMap<>();
@@ -78,7 +77,7 @@ public class AppFork implements CommandLineRunner {
                 continue;
             }
 
-            String code = FileNameUtil.mainName(manifest).toLowerCase();
+            String code = FileUtil.mainName(manifest).toLowerCase();
             String name = manifestJson.getString("name");
             String homepage = manifestJson.getString("homepage");
             // String logo = manifestJson.getString("logo");
@@ -184,7 +183,7 @@ public class AppFork implements CommandLineRunner {
     }
 
     private boolean isUrl(String text) {
-        return !StrUtil.isBlank(text) && ReUtil.isMatch("(http[s]?:)?//(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+", text);
+        return ReUtil.isMatch("(http[s]?:)?//(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+", text);
     }
 
 }
