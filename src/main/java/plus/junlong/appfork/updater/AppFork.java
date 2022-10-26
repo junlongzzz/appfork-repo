@@ -21,7 +21,7 @@ import java.util.Map;
 @Slf4j
 public class AppFork implements CommandLineRunner {
 
-    private static final String REPO_DIR = "plate";
+    private static final String REPO_DIR = "plate-test";
 
     private static final Map<String, String> platforms = new LinkedHashMap<>();
     private static final Map<String, String> categories = new LinkedHashMap<>();
