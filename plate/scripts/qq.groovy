@@ -1,18 +1,32 @@
-import groovy.json.JsonSlurper
+import org.jsoup.Jsoup
 
 static def checkUpdate(version, platform, args) {
-    def response = 'https://im.qq.com/pcqq'.toURL().text
-    def matcher = response =~ '<script>window.__INITIAL_STATE__=(\\{.*})</script>'
-    if (!matcher.find()) {
+    def document = Jsoup.parse('https://im.qq.com/download'.toURL(), 30000)
+    if (!document) {
         return null
     }
-    def initialState = new JsonSlurper().parseText(matcher[0][1].toString().replaceAll('\\\\u002F', '/'))
-    if (initialState.isError) {
+
+    def params = switch (platform) {
+        case 'windows' -> ['#imedit_wordandurl_pctabdownurl', '/QQ([\\d.]+).exe']
+        case 'android' -> ['#mb_and', '/Android_([\\d.]+)_']
+        default -> null
+    }
+    if (params == null) {
         return null
+    }
+    def url = null
+    def element = document.selectFirst(params[0])
+    if (element) {
+        url = element.attr('href')
+        def matcher = url =~ params[1]
+        if (!matcher.find()) {
+            return null
+        }
+        version = matcher[0][1] as String
     }
 
     return [
-            version: initialState.rainbowConfig.banner.version,
-            url    : initialState.rainbowConfig.banner.downloadUrl
+            version: version,
+            url    : url
     ]
 }

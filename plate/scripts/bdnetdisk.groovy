@@ -1,48 +1,42 @@
 import groovy.json.JsonSlurper
 
 static def checkUpdate(version, platform, args) {
-    // https://pan.baidu.com/disk/cmsdata?platform=guanjia&page=1&num=1&time=1638699025247&channel=chunlei&clienttype=0&web=1
-    switch (platform) {
-        case 'windows':
-            platform = 'guanjia'
-            break
-        case 'linux':
-            platform = 'linux'
-            break
-        case 'mac':
-            platform = 'mac'
-            break
-        case 'android':
-            platform = 'android'
-            break
-        default:
-            return null
-    }
-    def response = "https://pan.baidu.com/disk/cmsdata?platform=${platform}&page=1&num=1&time=${System.currentTimeMillis()}&channel=chunlei&clienttype=0&web=1".toURL().text
+    def response = "https://pan.baidu.com/disk/cmsdata?clienttype=0&app_id=250528&t=${System.currentTimeMillis()}&do=client".toURL().text
     def jsonData = new JsonSlurper().parseText(response)
     if (jsonData.errorno != 0) {
         return null
     }
-    def data = jsonData.list[0]
+    def data = switch (platform) {
+        case 'windows' -> jsonData.guanjia
+        case 'linux' -> jsonData.linux
+        case 'mac' -> jsonData.mac
+        case 'android' -> jsonData.android
+        default -> null
+    }
+    if (data == null) {
+        return null
+    }
     def versionNew = data.version
     def matcher = versionNew =~ "[vV]([\\d.]+)"
     if (!matcher.find()) {
         return null
     }
-    version = matcher[0][1]
-    def url = null
-    if (platform == 'linux') {
-        url = [
-                ".deb": data.url_1,
-                ".rpm": data.url
+    version = matcher[0][1] as String
+
+    def url = switch (platform) {
+        case 'linux' -> [
+                '.rpm': data.url,
+                '.deb': data.url_1
         ]
-    } else {
-        url = data.url
+        case 'mac' -> [
+                'x64'  : data.url,
+                'arm64': data.url_1
+        ]
+        default -> data.url
     }
 
     return [
             'version': version,
             'url'    : url
     ]
-
 }
