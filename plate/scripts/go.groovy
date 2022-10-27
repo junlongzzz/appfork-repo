@@ -3,7 +3,8 @@ static def checkUpdate(version, platform, args) {
 //    def response = "https://cdn.jsdelivr.net/gh/chawyehsu/dorado@master/bucket/neteasemusic.json".toURL().text
 //    def response = "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Main/master/bucket/go.json".toURL().text
 //    return new JsonSlurper().parseText(response).version
-    def response = 'https://golang.google.cn/dl'.toURL().text
+//    def response = 'https://golang.google.cn/dl'.toURL().text
+    def response = 'https://go.dev/dl/'.toURL().text
     def matcher = response =~ 'go([\\d.]+)\\.windows-'
     if (!matcher.find()) {
         return null
