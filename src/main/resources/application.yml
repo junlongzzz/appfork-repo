@@ -1,3 +1,7 @@
 logging:
   level:
     plus.junlong.appfork: info
+
+spring:
+  main:
+    web-application-type: none
