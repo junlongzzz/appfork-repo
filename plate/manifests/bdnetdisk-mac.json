@@ -4,9 +4,12 @@
 	"logo":"https://imgsa.baidu.com/forum/pic/item/b166c31fbe096b63d8757d021b338744ebf8ac10.jpg",
 	"description":"百度网盘是一款国民级产品，已连续9年为超过7亿用户提供稳定、安全的个人云存储服务，已实现电脑、手机、电视等多种终端场景的覆盖和互联，并支持多类型文件的备份、分享、查看和处理。",
 	"category":"network",
-	"version":"4.14.7",
+	"version":"4.14.8",
 	"platform":"mac",
 	"script":"bdnetdisk",
-	"url":"https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/4.14.7/BaiduNetdisk_mac_4.14.7_x64.dmg",
+	"url":{
+		"x64":"https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/4.14.8/BaiduNetdisk_mac_4.14.8_x64.dmg",
+		"arm64":"https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/4.14.8/BaiduNetdisk_mac_4.14.8_arm64.dmg"
+	},
 	"homepage":"https://pan.baidu.com/"
 }
