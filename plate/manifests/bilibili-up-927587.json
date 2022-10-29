@@ -3,7 +3,7 @@
 	"name":"[B站]木鱼水心今天更新视频了吗？",
 	"description":"\"影评某种程度上，是让看过这部片的人，不那么孤独的东西\"。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1Q14y1j7AA",
+	"version":"BV1tW4y1j7u5",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"落单？反杀1000人！我卢俊义没开挂！《水浒传》P43 [2022-10-22]":"https://www.bilibili.com/video/BV1Q14y1j7AA"
+		"内讧？卢俊义大骂宋江「黑矮无能」！《水浒传》P44 [2022-10-29]":"https://www.bilibili.com/video/BV1tW4y1j7u5"
 	},
 	"homepage":"https://space.bilibili.com/927587"
 }
