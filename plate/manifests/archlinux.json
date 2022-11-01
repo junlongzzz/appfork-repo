@@ -4,8 +4,8 @@
 	"logo":"https://cpng.pikpng.com/pngl/s/201-2013443_600px-arch-linux-logo-arch-linux-logo-svg.png",
 	"description":"A lightweight and flexible Linux® distribution that tries to Keep It Simple.",
 	"category":"image",
-	"version":"2022.10.01",
+	"version":"2022.11.01",
 	"platform":"linux",
-	"url":"https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/archlinux-2022.10.01-x86_64.iso",
+	"url":"https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/archlinux-2022.11.01-x86_64.iso",
 	"homepage":"https://archlinux.org/"
 }
