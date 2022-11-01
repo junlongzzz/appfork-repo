@@ -22,6 +22,8 @@ public class AppFork implements CommandLineRunner {
 
     private static final String REPO_DIR = "plate";
 
+    private static final GroovyShell GROOVY_SHELL = new GroovyShell();
+
     private static final Map<String, String> platforms = new LinkedHashMap<>();
     private static final Map<String, String> categories = new LinkedHashMap<>();
 
@@ -50,8 +52,10 @@ public class AppFork implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         log.info("开始软件库同步...");
+
+        long startTime = System.currentTimeMillis();
 
         File[] manifests = new File(REPO_DIR, "manifests").listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
         if (manifests == null) {
@@ -59,67 +63,58 @@ public class AppFork implements CommandLineRunner {
             return;
         }
 
-        long startTime = System.currentTimeMillis();
-
-        GroovyShell groovyShell = new GroovyShell();
         for (File manifest : manifests) {
-            JSONObject manifestJson;
             try {
                 if (manifest.length() <= 0 || !manifest.canRead() || !manifest.canWrite()) {
                     throw new RuntimeException("清单文件为空或无读写权限");
                 }
-                manifestJson = JSON.parseObject(FileUtil.readUtf8String(manifest));
+                JSONObject manifestJson = JSON.parseObject(FileUtil.readUtf8String(manifest));
                 if (manifestJson == null || manifestJson.isEmpty()) {
                     throw new RuntimeException("清单文件解析为空");
                 }
-            } catch (Exception e) {
-                log.error("manifest [{}] read error:{}", manifest.getName(), e.getMessage());
-                continue;
-            }
 
-            String code = FileUtil.mainName(manifest).toLowerCase();
-            String name = manifestJson.getString("name");
-            String homepage = manifestJson.getString("homepage");
-            // String logo = manifestJson.getString("logo");
-            String author = manifestJson.getString("author");
-            String description = manifestJson.getString("description");
-            String category = manifestJson.getString("category");
-            String platform = manifestJson.getString("platform");
-            String version = manifestJson.getString("version");
-            // String url = manifestJson.getString("url");
-            Object scriptValue = manifestJson.get("script");
+                String code = FileUtil.mainName(manifest).toLowerCase();
+                String name = manifestJson.getString("name");
+                String homepage = manifestJson.getString("homepage");
+                // String logo = manifestJson.getString("logo");
+                String author = manifestJson.getString("author");
+                String description = manifestJson.getString("description");
+                String category = manifestJson.getString("category");
+                String platform = manifestJson.getString("platform");
+                String version = manifestJson.getString("version");
+                // String url = manifestJson.getString("url");
+                Object scriptValue = manifestJson.get("script");
 
-            if (StrUtil.isBlank(name) ||
-                    StrUtil.isBlank(homepage) ||
-                    StrUtil.isBlank(platform) || !platforms.containsKey(platform.toLowerCase()) ||
-                    StrUtil.isBlank(category) || !categories.containsKey(category.toLowerCase())) {
-                log.error("manifest [{}] has illegal attribute", manifest.getName());
-                continue;
-            }
-
-            // 清单文件对应的script脚本文件名 默认为清单文件名一致
-            String scriptName = code;
-            // 脚本文件执行时的额外参数
-            Map<?, ?> scriptArgs = null;
-            if (scriptValue instanceof String) {
-                scriptName = (String) scriptValue;
-            } else if (scriptValue instanceof Map<?, ?> scriptValueMap) {
-                Object nameObj = scriptValueMap.get("name");
-                if (nameObj instanceof String) {
-                    scriptName = (String) nameObj;
+                if (StrUtil.isBlank(name) ||
+                        StrUtil.isBlank(homepage) ||
+                        StrUtil.isBlank(platform) || !platforms.containsKey(platform.toLowerCase()) ||
+                        StrUtil.isBlank(category) || !categories.containsKey(category.toLowerCase())) {
+                    log.error("manifest [{}] has illegal attribute", manifest.getName());
+                    continue;
                 }
-                Object argsObj = scriptValueMap.get("args");
-                if (argsObj instanceof Map) {
-                    scriptArgs = (Map<?, ?>) argsObj;
-                }
-            }
 
-            // 检查更新脚本
-            File script = new File(REPO_DIR, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
-            if (script.exists() && script.isFile()) {
-                try {
+                // 清单文件对应的script脚本文件名 默认为清单文件名一致
+                String scriptName = code;
+                // 脚本文件执行时的额外参数
+                Map<?, ?> scriptArgs = null;
+                if (scriptValue instanceof String) {
+                    scriptName = (String) scriptValue;
+                } else if (scriptValue instanceof Map<?, ?> scriptValueMap) {
+                    Object nameObj = scriptValueMap.get("name");
+                    if (nameObj instanceof String) {
+                        scriptName = (String) nameObj;
+                    }
+                    Object argsObj = scriptValueMap.get("args");
+                    if (argsObj instanceof Map) {
+                        scriptArgs = (Map<?, ?>) argsObj;
+                    }
+                }
+
+                // 检查更新脚本
+                File script = new File(REPO_DIR, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
+                if (script.exists() && script.isFile()) {
                     // groovy脚本运行
-                    Script updateScript = groovyShell.parse(script);
+                    Script updateScript = GROOVY_SHELL.parse(script);
                     // 执行检测App更新的脚本指定方法
                     Object checkUpdateObj = updateScript.invokeMethod("checkUpdate", new Object[]{version, platform.toLowerCase(), scriptArgs});
                     if (checkUpdateObj instanceof Map<?, ?> checkUpdate) {
@@ -173,9 +168,9 @@ public class AppFork implements CommandLineRunner {
                             }
                         }
                     }
-                } catch (Exception e) {
-                    log.error("exec [{}] script [{}] error:{}", manifest.getName(), script.getName(), e.getMessage());
                 }
+            } catch (Exception e) {
+                log.error("[{}] update error({}):{}", manifest.getName(), e.getClass().getSimpleName(), e.getMessage());
             }
         }
 
