@@ -1,0 +1,23 @@
+{
+	"name":"Node.js LTS",
+	"logo":"https://nodejs.org/static/images/logo.svg",
+	"description":"Node.js® is an open-source, cross-platform JavaScript runtime environment. LTS Recommended For Most Users.",
+	"homepage":"https://nodejs.org",
+	"author":"OpenJS Foundation and Node.js contributors.",
+	"category":"development",
+	"platform":"windows",
+	"script":{
+		"name":"nodejs",
+		"args":{
+			"type":"LTS"
+		}
+	},
+	"version":"18.12.0",
+	"url":{
+		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v18.12.0/node-v18.12.0-x86.msi",
+		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v18.12.0/node-v18.12.0-x64.msi",
+		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v18.12.0/node-v18.12.0-win-x86.zip",
+		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v18.12.0/node-v18.12.0-win-x64.zip",
+		"Official Docker Image":"https://hub.docker.com/_/node/"
+	}
+}
