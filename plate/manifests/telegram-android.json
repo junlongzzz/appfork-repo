@@ -1,0 +1,15 @@
+{
+	"author":"Telegram for Android Contributors",
+	"name":"Telegram",
+	"logo":"https://avatars.githubusercontent.com/u/6113871?s=200&v=4",
+	"description":"Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed. Chinese users need to use 'magic' to download.",
+	"category":"chat",
+	"platform":"android",
+	"homepage":"https://telegram.org",
+	"script":"telegram",
+	"version":"9.0.2",
+	"url":{
+		"Apk Installer":"https://telegram.org/dl/android/apk",
+		"Download from Google Play":"https://telegram.org/dl/android"
+	}
+}
