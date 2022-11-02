@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1V84y1i7jN",
+	"version":"BV1iG411A78x",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】陈势安《天后》经典K歌金曲！唱哭无数人的神曲 [2022-10-29]":"https://www.bilibili.com/video/BV1V84y1i7jN"
+		"【私藏馆】赖伟锋《闹够了没有》经典备胎金曲！没有关系我们只是朋友 [2022-11-02]":"https://www.bilibili.com/video/BV1iG411A78x"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
