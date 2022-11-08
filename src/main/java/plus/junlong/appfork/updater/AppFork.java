@@ -67,9 +67,10 @@ public class AppFork implements CommandLineRunner {
             return;
         }
 
-        ExecutorService threadPool = Executors.newCachedThreadPool();
         CountDownLatch countDownLatch = new CountDownLatch(manifests.length);
-        int i = 0;
+
+        ExecutorService threadPool = Executors.newCachedThreadPool();
+
         for (File manifest : manifests) {
             threadPool.submit(() -> {
                 try {
@@ -80,14 +81,6 @@ public class AppFork implements CommandLineRunner {
                     countDownLatch.countDown();
                 }
             });
-
-            if (++i % 50 == 0) {
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    log.error("sleep error:{}", e.getMessage());
-                }
-            }
         }
 
         try {
