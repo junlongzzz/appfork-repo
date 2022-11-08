@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1414y1V79Z",
+	"version":"BV1nG411w7Nt",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】Koolulam《One Day》三千人大合唱现场！人生必看的现场 [2022-11-04]":"https://www.bilibili.com/video/BV1414y1V79Z"
+		"【私藏馆】苏打绿《我好想你》唱哭吴青峰的神曲！秋天的思念好像你 [2022-11-08]":"https://www.bilibili.com/video/BV1nG411w7Nt"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
