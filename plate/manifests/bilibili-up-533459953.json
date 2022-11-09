@@ -3,7 +3,7 @@
 	"name":"[B站]刘庸干净又卫生今天更新视频了吗？",
 	"description":"刘庸：干净又卫生嗷，xdm。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1584y1q7Q1",
+	"version":"BV1114y1p7h4",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"街头吃完这个烤玉米，又要出个远门了。 [2022-11-06]":"https://www.bilibili.com/video/BV1584y1q7Q1"
+		"第一次吃牛肚包味道真的很不错，跟肉夹馍很像！ [2022-11-09]":"https://www.bilibili.com/video/BV1114y1p7h4"
 	},
 	"homepage":"https://space.bilibili.com/533459953"
 }
