@@ -69,14 +69,14 @@ public class AppFork implements CommandLineRunner {
 
         CountDownLatch countDownLatch = new CountDownLatch(manifests.length);
 
-        ExecutorService threadPool = Executors.newCachedThreadPool();
+        ExecutorService threadPool = Executors.newFixedThreadPool(50);
 
         for (File manifest : manifests) {
             threadPool.submit(() -> {
                 try {
                     sync(manifest);
                 } catch (Exception e) {
-                    throw new RuntimeException(e);
+                    log.error("sync [{}] error:{}", manifest.getName(), e.getMessage());
                 } finally {
                     countDownLatch.countDown();
                 }
