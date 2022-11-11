@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1nG411w7Nt",
+	"version":"BV1Wg411s7z7",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】苏打绿《我好想你》唱哭吴青峰的神曲！秋天的思念好像你 [2022-11-08]":"https://www.bilibili.com/video/BV1nG411w7Nt"
+		"【私藏馆】林俊杰《修炼爱情》经典现场！忘不了那个人就投降 [2022-11-11]":"https://www.bilibili.com/video/BV1Wg411s7z7"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
