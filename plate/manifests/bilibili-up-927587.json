@@ -3,7 +3,7 @@
 	"name":"[B站]木鱼水心今天更新视频了吗？",
 	"description":"\"影评某种程度上，是让看过这部片的人，不那么孤独的东西\"。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1XP411w7vQ",
+	"version":"BV1M14y1W7WR",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"决战！宋江成民族英雄！朝廷却无封赏？《水浒传》P45 [2022-11-05]":"https://www.bilibili.com/video/BV1XP411w7vQ"
+		"不为人知！水浒传多出来的20回，讲了什么？《水浒传》P46 [2022-11-12]":"https://www.bilibili.com/video/BV1M14y1W7WR"
 	},
 	"homepage":"https://space.bilibili.com/927587"
 }
