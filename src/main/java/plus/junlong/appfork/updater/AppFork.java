@@ -15,10 +15,6 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 @Component
 @Slf4j
@@ -59,41 +55,23 @@ public class AppFork implements CommandLineRunner {
     public void run(String... args) {
         log.info("开始软件库同步...");
 
-        long startTime = System.currentTimeMillis();
-
         File[] manifests = new File(REPO_DIR, "manifests").listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
         if (manifests == null) {
             log.error("manifests 为空或不存在该目录");
             return;
         }
 
-        CountDownLatch countDownLatch = new CountDownLatch(manifests.length);
-
-        ExecutorService threadPool = Executors.newFixedThreadPool(50);
+        long startTime = System.currentTimeMillis();
 
         for (File manifest : manifests) {
-            threadPool.submit(() -> {
-                try {
-                    sync(manifest);
-                } catch (Exception e) {
-                    log.error("sync [{}] error:{}", manifest.getName(), e.getMessage());
-                } finally {
-                    countDownLatch.countDown();
-                }
-            });
+            try {
+                sync(manifest);
+            } catch (Exception e) {
+                log.error("sync [{}] error:{}", manifest.getName(), e.getMessage());
+            }
         }
 
-        try {
-            if (countDownLatch.await(4, TimeUnit.HOURS)) {
-                log.info("软件库同步完成，耗时：{}ms", System.currentTimeMillis() - startTime);
-            } else {
-                log.error("软件库同步超时，耗时:{}ms，未同步软件数量:{}", System.currentTimeMillis() - startTime, countDownLatch.getCount());
-            }
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        } finally {
-            threadPool.shutdownNow();
-        }
+        log.info("软件库同步完成，耗时：{}ms", System.currentTimeMillis() - startTime);
     }
 
     private void sync(File manifest) throws Exception {

@@ -15,7 +15,7 @@
     <description>AppFork repository updater</description>
     <properties>
         <java.version>17</java.version>
-        <fastjson2.version>2.0.17</fastjson2.version>
+        <fastjson2.version>2.0.19</fastjson2.version>
         <groovy4.version>4.0.6</groovy4.version>
         <hutool.version>5.8.9</hutool.version>
         <jsoup.version>1.15.3</jsoup.version>
