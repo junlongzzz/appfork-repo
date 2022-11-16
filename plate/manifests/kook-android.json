@@ -4,9 +4,9 @@
 	"logo":"https://www.kookapp.cn/favicon.ico",
 	"description":"一个好用的语音沟通工具，无广告、不掉线、低占用、不延迟。",
 	"category":"chat",
-	"version":"1.39.0",
+	"version":"1.40.0",
 	"platform":"android",
 	"script":"kook",
-	"url":"https://img.kookapp.cn/assets/release/khl_android_release_ci/1026/kook_release_1.39.0.apk",
+	"url":"https://img.kookapp.cn/assets/release/khl_android_release_ci/1116/kook_release_1.40.0.apk",
 	"homepage":"https://www.kookapp.cn"
 }
