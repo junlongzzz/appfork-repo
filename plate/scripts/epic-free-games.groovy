@@ -51,7 +51,7 @@ static def checkUpdate(version, platform, args) {
                             } else {
                                 slug = element.productSlug
                             }
-                            url[element.title as String] = "https://store.epicgames.com/zh-CN/p/${slug}".toString()
+                            url["${element.title} [${endDate}]" as String] = "https://store.epicgames.com/zh-CN/p/${slug}".toString()
                             flag = true
                             break
                         }
