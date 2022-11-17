@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.*;
 
 @Component
 @Slf4j
@@ -63,15 +64,28 @@ public class AppFork implements CommandLineRunner {
 
         long startTime = System.currentTimeMillis();
 
-        for (File manifest : manifests) {
-            try {
-                sync(manifest);
-            } catch (Exception e) {
-                log.error("sync [{}] error:{}", manifest.getName(), e.getMessage());
+        Future<?> future = Executors.newSingleThreadExecutor().submit(() -> {
+            int count = 0;
+            for (File manifest : manifests) {
+                try {
+                    sync(manifest);
+                    count++;
+                } catch (Exception e) {
+                    log.error("sync [{}] error:{}", manifest.getName(), e.getMessage());
+                }
             }
+            return count;
+        });
+
+        try {
+            int count = (int) future.get(4, TimeUnit.HOURS);
+            log.info("软件库同步完成，同步结果：{}/{}，耗时：{}ms", count, manifests.length, System.currentTimeMillis() - startTime);
+        } catch (Exception e) {
+            log.error("软件库同步出错[{}]，耗时：{}ms", e.getClass().getSimpleName(), System.currentTimeMillis() - startTime);
+            // 同步超时强行中断程序退出
+            System.exit(0);
         }
 
-        log.info("软件库同步完成，耗时：{}ms", System.currentTimeMillis() - startTime);
     }
 
     private void sync(File manifest) throws Exception {
