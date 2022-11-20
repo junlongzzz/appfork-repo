@@ -3,7 +3,7 @@
 	"name":"[B站]刘庸干净又卫生今天更新视频了吗？",
 	"description":"刘庸：干净又卫生嗷，xdm。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1vP4y117da",
+	"version":"BV1N14y1p7rP",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"半夜饿了睡不着，喊老姨给我做夜宵！ [2022-11-18]":"https://www.bilibili.com/video/BV1vP4y117da"
+		"意大利街头随拍 [2022-11-20]":"https://www.bilibili.com/video/BV1N14y1p7rP"
 	},
 	"homepage":"https://space.bilibili.com/533459953"
 }
