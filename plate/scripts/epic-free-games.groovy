@@ -1,9 +1,12 @@
+import cn.hutool.core.date.DateTime
 import cn.hutool.core.date.DateUtil
 import groovy.json.JsonSlurper
 
 static def checkUpdate(version, platform, args) {
     def versionDate = null
     def url = [:]
+
+    def time = 0L
 
     def response = 'https://store-site-backend-static-ipv4.ak.epicgames.com/freeGamesPromotions?locale=zh-CN&country=CN&allowCountries=CN'.toURL().text
     def object = new JsonSlurper().parseText(response)
@@ -36,8 +39,8 @@ static def checkUpdate(version, platform, args) {
                 for (rule in rules) {
                     // 折扣优惠结束时间在今日之后表示正在进行优惠折扣
                     if (rule.endDate) {
-                        def endDate = DateUtil.parse(rule.endDate).setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"))
-                        def nowDate = DateUtil.date().setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"))
+                        def endDate = DateUtil.parse(rule.endDate).setTimeZone(TimeZone.getDefault())
+                        def nowDate = new Date()
                         if (endDate.isAfter(nowDate)) {
                             if (versionDate == null) {
                                 versionDate = endDate
@@ -52,6 +55,7 @@ static def checkUpdate(version, platform, args) {
                                 slug = element.productSlug
                             }
                             url["${element.title} [${endDate}]" as String] = "https://store.epicgames.com/zh-CN/p/${slug}".toString()
+                            time += endDate.time / 1000
                             flag = true
                             break
                         }
@@ -66,7 +70,7 @@ static def checkUpdate(version, platform, args) {
 
     if (versionDate) {
         return [
-                'version': versionDate.toString(),
+                'version': "${versionDate} (${time})" as String,
                 'url'    : url
         ]
     }
