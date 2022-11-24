@@ -3,12 +3,10 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2022-11-25 00:00:00 (5007916800)",
+	"version":"2022-12-02 00:00:00 (1669910400)",
 	"platform":"other",
 	"url":{
-		"Dark Deity [2022-11-25 00:00:00]":"https://store.epicgames.com/zh-CN/p/dark-deity-0b08d1",
-		"《Evil Dead: The Game》 [2022-11-25 00:00:00]":"https://store.epicgames.com/zh-CN/p/evil-dead-the-game",
-		"Epic Cheerleader 包 [2022-11-25 00:00:00]":"https://store.epicgames.com/zh-CN/p/rumbleverse"
+		"《星球大战™：战机中队》 [2022-12-02 00:00:00]":"https://store.epicgames.com/zh-CN/p/star-wars-squadrons"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
