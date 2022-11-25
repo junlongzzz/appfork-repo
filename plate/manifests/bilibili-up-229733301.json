@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1484y1177s",
+	"version":"BV1s44y1D7Eu",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】瑞奇·马丁《The Cup Of Life》世界名曲！永恒的生命之杯！ [2022-11-21]":"https://www.bilibili.com/video/BV1484y1177s"
+		"【4K60FPS】皇后Queen《We Will Rock You》《We Are The Champions》世界名曲现场！ [2022-11-25]":"https://www.bilibili.com/video/BV1s44y1D7Eu"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
