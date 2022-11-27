@@ -3,7 +3,7 @@
 	"name":"[B站]木鱼水心今天更新视频了吗？",
 	"description":"\"影评某种程度上，是让看过这部片的人，不那么孤独的东西\"。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV14G4y147Gc",
+	"version":"BV1m44y1X7da",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"征方腊！梁山生离死别，张顺涌金门归神！《水浒传》P47 [2022-11-19]":"https://www.bilibili.com/video/BV14G4y147Gc"
+		"悲壮！武松断臂！百战英雄士，生平志未降！《水浒传》P48 [2022-11-27]":"https://www.bilibili.com/video/BV1m44y1X7da"
 	},
 	"homepage":"https://space.bilibili.com/927587"
 }
