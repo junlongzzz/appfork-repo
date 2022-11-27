@@ -3,7 +3,7 @@
 	"name":"[B站]刘庸干净又卫生今天更新视频了吗？",
 	"description":"刘庸：干净又卫生嗷，xdm。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1QW4y1H7hW",
+	"version":"BV14G411M748",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"刘庸尝试意大利牛排和香肠 [2022-11-25]":"https://www.bilibili.com/video/BV1QW4y1H7hW"
+		"新头像海盗狗的来历 [2022-11-27]":"https://www.bilibili.com/video/BV14G411M748"
 	},
 	"homepage":"https://space.bilibili.com/533459953"
 }
