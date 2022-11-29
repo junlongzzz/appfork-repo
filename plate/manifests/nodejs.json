@@ -6,12 +6,12 @@
 	"author":"OpenJS Foundation and Node.js contributors.",
 	"category":"development",
 	"platform":"windows",
-	"version":"19.1.0",
+	"version":"19.2.0",
 	"url":{
-		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v19.1.0/node-v19.1.0-x86.msi",
-		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v19.1.0/node-v19.1.0-x64.msi",
-		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v19.1.0/node-v19.1.0-win-x86.zip",
-		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v19.1.0/node-v19.1.0-win-x64.zip",
+		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v19.2.0/node-v19.2.0-x86.msi",
+		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v19.2.0/node-v19.2.0-x64.msi",
+		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v19.2.0/node-v19.2.0-win-x86.zip",
+		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v19.2.0/node-v19.2.0-win-x64.zip",
 		"Official Docker Image":"https://hub.docker.com/_/node/"
 	}
 }
