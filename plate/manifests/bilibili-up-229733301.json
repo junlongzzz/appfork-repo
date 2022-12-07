@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1E84y167ZA",
+	"version":"BV1814y1K7MR",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】Daniel Powter《Free Loop》超治愈神曲！希望一切都会过去 [2022-12-02]":"https://www.bilibili.com/video/BV1E84y167ZA"
+		"【私藏馆】林俊杰《她说》梦幻联动神曲！孙燕姿作词！ [2022-12-07]":"https://www.bilibili.com/video/BV1814y1K7MR"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
