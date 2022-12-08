@@ -3,11 +3,11 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2022-12-09 00:00:00 (3341030400)",
+	"version":"2022-12-16 00:00:00 (3342240000)",
 	"platform":"other",
 	"url":{
-		"《Fort Triumph》 [2022-12-09 00:00:00]":"https://store.epicgames.com/zh-CN/p/fort-triumph",
-		"《RPG in a Box》 [2022-12-09 00:00:00]":"https://store.epicgames.com/zh-CN/p/rpg-in-a-box"
+		"《Wildcat Gun Machine》 [2022-12-16 00:00:00]":"https://store.epicgames.com/zh-CN/p/wildcat-gun-machine-c66c4e",
+		"《黑街圣徒 IV：改选》 [2022-12-16 00:00:00]":"https://store.epicgames.com/zh-CN/p/saints-row-iv-re-elected"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
