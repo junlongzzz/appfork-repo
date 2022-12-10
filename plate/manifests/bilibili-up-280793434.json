@@ -3,7 +3,7 @@
 	"name":"[B站]手工耿今天更新视频了吗？",
 	"description":"大发明家-手工耿。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV16P411u7df",
+	"version":"BV1hK41167zZ",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"自制可以辅助做菜按摩的机械外骨骼 [2022-11-27]":"https://www.bilibili.com/video/BV16P411u7df"
+		"给星爷做了一个箱神冲浪板 [2022-12-10]":"https://www.bilibili.com/video/BV1hK41167zZ"
 	},
 	"homepage":"https://space.bilibili.com/280793434"
 }
