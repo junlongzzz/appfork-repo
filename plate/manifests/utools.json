@@ -4,11 +4,11 @@
 	"logo":"https://u.tools/favicon.ico",
 	"description":"新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持Windows 7+。视频介绍：\n<div class=\"mdui-video-container\"><video poster=\"https://res.u-tools.cn/website/video-play.png\" src=\"https://res.u-tools.cn/videos/utools3.mp4\" controls>你的浏览器不支持video标签</video></div>",
 	"category":"tools",
-	"version":"3.0.2",
+	"version":"3.3.0",
 	"platform":"windows",
 	"url":{
-		"64位":"https://res.u-tools.cn/version2/uTools-3.0.2.exe",
-		"32位":"https://res.u-tools.cn/version2/uTools-3.0.2-ia32.exe"
+		"64位":"https://res.u-tools.cn/version2/uTools-3.3.0.exe",
+		"32位":"https://res.u-tools.cn/version2/uTools-3.3.0-ia32.exe"
 	},
 	"homepage":"https://u.tools"
 }
