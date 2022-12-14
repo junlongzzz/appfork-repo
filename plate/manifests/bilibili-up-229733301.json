@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1iD4y1h7kU",
+	"version":"BV1Be411w7ad",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】五月天、孫燕姿《温柔》梦幻联动现场！神仙合唱系列 [2022-12-09]":"https://www.bilibili.com/video/BV1iD4y1h7kU"
+		"【私藏馆】Maria Arredondo《Burning》经典神曲！当年火爆全网的金曲！ [2022-12-14]":"https://www.bilibili.com/video/BV1Be411w7ad"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
