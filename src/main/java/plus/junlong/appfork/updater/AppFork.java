@@ -15,13 +15,15 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.concurrent.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 @Component
 @Slf4j
 public class AppFork implements CommandLineRunner {
 
-    private static final String REPO_DIR = "plate";
+    private static final String DEFAULT_REPO_PATH = "plate";
 
     private static final GroovyShell GROOVY_SHELL = new GroovyShell();
 
@@ -54,11 +56,23 @@ public class AppFork implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+        // 实际要同步的软件库所在目录路径
+        String repoPath = DEFAULT_REPO_PATH;
+        for (String arg : args) {
+            String[] kv = arg.split("=");
+            if (kv.length == 2) {
+                // 程序运行时参数内有指定特定的同步目录则覆盖默认目录
+                if ("path".equalsIgnoreCase(kv[0])) {
+                    repoPath = kv[1];
+                }
+            }
+        }
+
         log.info("开始软件库同步...");
 
-        File[] manifests = new File(REPO_DIR, "manifests").listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
+        File[] manifests = new File(repoPath, "manifests").listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
         if (manifests == null) {
-            log.error("manifests 为空或不存在该目录");
+            log.error("manifests 为空或不存在该目录:{}", repoPath);
             return;
         }
 
@@ -137,7 +151,7 @@ public class AppFork implements CommandLineRunner {
         }
 
         // 检查更新脚本
-        File script = new File(REPO_DIR, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
+        File script = new File(manifest.getParentFile().getParent(), "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
         if (script.exists() && script.isFile()) {
             // groovy脚本运行
             Script updateScript = GROOVY_SHELL.parse(script);
