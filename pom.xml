@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>plus.junlong</groupId>
-    <artifactId>appfork</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>appfork-repo</artifactId>
+    <version>1.0.0</version>
     <name>appfork</name>
     <description>AppFork repository updater</description>
     <properties>

@@ -9,6 +9,7 @@ import com.alibaba.fastjson2.JSONWriter;
 import groovy.lang.GroovyShell;
 import groovy.lang.Script;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -22,8 +23,6 @@ import java.util.concurrent.TimeUnit;
 @Component
 @Slf4j
 public class AppFork implements CommandLineRunner {
-
-    private static final String DEFAULT_REPO_PATH = "plate";
 
     private static final GroovyShell GROOVY_SHELL = new GroovyShell();
 
@@ -54,25 +53,16 @@ public class AppFork implements CommandLineRunner {
         categories.put("image", "系统镜像");
     }
 
+    @Value("${config.repo-path}")
+    private String repoPath;
+
     @Override
     public void run(String... args) {
-        // 实际要同步的软件库所在目录路径
-        String repoPath = DEFAULT_REPO_PATH;
-        for (String arg : args) {
-            String[] kv = arg.split("=");
-            if (kv.length == 2) {
-                // 程序运行时参数内有指定特定的同步目录则覆盖默认目录
-                if ("path".equalsIgnoreCase(kv[0])) {
-                    repoPath = kv[1];
-                }
-            }
-        }
-
-        log.info("开始软件库同步...");
+        log.info("开始软件库同步[{}]...", repoPath);
 
         File[] manifests = new File(repoPath, "manifests").listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
         if (manifests == null) {
-            log.error("manifests 为空或不存在该目录:{}", repoPath);
+            log.error("目录内无清单文件或不存在该目录:{}", repoPath);
             return;
         }
 
@@ -193,7 +183,6 @@ public class AppFork implements CommandLineRunner {
                         }
                     }
                     if (updateUrl != null) {
-                        log.info("{} 发现新版本 {}->{}", code, version, checkVersion);
                         // 更新版本信息
                         manifestJson.put("version", checkVersion);
                         manifestJson.put("url", updateUrl);
@@ -205,6 +194,7 @@ public class AppFork implements CommandLineRunner {
                         }
                         // 将新版清单内容写入文件
                         FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
+                        log.info("{} 同步新版本 {}->{}", code, version, checkVersion);
                     }
                 }
             }
