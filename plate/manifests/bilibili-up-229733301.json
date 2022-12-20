@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1XP4y1D7oR",
+	"version":"BV1Q14y1A7Fb",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】Kelly Clarkson《Because Of You》经典！唱哭无数人的神曲 [2022-12-15]":"https://www.bilibili.com/video/BV1XP4y1D7oR"
+		"【私藏馆】艾薇儿《Tomorrow》早期巅峰现场！永远的女神 [2022-12-20]":"https://www.bilibili.com/video/BV1Q14y1A7Fb"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
