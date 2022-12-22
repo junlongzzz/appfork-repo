@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1A24y1S7Qu",
+	"version":"BV1P24y1S7Pc",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】艾薇儿《Complicated》神级现场，还是觉得她很可爱 [2022-12-21]":"https://www.bilibili.com/video/BV1A24y1S7Qu"
+		"【4K新现场】陈奕迅《葡萄成熟时》神级现场！冬至安康！ [2022-12-22]":"https://www.bilibili.com/video/BV1P24y1S7Pc"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
