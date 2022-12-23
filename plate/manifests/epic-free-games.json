@@ -3,12 +3,10 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2022-12-24 00:00:00 (5015433600)",
+	"version":"2022-12-25 00:00:00 (1671897600)",
 	"platform":"other",
 	"url":{
-		"Fallout 2: A Post Nuclear Role Playing Game [2022-12-24 00:00:00]":"https://store.epicgames.com/zh-CN/p/fallout-2",
-		"Fallout: A Post Nuclear Role Playing Game [2022-12-24 00:00:00]":"https://store.epicgames.com/zh-CN/p/fallout",
-		"Fallout Tactics: Brotherhood of Steel [2022-12-24 00:00:00]":"https://store.epicgames.com/zh-CN/p/fallout-tactics-brotherhood-of-steel"
+		"Encased [2022-12-25 00:00:00]":"https://store.epicgames.com/zh-CN/p/encased"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
