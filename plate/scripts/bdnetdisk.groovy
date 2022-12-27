@@ -17,7 +17,7 @@ static def checkUpdate(version, platform, args) {
         return null
     }
     def versionNew = data.version
-    def matcher = versionNew =~ "[vV]([\\d.]+)"
+    def matcher = versionNew =~ '[vV]([\\d.]+)'
     if (!matcher.find()) {
         return null
     }

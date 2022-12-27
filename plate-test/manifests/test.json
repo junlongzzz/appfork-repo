@@ -1,21 +1,17 @@
 {
-  "author": "Author",
-  "name": "App Name",
-  "logo": "",
-  "description": "Description",
-  "category": "others",
-  "version": "latest",
-  "platform": "windows",
-  "url": {
-    "arm64": "https://www.7-zip.org/a/7z2201-arm64.exe",
-    "x64": "https://www.7-zip.org/a/7z2201-x64.exe",
-    "x86": "https://www.7-zip.org/a/7z2201.exe"
-  },
-  "homepage": "https://junlong.plus",
-  "script": {
-    "args": {
-      "key": 1212,
-      "str": "str111ddd"
-    }
-  }
+	"author":"Author",
+	"name":"App Name",
+	"logo":"",
+	"description":"Description",
+	"category":"others",
+	"version":"beta",
+	"platform":"windows",
+	"url":"https://junlong.plus/ztool/appfork",
+	"homepage":"https://junlong.plus",
+	"script":{
+		"args":{
+			"key":1212,
+			"str":"str111ddd"
+		}
+	}
 }

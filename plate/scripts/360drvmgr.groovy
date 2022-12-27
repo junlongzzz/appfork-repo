@@ -1,6 +1,6 @@
 static def checkUpdate(version, platform, args) {
     // 在 2.0.0.1740 版本的时候，返回的json内的 details 的值是数组但是多了一个逗号，导致无法进行json解析
-//    def matcher = response =~ "jsonpCallback\\(([\\s\\S]*)\\)"
+//    def matcher = response =~ 'jsonpCallback\\(([\\s\\S]*)\\)'
 //    if (!matcher.find()) {
 //        return null
 //    }
@@ -9,7 +9,7 @@ static def checkUpdate(version, platform, args) {
 
     def response = "https://weishi.360.cn/qudongdashi/updateData.json?callback=jsonpCallback&_=${System.currentTimeMillis()}".toURL().text
     // 正则匹配任意字符
-    def matcher = response =~ "\"version\": \"([\\d.]+)\""
+    def matcher = response =~ '"version": "([\\d.]+)"'
     if (!matcher.find()) {
         return null
     }
