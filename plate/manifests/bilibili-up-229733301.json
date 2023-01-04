@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1oG4y1277L",
+	"version":"BV1d24y1Y79G",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】胡歌《忘记时间》经典神曲！《仙剑奇侠传三》片尾曲 [2022-12-29]":"https://www.bilibili.com/video/BV1oG4y1277L"
+		"【4K60FPS】赵雷《南方姑娘》万人大合唱现场！笛子直接封神 [2023-01-04]":"https://www.bilibili.com/video/BV1d24y1Y79G"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
