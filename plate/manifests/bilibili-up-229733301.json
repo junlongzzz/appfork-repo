@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1d24y1Y79G",
+	"version":"BV1me4y137NA",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】赵雷《南方姑娘》万人大合唱现场！笛子直接封神 [2023-01-04]":"https://www.bilibili.com/video/BV1d24y1Y79G"
+		"【4K60FPS】逃跑计划《一万次悲伤》经典现场！我看到了阳光山和海 [2023-01-07]":"https://www.bilibili.com/video/BV1me4y137NA"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
