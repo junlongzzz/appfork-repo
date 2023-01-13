@@ -3,7 +3,7 @@
 	"name":"[B站]手工耿今天更新视频了吗？",
 	"description":"大发明家-手工耿。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1Pg411x76q",
+	"version":"BV1jD4y1W7XH",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"自制小黄人悬空火炉 [2022-12-31]":"https://www.bilibili.com/video/BV1Pg411x76q"
+		"又是一年 [2023-01-13]":"https://www.bilibili.com/video/BV1jD4y1W7XH"
 	},
 	"homepage":"https://space.bilibili.com/280793434"
 }
