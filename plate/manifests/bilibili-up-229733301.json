@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1rM411h7C5",
+	"version":"BV1aA411R7qw",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】2016年酷玩火星哥碧昂丝封神现场！人生一定要看的现场 [2023-01-12]":"https://www.bilibili.com/video/BV1rM411h7C5"
+		"【春节】群星《祝福你》春节神曲！祝大家新年快乐 [2023-01-18]":"https://www.bilibili.com/video/BV1aA411R7qw"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
