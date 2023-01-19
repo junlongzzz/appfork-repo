@@ -3,12 +3,10 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2023-01-20 00:00:00 (5022432000)",
+	"version":"2023-01-27 00:00:00 (1674748800)",
 	"platform":"other",
 	"url":{
-		"Gamedec [2023-01-20 00:00:00]":"https://store.epicgames.com/zh-CN/p/gamedec",
-		"《First Class Trouble》 [2023-01-20 00:00:00]":"https://store.epicgames.com/zh-CN/p/first-class-trouble",
-		"《Divine Knockout》（DKO） [2023-01-20 00:00:00]":"https://store.epicgames.com/zh-CN/p/divine-knockout"
+		"Epistory - Typing Chronicles [2023-01-27 00:00:00]":"https://store.epicgames.com/zh-CN/p/epistory-typing-chronicles-445794"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
