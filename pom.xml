@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.1</version>
+        <version>3.0.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>plus.junlong</groupId>
@@ -15,10 +15,12 @@
     <description>AppFork repository updater</description>
     <properties>
         <java.version>17</java.version>
-        <groovy4.version>4.0.7</groovy4.version>
+        <groovy4.version>4.0.8</groovy4.version>
         <hutool.version>5.8.11</hutool.version>
-        <fastjson2.version>2.0.22</fastjson2.version>
+        <fastjson2.version>2.0.23</fastjson2.version>
         <jsoup.version>1.15.3</jsoup.version>
+        <dom4j.version>2.1.4</dom4j.version>
+        <jaxen.version>2.0.0</jaxen.version>
     </properties>
     <dependencies>
         <dependency>
@@ -68,6 +70,20 @@
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
             <version>${jsoup.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>${dom4j.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/jaxen/jaxen -->
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>${jaxen.version}</version>
         </dependency>
 
     </dependencies>

@@ -8,7 +8,6 @@ static def checkUpdate(version, platform, args) {
     return [
             'version': version,
             'url'    : [
-                    '.jar'      : "https://github.com/halo-dev/halo/releases/download/v${version}/halo-${version}.jar".toString(),
                     'via Docker': 'https://hub.docker.com/r/halohub/halo'
             ]
     ]
