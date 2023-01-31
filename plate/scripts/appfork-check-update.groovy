@@ -6,17 +6,17 @@ static def checkUpdate(version, platform, args) {
         return null
     }
 
-    def url = args.url as String
+    def checkUrl = args.url as String
     def regex = args.regex as String
     def jsonpath = args.jsonpath as String
     def xpath = args.xpath as String
     def updateUrl = args[platform as String]
 
-    if (!url || !updateUrl) {
+    if (!checkUrl || !updateUrl) {
         return null
     }
 
-    def response = url.toURL().text
+    def response = checkUrl.toURL().text
     // 开始用对应方式查找版本号
     if (regex) { // 正则
         def matcher = response =~ regex
@@ -34,7 +34,7 @@ static def checkUpdate(version, platform, args) {
     } else if (xpath) { // xml
         def document = DocumentHelper.parseText(response)
         def node = document.selectSingleNode(xpath)
-        if (node) {
+        if (!node) {
             return null
         }
         version = node.getText()
@@ -43,18 +43,18 @@ static def checkUpdate(version, platform, args) {
     }
 
     def versionReplaceRegex = '\\$\\{?version}?'
-    def retUrl = null
+    def url = null
     if (updateUrl instanceof String) {
-        retUrl = updateUrl.replaceAll(versionReplaceRegex, version)
+        url = updateUrl.replaceAll(versionReplaceRegex, version)
     } else if (updateUrl instanceof Map) {
-        retUrl = [:]
+        url = [:]
         updateUrl.forEach((String k, String v) -> {
-            retUrl[k.replaceAll(versionReplaceRegex, version)] = v.replaceAll(versionReplaceRegex, version)
+            url[k.replaceAll(versionReplaceRegex, version)] = v.replaceAll(versionReplaceRegex, version)
         })
     }
 
     return [
             version: version,
-            url    : retUrl
+            url    : url
     ]
 }
