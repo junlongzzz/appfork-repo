@@ -1,19 +1,22 @@
 {
-  "author": "2dust",
-  "name": "v2rayN [Pre-release]",
-  "description": "A V2Ray client for Windows, support Xray core and v2fly core.",
-  "category": "network",
-  "version": "5.39",
-  "platform": "windows",
-  "url": {
-    "v2rayN-Core.zip": "https://github.com/2dust/v2rayN/releases/download/5.39/v2rayN-Core.zip",
-    "v2rayN.zip": "https://github.com/2dust/v2rayN/releases/download/5.39/v2rayN.zip"
-  },
-  "script": {
-    "name": "v2rayn",
-    "args": {
-      "prerelease": true
-    }
-  },
-  "homepage": "https://github.com/2dust/v2rayN"
+	"author":"2dust",
+	"name":"v2rayN [Pre-release]",
+	"description":"A V2Ray client for Windows, support Xray core and v2fly core.",
+	"category":"network",
+	"version":"6.8",
+	"platform":"windows",
+	"url":{
+		"v2rayN-With-Core.7z":"https://github.com/2dust/v2rayN/releases/download/6.8/v2rayN-With-Core.7z",
+		"v2rayN-With-Core.zip":"https://github.com/2dust/v2rayN/releases/download/6.8/v2rayN-With-Core.zip",
+		"v2rayN.7z":"https://github.com/2dust/v2rayN/releases/download/6.8/v2rayN.7z",
+		"v2rayN.zip":"https://github.com/2dust/v2rayN/releases/download/6.8/v2rayN.zip",
+		"zz-v2rayN-With-Core-SelfContained.7z":"https://github.com/2dust/v2rayN/releases/download/6.8/zz-v2rayN-With-Core-SelfContained.7z"
+	},
+	"script":{
+		"name":"v2rayn",
+		"args":{
+			"prerelease":true
+		}
+	},
+	"homepage":"https://github.com/2dust/v2rayN"
 }
