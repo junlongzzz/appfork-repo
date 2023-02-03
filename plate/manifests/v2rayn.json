@@ -5,17 +5,6 @@
 	"category":"network",
 	"version":"5.39",
 	"platform":"windows",
-	"script":{
-		"args":{
-			"regex":"/releases/tag/[vV]?([\\d.]+)",
-			"windows":{
-				"v2rayN-Core.zip":"https://github.com/2dust/v2rayN/releases/download/${version}/v2rayN-Core.zip",
-				"v2rayN.zip":"https://github.com/2dust/v2rayN/releases/download/${version}/v2rayN.zip"
-			},
-			"url":"https://api.github.com/repos/2dust/v2rayN/releases/latest"
-		},
-		"name":"appfork-check-update"
-	},
 	"url":{
 		"v2rayN-Core.zip":"https://github.com/2dust/v2rayN/releases/download/5.39/v2rayN-Core.zip",
 		"v2rayN.zip":"https://github.com/2dust/v2rayN/releases/download/5.39/v2rayN.zip"
