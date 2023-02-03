@@ -7,7 +7,7 @@
 	"platform":"android",
 	"homepage":"https://telegram.org",
 	"script":"telegram",
-	"version":"9.3.3",
+	"version":"9.4.0",
 	"url":{
 		"Apk Installer":"https://telegram.org/dl/android/apk",
 		"Download from Google Play":"https://telegram.org/dl/android"
