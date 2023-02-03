@@ -6,7 +6,7 @@
 	"category":"tools",
 	"platform":"linux",
 	"script":"typora",
-	"url":"https://download.typoraio.cn/linux/Typora-linux-x64-1.4.8.tar.gz",
+	"url":"https://download.typoraio.cn/linux/Typora-linux-x64-1.5.5.tar.gz",
 	"homepage":"https://typoraio.cn",
-	"version":"1.4.8"
+	"version":"1.5.5"
 }
