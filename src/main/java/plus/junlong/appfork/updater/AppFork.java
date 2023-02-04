@@ -166,12 +166,12 @@ public class AppFork implements CommandLineRunner {
                     Object updateUrlObj = checkUpdate.get("url");
                     Object updateUrl = null;
                     if (updateUrlObj instanceof String) {
-                        // 只有一个链接，直接检查是否时合法链接形式
+                        // 只有一个链接，直接检查是否是合法链接形式
                         if (isUrl((String) updateUrlObj)) {
                             updateUrl = updateUrlObj;
                         }
                     } else if (updateUrlObj instanceof Map<?, ?> updateUrlMap) {
-                        // 有多个链接，循环检查是否时合法链接形式
+                        // 有多个链接，循环检查是否是合法链接形式
                         if (!updateUrlMap.isEmpty()) {
                             updateUrl = updateUrlMap;
                             for (Object value : updateUrlMap.values()) {
