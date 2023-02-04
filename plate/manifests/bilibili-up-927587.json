@@ -3,7 +3,7 @@
 	"name":"[B站]木鱼水心今天更新视频了吗？",
 	"description":"\"影评某种程度上，是让看过这部片的人，不那么孤独的东西\"。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1xY4y1d7uk",
+	"version":"BV1Fj411M79v",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"普京的最高理想！让欧洲战栗的女帝！《叶卡捷琳娜》P1 [2023-02-01]":"https://www.bilibili.com/video/BV1xY4y1d7uk"
+		"情敌是手办？王子：我不爱美女，唯爱手办！《叶卡捷琳娜》P2 [2023-02-04]":"https://www.bilibili.com/video/BV1Fj411M79v"
 	},
 	"homepage":"https://space.bilibili.com/927587"
 }
