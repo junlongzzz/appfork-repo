@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1RT411y7Cv",
+	"version":"BV17j411M7Wm",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】古巨基、容祖儿《爱得太迟》梦幻联动现场！热闹后的冷清更为孤独 [2023-01-27]":"https://www.bilibili.com/video/BV1RT411y7Cv"
+		"【4K60FPS】Hillsong Young & Free《Wake》 封神现场！人生必看的现场 [2023-02-07]":"https://www.bilibili.com/video/BV17j411M7Wm"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
