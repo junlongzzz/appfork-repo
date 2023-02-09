@@ -24,8 +24,6 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class AppFork implements CommandLineRunner {
 
-    private static final GroovyShell GROOVY_SHELL = new GroovyShell();
-
     private static final Map<String, String> platforms = new LinkedHashMap<>();
     private static final Map<String, String> categories = new LinkedHashMap<>();
 
@@ -52,6 +50,8 @@ public class AppFork implements CommandLineRunner {
         categories.put("others", "其他应用");
         categories.put("image", "系统镜像");
     }
+
+    private static final Map<String, Script> SCRIPT_CACHE = new LinkedHashMap<>();
 
     @Value("${config.repo-path}")
     private String repoPath;
@@ -144,7 +144,12 @@ public class AppFork implements CommandLineRunner {
         File script = new File(manifest.getParentFile().getParent(), "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
         if (script.exists() && script.isFile()) {
             // groovy脚本运行
-            Script updateScript = GROOVY_SHELL.parse(script);
+            String scriptFilename = script.getName();
+            Script updateScript = SCRIPT_CACHE.get(scriptFilename);
+            if (updateScript == null) {
+                updateScript = new GroovyShell().parse(script);
+                SCRIPT_CACHE.put(scriptFilename, updateScript);
+            }
             // 执行检测App更新的脚本指定方法
             Object checkUpdateObj = updateScript.invokeMethod("checkUpdate", new Object[]{version, platform.toLowerCase(), scriptArgs});
             if (checkUpdateObj instanceof Map<?, ?> checkUpdate) {
@@ -152,7 +157,7 @@ public class AppFork implements CommandLineRunner {
                 // 获取脚本返回的错误信息
                 Object error = checkUpdate.get("error");
                 if (error != null) {
-                    log.error("exec [{}] script [{}] return error:{}", manifest.getName(), script.getName(), error);
+                    log.error("exec [{}] script [{}] return error:{}", manifest.getName(), scriptFilename, error);
                 } else {
                     // 获取脚本返回的版本号
                     Object checkVersionObj = checkUpdate.get("version");
