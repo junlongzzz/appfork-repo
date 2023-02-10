@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV17j411M7Wm",
+	"version":"BV1WT411Q7Nx",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】Hillsong Young & Free《Wake》 封神现场！人生必看的现场 [2023-02-07]":"https://www.bilibili.com/video/BV17j411M7Wm"
+		"【4K60FPS】火星哥Bruno Mars《Uptown Funk》神级现场！真的这么丝滑吗 [2023-02-10]":"https://www.bilibili.com/video/BV1WT411Q7Nx"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
