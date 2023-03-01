@@ -1,0 +1,19 @@
+{
+  "author": "VMware, Inc.",
+  "name": "Spring Boot",
+  "description": "Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can \"just run\".",
+  "category": "development",
+  "platform": "other",
+  "script": {
+    "args": {
+      "xpath": "/metadata/versioning/release",
+      "other": {
+        "Spring Initializr": "https://start.spring.io"
+      },
+      "url": "https://repo1.maven.org/maven2/org/springframework/boot/spring-boot/maven-metadata.xml"
+    },
+    "name": "appfork-check-update"
+  },
+  "homepage": "https://spring.io/projects/spring-boot",
+  "logo": "https://spring.io/img/logos/spring-initializr.svg"
+}
