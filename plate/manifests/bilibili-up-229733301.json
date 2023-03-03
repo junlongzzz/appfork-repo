@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1Zj41137VN",
+	"version":"BV1C54y1u7Qz",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【怀旧经典】阿桑《一直很安静》经典神曲！《仙剑奇侠传》插曲 [2023-02-28]":"https://www.bilibili.com/video/BV1Zj41137VN"
+		"【怀旧经典】金莎《星月神话》 经典神曲！胡歌版《神话》插曲 [2023-03-03]":"https://www.bilibili.com/video/BV1C54y1u7Qz"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
