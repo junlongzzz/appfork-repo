@@ -12,12 +12,12 @@
 			"type":"LTS"
 		}
 	},
-	"version":"18.14.2",
+	"version":"18.15.0",
 	"url":{
-		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v18.14.2/node-v18.14.2-x86.msi",
-		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v18.14.2/node-v18.14.2-x64.msi",
-		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v18.14.2/node-v18.14.2-win-x86.zip",
-		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v18.14.2/node-v18.14.2-win-x64.zip",
+		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v18.15.0/node-v18.15.0-x86.msi",
+		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v18.15.0/node-v18.15.0-x64.msi",
+		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v18.15.0/node-v18.15.0-win-x86.zip",
+		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v18.15.0/node-v18.15.0-win-x64.zip",
 		"Official Docker Image":"https://hub.docker.com/_/node/"
 	}
 }
