@@ -1,15 +1,21 @@
 {
-  "name": "Apache Tomcat 10",
-  "logo": "https://tomcat.apache.org/res/images/tomcat.png",
-  "author": "The Apache Software Foundation",
-  "description": "Implementation of the Jakarta Servlet, Jakarta Server Pages, Jakarta Expression Language, Jakarta WebSocket, Jakarta Annotations and Jakarta Authentication specifications.",
-  "category": "development",
-  "platform": "windows",
-  "homepage": "https://tomcat.apache.org",
-  "script": {
-    "name": "tomcat",
-    "args": {
-      "ver": "10"
-    }
-  }
+	"name":"Apache Tomcat 10",
+	"logo":"https://tomcat.apache.org/res/images/tomcat.png",
+	"author":"The Apache Software Foundation",
+	"description":"Implementation of the Jakarta Servlet, Jakarta Server Pages, Jakarta Expression Language, Jakarta WebSocket, Jakarta Annotations and Jakarta Authentication specifications.",
+	"category":"development",
+	"platform":"windows",
+	"homepage":"https://tomcat.apache.org",
+	"script":{
+		"name":"tomcat",
+		"args":{
+			"ver":"10"
+		}
+	},
+	"version":"10.1.7",
+	"url":{
+		"apache-tomcat-10.1.7.exe":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.7/bin/apache-tomcat-10.1.7.exe",
+		"apache-tomcat-10.1.7-windows-x64.zip":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.7/bin/apache-tomcat-10.1.7-windows-x64.zip",
+		"apache-tomcat-10.1.7-windows-x86.zip":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.7/bin/apache-tomcat-10.1.7-windows-x86.zip"
+	}
 }
