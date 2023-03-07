@@ -7,8 +7,8 @@
 	"platform":"linux",
 	"script":"unblockneteasemusic",
 	"url":{
-		"arm64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.0/unblockneteasemusic-linux-arm64",
-		"amd64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.0/unblockneteasemusic-linux-x64"
+		"amd64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.0/unblockneteasemusic-linux-x64",
+		"arm64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.0/unblockneteasemusic-linux-arm64"
 	},
 	"homepage":"https://github.com/UnblockNeteaseMusic/server"
 }

@@ -9,11 +9,11 @@
 	"script":"todesk",
 	"url":{
 		"Debian/Ubuntu/Mint (x64)":"https://dl.todesk.com/linux/todesk_4.3.1.0_amd64.deb",
+		"Arch Linux (x64)":"https://dl.todesk.com/linux/todesk_4.3.1.0_x86_64.pkg.tar.zst",
 		"Fedora/CentOS/RedHat (x64)":"https://dl.todesk.com/linux/todesk_4.3.1.0_x86_64.rpm",
-		"Arm64 & aarch64 (deb)":"https://dl.todesk.com/linux/todesk_4.3.1.0_aarch64.deb",
 		"Raspberry Pi 4 Arm v7":"https://dl.todesk.com/linux/todesk_4.3.1.0_armv7l.deb",
 		"Arm64 & aarch64 (rpm)":"https://dl.todesk.com/linux/todesk_4.3.1.0_aarch64.rpm",
-		"Arch Linux (x64)":"https://dl.todesk.com/linux/todesk_4.3.1.0_x86_64.pkg.tar.zst"
+		"Arm64 & aarch64 (deb)":"https://dl.todesk.com/linux/todesk_4.3.1.0_aarch64.deb"
 	},
 	"homepage":"https://www.todesk.com"
 }

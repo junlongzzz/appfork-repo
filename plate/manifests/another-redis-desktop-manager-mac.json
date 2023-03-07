@@ -7,8 +7,8 @@
 	"platform":"mac",
 	"script":"another-redis-desktop-manager",
 	"url":{
-		"arm64":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.5.9/Another-Redis-Desktop-Manager-M1-arm64-1.5.9.dmg",
-		"x86":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.5.9/Another-Redis-Desktop-Manager.1.5.9.dmg"
+		"x86":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.5.9/Another-Redis-Desktop-Manager.1.5.9.dmg",
+		"arm64":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.5.9/Another-Redis-Desktop-Manager-M1-arm64-1.5.9.dmg"
 	},
 	"homepage":"https://github.com/qishibo/AnotherRedisDesktopManager"
 }
