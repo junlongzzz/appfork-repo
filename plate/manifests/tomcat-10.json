@@ -1,0 +1,15 @@
+{
+  "name": "Apache Tomcat 10",
+  "logo": "https://tomcat.apache.org/res/images/tomcat.png",
+  "author": "The Apache Software Foundation",
+  "description": "Implementation of the Jakarta Servlet, Jakarta Server Pages, Jakarta Expression Language, Jakarta WebSocket, Jakarta Annotations and Jakarta Authentication specifications.",
+  "category": "development",
+  "platform": "windows",
+  "homepage": "https://tomcat.apache.org",
+  "script": {
+    "name": "tomcat",
+    "args": {
+      "ver": "10"
+    }
+  }
+}
