@@ -112,7 +112,7 @@ public class AppFork implements CommandLineRunner {
         String category = manifestJson.getString("category");
         String platform = manifestJson.getString("platform");
         String version = manifestJson.getString("version");
-        // String url = manifestJson.getString("url");
+        Object url = manifestJson.get("url");
         Object scriptValue = manifestJson.get("script");
 
         if (StrUtil.isBlank(name) ||
@@ -165,41 +165,52 @@ public class AppFork implements CommandLineRunner {
                         checkVersion = (String) checkVersionObj;
                     }
                 }
-                // 发现新版本
-                if (!StrUtil.isBlank(checkVersion) && !checkVersion.equalsIgnoreCase(version)) {
+
+                if (!StrUtil.isBlank(checkVersion)) {
+                    boolean update = !checkVersion.equalsIgnoreCase(version);
                     // 获取脚本返回的下载链接
                     Object updateUrlObj = checkUpdate.get("url");
-                    Object updateUrl = null;
-                    if (updateUrlObj instanceof String) {
-                        // 只有一个链接，直接检查是否是合法链接形式
-                        if (isUrl((String) updateUrlObj)) {
-                            updateUrl = updateUrlObj;
-                        }
-                    } else if (updateUrlObj instanceof Map<?, ?> updateUrlMap) {
-                        // 有多个链接，循环检查是否是合法链接形式
-                        if (!updateUrlMap.isEmpty()) {
-                            updateUrl = updateUrlMap;
-                            for (Object value : updateUrlMap.values()) {
-                                if (!(value instanceof String) || !isUrl((String) value)) {
-                                    updateUrl = null;
-                                    break;
+                    if (!update) {
+                        // 如果版本号一样，就判断下载链接是否发生了改变，如果下载链接发生了改变，那么也要更新对应的清单文件内容
+                        String manifestUrlJson = JSON.toJSONString(url);
+                        String updateUrlJson = JSON.toJSONString(updateUrlObj);
+                        update = !manifestUrlJson.equals(updateUrlJson);
+                    }
+
+                    if (update) {
+                        // 开始检查链接是否合法
+                        Object updateUrl = null;
+                        if (updateUrlObj instanceof String) {
+                            // 只有一个链接，直接检查是否是合法链接形式
+                            if (isUrl((String) updateUrlObj)) {
+                                updateUrl = updateUrlObj;
+                            }
+                        } else if (updateUrlObj instanceof Map<?, ?> updateUrlMap) {
+                            // 有多个链接，循环检查是否是合法链接形式
+                            if (!updateUrlMap.isEmpty()) {
+                                updateUrl = updateUrlMap;
+                                for (Object value : updateUrlMap.values()) {
+                                    if (!(value instanceof String) || !isUrl((String) value)) {
+                                        updateUrl = null;
+                                        break;
+                                    }
                                 }
                             }
                         }
-                    }
-                    if (updateUrl != null) {
-                        // 更新版本信息
-                        manifestJson.put("version", checkVersion);
-                        manifestJson.put("url", updateUrl);
-                        if (StrUtil.isBlank(author)) {
-                            manifestJson.put("author", "[Unknown]");
+                        if (updateUrl != null) {
+                            // 更新版本信息
+                            manifestJson.put("version", checkVersion);
+                            manifestJson.put("url", updateUrl);
+                            if (StrUtil.isBlank(author)) {
+                                manifestJson.put("author", "[Unknown]");
+                            }
+                            if (StrUtil.isBlank(description)) {
+                                manifestJson.put("description", "[暂无描述]");
+                            }
+                            // 将新版清单内容写入文件
+                            FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
+                            log.info("{} 同步新版本 {}->{}", code, version, checkVersion);
                         }
-                        if (StrUtil.isBlank(description)) {
-                            manifestJson.put("description", "[暂无描述]");
-                        }
-                        // 将新版清单内容写入文件
-                        FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
-                        log.info("{} 同步新版本 {}->{}", code, version, checkVersion);
                     }
                 }
             }
