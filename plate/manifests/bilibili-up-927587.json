@@ -3,7 +3,7 @@
 	"name":"[B站]木鱼水心今天更新视频了吗？",
 	"description":"\"影评某种程度上，是让看过这部片的人，不那么孤独的东西\"。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV11N411F7XY",
+	"version":"BV1CY41167bq",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"国际惯例！只提供军火却不参战？《叶卡捷琳娜》S2P1 [2023-03-04]":"https://www.bilibili.com/video/BV11N411F7XY"
+		"女皇：男友性无能？下一个更好！《叶卡捷琳娜》S2P2 [2023-03-08]":"https://www.bilibili.com/video/BV1CY41167bq"
 	},
 	"homepage":"https://space.bilibili.com/927587"
 }
