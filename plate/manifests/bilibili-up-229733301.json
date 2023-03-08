@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1C54y1u7Qz",
+	"version":"BV1n24y1b78m",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【怀旧经典】金莎《星月神话》 经典神曲！胡歌版《神话》插曲 [2023-03-03]":"https://www.bilibili.com/video/BV1C54y1u7Qz"
+		"【怀旧经典】张韶涵《隐形的翅膀》2006年年度金曲！祝大家节日快乐 [2023-03-08]":"https://www.bilibili.com/video/BV1n24y1b78m"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
