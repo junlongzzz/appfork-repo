@@ -1,0 +1,9 @@
+{
+  "name": "VirtualBox",
+  "logo": "https://www.virtualbox.org/graphics/vbox_logo2_gradient.png",
+  "description": "VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.",
+  "homepage": "https://www.virtualbox.org",
+  "author": "Oracle",
+  "category": "tools",
+  "platform": "windows"
+}
