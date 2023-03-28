@@ -1,0 +1,9 @@
+{
+  "name": "Obsidian",
+  "logo": "https://obsidian.md/favicon.ico",
+  "description": "**A second brain, for you, forever.**\nObsidian is a powerful and extensible knowledge base that works on top of your local folder of plain text files.",
+  "homepage": "https://obsidian.md",
+  "author": "Obsidian Team",
+  "category": "reading",
+  "platform": "windows"
+}
