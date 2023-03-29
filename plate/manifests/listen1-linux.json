@@ -4,13 +4,13 @@
 	"logo":"https://avatars.githubusercontent.com/u/18599108?v=4",
 	"description":"One for all free music in China.",
 	"category":"music",
-	"version":"2.27.0",
+	"version":"2.28.0",
 	"platform":"linux",
 	"script":"listen1",
 	"url":{
-		"listen1_2.27.0_linux_amd64.deb":"https://github.com/listen1/listen1_desktop/releases/download/v2.27.0/listen1_2.27.0_linux_amd64.deb",
-		"listen1_2.27.0_linux_x64.tar.gz":"https://github.com/listen1/listen1_desktop/releases/download/v2.27.0/listen1_2.27.0_linux_x64.tar.gz",
-		"listen1_2.27.0_linux_x86_64.AppImage":"https://github.com/listen1/listen1_desktop/releases/download/v2.27.0/listen1_2.27.0_linux_x86_64.AppImage"
+		"listen1_2.28.0_linux_amd64.deb":"https://github.com/listen1/listen1_desktop/releases/download/v2.28.0/listen1_2.28.0_linux_amd64.deb",
+		"listen1_2.28.0_linux_x64.tar.gz":"https://github.com/listen1/listen1_desktop/releases/download/v2.28.0/listen1_2.28.0_linux_x64.tar.gz",
+		"listen1_2.28.0_linux_x86_64.AppImage":"https://github.com/listen1/listen1_desktop/releases/download/v2.28.0/listen1_2.28.0_linux_x86_64.AppImage"
 	},
 	"homepage":"https://listen1.github.io/listen1"
 }
