@@ -4,11 +4,11 @@
 	"logo":"https://files.dev47apps.net/img/app_icon.png",
 	"description":"DroidCam turns your phone/tablet into a webcam for your PC. Use it with chat programs like Zoom, MS Teams, and Skype.",
 	"category":"tools",
-	"version":"1.8.2",
+	"version":"1.9.0",
 	"platform":"linux",
 	"script":"droidcam",
 	"url":{
-		"droidcam_1.8.2.zip":"https://files.dev47apps.net/linux/droidcam_1.8.2.zip",
+		"droidcam_1.9.0.zip":"https://files.dev47apps.net/linux/droidcam_1.9.0.zip",
 		"Android App on Google Play":"https://play.google.com/store/apps/developer?id=Dev47Apps",
 		"iOS App on App Store":"https://apps.apple.com/us/app/droidcam-wireless-webcam/id1510258102"
 	},
