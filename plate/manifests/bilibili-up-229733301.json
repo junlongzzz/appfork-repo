@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV12a4y1T7Yh",
+	"version":"BV1qs4y177wL",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】张学友《慢慢》经典神级现场！慢慢心变成铁 [2023-03-30]":"https://www.bilibili.com/video/BV12a4y1T7Yh"
+		"【怀念专题】张国荣《风继续吹》经典感人现场！他是一个传奇 [2023-04-01]":"https://www.bilibili.com/video/BV1qs4y177wL"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
