@@ -25,7 +25,7 @@ static def checkUpdate(version, platform, args) {
     def url = [:]
     if (platform == 'extensions') {
         url['Install on Chrome'] = 'https://chrome.google.com/webstore/detail/listen-1/indecfegkejajpaipjipfkkbedgaodbp'
-        url['Install on Microsoft Edge'] = 'https://microsoftedge.microsoft.com/addons/detail/hneiglcmpeedblkmbndhfbeahcpjojjg'
+        url['Install on Microsoft Edge'] = 'https://microsoftedge.microsoft.com/addons/detail/bcneiehcbgahghfmgigmblcgkhihehad'
         url['Install on FireFox'] = 'https://addons.mozilla.org/zh-CN/firefox/addon/listen1/'
     } else {
         for (asset in result.assets) {
