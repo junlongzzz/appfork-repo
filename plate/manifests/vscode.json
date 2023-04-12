@@ -4,18 +4,18 @@
 	"logo":"https://opensource.microsoft.com/assets/images/projects/vsc-icon.svg",
 	"description":"Code editing. Redefined. Free. Built on open source. Runs everywhere.",
 	"category":"development",
-	"version":"1.77.2",
+	"version":"1.77.3",
 	"platform":"windows",
 	"url":{
-		"Windows User Installer (x86)":"https://update.code.visualstudio.com/1.77.2/win32-user/stable",
-		"Windows System Installer (x86)":"https://update.code.visualstudio.com/1.77.2/win32/stable",
-		"Windows .zip (x86)":"https://update.code.visualstudio.com/1.77.2/win32-archive/stable",
-		"Windows User Installer (x64)":"https://update.code.visualstudio.com/1.77.2/win32-x64-user/stable",
-		"Windows System Installer (x64)":"https://update.code.visualstudio.com/1.77.2/win32-x64/stable",
-		"Windows .zip (x64)":"https://update.code.visualstudio.com/1.77.2/win32-x64-archive/stable",
-		"Windows User Installer (Arm64)":"https://update.code.visualstudio.com/1.77.2/win32-arm64-user/stable",
-		"Windows .zip (Arm64)":"https://update.code.visualstudio.com/1.77.2/win32-arm64-archive/stable",
-		"Windows System Installer (Arm64)":"https://update.code.visualstudio.com/1.77.2/win32-arm64/stable"
+		"Windows User Installer (x86)":"https://update.code.visualstudio.com/1.77.3/win32-user/stable",
+		"Windows System Installer (x86)":"https://update.code.visualstudio.com/1.77.3/win32/stable",
+		"Windows .zip (x86)":"https://update.code.visualstudio.com/1.77.3/win32-archive/stable",
+		"Windows User Installer (x64)":"https://update.code.visualstudio.com/1.77.3/win32-x64-user/stable",
+		"Windows System Installer (x64)":"https://update.code.visualstudio.com/1.77.3/win32-x64/stable",
+		"Windows .zip (x64)":"https://update.code.visualstudio.com/1.77.3/win32-x64-archive/stable",
+		"Windows User Installer (Arm64)":"https://update.code.visualstudio.com/1.77.3/win32-arm64-user/stable",
+		"Windows .zip (Arm64)":"https://update.code.visualstudio.com/1.77.3/win32-arm64-archive/stable",
+		"Windows System Installer (Arm64)":"https://update.code.visualstudio.com/1.77.3/win32-arm64/stable"
 	},
 	"homepage":"https://code.visualstudio.com"
 }
