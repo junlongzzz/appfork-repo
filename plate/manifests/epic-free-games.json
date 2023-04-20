@@ -3,11 +3,11 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2023-04-20 23:00:00 (3364005600)",
+	"version":"2023-04-27 23:00:00 (3365215200)",
 	"platform":"other",
 	"url":{
-		"《Second Extinction™》 [2023-04-20 23:00:00]":"https://store.epicgames.com/zh-CN/p/second-extinction",
-		"《MORDHAU》 [2023-04-20 23:00:00]":"https://store.epicgames.com/zh-CN/p/mordhau"
+		"《Beyond Blue》 [2023-04-27 23:00:00]":"https://store.epicgames.com/zh-CN/p/beyond-blue",
+		"《Never Alone (Kisima Ingitchuna)》 [2023-04-27 23:00:00]":"https://store.epicgames.com/zh-CN/p/never-alone-kisima-ingitchuna"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
