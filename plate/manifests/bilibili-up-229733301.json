@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1fV4y1Z7Lc",
+	"version":"BV11h411j7K3",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】张学友《吻别》早期封神现场！人生必看的现场 [2023-04-16]":"https://www.bilibili.com/video/BV1fV4y1Z7Lc"
+		"【4K60FPS】威肯和A妹《Save Your Tears》神仙合唱现场！这是什么王炸组合 [2023-04-21]":"https://www.bilibili.com/video/BV11h411j7K3"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
