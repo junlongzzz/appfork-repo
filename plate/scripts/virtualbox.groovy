@@ -10,7 +10,6 @@ static def checkUpdate(version, platform, args) {
     def url = [:]
     boolean done = false
     for (Element element : document.select('ul a.ext-link[href]')) {
-        println(element)
         def href = element.attr('href')
         if (href.endsWith('.exe')) {
             def matcher = href =~ '/([\\d.]+)/'
