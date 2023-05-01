@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV16g4y1L7H2",
+	"version":"BV1so4y1x7rT",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】张学友《她来听我的演唱会》万人大合唱现场！单身看了会流泪 [2023-04-29]":"https://www.bilibili.com/video/BV16g4y1L7H2"
+		"【私藏馆】五月天《干杯》万人大合唱现场！如果有一天时间真的能倒退 [2023-05-01]":"https://www.bilibili.com/video/BV1so4y1x7rT"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
