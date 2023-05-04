@@ -3,11 +3,12 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2023-05-04 23:00:00 (3366424800)",
+	"version":"2023-05-11 23:00:00 (5051451600)",
 	"platform":"other",
 	"url":{
-		"《Breathedge》 [2023-05-04 23:00:00]":"https://store.epicgames.com/zh-CN/p/breathedge",
-		"Poker Club [2023-05-04 23:00:00]":"https://store.epicgames.com/zh-CN/p/poker-club-6e18ee"
+		"《Horizon Chase Turbo》 [2023-05-11 23:00:00]":"https://store.epicgames.com/zh-CN/p/horizon-chase-turbo",
+		"Kao the Kangaroo [2023-05-11 23:00:00]":"https://store.epicgames.com/zh-CN/p/kao-the-kangaroo-62abe3",
+		"《Against All Odds》 [2023-05-11 23:00:00]":"https://store.epicgames.com/zh-CN/p/against-all-odds-409105"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
