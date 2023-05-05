@@ -82,7 +82,7 @@ public class AppFork implements CommandLineRunner {
         });
 
         try {
-            int count = (int) future.get(4, TimeUnit.HOURS);
+            int count = (int) future.get(3, TimeUnit.HOURS);
             log.info("软件库同步完成，同步结果：{}/{}，耗时：{}ms", count, manifests.length, System.currentTimeMillis() - startTime);
         } catch (Exception e) {
             log.error("软件库同步出错[{}]，耗时：{}ms", e.getClass().getSimpleName(), System.currentTimeMillis() - startTime);
