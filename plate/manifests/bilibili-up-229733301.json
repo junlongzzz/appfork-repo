@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1so4y1x7rT",
+	"version":"BV1bo4y1A7S9",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】五月天《干杯》万人大合唱现场！如果有一天时间真的能倒退 [2023-05-01]":"https://www.bilibili.com/video/BV1so4y1x7rT"
+		"【私藏馆】朴树《平凡之路》经典神作！我曾经跨过山和大海 [2023-05-06]":"https://www.bilibili.com/video/BV1bo4y1A7S9"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
