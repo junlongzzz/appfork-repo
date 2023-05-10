@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1bo4y1A7S9",
+	"version":"BV1QL41187Dt",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】朴树《平凡之路》经典神作！我曾经跨过山和大海 [2023-05-06]":"https://www.bilibili.com/video/BV1bo4y1A7S9"
+		"【4K60FPS】GARNiDELiA《极乐净土》经典现场！那个女人回来了！ [2023-05-08]":"https://www.bilibili.com/video/BV1QL41187Dt"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
