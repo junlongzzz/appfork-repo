@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1QL41187Dt",
+	"version":"BV1os4y1B79E",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】GARNiDELiA《极乐净土》经典现场！那个女人回来了！ [2023-05-08]":"https://www.bilibili.com/video/BV1QL41187Dt"
+		"【私藏馆】赵雷《我记得》献给母亲的神曲！祝天下母亲节日快乐 [2023-05-14]":"https://www.bilibili.com/video/BV1os4y1B79E"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
