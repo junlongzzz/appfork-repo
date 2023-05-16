@@ -3,7 +3,7 @@
 	"name":"[B站]老师好我叫何同学今天更新视频了吗？",
 	"description":"喜欢做贼有意思的视频。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV12h411u7DM",
+	"version":"BV1AP411d7Qa",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【何同学VLOG】为什么我们一期视频做了五个月... [2023-04-04]":"https://www.bilibili.com/video/BV12h411u7DM"
+		"【何同学】为了找到流量密码，我们做了个假B站... [2023-05-16]":"https://www.bilibili.com/video/BV1AP411d7Qa"
 	},
 	"homepage":"https://space.bilibili.com/163637592"
 }
