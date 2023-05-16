@@ -4,7 +4,7 @@
 	"logo":"https://docs.docker.com/assets/images/Compose.png",
 	"description":"Docker Compose is a tool for running multi-container applications on Docker defined using the Compose file format.",
 	"category":"development",
-	"version":"2.17.3",
+	"version":"2.18.0",
 	"platform":"linux",
 	"script":{
 		"args":{
@@ -20,10 +20,10 @@
 		"name":"appfork-check-update"
 	},
 	"url":{
-		"armv6":"https://github.com/docker/compose/releases/download/v2.17.3/docker-compose-linux-armv6",
-		"armv7":"https://github.com/docker/compose/releases/download/v2.17.3/docker-compose-linux-armv7",
-		"aarch64":"https://github.com/docker/compose/releases/download/v2.17.3/docker-compose-linux-aarch64",
-		"x86_64":"https://github.com/docker/compose/releases/download/v2.17.3/docker-compose-linux-x86_64"
+		"armv6":"https://github.com/docker/compose/releases/download/v2.18.0/docker-compose-linux-armv6",
+		"armv7":"https://github.com/docker/compose/releases/download/v2.18.0/docker-compose-linux-armv7",
+		"aarch64":"https://github.com/docker/compose/releases/download/v2.18.0/docker-compose-linux-aarch64",
+		"x86_64":"https://github.com/docker/compose/releases/download/v2.18.0/docker-compose-linux-x86_64"
 	},
 	"homepage":"https://docs.docker.com/compose/"
 }
