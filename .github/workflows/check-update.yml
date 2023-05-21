@@ -3,9 +3,9 @@ name: Automatic check repository update
 on:
   workflow_dispatch:
   schedule:
-    # 在每天的3、7、11、15、19、23点各执行一次
+    # 定时执行
     # 注：github action执行服务器在国外，时区为utc+0，比北京时间晚8小时，同时服务器资源问题会排队执行，所以定时时间是不会准确执行的
-    - cron: '0 3,7,11,15,19,23 * * *'
+    - cron: '0 3,9,15,21 * * *'
 
 jobs:
   check-update:
