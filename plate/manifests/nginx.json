@@ -4,10 +4,10 @@
 	"logo":"https://nginx.org/favicon.ico",
 	"description":"nginx [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server.",
 	"category":"development",
-	"version":"1.23.4/1.24.0",
+	"version":"1.25.0/1.24.0",
 	"platform":"windows",
 	"url":{
-		"Mainline:1.23.4":"https://nginx.org/download/nginx-1.23.4.zip",
+		"Mainline:1.25.0":"https://nginx.org/download/nginx-1.25.0.zip",
 		"Stable:1.24.0":"https://nginx.org/download/nginx-1.24.0.zip"
 	},
 	"homepage":"https://nginx.org"
