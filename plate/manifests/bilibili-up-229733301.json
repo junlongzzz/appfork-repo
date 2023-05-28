@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1Jc411G7Hh",
+	"version":"BV1tu411s7CA",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】张学友《离人》神级口哨现场！你说情到深处人怎能不孤独 [2023-05-25]":"https://www.bilibili.com/video/BV1Jc411G7Hh"
+		"【私藏馆】张学友《小城大事》神级翻唱现场！唱哭无数人的神曲 [2023-05-28]":"https://www.bilibili.com/video/BV1tu411s7CA"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
