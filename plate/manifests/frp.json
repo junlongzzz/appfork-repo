@@ -4,5 +4,11 @@
 	"description":"A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.",
 	"category":"network",
 	"platform":"windows",
-	"homepage":"https://github.com/fatedier/frp"
+	"homepage":"https://github.com/fatedier/frp",
+	"version":"0.49.0",
+	"url":{
+		"frp_0.49.0_windows_386.zip":"https://github.com/fatedier/frp/releases/download/v0.49.0/frp_0.49.0_windows_386.zip",
+		"frp_0.49.0_windows_amd64.zip":"https://github.com/fatedier/frp/releases/download/v0.49.0/frp_0.49.0_windows_amd64.zip",
+		"frp_0.49.0_windows_arm64.zip":"https://github.com/fatedier/frp/releases/download/v0.49.0/frp_0.49.0_windows_arm64.zip"
+	}
 }
