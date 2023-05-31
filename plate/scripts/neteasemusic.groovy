@@ -35,7 +35,8 @@ static def checkUpdate(version, platform, args) {
     def response = httpClient.send(request, HttpResponse.BodyHandlers.discarding())
     def location = response.headers().firstValue('location').orElse(null)
 //    def matcher = Location =~ '_([\\d.]+\\d)(.*?).exe'
-    def matcher = location =~ '([\\d.]+).exe'
+//    def matcher = location =~ '([\\d.]+).exe'
+    def matcher = location =~ '/*_([\\d.]+)'
     if (!matcher.find()) {
         return null
     }
