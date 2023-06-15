@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1QL411q7Rn",
+	"version":"BV1Zu411Y7RY",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】胡歌《六月的雨》青春里的神曲！《仙剑奇侠传》插曲 [2023-06-01]":"https://www.bilibili.com/video/BV1QL411q7Rn"
+		"【私藏馆】谭咏麟《讲不出再见》神级现场！永远的经典 [2023-06-11]":"https://www.bilibili.com/video/BV1Zu411Y7RY"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
