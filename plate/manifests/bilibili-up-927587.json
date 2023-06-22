@@ -3,7 +3,7 @@
 	"name":"[B站]木鱼水心今天更新视频了吗？",
 	"description":"\"影评某种程度上，是让看过这部片的人，不那么孤独的东西\"。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1BX4y147Ab",
+	"version":"BV1ko4y1P7jA",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"超越时代的神作！中国第一部电视喜剧！《编辑部的故事》P1 [2023-06-17]":"https://www.bilibili.com/video/BV1BX4y147Ab"
+		"死亡预告！葛优卷入禁忌之恋？《编辑部的故事》P2 [2023-06-21]":"https://www.bilibili.com/video/BV1ko4y1P7jA"
 	},
 	"homepage":"https://space.bilibili.com/927587"
 }
