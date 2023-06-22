@@ -3,11 +3,11 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2023-06-22 23:00:00 (3374892000)",
+	"version":"2023-06-29 23:00:00 (3376101600)",
 	"platform":"other",
 	"url":{
-		"Guacamelee! Super Turbo Championship Edition [2023-06-22 23:00:00]":"https://store.epicgames.com/zh-CN/p/guacamelee-stce-7cdbc8",
-		"Guacamelee! 2 [2023-06-22 23:00:00]":"https://store.epicgames.com/zh-CN/p/guacamelee-2-ac4977"
+		"《Idle Champions of the Forgotten Realms》 [2023-06-29 23:00:00]":"https://store.epicgames.com/zh-CN/p/idle-champions-of-the-forgotten-realms",
+		"theHunter: Call of the Wild™ [2023-06-29 23:00:00]":"https://store.epicgames.com/zh-CN/p/thehunter-call-of-the-wild"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
