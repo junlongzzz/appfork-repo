@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV17a4y1A7t6",
+	"version":"BV1m14y1o7EB",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】迈克尔·杰克逊《Billie Jean》太空步名场面现场！无法超越 [2023-06-25]":"https://www.bilibili.com/video/BV17a4y1A7t6"
+		"【4K60FPS】张学友《天黑黑》《听海》《约定》三连唱神级现场！活出生命！ [2023-07-04]":"https://www.bilibili.com/video/BV1m14y1o7EB"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
