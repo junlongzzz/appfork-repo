@@ -3,7 +3,7 @@
 	"name":"[B站]木鱼水心今天更新视频了吗？",
 	"description":"\"影评某种程度上，是让看过这部片的人，不那么孤独的东西\"。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1Bj411m7k8",
+	"version":"BV1HF411R7fR",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"兄弟抢了我女神！媒人竟是我自己？《编辑部的故事》P5 [2023-07-01]":"https://www.bilibili.com/video/BV1Bj411m7k8"
+		"冬宝变身偶像制作人！最后竟要塌房了？《编辑部的故事》P6 [2023-07-05]":"https://www.bilibili.com/video/BV1HF411R7fR"
 	},
 	"homepage":"https://space.bilibili.com/927587"
 }
