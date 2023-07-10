@@ -1,9 +1,11 @@
 {
-  "author": "Tencent",
-  "name": "QQ-全新NT版",
-  "logo": "https://qzonestyle.gtimg.cn/qzone/qzact/act/external/tiqq/logo.png",
-  "description": "![p1](https://im.qq.com/pcqq/images/new/p1.png)\n![p2](https://im.qq.com/pcqq/images/new/p2.gif)\n![p3](https://im.qq.com/pcqq/images/new/p3.gif)\n![p4](https://im.qq.com/pcqq/images/new/p4.png)\n![p5](\nhttps://im.qq.com/pcqq/images/new/p5.png)\n![p6](https://im.qq.com/pcqq/images/new/p6.png)",
-  "category": "chat",
-  "platform": "windows",
-  "homepage": "https://im.qq.com/pcqq/index.shtml"
+	"author":"Tencent",
+	"name":"QQ-全新NT版",
+	"logo":"https://qzonestyle.gtimg.cn/qzone/qzact/act/external/tiqq/logo.png",
+	"description":"![p1](https://im.qq.com/pcqq/images/new/p1.png)\n![p2](https://im.qq.com/pcqq/images/new/p2.gif)\n![p3](https://im.qq.com/pcqq/images/new/p3.gif)\n![p4](https://im.qq.com/pcqq/images/new/p4.png)\n![p5](\nhttps://im.qq.com/pcqq/images/new/p5.png)\n![p6](https://im.qq.com/pcqq/images/new/p6.png)",
+	"category":"chat",
+	"platform":"windows",
+	"homepage":"https://im.qq.com/pcqq/index.shtml",
+	"version":"9.9.0.14569",
+	"url":"https://dldir1.qq.com/qqfile/qq/QQNT/bbabcfd7/QQ9.9.0.14569_x64.exe"
 }
