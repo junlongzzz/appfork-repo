@@ -4,13 +4,13 @@
 	"logo":"https://gitforwindows.org/img/gwindows_logo.png",
 	"description":"This is Git for Windows, the Windows port of Git.",
 	"category":"development",
-	"version":"2.41.0.windows.3",
+	"version":"2.41.0.windows.1",
 	"platform":"windows",
 	"url":{
-		"Git-2.41.0.3-32-bit.exe":"https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.3/Git-2.41.0.3-32-bit.exe",
-		"Git-2.41.0.3-64-bit.exe":"https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.3/Git-2.41.0.3-64-bit.exe",
-		"PortableGit-2.41.0.3-32-bit.7z.exe":"https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.3/PortableGit-2.41.0.3-32-bit.7z.exe",
-		"PortableGit-2.41.0.3-64-bit.7z.exe":"https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.3/PortableGit-2.41.0.3-64-bit.7z.exe"
+		"Git-2.41.0-32-bit.exe":"https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.1/Git-2.41.0-32-bit.exe",
+		"Git-2.41.0-64-bit.exe":"https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.1/Git-2.41.0-64-bit.exe",
+		"PortableGit-2.41.0-32-bit.7z.exe":"https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.1/PortableGit-2.41.0-32-bit.7z.exe",
+		"PortableGit-2.41.0-64-bit.7z.exe":"https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.1/PortableGit-2.41.0-64-bit.7z.exe"
 	},
 	"homepage":"https://gitforwindows.org"
 }
