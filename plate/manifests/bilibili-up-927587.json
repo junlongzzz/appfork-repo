@@ -3,7 +3,7 @@
 	"name":"[B站]木鱼水心今天更新视频了吗？",
 	"description":"\"影评某种程度上，是让看过这部片的人，不那么孤独的东西\"。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1M8411Q75X",
+	"version":"BV1Cm4y177EJ",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"胖子不能当厨师？编辑部上演减肥踩雷大全！《编辑部的故事》P9 [2023-07-15]":"https://www.bilibili.com/video/BV1M8411Q75X"
+		"三十年前的人工智能，竟在编辑部打杂？《编辑部的故事》P10 [2023-07-19]":"https://www.bilibili.com/video/BV1Cm4y177EJ"
 	},
 	"homepage":"https://space.bilibili.com/927587"
 }
