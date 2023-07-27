@@ -3,11 +3,11 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2023-07-27 23:00:00 (3380940000)",
+	"version":"2023-08-03 23:00:00 (3382149600)",
 	"platform":"other",
 	"url":{
-		"《Murder by Numbers》 [2023-07-27 23:00:00]":"https://store.epicgames.com/zh-CN/p/murder-by-numbers",
-		"The Elder Scrolls Online [2023-07-27 23:00:00]":"https://store.epicgames.com/zh-CN/p/the-elder-scrolls-online"
+		"《Severed Steel》 [2023-08-03 23:00:00]":"https://store.epicgames.com/zh-CN/p/severed-steel",
+		"Homeworld Remastered Collection [2023-08-03 23:00:00]":"https://store.epicgames.com/zh-CN/p/homeworld-remastered-collection"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
