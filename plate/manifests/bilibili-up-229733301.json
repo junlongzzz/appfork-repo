@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1rV4y147hM",
+	"version":"BV1TV4y1q7qV",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】孙燕姿《逆光》《天黑黑》两大神级现场！她的眼里有光 [2023-07-21]":"https://www.bilibili.com/video/BV1rV4y147hM"
+		"【私藏馆】陈奕迅《最佳损友》经典神级现场！知己难求 [2023-07-27]":"https://www.bilibili.com/video/BV1TV4y1q7qV"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
