@@ -4,7 +4,7 @@
 	"logo":"https://halo.run/upload/2022/03/logo.svg",
 	"description":"一款现代化的开源博客/CMS系统，值得一试。本软件使用Java语言进行开发，使用前请安装Java运行时环境，或者直接使用Docker进行部署，前往官网阅读文档了解更多。",
 	"category":"reading",
-	"version":"2.7.0",
+	"version":"2.8.0",
 	"platform":"other",
 	"url":{
 		"via Docker":"https://hub.docker.com/r/halohub/halo"
