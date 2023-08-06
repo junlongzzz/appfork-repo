@@ -3,7 +3,7 @@
 	"name":"[B站]木鱼水心今天更新视频了吗？",
 	"description":"\"影评某种程度上，是让看过这部片的人，不那么孤独的东西\"。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1w841127SP",
+	"version":"BV1R841197CN",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"9.1分现象级韩剧！揭秘韩国男人逃不掉的噩梦！一口气看完Netflix爆款《D.P：逃兵追缉令》S1 [2023-07-29]":"https://www.bilibili.com/video/BV1w841127SP"
+		"被逼疯！向战友连开14枪！他经历了什么？一口气看完Netflix高口碑韩剧《D.P逃兵追缉令》S2 [2023-08-05]":"https://www.bilibili.com/video/BV1R841197CN"
 	},
 	"homepage":"https://space.bilibili.com/927587"
 }
