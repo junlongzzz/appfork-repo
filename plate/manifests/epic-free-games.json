@@ -3,11 +3,11 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2023-08-10 23:00:00 (3383359200)",
+	"version":"2023-08-17 23:00:00 (3384568800)",
 	"platform":"other",
 	"url":{
-		"《Loop Hero》 [2023-08-10 23:00:00]":"https://store.epicgames.com/zh-CN/p/loop-hero",
-		"Bloons TD 6 [2023-08-10 23:00:00]":"https://store.epicgames.com/zh-CN/p/bloons-td-6-bf95a0"
+		"Europa Universalis IV [2023-08-17 23:00:00]":"https://store.epicgames.com/zh-CN/p/europa-universalis-iv",
+		"《Orwell: Keeping an Eye on You》 [2023-08-17 23:00:00]":"https://store.epicgames.com/zh-CN/p/orwell-keeping-an-eye-on-you"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
