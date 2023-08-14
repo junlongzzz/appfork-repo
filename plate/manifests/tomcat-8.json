@@ -12,10 +12,10 @@
 			"ver":"8"
 		}
 	},
-	"version":"8.5.91",
+	"version":"8.5.92",
 	"url":{
-		"apache-tomcat-8.5.91.exe":"https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.91/bin/apache-tomcat-8.5.91.exe",
-		"apache-tomcat-8.5.91-windows-x64.zip":"https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.91/bin/apache-tomcat-8.5.91-windows-x64.zip",
-		"apache-tomcat-8.5.91-windows-x86.zip":"https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.91/bin/apache-tomcat-8.5.91-windows-x86.zip"
+		"apache-tomcat-8.5.92.exe":"https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.92/bin/apache-tomcat-8.5.92.exe",
+		"apache-tomcat-8.5.92-windows-x64.zip":"https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.92/bin/apache-tomcat-8.5.92-windows-x64.zip",
+		"apache-tomcat-8.5.92-windows-x86.zip":"https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.92/bin/apache-tomcat-8.5.92-windows-x86.zip"
 	}
 }
