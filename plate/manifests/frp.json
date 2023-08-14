@@ -5,10 +5,10 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://github.com/fatedier/frp",
-	"version":"0.51.2",
+	"version":"0.51.3",
 	"url":{
-		"frp_0.51.2_windows_386.zip":"https://github.com/fatedier/frp/releases/download/v0.51.2/frp_0.51.2_windows_386.zip",
-		"frp_0.51.2_windows_amd64.zip":"https://github.com/fatedier/frp/releases/download/v0.51.2/frp_0.51.2_windows_amd64.zip",
-		"frp_0.51.2_windows_arm64.zip":"https://github.com/fatedier/frp/releases/download/v0.51.2/frp_0.51.2_windows_arm64.zip"
+		"frp_0.51.3_windows_386.zip":"https://github.com/fatedier/frp/releases/download/v0.51.3/frp_0.51.3_windows_386.zip",
+		"frp_0.51.3_windows_amd64.zip":"https://github.com/fatedier/frp/releases/download/v0.51.3/frp_0.51.3_windows_amd64.zip",
+		"frp_0.51.3_windows_arm64.zip":"https://github.com/fatedier/frp/releases/download/v0.51.3/frp_0.51.3_windows_arm64.zip"
 	}
 }
