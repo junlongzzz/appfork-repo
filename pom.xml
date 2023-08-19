@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -19,9 +19,9 @@
 
     <properties>
         <java.version>17</java.version>
-        <groovy4.version>4.0.12</groovy4.version>
-        <hutool.version>5.8.19</hutool.version>
-        <fastjson2.version>2.0.33</fastjson2.version>
+        <groovy4.version>4.0.13</groovy4.version>
+        <hutool.version>5.8.20</hutool.version>
+        <fastjson2.version>2.0.39</fastjson2.version>
         <jsoup.version>1.16.1</jsoup.version>
         <dom4j.version>2.1.4</dom4j.version>
         <jaxen.version>2.0.0</jaxen.version>
