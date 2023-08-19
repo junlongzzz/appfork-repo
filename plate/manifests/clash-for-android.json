@@ -1,8 +1,17 @@
 {
-  "author": "Kr328",
-  "name": "Clash For Android",
-  "description": "A Graphical user interface of clash for Android. Requirement: Android 5.0+ (minimum), Android 7.0+ (recommend), armeabi-v7a , arm64-v8a, x86 or x86_64 Architecture.",
-  "category": "network",
-  "platform": "android",
-  "homepage": "https://github.com/Kr328/ClashForAndroid"
+	"author":"Kr328",
+	"name":"Clash For Android",
+	"description":"A Graphical user interface of clash for Android. Requirement: Android 5.0+ (minimum), Android 7.0+ (recommend), armeabi-v7a , arm64-v8a, x86 or x86_64 Architecture.",
+	"category":"network",
+	"platform":"android",
+	"homepage":"https://github.com/Kr328/ClashForAndroid",
+	"version":"2.5.12",
+	"url":{
+		"Get it on Google Play":"https://play.google.com/store/apps/details?id=com.github.kr328.clash",
+		"cfa-2.5.12-premium-arm64-v8a-release.apk":"https://github.com/Kr328/ClashForAndroid/releases/download/v2.5.12/cfa-2.5.12-premium-arm64-v8a-release.apk",
+		"cfa-2.5.12-premium-armeabi-v7a-release.apk":"https://github.com/Kr328/ClashForAndroid/releases/download/v2.5.12/cfa-2.5.12-premium-armeabi-v7a-release.apk",
+		"cfa-2.5.12-premium-universal-release.apk":"https://github.com/Kr328/ClashForAndroid/releases/download/v2.5.12/cfa-2.5.12-premium-universal-release.apk",
+		"cfa-2.5.12-premium-x86-release.apk":"https://github.com/Kr328/ClashForAndroid/releases/download/v2.5.12/cfa-2.5.12-premium-x86-release.apk",
+		"cfa-2.5.12-premium-x86_64-release.apk":"https://github.com/Kr328/ClashForAndroid/releases/download/v2.5.12/cfa-2.5.12-premium-x86_64-release.apk"
+	}
 }
