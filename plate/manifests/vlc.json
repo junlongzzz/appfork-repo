@@ -5,5 +5,13 @@
 	"description":"VLC 是一款自由、开源的跨平台多媒体播放器及框架，可播放大多数多媒体文件，以及 DVD、音频 CD、VCD 及各类流媒体协议。",
 	"category":"video",
 	"platform":"windows",
-	"homepage":"https://www.videolan.org"
+	"homepage":"https://www.videolan.org",
+	"version":"3.0.18",
+	"url":{
+		"7zip package":"https://get.videolan.org/vlc/3.0.18/win32/vlc-3.0.18-win32.7z",
+		"Zip package":"https://get.videolan.org/vlc/3.0.18/win32/vlc-3.0.18-win32.zip",
+		"MSI package":"https://get.videolan.org/vlc/3.0.18/win32/vlc-3.0.18-win32.msi",
+		"Installer for 64bit version":"https://get.videolan.org/vlc/3.0.18/win64/vlc-3.0.18-win64.exe",
+		"MSI package for 64bit version":"https://get.videolan.org/vlc/3.0.18/win64/vlc-3.0.18-win64.msi"
+	}
 }

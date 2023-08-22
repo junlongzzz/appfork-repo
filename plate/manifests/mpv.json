@@ -1,9 +1,14 @@
 {
-  "author": "Open Source Contributors",
-  "name": "mpv",
-  "logo": "https://mpv.io/images/mpv-logo-128-0baae5aa.png",
-  "description": "a free, open source, and cross-platform media player.",
-  "category": "video",
-  "platform": "windows",
-  "homepage": "https://mpv.io"
+	"author":"Open Source Contributors",
+	"name":"mpv",
+	"logo":"https://mpv.io/images/mpv-logo-128-0baae5aa.png",
+	"description":"a free, open source, and cross-platform media player.",
+	"category":"video",
+	"platform":"windows",
+	"homepage":"https://mpv.io",
+	"version":"0.36.0",
+	"url":{
+		"64Bit":"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.36.0-x86_64.7z",
+		"32Bit":"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.36.0-i686.7z"
+	}
 }
