@@ -1,7 +1,7 @@
 {
 	"author":"Fndroid",
-	"name":"Clash For Windows",
-	"description":"A Windows/macOS/Linux GUI based on Clash and Electron.",
+	"name":"Clash for Windows",
+	"description":"A Windows/macOS/Linux GUI based on [Clash](https://github.com/Dreamacro/clash) and Electron.",
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://github.com/Fndroid/clash_for_windows_pkg",

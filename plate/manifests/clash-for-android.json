@@ -1,7 +1,7 @@
 {
 	"author":"Kr328",
-	"name":"Clash For Android",
-	"description":"A Graphical user interface of clash for Android. Requirement: Android 5.0+ (minimum), Android 7.0+ (recommend), armeabi-v7a , arm64-v8a, x86 or x86_64 Architecture.",
+	"name":"Clash for Android",
+	"description":"A Graphical user interface of [Clash](https://github.com/Dreamacro/clash) for Android. Requirement: Android 5.0+ (minimum), Android 7.0+ (recommend), armeabi-v7a , arm64-v8a, x86 or x86_64 Architecture.",
 	"category":"network",
 	"platform":"android",
 	"homepage":"https://github.com/Kr328/ClashForAndroid",
