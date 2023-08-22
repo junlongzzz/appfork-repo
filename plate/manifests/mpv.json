@@ -1,0 +1,9 @@
+{
+  "author": "Open Source Contributors",
+  "name": "mpv",
+  "logo": "https://mpv.io/images/mpv-logo-128-0baae5aa.png",
+  "description": "a free, open source, and cross-platform media player.",
+  "category": "video",
+  "platform": "windows",
+  "homepage": "https://mpv.io"
+}
