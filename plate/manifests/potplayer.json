@@ -1,8 +1,13 @@
 {
-  "author": "Daum Communications",
-  "name": "PotPlayer",
-  "description": "Highly customizable multimedia player.",
-  "category": "video",
-  "platform": "windows",
-  "homepage": "https://potplayer.daum.net"
+	"author":"Daum Communications",
+	"name":"PotPlayer",
+	"description":"Highly customizable multimedia player.",
+	"category":"video",
+	"platform":"windows",
+	"homepage":"https://potplayer.daum.net",
+	"version":"230705",
+	"url":{
+		"64Bit":"https://t1.daumcdn.net/potplayer/PotPlayer/Version/230705/PotPlayerSetup64.exe",
+		"32Bit":"https://t1.daumcdn.net/potplayer/PotPlayer/Version/230705/PotPlayerSetup.exe"
+	}
 }
