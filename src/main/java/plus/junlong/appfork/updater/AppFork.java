@@ -62,7 +62,7 @@ public class AppFork implements CommandLineRunner {
 
         File[] manifests = new File(repoPath, "manifests").listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
         if (manifests == null) {
-            log.error("目录内无清单文件或不存在该目录:{}", repoPath);
+            log.error("目录内无清单文件或不存在该目录: {}", repoPath);
             return;
         }
 
@@ -75,7 +75,7 @@ public class AppFork implements CommandLineRunner {
                     sync(manifest);
                     count++;
                 } catch (Exception e) {
-                    log.error("sync [{}] error:{}", manifest.getName(), e.getMessage());
+                    log.error("sync [{}] error: {}", manifest.getName(), e.getMessage());
                 }
             }
             return count;
@@ -157,7 +157,7 @@ public class AppFork implements CommandLineRunner {
                 // 获取脚本返回的错误信息
                 Object error = checkUpdate.get("error");
                 if (error != null) {
-                    log.error("exec [{}] script [{}] return error:{}", manifest.getName(), scriptFilename, error);
+                    log.error("exec [{}] script [{}] return error: {}", manifest.getName(), scriptFilename, error);
                 } else {
                     // 获取脚本返回的版本号
                     Object checkVersionObj = checkUpdate.get("version");
