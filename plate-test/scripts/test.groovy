@@ -10,5 +10,5 @@ static def checkUpdate(version, platform, args) {
 }
 
 static def checkUpdateTest(version, platform, args) {
-
+    // test script here
 }
