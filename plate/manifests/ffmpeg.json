@@ -1,0 +1,8 @@
+{
+  "author": "open source software",
+  "name": "FFmpeg",
+  "description": "A complete, cross-platform solution to record, convert and stream audio and video.",
+  "category": "tools",
+  "platform": "windows",
+  "homepage": "https://ffmpeg.org"
+}
