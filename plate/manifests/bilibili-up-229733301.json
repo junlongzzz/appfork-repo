@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1Sw411D7ad",
+	"version":"BV16u4y1e77h",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【4K60FPS】泰勒Taylor Swift《Love Story》史诗级现场！七夕快乐！ [2023-08-21]":"https://www.bilibili.com/video/BV1Sw411D7ad"
+		"【4K60FPS】迈克尔·杰克逊《Jam》史上经典演唱会开场！人生必看的现场 [2023-08-28]":"https://www.bilibili.com/video/BV16u4y1e77h"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
