@@ -5,13 +5,13 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://github.com/Fndroid/clash_for_windows_pkg",
-	"version":"0.20.32",
+	"version":"0.20.33",
 	"url":{
-		"Clash.for.Windows-0.20.32-arm64-win.7z":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.32/Clash.for.Windows-0.20.32-arm64-win.7z",
-		"Clash.for.Windows-0.20.32-ia32-win.7z":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.32/Clash.for.Windows-0.20.32-ia32-win.7z",
-		"Clash.for.Windows-0.20.32-win.7z":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.32/Clash.for.Windows-0.20.32-win.7z",
-		"Clash.for.Windows.Setup.0.20.32.arm64.exe":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.32/Clash.for.Windows.Setup.0.20.32.arm64.exe",
-		"Clash.for.Windows.Setup.0.20.32.exe":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.32/Clash.for.Windows.Setup.0.20.32.exe",
-		"Clash.for.Windows.Setup.0.20.32.ia32.exe":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.32/Clash.for.Windows.Setup.0.20.32.ia32.exe"
+		"Clash.for.Windows-0.20.33-arm64-win.7z":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.33/Clash.for.Windows-0.20.33-arm64-win.7z",
+		"Clash.for.Windows-0.20.33-ia32-win.7z":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.33/Clash.for.Windows-0.20.33-ia32-win.7z",
+		"Clash.for.Windows-0.20.33-win.7z":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.33/Clash.for.Windows-0.20.33-win.7z",
+		"Clash.for.Windows.Setup.0.20.33.arm64.exe":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.33/Clash.for.Windows.Setup.0.20.33.arm64.exe",
+		"Clash.for.Windows.Setup.0.20.33.exe":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.33/Clash.for.Windows.Setup.0.20.33.exe",
+		"Clash.for.Windows.Setup.0.20.33.ia32.exe":"https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.33/Clash.for.Windows.Setup.0.20.33.ia32.exe"
 	}
 }
