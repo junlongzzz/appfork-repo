@@ -1,9 +1,14 @@
 {
-  "author": "Redis",
-  "name": "Redis",
-  "description": "Redis is an open source (BSD licensed), in-memory data structure store used as a database, cache, message broker, and streaming engine.",
-  "category": "development",
-  "platform": "windows",
-  "homepage": "https://redis.io",
-  "script": "redis"
+	"author":"Redis",
+	"name":"Redis",
+	"description":"Redis is an open source (BSD licensed), in-memory data structure store used as a database, cache, message broker, and streaming engine.",
+	"category":"development",
+	"platform":"windows",
+	"homepage":"https://redis.io",
+	"script":"redis",
+	"version":"7.0.13",
+	"url":{
+		"Redis-7.0.13-Windows-x64-with-Service.tar.gz":"https://github.com/redis-windows/redis-windows/releases/download/7.0.13/Redis-7.0.13-Windows-x64-with-Service.tar.gz",
+		"Redis-7.0.13-Windows-x64.tar.gz":"https://github.com/redis-windows/redis-windows/releases/download/7.0.13/Redis-7.0.13-Windows-x64.tar.gz"
+	}
 }
