@@ -21,7 +21,7 @@
         <java.version>17</java.version>
         <groovy4.version>4.0.14</groovy4.version>
         <hutool.version>5.8.20</hutool.version>
-        <fastjson2.version>2.0.39</fastjson2.version>
+        <fastjson2.version>2.0.40</fastjson2.version>
         <jsoup.version>1.16.1</jsoup.version>
         <dom4j.version>2.1.4</dom4j.version>
         <jaxen.version>2.0.0</jaxen.version>

@@ -1,0 +1,9 @@
+{
+  "author": "RedisInsight",
+  "name": "RESP(Redis Desktop Manager)",
+  "description": "RESP.app - GUI for Redis ® (Formerly RedisDesktopManager)",
+  "category": "development",
+  "platform": "windows",
+  "homepage": "https://resp.app",
+  "script": "redis-desktop-manager"
+}
