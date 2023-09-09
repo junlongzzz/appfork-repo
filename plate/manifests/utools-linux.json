@@ -4,11 +4,11 @@
 	"logo":"https://u.tools/favicon.ico",
 	"description":"新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持UOS, Deepin, Ubuntu。视频介绍：\n<div class=\"mdui-video-container\"><video poster=\"https://res.u-tools.cn/website/video-play.png\" src=\"https://res.u-tools.cn/videos/utools3.mp4\" controls>你的浏览器不支持video标签</video></div>",
 	"category":"tools",
-	"version":"4.0.1",
+	"version":"3.3.0",
 	"platform":"linux",
 	"script":"utools",
 	"url":{
-		"amd64_deb":"https://res.u-tools.cn/version2/utools_4.0.1_amd64.deb"
+		"amd64_deb":"https://res.u-tools.cn/version2/utools_3.3.0_amd64.deb"
 	},
 	"homepage":"https://u.tools"
 }
