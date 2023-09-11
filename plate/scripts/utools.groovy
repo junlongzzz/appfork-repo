@@ -1,7 +1,11 @@
+import cn.hutool.core.comparator.VersionComparator
 import groovy.yaml.YamlSlurper
 
 static def checkUpdate(version, platform, args) {
     def latest = new YamlSlurper().parseText('https://res.u-tools.cn/version2/latest.yml'.toURL().text)
+    if (VersionComparator.INSTANCE.compare(latest.version as String, version as String) != 1) {
+        return null
+    }
     version = latest.version
     if (version == null) {
         return null
