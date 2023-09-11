@@ -6,11 +6,11 @@
 	"author":"Obsidian Team",
 	"category":"reading",
 	"platform":"windows",
-	"version":"1.4.5",
+	"version":"1.4.11",
 	"url":{
-		"Obsidian.1.4.5-32.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.5/Obsidian.1.4.5-32.exe",
-		"Obsidian.1.4.5-allusers.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.5/Obsidian.1.4.5-allusers.exe",
-		"Obsidian.1.4.5-arm64.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.5/Obsidian.1.4.5-arm64.exe",
-		"Obsidian.1.4.5.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.5/Obsidian.1.4.5.exe"
+		"Obsidian.1.4.11-32.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.11/Obsidian.1.4.11-32.exe",
+		"Obsidian.1.4.11-allusers.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.11/Obsidian.1.4.11-allusers.exe",
+		"Obsidian.1.4.11-arm64.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.11/Obsidian.1.4.11-arm64.exe",
+		"Obsidian.1.4.11.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.11/Obsidian.1.4.11.exe"
 	}
 }
