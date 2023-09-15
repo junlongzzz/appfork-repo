@@ -15,5 +15,10 @@
 		},
 		"name":"appfork-check-update"
 	},
-	"homepage":"https://github.com/zhile-io/pandora"
+	"homepage":"https://github.com/zhile-io/pandora",
+	"version":"1.3.2",
+	"url":{
+		"chat.zhile.io":"https://chat.zhile.io",
+		"ai.junlong.plus":"https://ai.junlong.plus"
+	}
 }
