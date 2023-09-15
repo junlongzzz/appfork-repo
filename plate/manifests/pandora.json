@@ -1,0 +1,19 @@
+{
+	"author":"pengzhile",
+	"name":"Pandora",
+	"description":"潘多拉 (Pandora)，一个让你呼吸顺畅的 ChatGPT。实现了网页版 ChatGPT 的主要操作。后端优化，绕过 Cloudflare，速度喜人。",
+	"category":"tools",
+	"platform":"other",
+	"script":{
+		"args":{
+			"regex":"/releases/tag/[vV]?([\\d.]+)",
+			"other":{
+				"chat.zhile.io":"https://chat.zhile.io",
+				"ai.junlong.plus":"https://ai.junlong.plus"
+			},
+			"url":"https://api.github.com/repos/zhile-io/pandora/releases/latest"
+		},
+		"name":"appfork-check-update"
+	},
+	"homepage":"https://github.com/zhile-io/pandora"
+}
