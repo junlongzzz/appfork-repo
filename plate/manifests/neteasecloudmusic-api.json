@@ -1,0 +1,18 @@
+{
+	"author":"Binaryify <binaryify@gmail.com>",
+	"name":"网易云音乐 API",
+	"description":"网易云音乐 Node.js API service",
+	"category":"music",
+	"platform":"other",
+	"script":{
+		"args":{
+			"regex":"/releases/tag/[vV]?([\\d.]+)",
+			"other":{
+				"文档查看":"https://binaryify.github.io/NeteaseCloudMusicApi"
+			},
+			"url":"https://api.github.com/repos/Binaryify/NeteaseCloudMusicApi/releases/latest"
+		},
+		"name":"appfork-check-update"
+	},
+	"homepage":"https://github.com/Binaryify/NeteaseCloudMusicApi"
+}
