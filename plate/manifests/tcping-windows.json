@@ -1,19 +1,24 @@
 {
-  "author": "Eli Fulkerson",
-  "name": "Tcping",
-  "description": "tcping.exe is a console application that operates similarly to 'ping', however it works over a tcp port.",
-  "category": "tools",
-  "platform": "windows",
-  "script": {
-    "args": {
-      "regex": "Index of /files/tcping/([\\d.]+)",
-      "autoupdate": {
-        "64Bit": "https://download.elifulkerson.com/files/tcping/${version}/x64/tcping64.exe",
-        "32Bit": "https://download.elifulkerson.com/files/tcping/${version}/tcping.exe"
-      },
-      "url": "https://download.elifulkerson.com/files/tcping/current/"
-    },
-    "name": "appfork-check-update"
-  },
-  "homepage": "https://www.elifulkerson.com/projects/tcping.php"
+	"author":"Eli Fulkerson",
+	"name":"Tcping",
+	"description":"tcping.exe is a console application that operates similarly to 'ping', however it works over a tcp port.",
+	"category":"tools",
+	"platform":"windows",
+	"script":{
+		"args":{
+			"regex":"Index of /files/tcping/([\\d.]+)",
+			"autoupdate":{
+				"64Bit":"https://download.elifulkerson.com/files/tcping/${version}/x64/tcping64.exe",
+				"32Bit":"https://download.elifulkerson.com/files/tcping/${version}/tcping.exe"
+			},
+			"url":"https://download.elifulkerson.com/files/tcping/current/"
+		},
+		"name":"appfork-check-update"
+	},
+	"homepage":"https://www.elifulkerson.com/projects/tcping.php",
+	"version":"0.39",
+	"url":{
+		"64Bit":"https://download.elifulkerson.com/files/tcping/0.39/x64/tcping64.exe",
+		"32Bit":"https://download.elifulkerson.com/files/tcping/0.39/tcping.exe"
+	}
 }
