@@ -10,7 +10,7 @@ static def checkUpdate(version, platform, args) {
     def regex = args.regex as String
     def jsonpath = args.jsonpath as String
     def xpath = args.xpath as String
-    def updateUrl = args[platform as String]
+    def updateUrl = args.autoupdate ? args.autoupdate : args[platform as String]
 
     if (!checkUrl || !updateUrl) {
         return null
@@ -24,7 +24,7 @@ static def checkUpdate(version, platform, args) {
             return null
         }
         version = matcher[0][1] as String
-    } else if (jsonpath) { // json
+    } else if (jsonpath) { // jsonpath
         def read = JsonPath.read(response, jsonpath)
         if (read instanceof List) {
             version = read[0] as String
