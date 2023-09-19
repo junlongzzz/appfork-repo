@@ -51,6 +51,7 @@ public class AppFork implements CommandLineRunner {
         categories.put("image", "系统镜像");
     }
 
+    private static final GroovyShell GROOVY_SHELL = new GroovyShell();
     private static final Map<String, Script> SCRIPT_CACHE = new LinkedHashMap<>();
 
     @Value("${config.repo-path}")
@@ -147,7 +148,7 @@ public class AppFork implements CommandLineRunner {
             String scriptFilename = script.getName();
             Script updateScript = SCRIPT_CACHE.get(scriptFilename);
             if (updateScript == null) {
-                updateScript = new GroovyShell().parse(script);
+                updateScript = GROOVY_SHELL.parse(script);
                 SCRIPT_CACHE.put(scriptFilename, updateScript);
             }
             // 执行检测App更新的脚本指定方法
