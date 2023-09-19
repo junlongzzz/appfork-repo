@@ -3,7 +3,7 @@
 	"name":"[B站]老师好我叫何同学今天更新视频了吗？",
 	"description":"喜欢做贼有意思的视频。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1fu411G7e3",
+	"version":"BV1BH4y1S7BN",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【何同学】 为了找到专注的秘诀，我们找500人做了个实验... [2023-07-29]":"https://www.bilibili.com/video/BV1fu411G7e3"
+		"【何同学】十五而立 | iPhone 15 系列首发体验 [2023-09-19]":"https://www.bilibili.com/video/BV1BH4y1S7BN"
 	},
 	"homepage":"https://space.bilibili.com/163637592"
 }
