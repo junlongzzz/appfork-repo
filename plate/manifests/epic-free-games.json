@@ -3,10 +3,11 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2023-09-21 23:00:00 (1695308400)",
+	"version":"2023-09-28 23:00:00 (3391826400)",
 	"platform":"other",
 	"url":{
-		"911 Operator [2023-09-21 23:00:00]":"https://store.epicgames.com/zh-CN/p/911-operator-585edd"
+		"Out of Line [2023-09-28 23:00:00]":"https://store.epicgames.com/zh-CN/p/out-of-line-209cbb",
+		"The Forest Quartet [2023-09-28 23:00:00]":"https://store.epicgames.com/zh-CN/p/forest-quartet-5d03e3"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
