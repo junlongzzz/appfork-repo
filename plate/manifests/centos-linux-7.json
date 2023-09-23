@@ -1,0 +1,21 @@
+{
+  "author": "The CentOS Project",
+  "name": "CentOS Linux 7",
+  "description": "CentOS Linux 7（简称 CentOS 7）是一种免费且开源的Linux发行版，它基于Red Hat Enterprise Linux（RHEL）源代码构建而成。此处只提供x86_64架构镜像下载地址。注意：CentOS 7 将在2024年6月30日后停止维护！",
+  "category": "image",
+  "platform": "linux",
+  "script": {
+    "args": {
+      "regex": "/([\\d.]+)/isos/",
+      "autoupdate": {
+        "via Aliyun Mirror": "http://mirrors.aliyun.com/centos/${version}/isos/x86_64/",
+        "via Tsinghua Mirror": "http://mirrors.tuna.tsinghua.edu.cn/centos/${version}/isos/x86_64/",
+        "via USTC Mirror": "http://mirrors.ustc.edu.cn/centos/${version}/isos/x86_64/",
+        "via 163 Mirror": "http://mirrors.163.com/centos/${version}/isos/x86_64/"
+      },
+      "url": "http://isoredirect.centos.org/centos/7/isos/x86_64/"
+    },
+    "name": "appfork-check-update"
+  },
+  "homepage": "https://www.centos.org/centos-linux/"
+}

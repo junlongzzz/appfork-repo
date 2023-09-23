@@ -23,7 +23,7 @@ static def checkUpdate(version, platform, args) {
         if (!matcher.find()) {
             return null
         }
-        version = matcher[0][1] as String
+        version = matcher.group(1)
     } else if (jsonpath) { // jsonpath
         def read = JsonPath.read(response, jsonpath)
         if (read instanceof List) {
