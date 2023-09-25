@@ -1,15 +1,17 @@
 {
-  "author": "阿里巴巴集团",
-  "name": "钉钉",
-  "logo": "https://pc3.gtimg.com/softmgr/logo/48/26980_48_1610695420.png",
-  "description": "钉钉，是阿里巴巴集团专为企业打造的一个专业通讯、协同办公平台， 帮助企业降低沟通与管理成本，提升办公效率，让数千万企业提前进入到云和移动办公时代。",
-  "category": "office",
-  "platform": "windows",
-  "homepage": "https://www.dingtalk.com",
-  "script": {
-    "args": {
-      "url": "tsc://0/26980"
-    },
-    "name": "appfork-check-update"
-  }
+	"author":"阿里巴巴集团",
+	"name":"钉钉",
+	"logo":"https://pc3.gtimg.com/softmgr/logo/48/26980_48_1610695420.png",
+	"description":"钉钉，是阿里巴巴集团专为企业打造的一个专业通讯、协同办公平台， 帮助企业降低沟通与管理成本，提升办公效率，让数千万企业提前进入到云和移动办公时代。",
+	"category":"office",
+	"platform":"windows",
+	"homepage":"https://www.dingtalk.com",
+	"script":{
+		"args":{
+			"url":"tsc://0/26980"
+		},
+		"name":"appfork-check-update"
+	},
+	"version":"7.1.0.915",
+	"url":"https://webcdn.m.qq.com/spcmgr/download/7.1.0-Release.9159115.exe"
 }

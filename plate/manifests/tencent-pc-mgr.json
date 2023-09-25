@@ -1,15 +1,17 @@
 {
-  "author": "Tencent",
-  "name": "腾讯电脑管家",
-  "logo": "https://guanjia.qq.com/assets/images/v15/favicon.ico?_t=20230209",
-  "description": "腾讯电脑管家16.0是管家的一次全新全面的升级，以“更轻更快”作为产品理念，高效解决用户电脑问题。作为国际领先的互联网安全服务提供者，重点聚焦用户体验，打磨核心能力。",
-  "category": "tools",
-  "platform": "windows",
-  "homepage": "https://guanjia.qq.com",
-  "script": {
-    "args": {
-      "url": "tsc://19/25639"
-    },
-    "name": "appfork-check-update"
-  }
+	"author":"Tencent",
+	"name":"腾讯电脑管家",
+	"logo":"https://guanjia.qq.com/assets/images/v15/favicon.ico?_t=20230209",
+	"description":"腾讯电脑管家16.0是管家的一次全新全面的升级，以“更轻更快”作为产品理念，高效解决用户电脑问题。作为国际领先的互联网安全服务提供者，重点聚焦用户体验，打磨核心能力。",
+	"category":"tools",
+	"platform":"windows",
+	"homepage":"https://guanjia.qq.com",
+	"script":{
+		"args":{
+			"url":"tsc://19/25639"
+		},
+		"name":"appfork-check-update"
+	},
+	"version":"16.8.24468.211",
+	"url":"https://webcdn.m.qq.com/spcmgr/download/PCMgr_Setup_16_8_24468_211_1813c9.exe"
 }
