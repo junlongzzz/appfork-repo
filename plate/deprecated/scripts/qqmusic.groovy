@@ -7,7 +7,7 @@ static def checkUpdate(version, platform, args) {
     }
 
     return [
-            version: versionMatcher[0][1] as String,
-            url    : urlMatcher[0][1] as String
+            version: versionMatcher.group(1) as String,
+            url    : urlMatcher.group(1) as String
     ]
 }
