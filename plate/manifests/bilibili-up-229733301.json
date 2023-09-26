@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1T94y1s7G3",
+	"version":"BV1sp4y1F7Xc",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【新现场】李克勤《月半小夜曲》弦乐现场！我的心仍然被她占有 [2023-09-14]":"https://www.bilibili.com/video/BV1T94y1s7G3"
+		"【4K60FPS】伍佰《浪人情歌》人浪名场面现场！万人大合唱太震撼 [2023-09-26]":"https://www.bilibili.com/video/BV1sp4y1F7Xc"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
