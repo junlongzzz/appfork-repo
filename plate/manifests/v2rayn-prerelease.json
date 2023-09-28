@@ -6,10 +6,11 @@
 	"version":"6.29",
 	"platform":"windows",
 	"url":{
-		"v2rayN-arm64.zip":"https://github.com/2dust/v2rayN/releases/download/6.29/v2rayN-arm64.zip",
 		"v2rayN-32.zip":"https://github.com/2dust/v2rayN/releases/download/6.29/v2rayN-32.zip",
-		"zz_v2rayN-With-Core-SelfContained.7z":"https://github.com/2dust/v2rayN/releases/download/6.29/zz_v2rayN-With-Core-SelfContained.7z",
-		"v2rayN.zip":"https://github.com/2dust/v2rayN/releases/download/6.29/v2rayN.zip"
+		"v2rayN-arm64.zip":"https://github.com/2dust/v2rayN/releases/download/6.29/v2rayN-arm64.zip",
+		"v2rayN-With-Core.zip":"https://github.com/2dust/v2rayN/releases/download/6.29/v2rayN-With-Core.zip",
+		"v2rayN.zip":"https://github.com/2dust/v2rayN/releases/download/6.29/v2rayN.zip",
+		"zz_v2rayN-With-Core-SelfContained.7z":"https://github.com/2dust/v2rayN/releases/download/6.29/zz_v2rayN-With-Core-SelfContained.7z"
 	},
 	"script":{
 		"name":"v2rayn",
