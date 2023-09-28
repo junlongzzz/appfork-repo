@@ -3,7 +3,7 @@
 	"name":"[B站]木鱼水心今天更新视频了吗？",
 	"description":"\"影评某种程度上，是让看过这部片的人，不那么孤独的东西\"。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1ap4y1F7CU",
+	"version":"BV1aC4y1f7Lx",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"史上最高单集成本！首季结局！热血与感动《海贼王》真人版P2 [2023-09-27]":"https://www.bilibili.com/video/BV1ap4y1F7CU"
+		"挑战题材尺度！关于《坚如磐石》可以透露的一切！【有备而来】02 [2023-09-28]":"https://www.bilibili.com/video/BV1aC4y1f7Lx"
 	},
 	"homepage":"https://space.bilibili.com/927587"
 }
