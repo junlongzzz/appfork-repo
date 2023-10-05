@@ -3,11 +3,10 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2023-10-05 23:00:00 (3393036000)",
+	"version":"2023-10-12 23:00:00 (1697122800)",
 	"platform":"other",
 	"url":{
-		"Model Builder [2023-10-05 23:00:00]":"https://store.epicgames.com/zh-CN/p/model-builder-f9b456",
-		"《Soulstice》 [2023-10-05 23:00:00]":"https://store.epicgames.com/zh-CN/p/soulstice"
+		"《Godlike Burger》 [2023-10-12 23:00:00]":"https://store.epicgames.com/zh-CN/p/godlike-burger-4150a0"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
