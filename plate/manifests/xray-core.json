@@ -7,12 +7,11 @@
 	"platform":"windows",
 	"script":{
 		"args":{
-			"regex":"/releases/tag/[vV]?([\\d.]+)",
-			"windows":{
+			"autoupdate":{
 				"Xray-windows-32.zip":"https://github.com/XTLS/Xray-core/releases/download/v${version}/Xray-windows-32.zip",
 				"Xray-windows-64.zip":"https://github.com/XTLS/Xray-core/releases/download/v${version}/Xray-windows-64.zip"
 			},
-			"url":"https://api.github.com/repos/XTLS/Xray-core/releases/latest"
+			"url":"gh://XTLS/Xray-core"
 		},
 		"name":"appfork-check-update"
 	},

@@ -8,14 +8,13 @@
 	"platform":"linux",
 	"script":{
 		"args":{
-			"regex":"/releases/tag/[vV]?([\\d.]+)",
-			"linux":{
+			"autoupdate":{
 				"armv6":"https://github.com/docker/compose/releases/download/v${version}/docker-compose-linux-armv6",
 				"armv7":"https://github.com/docker/compose/releases/download/v${version}/docker-compose-linux-armv7",
 				"aarch64":"https://github.com/docker/compose/releases/download/v${version}/docker-compose-linux-aarch64",
 				"x86_64":"https://github.com/docker/compose/releases/download/v${version}/docker-compose-linux-x86_64"
 			},
-			"url":"https://api.github.com/repos/docker/compose/releases/latest"
+			"url":"gh://docker/compose"
 		},
 		"name":"appfork-check-update"
 	},

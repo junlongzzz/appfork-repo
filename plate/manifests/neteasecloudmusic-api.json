@@ -6,11 +6,10 @@
 	"platform":"other",
 	"script":{
 		"args":{
-			"regex":"/releases/tag/[vV]?([\\d.]+)",
-			"other":{
+			"autoupdate":{
 				"文档查看":"https://binaryify.github.io/NeteaseCloudMusicApi"
 			},
-			"url":"https://api.github.com/repos/Binaryify/NeteaseCloudMusicApi/releases/latest"
+			"url":"gh://Binaryify/NeteaseCloudMusicApi"
 		},
 		"name":"appfork-check-update"
 	},

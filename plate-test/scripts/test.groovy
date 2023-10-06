@@ -11,16 +11,16 @@ static def checkUpdate(version, platform, args) {
 
     println(checkUpdateTest(version, platform, args))
 
-    println(tsc('tsc://0/26980'))
-
-    def respJson = lestore('/api/webstorecontents/app/details', [
-            softId: '13407'
-    ])
-    if (respJson.status != 0) {
-        println(respJson.message)
-    } else {
-        println(respJson.data)
-    }
+//    println(tsc('tsc://0/26980'))
+//
+//    def respJson = lestore('/api/webstorecontents/app/details', [
+//            softId: '13407'
+//    ])
+//    if (respJson.status != 0) {
+//        println(respJson.message)
+//    } else {
+//        println(respJson.data)
+//    }
 
     return [
             version: 'beta',
@@ -33,6 +33,7 @@ static def checkUpdateTest(version, platform, args) {
 }
 
 static tsc(appUrl, regex = '>版本：([\\d.]+)<') {
+    // 从腾讯软件中心获取版本号和下载链接
     def urlMatcher = appUrl =~ 'tsc://(\\d+)/(\\d+)'
     if (!urlMatcher.find()) {
         return null

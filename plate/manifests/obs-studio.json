@@ -8,14 +8,13 @@
 	"platform":"windows",
 	"script":{
 		"args":{
-			"regex":"/releases/tag/([\\d.]+)",
-			"windows":{
+			"autoupdate":{
 				"Installer (32-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-${version}-Full-Installer-x86.exe",
 				"Zip (64-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-${version}-Full-x64.zip",
 				"Installer (64-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-${version}-Full-Installer-x64.exe",
 				"Zip (32-bit)":"https://cdn-fastly.obsproject.com/downloads/OBS-Studio-${version}-Full-x86.zip"
 			},
-			"url":"https://api.github.com/repos/obsproject/obs-studio/releases/latest"
+			"url":"gh://obsproject/obs-studio"
 		},
 		"name":"appfork-check-update"
 	},

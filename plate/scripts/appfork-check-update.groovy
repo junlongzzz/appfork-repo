@@ -15,7 +15,7 @@ static def checkUpdate(version, platform, args) {
 
     def url = null
 
-    // 判断是不是腾讯软件中心的检测方式链接，格式为 tsc://分类ID/应用ID
+    // 判断是不是腾讯软件中心的检测方式链接，格式为 tsc://<分类ID>/<应用ID>
     // tsc为Tencent Software Center的缩写
     def urlMatcher = checkUrl =~ 'tsc://(\\d+)/(\\d+)'
     if (urlMatcher.find()) {
@@ -39,6 +39,18 @@ static def checkUpdate(version, platform, args) {
     } else {
         if (!checkUrl || !updateUrl) {
             return null
+        }
+
+        // 检查是不是github检测更新方式，格式为：gh://<用户名>/<仓库名>
+        urlMatcher = checkUrl =~ 'gh://(.+)/(.+)'
+        if (urlMatcher.find()) {
+            def owner = urlMatcher.group(1)
+            def repo = urlMatcher.group(2)
+            // 将检测更新链接转换为github最新release链接
+            checkUrl = "https://github.com/${owner}/${repo}/releases/latest" as String
+            if (!regex) {
+                regex = '/releases/tag/[vV]?([\\d.]+)'
+            }
         }
 
         def response = checkUrl.toURL().text
