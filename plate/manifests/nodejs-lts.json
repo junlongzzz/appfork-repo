@@ -6,23 +6,23 @@
 	"author":"OpenJS Foundation and Node.js contributors.",
 	"category":"development",
 	"platform":"windows",
-	"version":"18.15.0",
+	"version":"18.18.0",
 	"url":{
-		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v18.15.0/node-v18.15.0-x86.msi",
-		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v18.15.0/node-v18.15.0-x64.msi",
-		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v18.15.0/node-v18.15.0-win-x86.zip",
-		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v18.15.0/node-v18.15.0-win-x64.zip",
+		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v18.18.0/node-v18.18.0-x86.msi",
+		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v18.18.0/node-v18.18.0-x64.msi",
+		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v18.18.0/node-v18.18.0-win-x86.zip",
+		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v18.18.0/node-v18.18.0-win-x64.zip",
 		"Official Docker Image":"https://hub.docker.com/_/node/"
 	},
 	"script":{
 		"args":{
 			"regex":"/node-v([\\d.]+)-win-",
 			"autoupdate":{
-				"Installer (.msi 32-bit)": "https://nodejs.org/dist/v${version}/node-v${version}-x86.msi",
-				"Installer (.msi 64-bit)": "https://nodejs.org/dist/v${version}/node-v${version}-x64.msi",
-				"Binary (.zip 32-bit)"   : "https://nodejs.org/dist/v${version}/node-v${version}-win-x86.zip",
-				"Binary (.zip 64-bit)"   : "https://nodejs.org/dist/v${version}/node-v${version}-win-x64.zip",
-				"Official Docker Image"  : "https://hub.docker.com/_/node/"
+				"Installer (.msi 32-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-x86.msi",
+				"Installer (.msi 64-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-x64.msi",
+				"Binary (.zip 32-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-win-x86.zip",
+				"Binary (.zip 64-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-win-x64.zip",
+				"Official Docker Image":"https://hub.docker.com/_/node/"
 			},
 			"url":"https://nodejs.org/en/download"
 		},
