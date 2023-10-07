@@ -7,5 +7,13 @@
 	"version":"1.4.1.1024",
 	"platform":"windows",
 	"url":"https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe",
-	"homepage":"https://www.voidtools.com"
+	"homepage":"https://www.voidtools.com",
+	"script":{
+		"args":{
+			"regex":"Download Everything ([\\d.]+)",
+			"autoupdate":"https://www.voidtools.com/Everything-${version}.x64-Setup.exe",
+			"url":"https://www.voidtools.com"
+		},
+		"name":"appfork-check-update"
+	}
 }

@@ -7,5 +7,13 @@
 	"version":"3.9.5",
 	"platform":"windows",
 	"url":"https://repo.huaweicloud.com/apache/maven/maven-3/3.9.5/binaries/apache-maven-3.9.5-bin.zip",
-	"homepage":"https://maven.apache.org/"
+	"homepage":"https://maven.apache.org",
+	"script":{
+		"args":{
+			"regex":"<b>([\\d.]+)</b>",
+			"autoupdate":"https://repo.huaweicloud.com/apache/maven/maven-3/${version}/binaries/apache-maven-${version}-bin.zip",
+			"url":"https://maven.apache.org/docs/history.html"
+		},
+		"name":"appfork-check-update"
+	}
 }

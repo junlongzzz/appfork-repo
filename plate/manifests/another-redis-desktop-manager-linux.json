@@ -5,7 +5,13 @@
 	"category":"development",
 	"version":"1.6.1",
 	"platform":"linux",
-	"script":"another-redis-desktop-manager",
 	"url":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.6.1/Another-Redis-Desktop-Manager.1.6.1.AppImage",
-	"homepage":"https://github.com/qishibo/AnotherRedisDesktopManager"
+	"homepage":"https://github.com/qishibo/AnotherRedisDesktopManager",
+	"script":{
+		"args":{
+			"autoupdate":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager.${version}.AppImage",
+			"url":"gh://qishibo/AnotherRedisDesktopManager"
+		},
+		"name":"appfork-check-update"
+	}
 }

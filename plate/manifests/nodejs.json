@@ -13,5 +13,19 @@
 		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v19.7.0/node-v19.7.0-win-x86.zip",
 		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v19.7.0/node-v19.7.0-win-x64.zip",
 		"Official Docker Image":"https://hub.docker.com/_/node/"
+	},
+	"script":{
+		"args":{
+			"regex":"/node-v([\\d.]+)-win-",
+			"autoupdate":{
+				"Installer (.msi 32-bit)": "https://nodejs.org/dist/v${version}/node-v${version}-x86.msi",
+				"Installer (.msi 64-bit)": "https://nodejs.org/dist/v${version}/node-v${version}-x64.msi",
+				"Binary (.zip 32-bit)"   : "https://nodejs.org/dist/v${version}/node-v${version}-win-x86.zip",
+				"Binary (.zip 64-bit)"   : "https://nodejs.org/dist/v${version}/node-v${version}-win-x64.zip",
+				"Official Docker Image"  : "https://hub.docker.com/_/node/"
+			},
+			"url":"https://nodejs.org/en/download/current"
+		},
+		"name":"appfork-check-update"
 	}
 }

@@ -7,5 +7,13 @@
 	"version":"20.9",
 	"platform":"linux",
 	"url":"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/20.9/deepin-desktop-community-20.9-amd64.iso",
-	"homepage":"https://www.deepin.org"
+	"homepage":"https://www.deepin.org",
+	"script":{
+		"args":{
+			"regex":"/releases/([\\d.]+)/",
+			"autoupdate":"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/${version}/deepin-desktop-community-${version}-amd64.iso",
+			"url":"https://www.deepin.org/zh/download/"
+		},
+		"name":"appfork-check-update"
+	}
 }

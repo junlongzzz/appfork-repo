@@ -9,5 +9,15 @@
 		"amd64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.4/unblockneteasemusic-win-x64.exe",
 		"arm64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.4/unblockneteasemusic-win-arm64.exe"
 	},
-	"homepage":"https://github.com/UnblockNeteaseMusic/server"
+	"homepage":"https://github.com/UnblockNeteaseMusic/server",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"amd64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v${version}/unblockneteasemusic-win-x64.exe",
+				"arm64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v${version}/unblockneteasemusic-win-arm64.exe"
+			},
+			"url":"gh://UnblockNeteaseMusic/server"
+		},
+		"name":"appfork-check-update"
+	}
 }

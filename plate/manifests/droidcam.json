@@ -11,5 +11,17 @@
 		"Android App on Google Play":"https://play.google.com/store/apps/developer?id=Dev47Apps",
 		"iOS App on App Store":"https://apps.apple.com/us/app/droidcam-wireless-webcam/id1510258102"
 	},
-	"homepage":"https://www.dev47apps.com"
+	"homepage":"https://www.dev47apps.com",
+	"script":{
+		"args":{
+			"regex":"win-([\\d.]+)",
+			"autoupdate":{
+				"DroidCam.Setup.${version}.exe":"https://files.dev47apps.net/win/DroidCam.Setup.${version}.exe",
+				"Android App on Google Play":"https://play.google.com/store/apps/developer?id=Dev47Apps",
+				"iOS App on App Store":"https://apps.apple.com/us/app/droidcam-wireless-webcam/id1510258102"
+			},
+			"url":"gh://dev47apps/windows-releases"
+		},
+		"name":"appfork-check-update"
+	}
 }

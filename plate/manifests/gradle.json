@@ -10,5 +10,16 @@
 		"Binary-only":"https://services.gradle.org/distributions/gradle-8.4-bin.zip",
 		"Complete-all":"https://services.gradle.org/distributions/gradle-8.4-all.zip"
 	},
-	"homepage":"https://gradle.org"
+	"homepage":"https://gradle.org",
+	"script":{
+		"args":{
+			"regex":"The current Gradle release is version ([\\d.]+)",
+			"autoupdate":{
+				"Binary-only" : "https://services.gradle.org/distributions/gradle-${version}-bin.zip",
+				"Complete-all": "https://services.gradle.org/distributions/gradle-${version}-all.zip"
+			},
+			"url":"https://gradle.org/install/"
+		},
+		"name":"appfork-check-update"
+	}
 }

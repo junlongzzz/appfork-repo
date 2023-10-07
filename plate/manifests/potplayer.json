@@ -9,5 +9,16 @@
 	"url":{
 		"64Bit":"https://t1.daumcdn.net/potplayer/PotPlayer/Version/230830/PotPlayerSetup64.exe",
 		"32Bit":"https://t1.daumcdn.net/potplayer/PotPlayer/Version/230830/PotPlayerSetup.exe"
+	},
+	"script":{
+		"args":{
+			"regex":"\\[(\\d+)]",
+			"autoupdate":{
+				"64Bit":"https://t1.daumcdn.net/potplayer/PotPlayer/Version/${version}/PotPlayerSetup64.exe",
+				"32Bit":"https://t1.daumcdn.net/potplayer/PotPlayer/Version/${version}/PotPlayerSetup.exe"
+			},
+			"url":"https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html"
+		},
+		"name":"appfork-check-update"
 	}
 }

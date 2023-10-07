@@ -12,5 +12,18 @@
 		"arm64_msi":"https://dl.google.com/go/go1.21.2.windows-arm64.msi",
 		"arm64_zip":"https://dl.google.com/go/go1.21.2.windows-arm64.zip"
 	},
-	"homepage":"https://go.dev"
+	"homepage":"https://go.dev",
+	"script":{
+		"args":{
+			"regex":"go([\\d.]+)\\.windows-",
+			"autoupdate":{
+				"amd64_msi": "https://dl.google.com/go/go${version}.windows-amd64.msi",
+				"amd64_zip": "https://dl.google.com/go/go${version}.windows-amd64.zip",
+				"arm64_msi": "https://dl.google.com/go/go${version}.windows-arm64.msi",
+				"arm64_zip": "https://dl.google.com/go/go${version}.windows-arm64.zip"
+			},
+			"url":"https://go.dev/dl/"
+		},
+		"name":"appfork-check-update"
+	}
 }

@@ -5,10 +5,19 @@
 	"category":"development",
 	"version":"1.6.1",
 	"platform":"mac",
-	"script":"another-redis-desktop-manager",
 	"url":{
-		"x86":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.6.1/Another-Redis-Desktop-Manager.1.6.1.dmg",
-		"arm64":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.6.1/Another-Redis-Desktop-Manager-M1-arm64-1.6.1.dmg"
+		"Intel Chip":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.6.1/Another-Redis-Desktop-Manager.1.6.1.dmg",
+		"M1 Chip":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.6.1/Another-Redis-Desktop-Manager-M1-arm64-1.6.1.dmg"
 	},
-	"homepage":"https://github.com/qishibo/AnotherRedisDesktopManager"
+	"homepage":"https://github.com/qishibo/AnotherRedisDesktopManager",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"Intel Chip":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager.${version}.dmg",
+				"M1 Chip":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager-M1-arm64-${version}.dmg"
+			},
+			"url":"gh://qishibo/AnotherRedisDesktopManager"
+		},
+		"name":"appfork-check-update"
+	}
 }

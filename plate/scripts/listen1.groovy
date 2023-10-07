@@ -1,21 +1,14 @@
 import groovy.json.JsonSlurper
 
 static def checkUpdate(version, platform, args) {
-    def repo = null
-    switch (platform) {
-        case 'windows':
-        case 'linux':
-        case 'mac':
-            repo = 'listen1_desktop'
-            break
-        case 'android':
-            repo = 'listen1_mobile'
-            break
-        case 'extensions':
-            repo = 'listen1_chrome_extension'
-            break
-        default:
-            return null
+    def repo = switch (platform) {
+        case 'windows', 'linux', 'mac' -> 'listen1_desktop'
+        case 'android' -> 'listen1_mobile'
+        case 'extensions' -> 'listen1_chrome_extension'
+        default -> null
+    }
+    if (!repo) {
+        return null
     }
     def response = "https://api.github.com/repos/listen1/${repo}/releases/latest".toURL().text
     def result = new JsonSlurper().parseText(response)
@@ -32,14 +25,13 @@ static def checkUpdate(version, platform, args) {
             def name = asset.name as String
             if (name.endsWithIgnoreCase('.yml') ||
                     name.endsWithIgnoreCase('.blockmap') ||
-                    !name.containsIgnoreCase(platform == 'windows' ? '_win' :
-                            (platform == 'linux' ? '_linux' :
-                                    (platform == 'mac' ? '_mac' : '.apk')))) {
+                    !name.containsIgnoreCase(platform == 'windows' ? '_win' : (platform == 'linux' ? '_linux' : (platform == 'mac' ? '_mac' : '.apk')))
+            ) {
                 continue
             }
             url[name] = asset.browser_download_url
         }
     }
-    return ['version': version, 'url': url]
+    return [version: version, url: url]
 }
 

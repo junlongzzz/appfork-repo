@@ -10,5 +10,16 @@
 	"url":{
 		"64Bit":"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.36.0-x86_64.7z",
 		"32Bit":"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.36.0-i686.7z"
+	},
+	"script":{
+		"args":{
+			"regex":"mpv-([\\d.]+)-",
+			"autoupdate":{
+				"64Bit": "https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-x86_64.7z",
+				"32Bit": "https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-i686.7z"
+			},
+			"url":"https://sourceforge.net/projects/mpv-player-windows/files/release/"
+		},
+		"name":"appfork-check-update"
 	}
 }

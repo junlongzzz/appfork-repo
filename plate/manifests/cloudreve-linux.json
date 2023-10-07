@@ -6,11 +6,19 @@
 	"category":"network",
 	"version":"3.8.2",
 	"platform":"linux",
-	"script":"cloudreve",
 	"url":{
-		"amd64":"https://github.com/cloudreve/Cloudreve/releases/download/3.8.2/cloudreve_3.8.2_linux_amd64.tar.gz",
-		"arm64":"https://github.com/cloudreve/Cloudreve/releases/download/3.8.2/cloudreve_3.8.2_linux_arm64.tar.gz",
-		"arm":"https://github.com/cloudreve/Cloudreve/releases/download/3.8.2/cloudreve_3.8.2_linux_arm.tar.gz"
+		"cloudreve_3.8.2_linux_amd64.tar.gz":"https://github.com/cloudreve/Cloudreve/releases/download/3.8.2/cloudreve_3.8.2_linux_amd64.tar.gz",
+		"cloudreve_3.8.2_linux_arm64.tar.gz":"https://github.com/cloudreve/Cloudreve/releases/download/3.8.2/cloudreve_3.8.2_linux_arm64.tar.gz"
 	},
-	"homepage":"https://github.com/cloudreve/Cloudreve"
+	"homepage":"https://github.com/cloudreve/Cloudreve",
+	"script": {
+		"args": {
+			"autoupdate": {
+				"cloudreve_${version}_linux_amd64.tar.gz":"https://github.com/cloudreve/Cloudreve/releases/download/${version}/cloudreve_${version}_linux_amd64.tar.gz",
+				"cloudreve_${version}_linux_arm64.tar.gz":"https://github.com/cloudreve/Cloudreve/releases/download/${version}/cloudreve_${version}_linux_arm64.tar.gz"
+			},
+			"url": "gh://cloudreve/Cloudreve"
+		},
+		"name": "appfork-check-update"
+	}
 }

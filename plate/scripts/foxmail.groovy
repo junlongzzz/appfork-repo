@@ -32,7 +32,7 @@ static def checkUpdate(version, platform, args) {
     }
 
     return [
-            version: matcher[0][1] as String,
+            version: matcher.group(1),
             url    : location
     ]
 }

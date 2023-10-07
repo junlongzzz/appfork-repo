@@ -7,5 +7,13 @@
 	"version":"23.04",
 	"platform":"linux",
 	"url":"https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/23.04/ubuntu-23.04-desktop-amd64.iso",
-	"homepage":"https://ubuntu.com"
+	"homepage":"https://ubuntu.com",
+	"script":{
+		"args":{
+			"regex":">Ubuntu ([\\d.]+)<",
+			"autoupdate":"https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/${version}/ubuntu-${version}-desktop-amd64.iso",
+			"url":"https://ubuntu.com/download/desktop"
+		},
+		"name":"appfork-check-update"
+	}
 }

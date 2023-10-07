@@ -6,5 +6,12 @@
 	"version":"1.6.1",
 	"platform":"windows",
 	"url":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.6.1/Another-Redis-Desktop-Manager.1.6.1.exe",
-	"homepage":"https://github.com/qishibo/AnotherRedisDesktopManager"
+	"homepage":"https://github.com/qishibo/AnotherRedisDesktopManager",
+	"script":{
+		"args":{
+			"autoupdate":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager.${version}.exe",
+			"url":"gh://qishibo/AnotherRedisDesktopManager"
+		},
+		"name":"appfork-check-update"
+	}
 }

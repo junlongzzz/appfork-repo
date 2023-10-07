@@ -9,9 +9,11 @@
 	"url":"https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/22.04.3/ubuntu-22.04.3-desktop-amd64.iso",
 	"homepage":"https://ubuntu.com",
 	"script":{
-		"name":"ubuntu",
 		"args":{
-			"type":"LTS"
-		}
+			"regex":">Ubuntu ([\\d.]+) LTS<",
+			"autoupdate":"https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/${version}/ubuntu-${version}-desktop-amd64.iso",
+			"url":"https://ubuntu.com/download/desktop"
+		},
+		"name":"appfork-check-update"
 	}
 }

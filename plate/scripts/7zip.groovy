@@ -4,17 +4,14 @@ static def checkUpdate(version, platform, args) {
     if (!matcher.find()) {
         return null
     }
-    def versionNew = matcher[0][1] as String
-    if (versionNew == null || versionNew.length() <= 0 || versionNew.equalsIgnoreCase(version as String)) {
-        return null
-    }
-    version = versionNew.replaceAll("\\.", "")
+    version = matcher.group(1)
+    def versionNew = version.replaceAll("\\.", "")
     return [
-            'version': versionNew,
+            'version': version,
             'url'    : [
-                    'x64'  : "https://www.7-zip.org/a/7z${version}-x64.exe".toString(),
-                    'x86'  : "https://www.7-zip.org/a/7z${version}.exe".toString(),
-                    'arm64': "https://www.7-zip.org/a/7z${version}-arm64.exe".toString(),
+                    'x64'  : "https://www.7-zip.org/a/7z${versionNew}-x64.exe".toString(),
+                    'x86'  : "https://www.7-zip.org/a/7z${versionNew}.exe".toString(),
+                    'arm64': "https://www.7-zip.org/a/7z${versionNew}-arm64.exe".toString(),
             ]
     ]
 }
