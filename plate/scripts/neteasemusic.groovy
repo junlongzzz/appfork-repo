@@ -34,15 +34,13 @@ static def checkUpdate(version, platform, args) {
             .build()
     def response = httpClient.send(request, HttpResponse.BodyHandlers.discarding())
     def location = response.headers().firstValue('location').orElse(null)
-//    def matcher = Location =~ '_([\\d.]+\\d)(.*?).exe'
-//    def matcher = location =~ '([\\d.]+).exe'
     def matcher = location =~ '/*_([\\d.]+)'
     if (!matcher.find()) {
         return null
     }
 
     return [
-            version: matcher[0][1] as String,
+            version: matcher.group(1),
             url    : url
     ]
 }

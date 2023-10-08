@@ -6,16 +6,16 @@ static def checkUpdate(version, platform, args) {
     if (!matcher.find()) {
         return null
     }
-    def jsonData = new JsonSlurper().parseText(matcher[0][1] as String)
+    def jsonData = new JsonSlurper().parseText(matcher.group(1))
     def download = jsonData.app.download
     return switch (platform) {
         case 'windows' -> [
-                'version': download.pcVersion,
-                'url'    : download.pcLink
+                version: download.pcVersion,
+                url    : download.pcLink
         ]
         case 'android' -> [
-                'version': download.androidVersion,
-                'url'    : download.androidLink
+                version: download.androidVersion,
+                url    : download.androidLink
         ]
         default -> null
     }

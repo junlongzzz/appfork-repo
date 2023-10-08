@@ -22,7 +22,7 @@ static def checkUpdate(version, platform, args) {
         if (!matcher.find()) {
             return null
         }
-        version = matcher[0][1] as String
+        version = matcher.group(1)
     }
 
     return [

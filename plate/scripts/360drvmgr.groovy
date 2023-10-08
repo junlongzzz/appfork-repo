@@ -26,7 +26,7 @@ static def checkUpdate(version, platform, args) {
         return null
     }
     return [
-            'version': matcher[0][1] as String,
+            'version': matcher.group(1),
             'url'    : [
                     '轻巧版': 'https://dl.360safe.com/drvmgr/guanwang__360DrvMgrInstaller_beta.exe',
                     '网卡版': 'https://dl.360safe.com/drvmgr/gwwk__360DrvMgrInstaller_net.exe'

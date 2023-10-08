@@ -9,7 +9,7 @@ static def checkUpdate(version, platform, args) {
     if (!matcher.find()) {
         return null
     }
-    version = matcher[0][1] as String
+    version = matcher.group(1)
 
     def url = [:]
     ["${baseUrl}/tomcat/tomcat-${args.ver}/v${version}/bin/apache-tomcat-${version}.exe" as String,
@@ -19,7 +19,7 @@ static def checkUpdate(version, platform, args) {
     }
 
     return [
-            'version': version,
-            'url'    : url
+            version: version,
+            url    : url
     ]
 }

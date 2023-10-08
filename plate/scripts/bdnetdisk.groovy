@@ -8,7 +8,7 @@ import java.time.Duration
 static def checkUpdate(version, platform, args) {
 //    def response = "https://pan.baidu.com/disk/cmsdata?clienttype=0&app_id=250528&t=${System.currentTimeMillis()}&do=client".toURL().text
 
-    def ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.54'
+    def ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.60'
 
     def httpClient = HttpClient.newBuilder()
             .connectTimeout(Duration.ofMillis(30000))
@@ -39,7 +39,7 @@ static def checkUpdate(version, platform, args) {
     if (!matcher.find()) {
         return null
     }
-    version = matcher[0][1] as String
+    version = matcher.group(1)
 
     def url = switch (platform) {
         case 'linux' -> [
@@ -54,7 +54,7 @@ static def checkUpdate(version, platform, args) {
     }
 
     return [
-            'version': version,
-            'url'    : url
+            version: version,
+            url    : url
     ]
 }
