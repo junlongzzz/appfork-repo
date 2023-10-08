@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV11p4y1F7kA",
+	"version":"BV1mw411a7io",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【暖心金曲】朋友应该是什么样子的？有你真好，我们的朋友 [2023-09-30]":"https://www.bilibili.com/video/BV11p4y1F7kA"
+		"【4K60FPS】伍佰、徐佳莹《被动》梦幻联动现场！爱你越久我越被动 [2023-10-08]":"https://www.bilibili.com/video/BV1mw411a7io"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
