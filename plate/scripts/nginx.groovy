@@ -6,8 +6,13 @@ static def checkUpdate(version, platform, args) {
     if (!matcher.find()) {
         return null
     }
-    def mainlineVersion = matcher[0][1] as String
-    def stableVersion = matcher[1][1] as String
+    def mainlineVersion = matcher.group(1)
+
+    // 继续往下查找匹配
+    if (!matcher.find()) {
+        return null
+    }
+    def stableVersion = matcher.group(1)
 
     def url = [:]
     url["Mainline:${mainlineVersion}".toString()] = "https://nginx.org/download/nginx-${mainlineVersion}.zip".toString()
