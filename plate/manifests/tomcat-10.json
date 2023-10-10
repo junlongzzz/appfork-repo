@@ -12,10 +12,10 @@
 			"ver":"10"
 		}
 	},
-	"version":"10.1.13",
+	"version":"10.1.14",
 	"url":{
-		"apache-tomcat-10.1.13.exe":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.13/bin/apache-tomcat-10.1.13.exe",
-		"apache-tomcat-10.1.13-windows-x64.zip":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.13/bin/apache-tomcat-10.1.13-windows-x64.zip",
-		"apache-tomcat-10.1.13-windows-x86.zip":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.13/bin/apache-tomcat-10.1.13-windows-x86.zip"
+		"apache-tomcat-10.1.14.exe":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.14/bin/apache-tomcat-10.1.14.exe",
+		"apache-tomcat-10.1.14-windows-x64.zip":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.14/bin/apache-tomcat-10.1.14-windows-x64.zip",
+		"apache-tomcat-10.1.14-windows-x86.zip":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.14/bin/apache-tomcat-10.1.14-windows-x86.zip"
 	}
 }
