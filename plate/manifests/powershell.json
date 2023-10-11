@@ -1,0 +1,36 @@
+{
+	"author":"微软Microsoft",
+	"name":"PowerShell",
+	"logo":"https://learn.microsoft.com/media/logos/logo-powershell-core.svg",
+	"description":"PowerShell 是一种跨平台的任务自动化解决方案，由命令行 shell、脚本语言和配置管理框架组成。 PowerShell 在 Windows、Linux 和 macOS 上运行。",
+	"category":"development",
+	"version":"7.3.8",
+	"platform":"windows",
+	"url":{
+		"PowerShell-7.3.8-win-x64.msi":"https://github.com/PowerShell/PowerShell/releases/download/v7.3.8/PowerShell-7.3.8-win-x64.msi",
+		"PowerShell-7.3.8-win-x86.msi":"https://github.com/PowerShell/PowerShell/releases/download/v7.3.8/PowerShell-7.3.8-win-x86.msi",
+		"PowerShell-7.3.8-win-x64.zip":"https://github.com/PowerShell/PowerShell/releases/download/v7.3.8/PowerShell-7.3.8-win-x64.zip",
+		"PowerShell-7.3.8-win-x86.zip":"https://github.com/PowerShell/PowerShell/releases/download/v7.3.8/PowerShell-7.3.8-win-x86.zip",
+		"PowerShell-7.3.8-win-arm64.zip":"https://github.com/PowerShell/PowerShell/releases/download/v7.3.8/PowerShell-7.3.8-win-arm64.zip",
+		"PowerShell-7.3.8-win-arm32.zip":"https://github.com/PowerShell/PowerShell/releases/download/v7.3.8/PowerShell-7.3.8-win-arm32.zip",
+		"PowerShell-7.3.8-win.msixbundle":"https://github.com/PowerShell/PowerShell/releases/download/v7.3.8/PowerShell-7.3.8-win.msixbundle",
+		"Get it on Microsoft Store":"https://www.microsoft.com/store/apps/9MZ1SNWT0N5D"
+	},
+	"homepage":"https://microsoft.com/PowerShell",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"PowerShell-${version}-win-x64.msi":"https://github.com/PowerShell/PowerShell/releases/download/v${version}/PowerShell-${version}-win-x64.msi",
+				"PowerShell-${version}-win-x86.msi":"https://github.com/PowerShell/PowerShell/releases/download/v${version}/PowerShell-${version}-win-x86.msi",
+				"PowerShell-${version}-win-x64.zip":"https://github.com/PowerShell/PowerShell/releases/download/v${version}/PowerShell-${version}-win-x64.zip",
+				"PowerShell-${version}-win-x86.zip":"https://github.com/PowerShell/PowerShell/releases/download/v${version}/PowerShell-${version}-win-x86.zip",
+				"PowerShell-${version}-win-arm64.zip":"https://github.com/PowerShell/PowerShell/releases/download/v${version}/PowerShell-${version}-win-arm64.zip",
+				"PowerShell-${version}-win-arm32.zip":"https://github.com/PowerShell/PowerShell/releases/download/v${version}/PowerShell-${version}-win-arm32.zip",
+				"PowerShell-${version}-win.msixbundle":"https://github.com/PowerShell/PowerShell/releases/download/v${version}/PowerShell-${version}-win.msixbundle",
+				"Get it on Microsoft Store":"https://www.microsoft.com/store/apps/9MZ1SNWT0N5D"
+			},
+			"url":"gh://PowerShell/PowerShell"
+		},
+		"name":"appfork-check-update"
+	}
+}
