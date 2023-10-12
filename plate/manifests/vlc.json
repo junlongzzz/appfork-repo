@@ -6,23 +6,23 @@
 	"category":"video",
 	"platform":"windows",
 	"homepage":"https://www.videolan.org",
-	"version":"3.0.18",
+	"version":"3.0.19",
 	"url":{
-		"7zip package":"https://get.videolan.org/vlc/3.0.18/win32/vlc-3.0.18-win32.7z",
-		"Zip package":"https://get.videolan.org/vlc/3.0.18/win32/vlc-3.0.18-win32.zip",
-		"MSI package":"https://get.videolan.org/vlc/3.0.18/win32/vlc-3.0.18-win32.msi",
-		"Installer for 64bit version":"https://get.videolan.org/vlc/3.0.18/win64/vlc-3.0.18-win64.exe",
-		"MSI package for 64bit version":"https://get.videolan.org/vlc/3.0.18/win64/vlc-3.0.18-win64.msi"
+		"7zip package":"https://get.videolan.org/vlc/3.0.19/win32/vlc-3.0.19-win32.7z",
+		"Zip package":"https://get.videolan.org/vlc/3.0.19/win32/vlc-3.0.19-win32.zip",
+		"MSI package":"https://get.videolan.org/vlc/3.0.19/win32/vlc-3.0.19-win32.msi",
+		"Installer for 64bit version":"https://get.videolan.org/vlc/3.0.19/win64/vlc-3.0.19-win64.exe",
+		"MSI package for 64bit version":"https://get.videolan.org/vlc/3.0.19/win64/vlc-3.0.19-win64.msi"
 	},
 	"script":{
 		"args":{
 			"regex":"/vlc-([\\d.]+)-win[a-z0-9.]+",
 			"autoupdate":{
-				"7zip package"                 : "https://get.videolan.org/vlc/${version}/win32/vlc-${version}-win32.7z",
-				"Zip package"                  : "https://get.videolan.org/vlc/${version}/win32/vlc-${version}-win32.zip",
-				"MSI package"                  : "https://get.videolan.org/vlc/${version}/win32/vlc-${version}-win32.msi",
-				"Installer for 64bit version"  : "https://get.videolan.org/vlc/${version}/win64/vlc-${version}-win64.exe",
-				"MSI package for 64bit version": "https://get.videolan.org/vlc/${version}/win64/vlc-${version}-win64.msi"
+				"7zip package":"https://get.videolan.org/vlc/${version}/win32/vlc-${version}-win32.7z",
+				"Zip package":"https://get.videolan.org/vlc/${version}/win32/vlc-${version}-win32.zip",
+				"MSI package":"https://get.videolan.org/vlc/${version}/win32/vlc-${version}-win32.msi",
+				"Installer for 64bit version":"https://get.videolan.org/vlc/${version}/win64/vlc-${version}-win64.exe",
+				"MSI package for 64bit version":"https://get.videolan.org/vlc/${version}/win64/vlc-${version}-win64.msi"
 			},
 			"url":"https://www.videolan.org/vlc/download-windows.html"
 		},
