@@ -3,10 +3,11 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2023-10-12 23:00:00 (1697122800)",
+	"version":"2023-10-19 23:00:00 (3395455200)",
 	"platform":"other",
 	"url":{
-		"《Godlike Burger》 [2023-10-12 23:00:00]":"https://store.epicgames.com/zh-CN/p/godlike-burger-4150a0"
+		"《Blazing Sails》 [2023-10-19 23:00:00]":"https://store.epicgames.com/zh-CN/p/blazing-sails",
+		"Q.U.B.E. ULTIMATE BUNDLE [2023-10-19 23:00:00]":"https://store.epicgames.com/zh-CN/p/qube-ultimate-bundle"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
