@@ -6,11 +6,11 @@
 	"author":"Obsidian Team",
 	"category":"reading",
 	"platform":"windows",
-	"version":"1.4.14",
+	"version":"1.4.16",
 	"url":{
-		"Obsidian.1.4.14-32.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.14/Obsidian.1.4.14-32.exe",
-		"Obsidian.1.4.14-allusers.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.14/Obsidian.1.4.14-allusers.exe",
-		"Obsidian.1.4.14-arm64.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.14/Obsidian.1.4.14-arm64.exe",
-		"Obsidian.1.4.14.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.14/Obsidian.1.4.14.exe"
+		"Obsidian.1.4.16-32.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian.1.4.16-32.exe",
+		"Obsidian.1.4.16-allusers.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian.1.4.16-allusers.exe",
+		"Obsidian.1.4.16-arm64.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian.1.4.16-arm64.exe",
+		"Obsidian.1.4.16.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian.1.4.16.exe"
 	}
 }
