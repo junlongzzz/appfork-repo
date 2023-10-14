@@ -3,7 +3,7 @@
 	"name":"[B站]手工耿今天更新视频了吗？",
 	"description":"大发明家-手工耿。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1Z34y1P72Q",
+	"version":"BV1yw411c7jq",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"给奶奶做了一个电动轮椅 [2023-09-19]":"https://www.bilibili.com/video/BV1Z34y1P72Q"
+		"【手工耿】我的最新作品，快来一睹为快！ [2023-10-14]":"https://www.bilibili.com/video/BV1yw411c7jq"
 	},
 	"homepage":"https://space.bilibili.com/280793434"
 }
