@@ -4,13 +4,13 @@
 	"logo":"https://docs.docker.com/assets/images/engine.svg",
 	"description":"Docker Desktop is an easy-to-install application for your Mac or Windows environment that enables you to build and share containerized applications and microservices.",
 	"category":"development",
-	"version":"4.24.1",
+	"version":"4.24.2",
 	"platform":"linux",
 	"script":"docker-desktop",
 	"url":{
-		"Linux DEB":"https://desktop.docker.com/linux/main/amd64/docker-desktop-4.24.1-amd64.deb",
-		"Linux RPM":"https://desktop.docker.com/linux/main/amd64/docker-desktop-4.24.1-x86_64.rpm",
-		"Linux Arch":"https://desktop.docker.com/linux/main/amd64/docker-desktop-4.24.1-x86_64.pkg.tar.zst"
+		"Linux DEB":"https://desktop.docker.com/linux/main/amd64/docker-desktop-4.24.2-amd64.deb",
+		"Linux RPM":"https://desktop.docker.com/linux/main/amd64/docker-desktop-4.24.2-x86_64.rpm",
+		"Linux Arch":"https://desktop.docker.com/linux/main/amd64/docker-desktop-4.24.2-x86_64.pkg.tar.zst"
 	},
 	"homepage":"https://www.docker.com/products/docker-desktop"
 }
