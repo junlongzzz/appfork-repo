@@ -3,7 +3,7 @@
 	"name":"Typora",
 	"logo":"https://typoraio.cn/img/favicon-128.png",
 	"description":"一款 Markdown 编辑器和阅读器",
-	"category":"tools",
+	"category":"reading",
 	"platform":"linux",
 	"script":"typora",
 	"url":"https://download.typoraio.cn/linux/Typora-linux-x64-1.7.6.tar.gz",

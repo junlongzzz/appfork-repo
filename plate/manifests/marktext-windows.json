@@ -1,0 +1,26 @@
+{
+	"author":"open source project",
+	"name":"MarkText",
+	"logo":"https://ghproxy.com/https://raw.githubusercontent.com/marktext/marktext/develop/static/logo-96px.png",
+	"description":"Simple and Elegant Markdown Editor Focused on speed and usability, available for Linux, macOS and Windows.",
+	"category":"reading",
+	"version":"0.17.1",
+	"platform":"windows",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"marktext-setup.exe": "https://github.com/marktext/marktext/releases/download/v${version}/marktext-setup.exe",
+				"marktext-x64-win.zip": "https://github.com/marktext/marktext/releases/download/v{version}/marktext-x64-win.zip",
+				"marktext-ia32-win.zip": "https://github.com/marktext/marktext/releases/download/v{version}/marktext-ia32-win.zip"
+			},
+			"url":"gh://marktext/marktext"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"marktext-setup.exe": "https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-setup.exe",
+		"marktext-x64-win.zip": "https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-x64-win.zip",
+		"marktext-ia32-win.zip": "https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-ia32-win.zip"
+	},
+	"homepage":"https://www.marktext.cc"
+}

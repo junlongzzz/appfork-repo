@@ -1,0 +1,28 @@
+{
+  "author": "open source project",
+  "name": "MarkText",
+  "logo": "https://ghproxy.com/https://raw.githubusercontent.com/marktext/marktext/develop/static/logo-96px.png",
+  "description": "Simple and Elegant Markdown Editor Focused on speed and usability, available for Linux, macOS and Windows.",
+  "category": "reading",
+  "version": "0.17.1",
+  "platform": "mac",
+  "script": {
+    "args": {
+      "autoupdate": {
+        "marktext-x64.dmg": "https://github.com/marktext/marktext/releases/download/v${version}/marktext-x64.dmg",
+        "marktext-arm64.dmg": "https://github.com/marktext/marktext/releases/download/v${version}/marktext-arm64.dmg",
+        "marktext-x64-mac.zip": "https://github.com/marktext/marktext/releases/download/v${version}/marktext-x64-mac.zip",
+        "marktext-arm64-mac.zip": "https://github.com/marktext/marktext/releases/download/v${version}/marktext-arm64-mac.zip"
+      },
+      "url": "gh://marktext/marktext"
+    },
+    "name": "appfork-check-update"
+  },
+  "url": {
+    "marktext-x64.dmg": "https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-x64.dmg",
+    "marktext-arm64.dmg": "https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-arm64.dmg",
+    "marktext-x64-mac.zip": "https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-x64-mac.zip",
+    "marktext-arm64-mac.zip": "https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-arm64-mac.zip"
+  },
+  "homepage": "https://www.marktext.cc"
+}
