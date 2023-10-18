@@ -6,9 +6,9 @@
 	"platform":"windows",
 	"homepage":"https://redis.io",
 	"script":"redis",
-	"version":"7.0.13",
+	"version":"7.0.14",
 	"url":{
-		"Redis-7.0.13-Windows-x64-with-Service.tar.gz":"https://github.com/redis-windows/redis-windows/releases/download/7.0.13/Redis-7.0.13-Windows-x64-with-Service.tar.gz",
-		"Redis-7.0.13-Windows-x64.tar.gz":"https://github.com/redis-windows/redis-windows/releases/download/7.0.13/Redis-7.0.13-Windows-x64.tar.gz"
+		"Redis-7.0.14-Windows-x64-with-Service.tar.gz":"https://github.com/redis-windows/redis-windows/releases/download/7.0.14/Redis-7.0.14-Windows-x64-with-Service.tar.gz",
+		"Redis-7.0.14-Windows-x64.tar.gz":"https://github.com/redis-windows/redis-windows/releases/download/7.0.14/Redis-7.0.14-Windows-x64.tar.gz"
 	}
 }
