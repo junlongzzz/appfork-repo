@@ -1,0 +1,23 @@
+{
+	"author":"Docker Inc.",
+	"name":"Docker Engine",
+	"logo":"https://docs.docker.com/assets/images/engine.svg",
+	"description":"Docker Engine is an open source containerization technology for building and containerizing your applications.",
+	"category":"development",
+	"version":"24.0.6",
+	"platform":"linux",
+	"url":{
+		"Install Docker Engine":"https://docs.docker.com/engine/install/"
+	},
+	"homepage":"https://www.docker.com",
+	"script":{
+		"args":{
+			"regex":">([\\d.]+)</a>",
+			"autoupdate":{
+				"Install Docker Engine":"https://docs.docker.com/engine/install/"
+			},
+			"url":"https://docs.docker.com/engine/release-notes"
+		},
+		"name":"appfork-check-update"
+	}
+}
