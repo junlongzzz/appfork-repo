@@ -5,21 +5,21 @@
 	"category":"tools",
 	"platform":"windows",
 	"homepage":"https://ffmpeg.org",
-	"version":"6.0",
+	"version":".",
 	"url":{
-		"essentials.7z":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-6.0-essentials_build.7z",
-		"essentials.zip":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-6.0-essentials_build.zip",
-		"full.7z [recommend]":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-6.0-full_build.7z",
-		"full-shared.7z":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-6.0-full_build-shared.7z"
+		"essentials.7z":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-.-essentials_build.7z",
+		"essentials.zip":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-.-essentials_build.zip",
+		"full.7z [recommend]":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-.-full_build.7z",
+		"full-shared.7z":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-.-full_build-shared.7z"
 	},
 	"script":{
 		"args":{
 			"regex":"([\\d.]+)",
 			"autoupdate":{
-				"essentials.7z"      : "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-${version}-essentials_build.7z",
-				"essentials.zip"     : "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-${version}-essentials_build.zip",
-				"full.7z [recommend]": "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-${version}-full_build.7z",
-				"full-shared.7z"     : "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-${version}-full_build-shared.7z"
+				"essentials.7z":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-${version}-essentials_build.7z",
+				"essentials.zip":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-${version}-essentials_build.zip",
+				"full.7z [recommend]":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-${version}-full_build.7z",
+				"full-shared.7z":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-${version}-full_build-shared.7z"
 			},
 			"url":"https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z.ver"
 		},
