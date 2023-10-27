@@ -14,7 +14,7 @@
 		"name":"appfork-check-update"
 	},
 	"homepage":"https://github.com/Binaryify/NeteaseCloudMusicApi",
-	"version":"4.13.7",
+	"version":"4.13.8",
 	"url":{
 		"文档查看":"https://binaryify.github.io/NeteaseCloudMusicApi"
 	}
