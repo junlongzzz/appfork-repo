@@ -3,7 +3,7 @@
 	"name":"[B站]音乐私藏馆今天更新视频了吗？",
 	"description":"馆主收藏的音乐都太好听啦！检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1ij411x7gW",
+	"version":"BV16c41197PF",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"【私藏馆】伍佰《泪桥》《再度重相逢》巅峰现场集！我们前世就深爱过 [2023-10-14]":"https://www.bilibili.com/video/BV1ij411x7gW"
+		"【4K60FPS】张宇《月亮惹的祸》《雨一直下》双经典神曲 [2023-11-06]":"https://www.bilibili.com/video/BV16c41197PF"
 	},
 	"homepage":"https://space.bilibili.com/229733301"
 }
