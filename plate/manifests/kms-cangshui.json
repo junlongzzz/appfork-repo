@@ -6,5 +6,13 @@
 	"version":"upstream",
 	"platform":"windows",
 	"url":"https://kms.cangshui.net/kms/KMS-Cangshui.net.bat",
-	"homepage":"https://kms.cangshui.net"
+	"homepage":"https://kms.cangshui.net",
+	"script":{
+		"args":{
+			"regex":"\\(更新时间：([\\d-]+)",
+			"autoupdate":"https://kms.cangshui.net/kms/KMS-Cangshui.net.bat",
+			"url":"https://kms.cangshui.net"
+		},
+		"name":"appfork-check-update"
+	}
 }
