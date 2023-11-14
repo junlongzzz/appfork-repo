@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
@@ -69,7 +70,8 @@ public class AppFork implements CommandLineRunner {
 
         long startTime = System.currentTimeMillis();
 
-        Future<?> future = Executors.newSingleThreadExecutor().submit(() -> {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        Future<?> future = executor.submit(() -> {
             int count = 0;
             for (File manifest : manifests) {
                 try {
@@ -88,7 +90,9 @@ public class AppFork implements CommandLineRunner {
         } catch (Exception e) {
             log.error("软件库同步出错[{}]，耗时：{}ms", e.getClass().getSimpleName(), System.currentTimeMillis() - startTime);
             // 同步超时强行中断程序退出
-            System.exit(0);
+            System.exit(1);
+        } finally {
+            executor.shutdown();
         }
 
     }
@@ -113,15 +117,27 @@ public class AppFork implements CommandLineRunner {
         String category = manifestJson.getString("category");
         String platform = manifestJson.getString("platform");
         String version = manifestJson.getString("version");
-        Object url = manifestJson.get("url");
+        // Object url = manifestJson.get("url");
         Object scriptValue = manifestJson.get("script");
 
         if (StrUtil.isBlank(name) ||
                 StrUtil.isBlank(homepage) ||
-                StrUtil.isBlank(platform) || !platforms.containsKey(platform.toLowerCase()) ||
-                StrUtil.isBlank(category) || !categories.containsKey(category.toLowerCase())) {
+                StrUtil.isBlank(category) || !categories.containsKey(category.toLowerCase()) ||
+                StrUtil.isBlank(platform) || !platforms.containsKey(platform.toLowerCase())) {
             log.error("manifest [{}] has illegal attribute", manifest.getName());
             return;
+        }
+
+        // 是否更新清单文件
+        boolean updateManifest = false;
+
+        if (StrUtil.isBlank(author)) {
+            manifestJson.put("author", "[Unknown]");
+            updateManifest = true;
+        }
+        if (StrUtil.isBlank(description)) {
+            manifestJson.put("description", "[No Description]");
+            updateManifest = true;
         }
 
         // 清单文件对应的script脚本文件名 默认为清单文件名一致
@@ -154,68 +170,66 @@ public class AppFork implements CommandLineRunner {
             // 执行检测App更新的脚本指定方法
             Object checkUpdateObj = updateScript.invokeMethod("checkUpdate", new Object[]{version, platform.toLowerCase(), scriptArgs});
             if (checkUpdateObj instanceof Map<?, ?> checkUpdate) {
-                String checkVersion = null;
                 // 获取脚本返回的错误信息
                 Object error = checkUpdate.get("error");
                 if (error != null) {
                     log.error("exec [{}] script [{}] return error: {}", manifest.getName(), scriptFilename, error);
-                } else {
-                    // 获取脚本返回的版本号
-                    Object checkVersionObj = checkUpdate.get("version");
-                    if (checkVersionObj instanceof String) {
-                        checkVersion = (String) checkVersionObj;
-                    }
+                    return;
                 }
 
-                if (!StrUtil.isBlank(checkVersion)) {
-                    boolean update = !checkVersion.equalsIgnoreCase(version);
-                    // 获取脚本返回的下载链接
-                    Object updateUrlObj = checkUpdate.get("url");
-                    if (!update) {
-                        // 如果版本号一样，就判断下载链接是否发生了改变，如果下载链接发生了改变，那么也要更新对应的清单文件内容
-                        String manifestUrlJson = JSON.toJSONString(url);
-                        String updateUrlJson = JSON.toJSONString(updateUrlObj);
-                        update = !manifestUrlJson.equals(updateUrlJson);
-                    }
+                // 通过循环获取脚本返回的属性值是否跟已有清单文件内属性值一致
+                for (Map.Entry<?, ?> entry : checkUpdate.entrySet()) {
+                    String key = (String) entry.getKey();
+                    Object value = entry.getValue();
 
-                    if (update) {
-                        // 开始检查链接是否合法
-                        Object updateUrl = null;
-                        if (updateUrlObj instanceof String) {
-                            // 只有一个链接，直接检查是否是合法链接形式
-                            if (isUrl((String) updateUrlObj)) {
-                                updateUrl = updateUrlObj;
-                            }
-                        } else if (updateUrlObj instanceof Map<?, ?> updateUrlMap) {
-                            // 有多个链接，循环检查是否是合法链接形式
-                            if (!updateUrlMap.isEmpty()) {
-                                updateUrl = updateUrlMap;
-                                for (Object value : updateUrlMap.values()) {
-                                    if (!(value instanceof String) || !isUrl((String) value)) {
-                                        updateUrl = null;
-                                        break;
+                    Object manifestValue = manifestJson.get(key);
+                    if (manifestValue == null) {
+                        // 清单文件内不存在该属性，直接添加
+                        manifestJson.put(key, value);
+                        updateManifest = true;
+                        continue;
+                    }
+                    if (value != null && !StrUtil.equals(JSON.toJSONString(value), JSON.toJSONString(manifestValue))) {
+                        if ("url".equalsIgnoreCase(key)) {
+                            // 开始检查链接是否合法
+                            boolean isUrl = false;
+                            if (value instanceof String valueStr) {
+                                // 只有一个链接，直接检查是否是合法链接形式
+                                if (isUrl(valueStr)) {
+                                    isUrl = true;
+                                }
+                            } else if (value instanceof Map<?, ?> updateUrlMap) {
+                                // 有多个链接，循环检查是否是合法链接形式
+                                if (!updateUrlMap.isEmpty()) {
+                                    isUrl = true;
+                                    for (Object v : updateUrlMap.values()) {
+                                        if (!(v instanceof String) || !isUrl((String) v)) {
+                                            isUrl = false;
+                                            break;
+                                        }
                                     }
                                 }
                             }
-                        }
-                        if (updateUrl != null) {
-                            // 更新版本信息
-                            manifestJson.put("version", checkVersion);
-                            manifestJson.put("url", updateUrl);
-                            if (StrUtil.isBlank(author)) {
-                                manifestJson.put("author", "[Unknown]");
+                            if (!isUrl) {
+                                // 如果链接不合法，那么不更新清单文件内的属性值
+                                continue;
                             }
-                            if (StrUtil.isBlank(description)) {
-                                manifestJson.put("description", "[暂无描述]");
-                            }
-                            // 将新版清单内容写入文件
-                            FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
-                            log.info("{} 同步新版本 {}->{}", code, version, checkVersion);
                         }
+                        // 如果脚本返回的属性值跟清单文件内的属性值不一致，那么更新清单文件内的属性值
+                        manifestJson.put(key, value);
+                        updateManifest = true;
                     }
                 }
+
             }
         }
+
+        if (updateManifest) {
+            // 将新版清单内容写入文件
+            FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
+            log.info("manifest [{}] updated: {} -> {}", manifest.getName(), version, manifestJson.getString("version"));
+        }
+
     }
 
     private boolean isUrl(String text) {
