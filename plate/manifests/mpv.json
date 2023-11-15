@@ -15,8 +15,8 @@
 		"args":{
 			"regex":"mpv-([\\d.]+)-",
 			"autoupdate":{
-				"64Bit": "https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-x86_64.7z",
-				"32Bit": "https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-i686.7z"
+				"64Bit":"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-x86_64.7z",
+				"32Bit":"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-i686.7z"
 			},
 			"url":"https://sourceforge.net/projects/mpv-player-windows/files/release/"
 		},

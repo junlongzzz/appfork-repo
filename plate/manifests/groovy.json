@@ -1,23 +1,23 @@
 {
-  "author": "the Apache Groovy project",
-  "name": "Groovy",
-  "logo": "https://raw.githubusercontent.com/groovy/artwork/master/medium.png",
-  "description": "Apache Groovy is a powerful, optionally typed and dynamic language, with static-typing and static compilation capabilities, for the Java platform aimed at improving developer productivity thanks to a concise, familiar and easy to learn syntax.",
-  "category": "development",
-  "platform": "other",
-  "script": {
-    "args": {
-      "regex": "/apache-groovy-binary-([\\d.]+)\\.zip",
-      "autoupdate": {
-        "apache-groovy-binary-${version}.zip": "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-${version}.zip"
-      },
-      "url": "https://groovy.apache.org/download.html"
-    },
-    "name": "appfork-check-update"
-  },
-  "homepage": "https://groovy-lang.org",
-  "version": "4.0.15",
-  "url": {
-    "apache-groovy-binary-4.0.15.zip": "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-4.0.15.zip"
-  }
+	"author":"the Apache Groovy project",
+	"name":"Groovy",
+	"logo":"https://raw.githubusercontent.com/groovy/artwork/master/medium.png",
+	"description":"Apache Groovy is a powerful, optionally typed and dynamic language, with static-typing and static compilation capabilities, for the Java platform aimed at improving developer productivity thanks to a concise, familiar and easy to learn syntax.",
+	"category":"development",
+	"platform":"other",
+	"script":{
+		"args":{
+			"regex":"/apache-groovy-binary-([\\d.]+)\\.zip",
+			"autoupdate":{
+				"apache-groovy-binary-${version}.zip":"https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-${version}.zip"
+			},
+			"url":"https://groovy.apache.org/download.html"
+		},
+		"name":"appfork-check-update"
+	},
+	"homepage":"https://groovy-lang.org",
+	"version":"4.0.15",
+	"url":{
+		"apache-groovy-binary-4.0.15.zip":"https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-4.0.15.zip"
+	}
 }

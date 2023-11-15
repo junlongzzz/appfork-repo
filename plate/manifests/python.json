@@ -16,9 +16,9 @@
 		"args":{
 			"regex":"Latest Python \\d+ Release - Python ([\\d.]+)",
 			"autoupdate":{
-				"Installer (32-bit)": "https://www.python.org/ftp/python/${version}/python-${version}.exe",
-				"Installer (64-bit)": "https://www.python.org/ftp/python/${version}/python-${version}-amd64.exe",
-				"Installer (ARM64)" : "https://www.python.org/ftp/python/${version}/python-${version}-arm64.exe"
+				"Installer (32-bit)":"https://www.python.org/ftp/python/${version}/python-${version}.exe",
+				"Installer (64-bit)":"https://www.python.org/ftp/python/${version}/python-${version}-amd64.exe",
+				"Installer (ARM64)":"https://www.python.org/ftp/python/${version}/python-${version}-arm64.exe"
 			},
 			"url":"https://www.python.org/downloads/windows/"
 		},

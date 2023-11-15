@@ -15,8 +15,8 @@
 		"args":{
 			"regex":"The current Gradle release is version ([\\d.]+)",
 			"autoupdate":{
-				"Binary-only" : "https://services.gradle.org/distributions/gradle-${version}-bin.zip",
-				"Complete-all": "https://services.gradle.org/distributions/gradle-${version}-all.zip"
+				"Binary-only":"https://services.gradle.org/distributions/gradle-${version}-bin.zip",
+				"Complete-all":"https://services.gradle.org/distributions/gradle-${version}-all.zip"
 			},
 			"url":"https://gradle.org/install/"
 		},
