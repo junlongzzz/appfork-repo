@@ -189,7 +189,7 @@ public class AppFork implements CommandLineRunner {
                         updateManifest = true;
                         continue;
                     }
-                    if (value != null && !StrUtil.equals(JSON.toJSONString(value), JSON.toJSONString(manifestValue))) {
+                    if (value != null && !String.valueOf(value).equals(String.valueOf(manifestValue))) {
                         if ("url".equalsIgnoreCase(key)) {
                             // 开始检查链接是否合法
                             boolean isUrl = false;
@@ -214,9 +214,13 @@ public class AppFork implements CommandLineRunner {
                                 // 如果链接不合法，那么不更新清单文件内的属性值
                                 continue;
                             }
+                            // url链接就直接存放对应数据类型，不做String化处理
+                            manifestJson.put(key, value);
+                        } else {
+                            // 如果脚本返回的属性值跟清单文件内的属性值不一致，那么更新清单文件内的属性值
+                            // 其他属性都是String类型，需要进行String化处理
+                            manifestJson.put(key, String.valueOf(value));
                         }
-                        // 如果脚本返回的属性值跟清单文件内的属性值不一致，那么更新清单文件内的属性值
-                        manifestJson.put(key, value);
                         updateManifest = true;
                     }
                 }
@@ -227,7 +231,7 @@ public class AppFork implements CommandLineRunner {
         if (updateManifest) {
             // 将新版清单内容写入文件
             FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
-            log.info("manifest [{}] updated: {} -> {}", manifest.getName(), version, manifestJson.getString("version"));
+            log.info("manifest [{}] updated: {}->{}", manifest.getName(), version, manifestJson.getString("version"));
         }
 
     }
