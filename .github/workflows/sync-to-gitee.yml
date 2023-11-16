@@ -22,5 +22,5 @@ jobs:
           dst_token: ${{ secrets.GITEE_TOKEN }}
           account_type: user
           clone_style: ssh
-          static_list: 'appfork-repo'
           force_update: true
+          static_list: ${{ github.event.repository.name }} # 自动获取当前仓库名
