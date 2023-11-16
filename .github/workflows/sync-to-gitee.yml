@@ -1,0 +1,26 @@
+name: Sync repository to gitee
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-to-gitee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Timezone
+        run: sudo timedatectl set-timezone 'Asia/Shanghai'
+
+      - name: Sync to gitee
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/junlongzzz
+          dst: gitee/junlongzzz
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          account_type: "user"
+          static_list: "appfork-repo"
+          clone_style: "ssh"
+          force_update: true

@@ -68,8 +68,6 @@ public class AppFork implements CommandLineRunner {
             return;
         }
 
-        long startTime = System.currentTimeMillis();
-
         ExecutorService executor = Executors.newSingleThreadExecutor();
         Future<?> future = executor.submit(() -> {
             int count = 0;
@@ -84,6 +82,7 @@ public class AppFork implements CommandLineRunner {
             return count;
         });
 
+        long startTime = System.currentTimeMillis();
         try {
             int count = (int) future.get(3, TimeUnit.HOURS);
             log.info("软件库同步完成，同步结果：{}/{}，耗时：{}ms", count, manifests.length, System.currentTimeMillis() - startTime);
@@ -92,7 +91,8 @@ public class AppFork implements CommandLineRunner {
             // 同步超时强行中断程序退出
             System.exit(1);
         } finally {
-            executor.shutdown();
+            // 关闭线程池
+            executor.shutdownNow();
         }
 
     }
