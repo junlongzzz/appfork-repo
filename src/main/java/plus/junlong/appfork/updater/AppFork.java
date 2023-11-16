@@ -189,7 +189,7 @@ public class AppFork implements CommandLineRunner {
                         updateManifest = true;
                         continue;
                     }
-                    if (value != null && !String.valueOf(value).equals(String.valueOf(manifestValue))) {
+                    if (value != null && !JSON.toJSONString(value).equals(JSON.toJSONString(manifestValue))) {
                         if ("url".equalsIgnoreCase(key)) {
                             // 开始检查链接是否合法
                             boolean isUrl = false;
