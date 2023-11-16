@@ -1,0 +1,25 @@
+{
+	"author":"zhile.io",
+	"name":"PandoraNext",
+	"description":"潘多拉 (Pandora)，一个让你呼吸顺畅的 ChatGPT。实现了网页版 ChatGPT 的主要操作。后端优化，绕过 Cloudflare，速度喜人。Pandora Cloud + Pandora Server + Shared Chat = `PandoraNext`",
+	"category":"tools",
+	"platform":"other",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"chat1.zhile.io":"https://chat1.zhile.io",
+				"ai.junlong.plus":"https://ai.junlong.plus",
+				"Deploy your own":"https://github.com/pandora-next/deploy"
+			},
+			"url":"gh://pandora-next/deploy"
+		},
+		"name":"appfork-check-update"
+	},
+	"homepage":"https://pandoranext.com",
+	"version":"0.1.1",
+	"url":{
+		"chat1.zhile.io":"https://chat1.zhile.io",
+		"ai.junlong.plus":"https://ai.junlong.plus",
+		"Deploy your own":"https://github.com/pandora-next/deploy"
+	}
+}
