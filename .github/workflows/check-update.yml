@@ -30,11 +30,15 @@ jobs:
         run: java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -Djava.security.egd=file:/dev/./urandom -jar ./target/appfork-repo-updater.jar
 
       - name: Commit files
+        id: commit_files
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           if [ -n "$(git status -s)" ]; then
             git commit -m "Automatic update" -a
+            echo "::set-output name=changed::true"
+          else
+            echo "::set-output name=changed::false"
           fi
 
       - name: Push changes
@@ -42,3 +46,10 @@ jobs:
         with:
           github_token: ${{ secrets.PAT_TOKEN }}
           branch: ${{ github.ref }}
+
+      - name: Trigger Sync to Gitee workflow
+        if: steps.commit_files.outputs.changed == 'true' # 有变更才触发
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          event-type: sync-to-gitee
