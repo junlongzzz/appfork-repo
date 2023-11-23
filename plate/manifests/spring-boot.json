@@ -16,7 +16,7 @@
 	},
 	"homepage":"https://spring.io/projects/spring-boot",
 	"logo":"https://spring.io/img/logos/spring-initializr.svg",
-	"version":"3.1.5",
+	"version":"3.2.0",
 	"url":{
 		"Spring Initializr":"https://start.spring.io"
 	}
