@@ -3,7 +3,7 @@
 	"name":"[B站]木鱼水心今天更新视频了吗？",
 	"description":"\"影评某种程度上，是让看过这部片的人，不那么孤独的东西\"。检测up主今天更新视频了吗？点击下载按钮即可跳转至B站该up主最新一期视频的播放界面。",
 	"category":"video",
-	"version":"BV1cN4y1D7Bw",
+	"version":"BV12H4y1q7bx",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -12,7 +12,7 @@
 		"name":"bilibili-checkpub"
 	},
 	"url":{
-		"千古佳话？政治谎言？尧舜禅让心甘情愿？《史记》原文全解读【故事】02 [2023-11-08]":"https://www.bilibili.com/video/BV1cN4y1D7Bw"
+		"从「孤苦少年」到「一代天子」！他凭什么？《史记》原文全解读【故事】03 [2023-11-22]":"https://www.bilibili.com/video/BV12H4y1q7bx"
 	},
 	"homepage":"https://space.bilibili.com/927587"
 }
