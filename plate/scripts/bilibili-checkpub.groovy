@@ -16,17 +16,19 @@ static def checkUpdate(version, platform, args) {
         return null
     }
 
-    def ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.60'
+    def ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0'
     def httpClient = HttpClient.newBuilder().cookieHandler(new CookieManager()).build()
     // 请求一次主页面拿到cookie，不然访问后面的接口回报-401非法访问错误
     httpClient.send(HttpRequest.newBuilder()
             .uri("https://space.bilibili.com/${mid}".toURI())
-            .header("user-agent", ua)
+            .header('user-agent', ua)
             .GET().build(),
             HttpResponse.BodyHandlers.discarding())
     def request = HttpRequest.newBuilder()
-            .uri("https://api.bilibili.com/x/space/wbi/arc/search?mid=${mid}&ps=1&pn=1&tid=0&keyword=&order=pubdate&platform=web&order_avoided=true&wts=${System.currentTimeMillis() / 1000}".toURI())
-            .header("user-agent", ua)
+            .uri("https://api.bilibili.com/x/space/wbi/arc/search?mid=${mid}&ps=1&pn=1&tid=0&keyword=&order=pubdate&platform=web&order_avoided=true&wts=${(long) (System.currentTimeMillis() / 1000)}".toURI())
+            .header('user-agent', ua)
+            .header('origin', 'https://space.bilibili.com')
+            .header('referer', "https://space.bilibili.com/${mid}/video")
             .GET().build()
     def response = httpClient.send(request, HttpResponse.BodyHandlers.ofString())
     def object = new JsonSlurper().parseText(response.body())
