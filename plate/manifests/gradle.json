@@ -4,11 +4,11 @@
 	"logo":"https://gradle.org/images/gradle-256x256.png",
 	"description":"Gradle is a build tool with a focus on build automation and support for multi-language development. If in doubt, choose the binary-only version and browse docs and sources online.",
 	"category":"development",
-	"version":"8.4",
+	"version":"8.5",
 	"platform":"windows",
 	"url":{
-		"Binary-only":"https://services.gradle.org/distributions/gradle-8.4-bin.zip",
-		"Complete-all":"https://services.gradle.org/distributions/gradle-8.4-all.zip"
+		"Binary-only":"https://services.gradle.org/distributions/gradle-8.5-bin.zip",
+		"Complete-all":"https://services.gradle.org/distributions/gradle-8.5-all.zip"
 	},
 	"homepage":"https://gradle.org",
 	"script":{
