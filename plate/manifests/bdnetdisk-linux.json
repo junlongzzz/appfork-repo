@@ -8,8 +8,8 @@
 	"platform":"linux",
 	"script":"bdnetdisk",
 	"url":{
-		".rpm":"https://issuepcdn.baidupcs.com/issue/netdisk/LinuxGuanjia/4.17.7/baidunetdisk_4.17.7_x86_64.rpm",
-		".deb":"https://issuepcdn.baidupcs.com/issue/netdisk/LinuxGuanjia/4.17.7/baidunetdisk_4.17.7_amd64.deb"
+		".rpm":"https://pkg-ant.baidu.com/issue/netdisk/LinuxGuanjia/4.17.7/baidunetdisk_4.17.7_x86_64.rpm",
+		".deb":"https://pkg-ant.baidu.com/issue/netdisk/LinuxGuanjia/4.17.7/baidunetdisk_4.17.7_amd64.deb"
 	},
 	"homepage":"https://pan.baidu.com/"
 }
