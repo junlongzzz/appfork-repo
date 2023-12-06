@@ -19,10 +19,10 @@
 
     <properties>
         <java.version>17</java.version>
-        <groovy4.version>4.0.15</groovy4.version>
+        <groovy4.version>4.0.16</groovy4.version>
         <hutool.version>5.8.23</hutool.version>
-        <fastjson2.version>2.0.42</fastjson2.version>
-        <jsoup.version>1.16.2</jsoup.version>
+        <fastjson2.version>2.0.43</fastjson2.version>
+        <jsoup.version>1.17.1</jsoup.version>
         <dom4j.version>2.1.4</dom4j.version>
         <jaxen.version>2.0.0</jaxen.version>
     </properties>

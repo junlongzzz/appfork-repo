@@ -1,6 +1,6 @@
 {
 	"author":"2dust",
-	"name":"v2rayN [Pre-release]",
+	"name":"v2rayN (Pre-release)",
 	"description":"A V2Ray client for Windows, support Xray core and v2fly core.",
 	"category":"network",
 	"version":"6.31",
@@ -13,10 +13,14 @@
 		"zz_v2rayN-With-Core-SelfContained.7z":"https://github.com/2dust/v2rayN/releases/download/6.31/zz_v2rayN-With-Core-SelfContained.7z"
 	},
 	"script":{
-		"name":"v2rayn",
 		"args":{
-			"prerelease":true
-		}
+			"url":"gh://2dust/v2rayN",
+			"gh":{
+				"prerelease":true,
+				"assets_jsonpath":"$.assets[?(@.name =~ /.*(.zip|.7z)/i)]"
+			}
+		},
+		"name":"appfork-check-update"
 	},
 	"homepage":"https://github.com/2dust/v2rayN"
 }

@@ -12,5 +12,14 @@
 		"Obsidian.1.4.16-allusers.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian.1.4.16-allusers.exe",
 		"Obsidian.1.4.16-arm64.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian.1.4.16-arm64.exe",
 		"Obsidian.1.4.16.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian.1.4.16.exe"
+	},
+	"script":{
+		"args":{
+			"url":"gh://obsidianmd/obsidian-releases",
+			"gh":{
+				"assets_jsonpath":"$.assets[?(@.name =~ /.*.exe/i)]"
+			}
+		},
+		"name":"appfork-check-update"
 	}
 }

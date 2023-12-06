@@ -17,9 +17,9 @@ static def checkUpdate(version, platform, args) {
     return [
             'version': version,
             'url'    : switch (platform) {
-                case 'windows' -> "https://download.typoraio.cn/windows/typora-setup-x64-${version}.exe".toString()
-                case 'linux' -> "https://download.typoraio.cn/linux/Typora-linux-x64-${version}.tar.gz".toString()
-                case 'mac' -> "https://download.typoraio.cn/mac/Typora-${version}.dmg".toString()
+                case 'windows' -> "https://download2.typoraio.cn/windows/typora-setup-x64-${version}.exe".toString()
+                case 'linux' -> "https://download2.typoraio.cn/linux/Typora-linux-x64-${version}.tar.gz".toString()
+                case 'mac' -> "https://download2.typoraio.cn/mac/Typora-${version}.dmg".toString()
                 default -> null
             }
     ]

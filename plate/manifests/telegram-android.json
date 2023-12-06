@@ -6,7 +6,17 @@
 	"category":"chat",
 	"platform":"android",
 	"homepage":"https://telegram.org",
-	"script":"telegram",
+	"script":{
+		"args":{
+			"url":"https://raw.githubusercontent.com/DrKLO/Telegram/master/TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java",
+			"regex":"BUILD_VERSION_STRING = \"([\\d.]+)\"",
+			"autoupdate":{
+				"Apk Installer":"https://telegram.org/dl/android/apk",
+				"Download from Google Play":"https://telegram.org/dl/android"
+			}
+		},
+		"name":"appfork-check-update"
+	},
 	"version":"10.3.2",
 	"url":{
 		"Apk Installer":"https://telegram.org/dl/android/apk",

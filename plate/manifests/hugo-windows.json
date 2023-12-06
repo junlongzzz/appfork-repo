@@ -10,5 +10,14 @@
 		"hugo_0.121.0_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.121.0/hugo_0.121.0_windows-amd64.zip",
 		"hugo_0.121.0_windows-arm64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.121.0/hugo_0.121.0_windows-arm64.zip",
 		"hugo_extended_0.121.0_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.121.0/hugo_extended_0.121.0_windows-amd64.zip"
+	},
+	"script":{
+		"args":{
+			"url":"gh://gohugoio/hugo",
+			"gh":{
+				"assets_jsonpath":"$.assets[?(@.name =~ /.*_windows.*/i)]"
+			}
+		},
+		"name":"appfork-check-update"
 	}
 }

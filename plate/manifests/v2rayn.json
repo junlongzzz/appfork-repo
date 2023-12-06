@@ -12,5 +12,14 @@
 		"v2rayN.zip":"https://github.com/2dust/v2rayN/releases/download/6.23/v2rayN.zip",
 		"zz_v2rayN-With-Core-SelfContained.7z":"https://github.com/2dust/v2rayN/releases/download/6.23/zz_v2rayN-With-Core-SelfContained.7z"
 	},
-	"homepage":"https://github.com/2dust/v2rayN"
+	"homepage":"https://github.com/2dust/v2rayN",
+	"script":{
+		"args":{
+			"url":"gh://2dust/v2rayN",
+			"gh":{
+				"assets_jsonpath":"$.assets[?(@.name =~ /.*(.zip|.7z)/i)]"
+			}
+		},
+		"name":"appfork-check-update"
+	}
 }

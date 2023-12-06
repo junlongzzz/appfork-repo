@@ -18,7 +18,12 @@ static def checkUpdate(version, platform, args) {
     def xpath = args.xpath as String
     def updateUrl = args.autoupdate ? args.autoupdate : args[platform as String]
 
-    if (!checkUrl || !updateUrl) {
+    def githubParams = args.gh
+    def githubPreRelease = false
+    // github api 返回的json结果内查找assets下载链接的jsonpath
+    def githubAssetsJsonpath = null
+
+    if (!checkUrl) {
         return null
     }
 
@@ -58,18 +63,41 @@ static def checkUpdate(version, platform, args) {
     if (urlMatcher.find()) {
         def owner = urlMatcher.group(1)
         def repo = urlMatcher.group(2)
-        // 将检测更新链接转换为github最新release链接
-        checkUrl = "https://github.com/${owner}/${repo}/releases/latest" as String
-        if (!regex) {
-            regex = '/releases/tag/[vV]?([\\d.]+)'
+
+        if (githubParams instanceof Map && !githubParams.isEmpty()) {
+            if (githubParams.assets_jsonpath instanceof String && githubParams.assets_jsonpath) { // 是否检测下载文件jsonpath
+                checkUrl = "https://api.github.com/repos/${owner}/${repo}/releases/latest" as String
+                jsonpath = '$.tag_name' as String
+                // 保存查找下载链接的jsonpath
+                githubAssetsJsonpath = githubParams.assets_jsonpath as String
+            }
+            if (githubParams.prerelease instanceof Boolean && githubParams.prerelease) { // 是否检测预发布版本
+                checkUrl = "https://api.github.com/repos/${owner}/${repo}/releases" as String
+                githubPreRelease = true
+            }
+        }
+        // 如果没有额外参数，使用默认方式检测最新版本
+        if (checkUrl.startsWith('gh://')) {
+            // 将检测更新链接转换为github最新release链接
+            checkUrl = "https://github.com/${owner}/${repo}/releases/latest" as String
+            if (!regex) {
+                regex = '/releases/tag/[vV]?([\\d.]+)'
+            }
         }
     }
 
-    def response = httpClient.send(HttpRequest.newBuilder()
-            .uri(checkUrl.toURI())
-            .GET().build(), HttpResponse.BodyHandlers.ofString()).body()
+    def response = httpClient.send(HttpRequest.newBuilder().uri(checkUrl.toURI()).GET().build(), HttpResponse.BodyHandlers.ofString()).body()
     // 开始用对应方式查找版本号
-    if (regex) { // 正则
+    if (githubPreRelease) { // github预发布版本
+        def result = JsonPath.read(response, '$.*[?(@.prerelease == true)]')
+        if (result instanceof List && !result.isEmpty()) {
+            result = result[0]
+        } else {
+            return null
+        }
+        version = result.tag_name as String
+        response = result
+    } else if (regex) { // 正则
         def matcher = response =~ regex
         if (!matcher.find()) {
             return null
@@ -89,19 +117,34 @@ static def checkUpdate(version, platform, args) {
             return null
         }
         version = node.getText()
+    }
+
+    if (version) {
+        // 去除版本号前面的v
+        version = version.replaceFirst('[vV]', '')
     } else {
         return null
     }
 
     def url = null
-    def versionReplaceRegex = '\\$\\{?version}?'
-    if (updateUrl instanceof String) {
-        url = updateUrl.replaceAll(versionReplaceRegex, version)
-    } else if (updateUrl instanceof Map) {
+    if (githubAssetsJsonpath) {
+        // 使用jsonpath方式读取查找下载链接
         url = [:]
-        updateUrl.forEach((String k, String v) -> {
-            url[k.replaceAll(versionReplaceRegex, version)] = v.replaceAll(versionReplaceRegex, version)
-        })
+        JsonPath.read(response, githubAssetsJsonpath).each { asset ->
+            def label = asset.label as String
+            def name = asset.name as String
+            url[label ? label : name] = asset.browser_download_url
+        }
+    } else {
+        def versionReplaceRegex = '\\$\\{?version}?'
+        if (updateUrl instanceof String) {
+            url = updateUrl.replaceAll(versionReplaceRegex, version)
+        } else if (updateUrl instanceof Map) {
+            url = [:]
+            updateUrl.forEach((String k, String v) -> {
+                url[k.replaceAll(versionReplaceRegex, version)] = v.replaceAll(versionReplaceRegex, version)
+            })
+        }
     }
 
     return [
