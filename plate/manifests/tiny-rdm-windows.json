@@ -1,0 +1,24 @@
+{
+	"author":"Tiny Craft",
+	"name":"Tiny RDM",
+	"logo":"https://redis.tinycraft.cc/images/logo.svg",
+	"description":"Tiny RDM is a modern lightweight cross-platform Redis desktop manager available for Mac, Windows, and Linux.",
+	"category":"development",
+	"version":"1.1.0",
+	"platform":"windows",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"TinyRDM_Setup_${version}_windows_amd64.exe":"https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/TinyRDM_Setup_${version}_windows_amd64.exe",
+				"TinyRDM_Portable_${version}_windows_amd64.zip":"https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/TinyRDM_Portable_${version}_windows_amd64.zip"
+			},
+			"url":"gh://tiny-craft/tiny-rdm"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"TinyRDM_Setup_1.1.0_windows_amd64.exe":"https://github.com/tiny-craft/tiny-rdm/releases/download/v1.1.0/TinyRDM_Setup_1.1.0_windows_amd64.exe",
+		"TinyRDM_Portable_1.1.0_windows_amd64.zip":"https://github.com/tiny-craft/tiny-rdm/releases/download/v1.1.0/TinyRDM_Portable_1.1.0_windows_amd64.zip"
+	},
+	"homepage":"https://github.com/tiny-craft/tiny-rdm"
+}
