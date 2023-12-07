@@ -1,0 +1,22 @@
+{
+	"author":"Anaconda Inc.",
+	"name":"Anaconda",
+	"description":"Anaconda is a data science platform that supports Python and other AI tools for data science projects.",
+	"category":"development",
+	"platform":"windows",
+	"script":{
+		"args":{
+			"regex":"Anaconda3-([\\d.-]+)-Windows",
+			"autoupdate":{
+				"Anaconda3-${version}-Windows-x86_64.exe":"https://repo.anaconda.com/archive/Anaconda3-${version}-Windows-x86_64.exe"
+			},
+			"url":"https://www.anaconda.com/download"
+		},
+		"name":"appfork-check-update"
+	},
+	"homepage":"https://www.anaconda.com",
+	"version":"2023.09-0",
+	"url":{
+		"Anaconda3-2023.09-0-Windows-x86_64.exe":"https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Windows-x86_64.exe"
+	}
+}
