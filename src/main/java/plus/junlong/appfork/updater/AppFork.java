@@ -1,5 +1,6 @@
 package plus.junlong.appfork.updater;
 
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.ReUtil;
 import cn.hutool.core.util.StrUtil;
@@ -85,9 +86,9 @@ public class AppFork implements CommandLineRunner {
         long startTime = System.currentTimeMillis();
         try {
             int count = (int) future.get(3, TimeUnit.HOURS);
-            log.info("软件库同步完成，同步结果：{}/{}，耗时：{}ms", count, manifests.length, System.currentTimeMillis() - startTime);
+            log.info("软件库同步完成，同步结果：{}/{}，耗时：{}", count, manifests.length, DateUtil.formatBetween(System.currentTimeMillis() - startTime));
         } catch (Exception e) {
-            log.error("软件库同步出错[{}]，耗时：{}ms", e.getClass().getSimpleName(), System.currentTimeMillis() - startTime);
+            log.error("软件库同步出错[{}]，耗时：{}", e.getClass().getSimpleName(), DateUtil.formatBetween(System.currentTimeMillis() - startTime));
             // 同步超时强行中断程序退出
             System.exit(1);
         } finally {
