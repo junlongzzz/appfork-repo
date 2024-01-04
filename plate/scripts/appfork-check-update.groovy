@@ -1,6 +1,6 @@
 import com.jayway.jsonpath.JsonPath
+import groovy.json.JsonSlurper
 import org.dom4j.DocumentHelper
-import org.jsoup.Jsoup
 
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
@@ -40,21 +40,25 @@ static def checkUpdate(version, platform, args) {
         def categoryId = urlMatcher.group(1)
         def appId = urlMatcher.group(2)
 
-        def document = Jsoup.parse(httpClient.send(HttpRequest.newBuilder()
-                .uri("https://pc.qq.com/detail/${categoryId}/detail_${appId}.html".toURI())
-                .header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.41')
-                .GET().build(), HttpResponse.BodyHandlers.ofString()).body())
-        if (!regex) {
-            // 默认的版本查找匹配正则表达式
-            regex = '>版本：([\\d.]+)<'
-        }
-        def versionMatcher = document.html() =~ regex
-        if (!versionMatcher.find()) {
+        def response = new JsonSlurper().parseText(httpClient.send(HttpRequest.newBuilder()
+                .uri("https://luban.m.qq.com/api/public/software-manager/softwareProxy".toURI())
+                .header('Content-Type', 'application/x-www-form-urlencoded')
+                .header('Accept-Language', 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6')
+                .header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
+                        'Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0')
+                .POST(HttpRequest.BodyPublishers.ofString("cmdid=3318&jprxReq[req][soft_id_list][]=${appId}")).build(),
+                HttpResponse.BodyHandlers.ofString()).body())
+        if (response.resp == null || response.resp.retCode != 0) {
             return null
         }
+        def softInfo = response.resp.soft_list[0]
+        def downloadUrl = softInfo.download_https_url
+        if (downloadUrl == null) {
+            downloadUrl = softInfo.download_url
+        }
         return [
-                version: versionMatcher.group(1),
-                url    : document.selectFirst("a[data-id='${appId}']").attr('href')
+                version: softInfo.ver_name as String,
+                url    : downloadUrl as String
         ]
     }
 
