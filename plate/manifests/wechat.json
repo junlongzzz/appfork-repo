@@ -4,9 +4,9 @@
 	"logo":"https://pc3.gtimg.com/softmgr/logo/48/11488_48_1616464914.png",
 	"description":"超过十亿人使用，可以群聊支持发送语音短信、视频、图片和文字",
 	"category":"chat",
-	"version":"3.9.7.25",
+	"version":"3.9.8.25",
 	"platform":"windows",
-	"url":"https://webcdn.m.qq.com/spcmgr/download/WeChatSetup_3.9.7.25.exe",
+	"url":"https://sw.pcmgr.qq.com/1561bac8bd369aa97e1283df7e76c39e/65967725/spcmgr/download/WeChat3.9.8.25.exe",
 	"homepage":"https://pc.weixin.qq.com",
 	"script":{
 		"args":{
