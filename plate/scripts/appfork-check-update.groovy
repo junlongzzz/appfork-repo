@@ -121,7 +121,9 @@ static def checkUpdate(version, platform, args) {
 
     if (version) {
         // 去除版本号前面的v
-        version = version.replaceFirst('[vV]', '')
+        if (version.startsWith('v') || version.startsWith('V')) {
+            version = version.substring(1)
+        }
     } else {
         return null
     }

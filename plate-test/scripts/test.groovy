@@ -12,9 +12,23 @@ static def checkUpdate(version, platform, args) {
     println(checkUpdateTest(version, platform, args))
 
 //    println(tsc('tsc://0/26980'))
-//
+
+    // 获取应用详情
 //    def respJson = lestore('/api/webstorecontents/app/details', [
 //            softId: '13407'
+//    ])
+//    if (respJson.status != 0) {
+//        println(respJson.message)
+//    } else {
+//        println(respJson.data)
+//    }
+
+    // 获取应用的下载链接地址
+//    def respJson = lestore('/api/webstorecontents/download/getDownloadUrl', [
+//            bizType: 1,
+//            product: 3,
+//            softId : '12489',
+//            type   : 0
 //    ])
 //    if (respJson.status != 0) {
 //        println(respJson.message)
