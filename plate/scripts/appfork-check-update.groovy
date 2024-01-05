@@ -48,17 +48,22 @@ static def checkUpdate(version, platform, args) {
                         'Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0')
                 .POST(HttpRequest.BodyPublishers.ofString("cmdid=3318&jprxReq[req][soft_id_list][]=${appId}")).build(),
                 HttpResponse.BodyHandlers.ofString()).body())
-        if (response.resp == null || response.resp.retCode != 0) {
+        if (response.resp == null || response.resp.retCode != 0 ||
+                response.resp.soft_list == null || response.resp.soft_list.isEmpty()) {
             return null
         }
         def softInfo = response.resp.soft_list[0]
-        def downloadUrl = softInfo.download_https_url
-        if (downloadUrl == null) {
-            downloadUrl = softInfo.download_url
-        }
+        // 舍弃使用返回的下载链接，因为每次请求的下载链接都不一样，会造成频繁的更新清单文件
+        // 故直接使用软件中心的详情页链接用户前往下载
+//        def downloadUrl = softInfo.download_https_url
+//        if (downloadUrl == null) {
+//            downloadUrl = softInfo.download_url
+//        }
         return [
                 version: softInfo.ver_name as String,
-                url    : downloadUrl as String
+                url    : [
+                        '前往下载': "https://pc.qq.com/detail/${categoryId}/detail_${appId}.html" as String
+                ]
         ]
     }
 
