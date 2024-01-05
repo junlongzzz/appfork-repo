@@ -6,7 +6,9 @@
 	"category":"chat",
 	"version":"3.9.8.25",
 	"platform":"windows",
-	"url":"https://sw.pcmgr.qq.com/6853ab0c4b4e5f53aa2d72e809daf45d/65971fa4/spcmgr/download/WeChat3.9.8.25.exe",
+	"url":{
+		"前往下载":"https://pc.qq.com/detail/8/detail_11488.html"
+	},
 	"homepage":"https://pc.weixin.qq.com",
 	"script":{
 		"args":{

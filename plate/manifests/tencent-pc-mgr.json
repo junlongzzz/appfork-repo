@@ -13,5 +13,7 @@
 		"name":"appfork-check-update"
 	},
 	"version":"16.9.24712.211",
-	"url":"https://sw.pcmgr.qq.com/8c572189ccb534943160d7fb50501fc7/65971f6e/spcmgr/download/PCMgr_Setup_169_24712_211.exe"
+	"url":{
+		"前往下载":"https://pc.qq.com/detail/19/detail_25639.html"
+	}
 }

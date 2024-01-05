@@ -13,5 +13,7 @@
 		"name":"appfork-check-update"
 	},
 	"version":"4.1.16.6007",
-	"url":"https://sw.pcmgr.qq.com/45b932be622833a590c6d00a8750b3c3/65971fb0/spcmgr/download/WeCom_4.1.16.6007.exe"
+	"url":{
+		"前往下载":"https://pc.qq.com/detail/14/detail_22554.html"
+	}
 }

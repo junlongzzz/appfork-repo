@@ -13,5 +13,7 @@
 		"name":"appfork-check-update"
 	},
 	"version":"7.1.10.1122",
-	"url":"https://sw.pcmgr.qq.com/b1b3150a5ebdd7a608d190e4bbc50d93/65971fa1/spcmgr/download/7.1.10-Release.11229101.exe"
+	"url":{
+		"前往下载":"https://pc.qq.com/detail/0/detail_26980.html"
+	}
 }
