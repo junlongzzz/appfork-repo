@@ -7,6 +7,9 @@
 	"version":"4.14.4",
 	"platform":"windows",
 	"url":{
+		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v4.14.4/tportable-x64.4.14.4.zip",
+		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v4.14.4/tportable.4.14.4.zip",
+		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v4.14.4/tsetup-x64.4.14.4.exe",
 		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v4.14.4/tsetup.4.14.4.exe"
 	},
 	"homepage":"https://telegram.org",
