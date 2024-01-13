@@ -2,7 +2,7 @@ name: Sync repository to gitee
 
 on:
   workflow_dispatch:
-  repository_dispatch: # 仓库调度事件
+  repository_dispatch: # 仓库调度事件触发
     types:
       - sync-to-gitee
   push:
@@ -13,9 +13,6 @@ jobs:
   sync-to-gitee:
     runs-on: ubuntu-latest
     steps:
-      - name: Set Timezone
-        run: sudo timedatectl set-timezone 'Asia/Shanghai'
-
       - name: Sync to gitee
         uses: Yikun/hub-mirror-action@master
         with:

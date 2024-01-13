@@ -28,7 +28,7 @@ jobs:
         run: mvn -B -DskipTests=true package --file pom.xml
 
       - name: Run updater
-        run: java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -Djava.security.egd=file:/dev/./urandom -jar ./target/appfork-repo-updater.jar
+        run: java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -Djava.security.egd=file:/dev/./urandom -jar ./target/appfork-repo-updater.jar --spring.profiles.active=prod
 
       - name: Commit files
         id: commit-files
@@ -43,6 +43,7 @@ jobs:
           fi
 
       - name: Push changes
+        if: steps.commit-files.outputs.changed == 'true' # 有变更才触发
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.PAT_TOKEN }}

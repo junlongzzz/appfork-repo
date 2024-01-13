@@ -1,10 +1,7 @@
-logging:
-  level:
-    plus.junlong.appfork: info
-
 spring:
+  profiles:
+    # 指定当前配置文件的 profile
+    active: test
   main:
+    # 指定当前应用的类型，none 表示不是 web 应用
     web-application-type: none
-
-config:
-  repo-path: plate
