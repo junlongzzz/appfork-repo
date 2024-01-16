@@ -6,9 +6,9 @@
 	"author":"Oracle",
 	"category":"tools",
 	"platform":"windows",
-	"version":"7.0.12",
+	"version":"7.0.14",
 	"url":{
-		"VirtualBox-7.0.12-159484-Win.exe":"https://download.virtualbox.org/virtualbox/7.0.12/VirtualBox-7.0.12-159484-Win.exe",
-		"Oracle_VM_VirtualBox_Extension_Pack-7.0.12.vbox-extpack":"https://download.virtualbox.org/virtualbox/7.0.12/Oracle_VM_VirtualBox_Extension_Pack-7.0.12.vbox-extpack"
+		"VirtualBox-7.0.14-161095-Win.exe":"https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14-161095-Win.exe",
+		"Oracle_VM_VirtualBox_Extension_Pack-7.0.14.vbox-extpack":"https://download.virtualbox.org/virtualbox/7.0.14/Oracle_VM_VirtualBox_Extension_Pack-7.0.14.vbox-extpack"
 	}
 }
