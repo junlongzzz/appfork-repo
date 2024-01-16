@@ -17,9 +17,9 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
 @Component
@@ -63,6 +63,7 @@ public class AppFork implements CommandLineRunner {
     public void run(String... args) {
         log.info("开始软件库同步[{}]...", repoPath);
 
+        // 获取清单文件列表
         File[] manifests = new File(repoPath, "manifests").listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
         if (manifests == null) {
             log.error("目录内无清单文件或不存在该目录: {}", repoPath);
@@ -70,30 +71,30 @@ public class AppFork implements CommandLineRunner {
         }
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
-        Future<?> future = executor.submit(() -> {
+        CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -> {
             int count = 0;
             for (File manifest : manifests) {
                 try {
                     sync(manifest);
                     count++;
                 } catch (Exception e) {
-                    log.error("sync [{}] error: {}", manifest.getName(), e.getMessage());
+                    log.error("sync [{}] error[{}]: {}", manifest.getName(), e.getClass().getSimpleName(), e.getMessage());
                 }
             }
             return count;
-        });
+        }, executor);
 
         long startTime = System.currentTimeMillis();
         try {
-            int count = (int) future.get(3, TimeUnit.HOURS);
+            int count = future.get(3, TimeUnit.HOURS);
             log.info("软件库同步完成，同步结果：{}/{}，耗时：{}", count, manifests.length, DateUtil.formatBetween(System.currentTimeMillis() - startTime));
         } catch (Exception e) {
-            log.error("软件库同步出错[{}]，耗时：{}", e.getClass().getSimpleName(), DateUtil.formatBetween(System.currentTimeMillis() - startTime));
+            log.error("软件库同步出错[{}]：{}，耗时：{}", e.getClass().getSimpleName(), e.getMessage(), DateUtil.formatBetween(System.currentTimeMillis() - startTime));
             // 同步超时强行中断程序退出
             System.exit(1);
         } finally {
             // 关闭线程池
-            executor.shutdownNow();
+            executor.shutdown();
         }
 
     }
@@ -146,8 +147,10 @@ public class AppFork implements CommandLineRunner {
         // 脚本文件执行时的额外参数
         Map<?, ?> scriptArgs = null;
         if (scriptValue instanceof String) {
+            // 如果脚本值是字符串，那么直接作为脚本文件名
             scriptName = (String) scriptValue;
         } else if (scriptValue instanceof Map<?, ?> scriptValueMap) {
+            // 如果脚本值是Map，那么获取脚本文件名和脚本参数
             Object nameObj = scriptValueMap.get("name");
             if (nameObj instanceof String) {
                 scriptName = (String) nameObj;
