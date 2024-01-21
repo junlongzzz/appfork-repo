@@ -1,0 +1,18 @@
+{
+	"author":"open-source",
+	"name":"RustDesk",
+	"logo":"https://rustdesk.com/images/rustdesk-banner.svg",
+	"description":"An open-source remote desktop, and alternative to TeamViewer.",
+	"category":"tools",
+	"version":"1.2.3",
+	"platform":"windows",
+	"url":"https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.exe",
+	"homepage":"https://rustdesk.com",
+	"script":{
+		"args":{
+			"autoupdate":"https://github.com/rustdesk/rustdesk/releases/download/${version}/rustdesk-${version}-x86_64.exe",
+			"url":"gh://rustdesk/rustdesk"
+		},
+		"name":"appfork-check-update"
+	}
+}
