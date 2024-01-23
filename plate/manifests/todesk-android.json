@@ -4,9 +4,9 @@
 	"logo":"https://www.todesk.com/dist/img/71cec72.svg",
 	"description":"ToDesk 是一款免费不限速的远程控制软件，支持在内网、外网和移动网络环境下，随时随地发起远程控制。",
 	"category":"tools",
-	"version":"4.7.2.3",
+	"version":"4.7.2.4",
 	"platform":"android",
 	"script":"todesk",
-	"url":"https://dl.todesk.com/android/ToDesk_4.7.2.3.apk",
+	"url":"https://dl.todesk.com/android/ToDesk_4.7.2.4.apk",
 	"homepage":"https://www.todesk.com"
 }
