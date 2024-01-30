@@ -1,0 +1,23 @@
+{
+	"author":"Alibaba Open Source",
+	"name":"Nacos",
+	"description":"Nacos /nɑ:kəʊs/ 是 Dynamic Naming and Configuration Service的首字母简称，一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。",
+	"category":"development",
+	"version":"2.3.0",
+	"platform":"other",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"nacos-server-${version}.tar.gz":"https://github.com/alibaba/nacos/releases/download/${version}/nacos-server-${version}.tar.gz",
+				"nacos-server-${version}.zip":"https://github.com/alibaba/nacos/releases/download/${version}/nacos-server-${version}.zip"
+			},
+			"url":"gh://alibaba/nacos"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"nacos-server-2.3.0.tar.gz":"https://github.com/alibaba/nacos/releases/download/2.3.0/nacos-server-2.3.0.tar.gz",
+		"nacos-server-2.3.0.zip":"https://github.com/alibaba/nacos/releases/download/2.3.0/nacos-server-2.3.0.zip"
+	},
+	"homepage":"https://nacos.io"
+}
