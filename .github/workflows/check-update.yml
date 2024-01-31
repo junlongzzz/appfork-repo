@@ -51,7 +51,7 @@ jobs:
 
       - name: Trigger Sync to Gitee workflow
         if: steps.commit-files.outputs.changed == 'true' # 有变更才触发
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT_TOKEN }}
           event-type: sync-to-gitee
