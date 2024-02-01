@@ -1,0 +1,27 @@
+{
+	"author":"微软Microsoft",
+	"name":"Microsoft Windows Desktop Runtime (LTS)",
+	"description":".NET 桌面运行时使用户能够运行现有 Windows 桌面应用程序。该版本为长期支持版 LTS (Long-term support)",
+	"category":"tools",
+	"platform":"windows",
+	"logo":"https://dotnet.microsoft.com/favicon.ico",
+	"homepage":"https://dotnet.microsoft.com",
+	"version":"8.0.1",
+	"url":{
+		"x64":"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.1/windowsdesktop-runtime-8.0.1-win-x64.exe",
+		"x86":"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.1/windowsdesktop-runtime-8.0.1-win-x86.exe",
+		"arm64":"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.1/windowsdesktop-runtime-8.0.1-win-arm64.exe"
+	},
+	"script":{
+		"args":{
+			"url":"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/LTS/latest.version",
+			"regex":"([\\d.]+)$",
+			"autoupdate":{
+				"x64":"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x64.exe",
+				"x86":"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x86.exe",
+				"arm64":"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-arm64.exe"
+			}
+		},
+		"name":"appfork-check-update"
+	}
+}
