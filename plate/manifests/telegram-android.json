@@ -8,8 +8,8 @@
 	"homepage":"https://telegram.org",
 	"script":{
 		"args":{
-			"url":"https://raw.githubusercontent.com/DrKLO/Telegram/master/TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java",
-			"regex":"BUILD_VERSION_STRING = \"([\\d.]+)\"",
+			"url":"https://raw.githubusercontent.com/DrKLO/Telegram/master/gradle.properties",
+			"regex":"APP_VERSION_NAME=([\\d.]+)",
 			"autoupdate":{
 				"Apk Installer":"https://telegram.org/dl/android/apk",
 				"Download from Google Play":"https://telegram.org/dl/android"
