@@ -4,12 +4,12 @@
 	"logo":"https://www.7-zip.org/7ziplogo.png",
 	"description":"7-Zip是一款拥有极高压缩比的开源压缩软件",
 	"category":"tools",
-	"version":"23.01",
+	"version":"24.01",
 	"platform":"windows",
 	"url":{
-		"x64":"https://www.7-zip.org/a/7z2301-x64.exe",
-		"x86":"https://www.7-zip.org/a/7z2301.exe",
-		"arm64":"https://www.7-zip.org/a/7z2301-arm64.exe"
+		"x64":"https://www.7-zip.org/a/7z2401-x64.exe",
+		"x86":"https://www.7-zip.org/a/7z2401.exe",
+		"arm64":"https://www.7-zip.org/a/7z2401-arm64.exe"
 	},
 	"homepage":"https://www.7-zip.org/"
 }
