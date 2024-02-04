@@ -1,5 +1,5 @@
 static def checkUpdate(version, platform, args) {
-    def response = "https://www.7-zip.org/download.html".toURL().text
+    def response = "https://www.7-zip.org".toURL().text
     def matcher = response =~ 'Download 7-Zip ([\\d.]+) \\(\\d{4}-\\d{2}-\\d{2}\\)'
     if (!matcher.find()) {
         return null

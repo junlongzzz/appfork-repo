@@ -11,5 +11,5 @@
 		"x86":"https://www.7-zip.org/a/7z2301.exe",
 		"arm64":"https://www.7-zip.org/a/7z2301-arm64.exe"
 	},
-	"homepage":"https://www.7-zip.org/"
+	"homepage":"https://www.7-zip.org"
 }
