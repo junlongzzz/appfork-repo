@@ -7,5 +7,10 @@
 	"platform":"windows",
 	"homepage":"https://im.qq.com/pcqq/index.shtml",
 	"version":"9.9.7.21484",
-	"url":"https://dldir1.qq.com/qqfile/qq/QQNT/897bf087/QQ9.9.7.21484_x64.exe"
+	"url":"https://dldir1.qq.com/qqfile/qq/QQNT/897bf087/QQ9.9.7.21484_x64.exe",
+	"script":{
+		"args":{
+			"nt":true
+		}
+	}
 }

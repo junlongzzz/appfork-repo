@@ -1,0 +1,16 @@
+{
+	"author":"Tencent",
+	"name":"QQ Linux版",
+	"logo":"https://qzonestyle.gtimg.cn/qzone/qzact/act/external/tiqq/logo.png",
+	"description":"![p1](https://im.qq.com/linuxqq/images/linuxqq/mobile/p1.png)",
+	"category":"chat",
+	"platform":"linux",
+	"homepage":"https://im.qq.com/linuxqq/index.shtml",
+	"version":"3.2.5",
+	"url":{
+		"deb": "https://dldir1.qq.com/qqfile/qq/QQNT/852276c1/linuxqq_3.2.5-21453_amd64.deb",
+		"rpm": "https://dldir1.qq.com/qqfile/qq/QQNT/852276c1/linuxqq_3.2.5-21453_x86_64.rpm",
+		"appimage": "https://dldir1.qq.com/qqfile/qq/QQNT/852276c1/linuxqq_3.2.5-21453_x86_64.AppImage"
+	},
+	"script":"qq-nt"
+}
