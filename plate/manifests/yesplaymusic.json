@@ -4,7 +4,7 @@
 	"logo":"https://ghproxy.org/https://raw.githubusercontent.com/qier222/YesPlayMusic/master/images/logo.png",
 	"description":"高颜值的第三方网易云播放器",
 	"category":"music",
-	"version":"0.4.7",
+	"version":"0.4.8",
 	"platform":"windows",
 	"script":{
 		"args":{
@@ -18,8 +18,8 @@
 		"name":"appfork-check-update"
 	},
 	"url":{
-		"YesPlayMusic-0.4.7.exe":"https://github.com/qier222/YesPlayMusic/releases/download/v0.4.7/YesPlayMusic-0.4.7.exe",
-		"YesPlayMusic-Setup-0.4.7.exe":"https://github.com/qier222/YesPlayMusic/releases/download/v0.4.7/YesPlayMusic-Setup-0.4.7.exe",
+		"YesPlayMusic-0.4.8.exe":"https://github.com/qier222/YesPlayMusic/releases/download/v0.4.8/YesPlayMusic-0.4.8.exe",
+		"YesPlayMusic-Setup-0.4.8.exe":"https://github.com/qier222/YesPlayMusic/releases/download/v0.4.8/YesPlayMusic-Setup-0.4.8.exe",
 		"在线使用网页版":"https://music.junlong.plus"
 	},
 	"homepage":"https://github.com/qier222/YesPlayMusic"
