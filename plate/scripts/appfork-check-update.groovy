@@ -90,7 +90,7 @@ static def checkUpdate(version, platform, args) {
             // 将检测更新链接转换为github最新release链接
             checkUrl = "https://github.com/${owner}/${repo}/releases/latest" as String
             if (!regex) {
-                regex = '/releases/tag/[vV]?([\\d.]+)'
+                regex = '/releases/tag/[vV]?([\\d.-]+)'
             }
         }
     }
