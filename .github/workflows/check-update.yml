@@ -28,7 +28,7 @@ jobs:
         run: mvn -B -DskipTests=true package --file pom.xml
 
       - name: Run updater
-        run: java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -Djava.security.egd=file:/dev/./urandom -jar ./target/appfork-repo-updater.jar --spring.profiles.active=prod
+        run: java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -jar ./target/appfork-repo-updater.jar --spring.profiles.active=prod
 
       - name: Commit files
         id: commit-files
