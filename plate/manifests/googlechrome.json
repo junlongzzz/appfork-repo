@@ -4,8 +4,8 @@
 	"logo":"https://www.google.cn/chrome/static/images/chrome-logo.svg",
 	"description":"由 Google 打造的网络浏览器",
 	"category":"network",
-	"version":"122.0.6261.95",
+	"version":"122.0.6261.112",
 	"platform":"windows",
-	"url":"https://dl.google.com/release2/chrome/acnek6rvok4udsoqpskgtblq4vdq_122.0.6261.95/122.0.6261.95_chrome_installer.exe",
+	"url":"https://dl.google.com/release2/chrome/ac7hkc546b3jisxnroqpyf3ayfrq_122.0.6261.112/122.0.6261.112_chrome_installer.exe",
 	"homepage":"https://www.google.cn/chrome/index.html"
 }
