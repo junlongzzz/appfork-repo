@@ -175,7 +175,9 @@ public class AppFork implements CommandLineRunner {
                 SCRIPT_CACHE.put(scriptFilename, updateScript);
             }
             // 执行检测App更新的脚本指定方法
-            Object checkUpdateObj = updateScript.invokeMethod("checkUpdate", new Object[]{version, platform.toLowerCase(), scriptArgs});
+            // 清除脚本属性
+            manifestJson.remove("script");
+            Object checkUpdateObj = updateScript.invokeMethod("checkUpdate", new Object[]{manifestJson.clone(), scriptArgs});
             if (checkUpdateObj instanceof Map<?, ?> checkUpdate) {
                 // 获取脚本返回的错误信息
                 Object error = checkUpdate.get("error");

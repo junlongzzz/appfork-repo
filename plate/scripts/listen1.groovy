@@ -1,6 +1,8 @@
 import groovy.json.JsonSlurper
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
+    def platform = manifest.platform as String
+
     def repo = switch (platform) {
         case 'windows', 'linux', 'mac' -> 'listen1_desktop'
         case 'android' -> 'listen1_mobile'
@@ -13,7 +15,7 @@ static def checkUpdate(version, platform, args) {
     def response = "https://api.github.com/repos/listen1/${repo}/releases/latest".toURL().text
     def result = new JsonSlurper().parseText(response)
     def tagName = result.tag_name as String
-    version = tagName.replaceFirst('[vV]', '')
+    def version = tagName.replaceFirst('[vV]', '')
 
     def url = [:]
     if (platform == 'extensions') {

@@ -7,16 +7,19 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 import java.time.Duration
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     if (args == null) {
         return null
     }
+
+    def version = manifest.version as String
+    def platform = manifest.platform as String
 
     def checkUrl = args.url as String
     def regex = args.regex as String
     def jsonpath = args.jsonpath as String
     def xpath = args.xpath as String
-    def updateUrl = args.autoupdate ? args.autoupdate : args[platform as String]
+    def updateUrl = args.autoupdate ? args.autoupdate : args[platform]
 
     def githubParams = args.gh
     def githubPreRelease = false

@@ -5,7 +5,7 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 import java.text.SimpleDateFormat
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     if (args == null) {
         return null
     }
@@ -40,7 +40,7 @@ static def checkUpdate(version, platform, args) {
         return null
     }
     def videoName = "${latestVideo.title} [${new SimpleDateFormat('yyyy-MM-dd').format(new Date(latestVideo.created * 1000L))}]"
-    version = latestVideo.bvid
+    def version = latestVideo.bvid
     return [
             version: version,
             url    : [

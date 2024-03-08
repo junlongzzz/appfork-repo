@@ -1,6 +1,8 @@
 import groovy.json.JsonSlurper
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
+    def platform = manifest.platform as String
+
     def checkUrl = switch (platform) {
         case 'windows' -> 'https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/windowsDownloadUrl.js'
         case 'linux' -> 'https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxQQDownload.js'
@@ -16,6 +18,7 @@ static def checkUpdate(version, platform, args) {
     }
     def object = new JsonSlurper().parseText(matcher.group(1))
 
+    def version = null
     def url = null
     if (platform == 'linux') {
         version = object.version

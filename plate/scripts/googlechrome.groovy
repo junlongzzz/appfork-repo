@@ -1,9 +1,9 @@
 import groovy.xml.XmlSlurper
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     def response = 'https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml'.toURL().text
     def chromechecker = new XmlSlurper().parseText(response)
-    version = chromechecker.stable64.version.text()
+    def version = chromechecker.stable64.version.text()
     def url = null
     chromechecker.stable64.download.url.each {
         url = it.text()

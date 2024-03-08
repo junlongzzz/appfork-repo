@@ -1,4 +1,6 @@
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
+    def platform = manifest.platform as String
+
     if (!(platform in ['windows', 'mac', 'linux'])) {
         return null
     }
@@ -8,7 +10,7 @@ static def checkUpdate(version, platform, args) {
     if (!matcher.find()) {
         return null
     }
-    version = matcher.group(1)
+    def version = matcher.group(1)
 
     def url = switch (platform) {
         case 'windows' -> 'https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe'

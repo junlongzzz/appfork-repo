@@ -5,8 +5,10 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 import java.time.Duration
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
 //    def response = "https://pan.baidu.com/disk/cmsdata?clienttype=0&app_id=250528&t=${System.currentTimeMillis()}&do=client".toURL().text
+
+    def platform = manifest.platform as String
 
     def ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.60'
 
@@ -39,7 +41,7 @@ static def checkUpdate(version, platform, args) {
     if (!matcher.find()) {
         return null
     }
-    version = matcher.group(1)
+    def version = matcher.group(1)
 
     def url = switch (platform) {
         case 'linux' -> [

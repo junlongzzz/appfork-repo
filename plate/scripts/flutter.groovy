@@ -1,6 +1,8 @@
 import groovy.json.JsonSlurper
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
+    def platform = manifest.platform as String
+
     switch (platform) {
         case 'windows':
             platform = 'windows'

@@ -1,7 +1,7 @@
 import com.jayway.jsonpath.JsonPath
 
-static def checkUpdate(version, platform, args) {
-    def jsonpath = switch (platform) {
+static def checkUpdate(manifest, args) {
+    def jsonpath = switch (manifest.platform) {
         case 'windows' -> '$.products[?(@.platform.os =~ /win32(.*)/i)]'
         case 'linux' -> '$.products[?(@.platform.os =~ /linux(.*)/i)]'
         case 'mac' -> '$.products[?(@.platform.os =~ /darwin(.*)/i)]'
@@ -14,6 +14,7 @@ static def checkUpdate(version, platform, args) {
 
     def response = new URL('https://code.visualstudio.com/sha?build=stable').text
     def read = JsonPath.read(response, jsonpath)
+    def version = null
     def url = [:]
     if (read instanceof List) {
         read.forEach(product -> {

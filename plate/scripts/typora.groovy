@@ -1,4 +1,6 @@
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
+    def platform = manifest.platform as String
+
     // 目前所有平台版本一致
 //    def response = 'https://typoraio.cn/releases/stable.html'.toURL().text
     def response = 'https://typora.io/releases/stable'.toURL().text
@@ -12,7 +14,7 @@ static def checkUpdate(version, platform, args) {
     if (!matcher.find()) {
         return null
     }
-    version = matcher.group(1)
+    def version = matcher.group(1)
 
     return [
             'version': version,

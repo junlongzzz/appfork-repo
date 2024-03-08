@@ -1,6 +1,6 @@
 import java.util.regex.Matcher
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     def response = 'https://nginx.org/en/download.html'.toURL().text
     Matcher matcher = response =~ 'nginx/Windows-([\\d.]+)'
     if (!matcher.find()) {

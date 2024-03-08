@@ -3,7 +3,7 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 import java.time.Duration
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     // 在 2.0.0.1740 版本的时候，返回的json内的 details 的值是数组但是多了一个逗号，导致无法进行json解析
 //    def matcher = response =~ 'jsonpCallback\\(([\\s\\S]*)\\)'
 //    if (!matcher.find()) {

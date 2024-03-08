@@ -1,12 +1,13 @@
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     def document = Jsoup.parse('https://www.virtualbox.org/wiki/Downloads'.toURL(), 30000)
     if (!document) {
         return null
     }
 
+    def version = null
     def url = [:]
     boolean done = false
     for (Element element : document.select('ul a.ext-link[href]')) {

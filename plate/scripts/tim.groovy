@@ -1,6 +1,6 @@
 import groovy.json.JsonSlurper
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     def response = 'https://im.qq.com/rainbow/TIMDownload/'.toURL().text
     def matcher = response =~ 'params= *(\\{.*})'
     if (!matcher.find()) {
@@ -8,7 +8,7 @@ static def checkUpdate(version, platform, args) {
     }
     def jsonData = new JsonSlurper().parseText(matcher.group(1))
     def download = jsonData.app.download
-    return switch (platform) {
+    return switch (manifest.platform) {
         case 'windows' -> [
                 version: download.pcVersion,
                 url    : download.pcLink

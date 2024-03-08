@@ -1,8 +1,7 @@
-import cn.hutool.core.date.DateTime
 import cn.hutool.core.date.DateUtil
 import groovy.json.JsonSlurper
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     def versionDate = null
     def url = [:]
 

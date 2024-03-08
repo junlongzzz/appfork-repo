@@ -2,8 +2,8 @@ import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 
-static def checkUpdate(version, platform, args) {
-    def (url, regex) = switch (platform) {
+static def checkUpdate(manifest, args) {
+    def (url, regex) = switch (manifest.platform) {
         case 'windows' -> ['https://www.foxmail.com/win/download', 'FoxmailSetup_([\\d.]+).exe']
         case 'mac' -> ['https://www.foxmail.com/mac/download', 'Foxmail_for_Mac_([\\d.]+).dmg']
         default -> [null, null]

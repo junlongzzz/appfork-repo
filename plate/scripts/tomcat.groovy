@@ -1,4 +1,4 @@
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     if (!args) {
         return null
     }
@@ -9,7 +9,7 @@ static def checkUpdate(version, platform, args) {
     if (!matcher.find()) {
         return null
     }
-    version = matcher.group(1)
+    def version = matcher.group(1)
 
     def url = [:]
     ["${baseUrl}/tomcat/tomcat-${args.ver}/v${version}/bin/apache-tomcat-${version}.exe" as String,

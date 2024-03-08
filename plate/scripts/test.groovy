@@ -2,14 +2,16 @@ import cn.hutool.crypto.Mode
 import cn.hutool.crypto.Padding
 import cn.hutool.crypto.symmetric.AES
 import cn.hutool.http.HttpUtil
+import org.jsoup.Jsoup
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
-import org.jsoup.Jsoup
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     println('[[this is test script]]')
+    println("manifest: ${manifest as String}")
+    println("script args: ${args as String}")
 
-    checkUpdateTest(version, platform, args)
+    checkUpdateTest(manifest, args)
 
 //    println(tsc('tsc://0/26980'))
 
@@ -42,7 +44,7 @@ static def checkUpdate(version, platform, args) {
     ]
 }
 
-static def checkUpdateTest(version, platform, args) {
+static def checkUpdateTest(manifest, args) {
     // test script here
 }
 

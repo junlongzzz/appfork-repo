@@ -1,4 +1,6 @@
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
+    def platform = manifest.platform as String
+
     def url = switch (platform) {
         case 'windows' -> 'https://update.todesk.com/windows/uplog.html'
         case 'mac' -> 'https://dl.todesk.com/macos/uplog.html'
@@ -16,7 +18,7 @@ static def checkUpdate(version, platform, args) {
     if (!matcher.find()) {
         return null
     }
-    version = matcher.group(1)
+    def version = matcher.group(1)
 
     url = switch (platform) {
         case 'windows' -> [

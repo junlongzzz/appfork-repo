@@ -2,7 +2,7 @@ import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     //    def html = "https://pc.qq.com/detail/7/detail_11167.html".toURL().text
 //    def matcher = html =~ "/cloudmusicsetup([\\d.]+).exe"
 //    if (!matcher.find()) {

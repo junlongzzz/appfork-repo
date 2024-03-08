@@ -5,7 +5,7 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 import java.time.Duration
 
-static def checkUpdate(version, platform, args) {
+static def checkUpdate(manifest, args) {
     def httpClient = HttpClient.newBuilder()
             .connectTimeout(Duration.ofMillis(30000))
             .build()
@@ -19,7 +19,7 @@ static def checkUpdate(version, platform, args) {
         return null
     }
 
-    return switch (platform) {
+    return switch (manifest.platform) {
         case 'windows' -> [
                 'version': jsonData.data.winCode,
                 'url'    : jsonData.data.winDownloadUrl
