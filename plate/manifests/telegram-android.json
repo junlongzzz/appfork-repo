@@ -6,18 +6,7 @@
 	"category":"chat",
 	"platform":"android",
 	"homepage":"https://telegram.org",
-	"script":{
-		"args":{
-			"url":"https://raw.githubusercontent.com/DrKLO/Telegram/master/gradle.properties",
-			"regex":"APP_VERSION_NAME=([\\d.]+)",
-			"autoupdate":{
-				"Apk Installer":"https://telegram.org/dl/android/apk",
-				"Download from Google Play":"https://telegram.org/dl/android"
-			}
-		},
-		"name":"appfork-check-update"
-	},
-	"version":"10.8.1",
+	"version":"10.9.1",
 	"url":{
 		"Apk Installer":"https://telegram.org/dl/android/apk",
 		"Download from Google Play":"https://telegram.org/dl/android"
