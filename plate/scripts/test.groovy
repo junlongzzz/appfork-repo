@@ -7,9 +7,9 @@ import groovy.json.JsonSlurper
 import org.jsoup.Jsoup
 
 static def checkUpdate(version, platform, args) {
-    println('test script...')
+    println('[[this is test script]]')
 
-    println(checkUpdateTest(version, platform, args))
+    checkUpdateTest(version, platform, args)
 
 //    println(tsc('tsc://0/26980'))
 

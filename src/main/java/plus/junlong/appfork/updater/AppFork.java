@@ -4,6 +4,7 @@ import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.ReUtil;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.extra.spring.SpringUtil;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.alibaba.fastjson2.JSONWriter;
@@ -63,8 +64,10 @@ public class AppFork implements CommandLineRunner {
     public void run(String... args) {
         log.info("开始软件库同步[{}]...", repoPath);
 
+        // 清单文件目录 test环境下使用manifests-test目录
+        String manifestsDir = "test".equals(SpringUtil.getActiveProfile()) ? "manifests-test" : "manifests";
         // 获取清单文件列表
-        File[] manifests = new File(repoPath, "manifests").listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
+        File[] manifests = new File(repoPath, manifestsDir).listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
         if (manifests == null) {
             log.error("目录内无清单文件或不存在该目录: {}", repoPath);
             return;

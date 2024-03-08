@@ -5,3 +5,7 @@ spring:
   main:
     # 指定当前应用的类型，none 表示不是 web 应用
     web-application-type: none
+
+config:
+  # 程序需要同步的软件库目录，也可以通过运行时后面添加参数指定 `--config.repo-path=xxx`
+  repo-path: plate

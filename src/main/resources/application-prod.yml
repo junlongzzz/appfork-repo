@@ -1,7 +1,3 @@
 logging:
   level:
     plus.junlong.appfork: info
-
-config:
-  # 程序需要同步的软件库目录，也可以通过运行时后面添加参数指定 `--config.repo-path=xxx`
-  repo-path: plate
