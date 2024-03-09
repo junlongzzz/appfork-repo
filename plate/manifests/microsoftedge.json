@@ -1,23 +1,23 @@
 {
-  "author": "微软Microsoft",
-  "name": "Microsoft Edge",
-  "logo": "https://edgestatic.azureedge.net/welcome/static/favicon.png",
-  "description": "基于 `Chromium` 内核的 `Microsoft Edge` 网络浏览器",
-  "category": "network",
-  "version": "122.0.2365.66",
-  "platform": "windows",
-  "url": {
-    "官网下载": "https://www.microsoft.com/zh-cn/edge/download"
-  },
-  "homepage": "https://www.microsoft.com/zh-cn/edge",
-  "script": {
-    "name": "appfork-check-update",
-    "args": {
-      "url": "https://dorado-api.deno.dev/edge?arch=64&channel=stable",
-      "jsonpath": "$.Version",
-      "autoupdate": {
-        "官网下载": "https://www.microsoft.com/zh-cn/edge/download"
-      }
-    }
-  }
+	"author":"微软Microsoft",
+	"name":"Microsoft Edge",
+	"logo":"https://edgestatic.azureedge.net/welcome/static/favicon.png",
+	"description":"基于 `Chromium` 内核的 `Microsoft Edge` 网络浏览器",
+	"category":"network",
+	"version":"122.0.2365.80",
+	"platform":"windows",
+	"url":{
+		"官网下载":"https://www.microsoft.com/zh-cn/edge/download"
+	},
+	"homepage":"https://www.microsoft.com/zh-cn/edge",
+	"script":{
+		"name":"appfork-check-update",
+		"args":{
+			"url":"https://dorado-api.deno.dev/edge?arch=64&channel=stable",
+			"jsonpath":"$.Version",
+			"autoupdate":{
+				"官网下载":"https://www.microsoft.com/zh-cn/edge/download"
+			}
+		}
+	}
 }
