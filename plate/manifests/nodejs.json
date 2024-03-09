@@ -6,26 +6,12 @@
 	"author":"OpenJS Foundation and Node.js contributors.",
 	"category":"development",
 	"platform":"windows",
-	"version":"21.7.0",
+	"version":"21.7.1",
 	"url":{
-		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v21.7.0/node-v21.7.0-x86.msi",
-		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v21.7.0/node-v21.7.0-x64.msi",
-		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v21.7.0/node-v21.7.0-win-x86.zip",
-		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v21.7.0/node-v21.7.0-win-x64.zip",
+		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v21.7.1/node-v21.7.1-x86.msi",
+		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v21.7.1/node-v21.7.1-x64.msi",
+		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v21.7.1/node-v21.7.1-win-x86.zip",
+		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v21.7.1/node-v21.7.1-win-x64.zip",
 		"Official Docker Image":"https://hub.docker.com/_/node/"
-	},
-	"script":{
-		"args":{
-			"regex":"/node-v([\\d.]+)-win-",
-			"autoupdate":{
-				"Installer (.msi 32-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-x86.msi",
-				"Installer (.msi 64-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-x64.msi",
-				"Binary (.zip 32-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-win-x86.zip",
-				"Binary (.zip 64-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-win-x64.zip",
-				"Official Docker Image":"https://hub.docker.com/_/node/"
-			},
-			"url":"https://nodejs.org/en/download/current"
-		},
-		"name":"appfork-check-update"
 	}
 }
