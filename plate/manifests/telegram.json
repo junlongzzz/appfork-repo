@@ -12,5 +12,14 @@
 		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v4.15.1/tsetup-x64.4.15.1.exe",
 		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v4.15.1/tsetup.4.15.1.exe"
 	},
-	"homepage":"https://telegram.org"
+	"homepage":"https://telegram.org",
+	"script":{
+		"args":{
+			"url":"gh://telegramdesktop/tdesktop",
+			"gh":{
+				"assets_jsonpath":"$.assets[?(@.label =~ /windows.*/i)]"
+			}
+		},
+		"name":"appfork-check-update"
+	}
 }

@@ -10,5 +10,16 @@
 	"url":{
 		"Apk Installer":"https://telegram.org/dl/android/apk",
 		"Download from Google Play":"https://telegram.org/dl/android"
+	},
+	"script":{
+		"args":{
+			"url":"https://raw.githubusercontent.com/DrKLO/Telegram/master/gradle.properties",
+			"regex":"APP_VERSION_NAME=([\\d.]+)",
+			"autoupdate":{
+				"Apk Installer":"https://telegram.org/dl/android/apk",
+				"Download from Google Play":"https://telegram.org/dl/android"
+			}
+		},
+		"name":"appfork-check-update"
 	}
 }
