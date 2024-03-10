@@ -17,6 +17,8 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
@@ -65,10 +67,11 @@ public class AppFork implements CommandLineRunner {
         log.info("开始软件库同步[{}]...", repoPath);
 
         // 清单文件目录 test环境下使用manifests-test目录
-        String manifestsDir = "test".equals(SpringUtil.getActiveProfile()) ? "manifests-test" : "manifests";
+        File manifestsDir = new File(repoPath, "test".equals(SpringUtil.getActiveProfile()) ? "manifests-test" : "manifests");
         // 获取清单文件列表
-        File[] manifests = new File(repoPath, manifestsDir).listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith(".json"));
-        if (manifests == null) {
+        List<File> manifests = new LinkedList<>();
+        findManifests(manifestsDir, manifests);
+        if (manifests.isEmpty()) {
             log.error("目录内无清单文件或不存在该目录: {}", repoPath);
             return;
         }
@@ -90,7 +93,7 @@ public class AppFork implements CommandLineRunner {
         long startTime = System.currentTimeMillis();
         try {
             int count = future.get(3, TimeUnit.HOURS);
-            log.info("软件库同步完成，同步结果：{}/{}，耗时：{}", count, manifests.length, DateUtil.formatBetween(System.currentTimeMillis() - startTime));
+            log.info("软件库同步完成，同步结果：{}/{}，耗时：{}", count, manifests.size(), DateUtil.formatBetween(System.currentTimeMillis() - startTime));
         } catch (Exception e) {
             log.error("软件库同步出错[{}]：{}，耗时：{}", e.getClass().getSimpleName(), e.getMessage(), DateUtil.formatBetween(System.currentTimeMillis() - startTime));
             // 同步超时强行中断程序退出
@@ -102,14 +105,31 @@ public class AppFork implements CommandLineRunner {
 
     }
 
-    private void sync(File manifest) throws Exception {
-        if (manifest.length() <= 0 || !manifest.canRead() || !manifest.canWrite()) {
-            log.error("清单文件为空或无读写权限");
+    /**
+     * 递归查找清单文件
+     */
+    private void findManifests(File dir, List<File> manifestList) {
+        File[] files = dir.listFiles();
+        if (files == null) {
             return;
         }
+        for (File file : files) {
+            if (file.isDirectory()) {
+                findManifests(file, manifestList);
+            } else if (file.isFile() &&
+                    file.getName().endsWith(".json") &&
+                    file.length() > 0 &&
+                    file.canRead() &&
+                    file.canWrite()) {
+                manifestList.add(file);
+            }
+        }
+    }
+
+    private void sync(File manifest) throws Exception {
         JSONObject manifestJson = JSON.parseObject(FileUtil.readUtf8String(manifest));
         if (manifestJson == null || manifestJson.isEmpty()) {
-            log.error("清单文件解析为空");
+            log.error("manifest [{}] parsed is null or empty", manifest.getName());
             return;
         }
 
@@ -165,7 +185,7 @@ public class AppFork implements CommandLineRunner {
         }
 
         // 检查更新脚本
-        File script = new File(manifest.getParentFile().getParent(), "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
+        File script = new File(repoPath, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
         if (script.exists() && script.isFile()) {
             // groovy脚本运行
             String scriptFilename = script.getName();
