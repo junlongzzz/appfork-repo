@@ -7,15 +7,18 @@
 	"script":{
 		"args":{
 			"autoupdate":{
-				"文档查看":"https://binaryify.github.io/NeteaseCloudMusicApi"
+				"文档查看":"https://binaryify.github.io/NeteaseCloudMusicApi",
+				"Docker Image":"https://hub.docker.com/r/junlongzzz/netease_cloud_music_api"
 			},
-			"url":"gh://Binaryify/NeteaseCloudMusicApi"
+			"url":"https://gitlab.com/Binaryify/neteasecloudmusicapi/-/raw/main/package.json?ref_type=heads",
+			"jsonpath":"$.version"
 		},
 		"name":"appfork-check-update"
 	},
 	"homepage":"https://github.com/Binaryify/NeteaseCloudMusicApi",
-	"version":"4.14.1",
+	"version":"4.15.5",
 	"url":{
-		"文档查看":"https://binaryify.github.io/NeteaseCloudMusicApi"
+		"文档查看":"https://binaryify.github.io/NeteaseCloudMusicApi",
+		"Docker Image":"https://hub.docker.com/r/junlongzzz/netease_cloud_music_api"
 	}
 }
