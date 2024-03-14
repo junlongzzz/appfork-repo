@@ -6,8 +6,8 @@
 	"category":"chat",
 	"platform":"windows",
 	"homepage":"https://im.qq.com/pcqq/index.shtml",
-	"version":"9.9.7.21484",
-	"url":"https://dldir1.qq.com/qqfile/qq/QQNT/897bf087/QQ9.9.7.21484_x64.exe",
+	"version":"9.9.7.240305",
+	"url":"https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.7_240305_x64_01.exe",
 	"script":{
 		"args":{
 			"nt":true
