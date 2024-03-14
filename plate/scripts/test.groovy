@@ -2,14 +2,16 @@ import cn.hutool.crypto.Mode
 import cn.hutool.crypto.Padding
 import cn.hutool.crypto.symmetric.AES
 import cn.hutool.http.HttpUtil
-import org.jsoup.Jsoup
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
+import org.jsoup.Jsoup
 
 static def checkUpdate(manifest, args) {
-    println('[[this is test script]]')
-    println("manifest: ${manifest as String}")
-    println("script args: ${args as String}")
+    println('=====================================')
+    println('>> This is test script')
+    println(">> manifest: ${manifest as String}")
+    println(">> script args: ${args as String}")
+    println('=====================================')
 
     checkUpdateTest(manifest, args)
 

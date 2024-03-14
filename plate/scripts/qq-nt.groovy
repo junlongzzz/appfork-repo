@@ -2,6 +2,7 @@ import groovy.json.JsonSlurper
 
 static def checkUpdate(manifest, args) {
     def platform = manifest.platform as String
+    def isNt = args ? (args.nt as Boolean) : false
 
     def checkUrl = switch (platform) {
         case 'windows' -> 'https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/windowsDownloadUrl.js'
@@ -24,12 +25,15 @@ static def checkUpdate(manifest, args) {
         version = object.version
         url = object.x64DownloadUrl
     } else if (platform == 'windows') {
-        url = args.nt ? object.ntDownloadX64Url : object.downloadUrl
-        def versionMatcher = url =~ (args.nt ? '/QQ([\\d.]+)_x64.exe' : '/QQ([\\d.]+).exe')
+        url = isNt ? object.ntDownloadX64Url : object.downloadUrl
+        def versionMatcher = url =~ (isNt ? '/QQ_([\\d._]+)_x64_(\\d+).exe' : '/QQ_([\\d.]+)_(\\d+).exe')
         if (!versionMatcher.find()) {
             return null
         }
         version = versionMatcher.group(1)
+        if (isNt) {
+            version = version.replace('_', '.')
+        }
     }
 
     return [
