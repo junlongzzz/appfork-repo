@@ -9,8 +9,8 @@ import org.jsoup.Jsoup
 static def checkUpdate(manifest, args) {
     println('=====================================')
     println('>> This is test script')
-    println(">> manifest: ${manifest as String}")
-    println(">> script args: ${args as String}")
+    println(">> manifest: \n${JsonOutput.prettyPrint(JsonOutput.toJson(manifest as Map))}")
+    println(">> script args: \n${JsonOutput.prettyPrint(JsonOutput.toJson(args as Map))}")
     println('=====================================')
 
     checkUpdateTest(manifest, args)
