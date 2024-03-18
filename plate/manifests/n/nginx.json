@@ -1,7 +1,7 @@
 {
 	"author":"Nginx, Inc.",
-	"name":"nginx",
-	"logo":"https://nginx.org/favicon.ico",
+	"name":"Nginx",
+	"logo":"https://nginx.org/nginx.png",
 	"description":"nginx [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server.",
 	"category":"development",
 	"version":"1.25.4/1.24.0",

@@ -15,8 +15,8 @@ static def checkUpdate(manifest, args) {
     def stableVersion = matcher.group(1)
 
     def url = [:]
-    url["Mainline:${mainlineVersion}".toString()] = "https://nginx.org/download/nginx-${mainlineVersion}.zip".toString()
-    url["Stable:${stableVersion}".toString()] = "https://nginx.org/download/nginx-${stableVersion}.zip".toString()
+    url["nginx-${mainlineVersion}.zip (Mainline)".toString()] = "https://nginx.org/download/nginx-${mainlineVersion}.zip".toString()
+    url["nginx-${stableVersion}.zip (Stable)".toString()] = "https://nginx.org/download/nginx-${stableVersion}.zip".toString()
 
     return [
             version: "${mainlineVersion}/${stableVersion}".toString(),
