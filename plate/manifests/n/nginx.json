@@ -7,8 +7,8 @@
 	"version":"1.25.4/1.24.0",
 	"platform":"windows",
 	"url":{
-		"Mainline:1.25.4":"https://nginx.org/download/nginx-1.25.4.zip",
-		"Stable:1.24.0":"https://nginx.org/download/nginx-1.24.0.zip"
+		"nginx-1.25.4.zip (Mainline)":"https://nginx.org/download/nginx-1.25.4.zip",
+		"nginx-1.24.0.zip (Stable)":"https://nginx.org/download/nginx-1.24.0.zip"
 	},
 	"homepage":"https://nginx.org"
 }
