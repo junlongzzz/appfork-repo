@@ -15,7 +15,8 @@ static def checkUpdate(manifest, args) {
     def version = manifest.version as String
     def platform = manifest.platform as String
 
-    def checkUrl = args.url as String
+    // 检测更新url不存在就默认使用主页地址
+    def checkUrl = args.url ? args.url as String : manifest.homepage as String
     def regex = args.regex as String
     def jsonpath = args.jsonpath as String
     def xpath = args.xpath as String
