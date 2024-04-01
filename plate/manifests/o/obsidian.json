@@ -6,12 +6,12 @@
 	"author":"Obsidian Team",
 	"category":"reading",
 	"platform":"windows",
-	"version":"1.5.11",
+	"version":"1.5.12",
 	"url":{
-		"Obsidian.1.5.11-32.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.11/Obsidian.1.5.11-32.exe",
-		"Obsidian.1.5.11-allusers.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.11/Obsidian.1.5.11-allusers.exe",
-		"Obsidian.1.5.11-arm64.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.11/Obsidian.1.5.11-arm64.exe",
-		"Obsidian.1.5.11.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.11/Obsidian.1.5.11.exe"
+		"Obsidian.1.5.12-32.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/Obsidian.1.5.12-32.exe",
+		"Obsidian.1.5.12-allusers.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/Obsidian.1.5.12-allusers.exe",
+		"Obsidian.1.5.12-arm64.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/Obsidian.1.5.12-arm64.exe",
+		"Obsidian.1.5.12.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/Obsidian.1.5.12.exe"
 	},
 	"script":{
 		"args":{
