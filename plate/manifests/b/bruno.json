@@ -3,7 +3,7 @@
   "name":"Bruno",
   "logo":"https://ghproxy.org/https://raw.githubusercontent.com/usebruno/bruno/main/assets/images/logo-transparent.png",
   "description":"Bruno 是一款全新且创新的 API 客户端，旨在颠覆 Postman/Insomnia 等其他类似工具。",
-  "category":"tools",
+  "category":"development",
   "version":"1.12.3",
   "platform":"windows",
   "url":{
