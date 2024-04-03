@@ -1,0 +1,24 @@
+{
+  "author":"open source project",
+  "name":"Bruno",
+  "logo":"https://ghproxy.org/https://raw.githubusercontent.com/usebruno/bruno/main/assets/images/logo-transparent.png",
+  "description":"Bruno 是一款全新且创新的 API 客户端，旨在颠覆 Postman/Insomnia 等其他类似工具。",
+  "category":"tools",
+  "version":"1.12.3",
+  "platform":"windows",
+  "url":{
+    "bruno_1.12.3_x64_win.exe":"https://github.com/usebruno/bruno/releases/download/v1.12.3/bruno_1.12.3_x64_win.exe",
+    "bruno_1.12.3_x64_win.zip":"https://github.com/usebruno/bruno/releases/download/v1.12.3/bruno_1.12.3_x64_win.zip"
+  },
+  "homepage":"https://www.usebruno.com",
+  "script":{
+    "args":{
+      "autoupdate":{
+        "bruno_${version}_x64_win.exe":"https://github.com/usebruno/bruno/releases/download/v${version}/bruno_${version}_x64_win.exe",
+        "bruno_${version}_x64_win.zip":"https://github.com/usebruno/bruno/releases/download/v${version}/bruno_${version}_x64_win.zip"
+      },
+      "url":"gh://usebruno/bruno"
+    },
+    "name":"appfork-check-update"
+  }
+}
