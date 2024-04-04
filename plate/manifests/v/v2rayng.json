@@ -3,7 +3,7 @@
 	"name":"v2rayNG",
 	"description":"A V2Ray client for Android, support Xray core and v2fly core.",
 	"category":"network",
-	"version":"1.8.18",
+	"version":"1.8.19",
 	"platform":"android",
 	"script":{
 		"args":{
@@ -19,11 +19,11 @@
 		"name":"appfork-check-update"
 	},
 	"url":{
-		"v2rayNG_1.8.18_x86_64.apk":"https://github.com/2dust/v2rayNG/releases/download/1.8.18/v2rayNG_1.8.18_x86_64.apk",
-		"v2rayNG_1.8.18_x86.apk":"https://github.com/2dust/v2rayNG/releases/download/1.8.18/v2rayNG_1.8.18_x86.apk",
-		"v2rayNG_1.8.18_armeabi-v7a.apk":"https://github.com/2dust/v2rayNG/releases/download/1.8.18/v2rayNG_1.8.18_armeabi-v7a.apk",
-		"v2rayNG_1.8.18.apk":"https://github.com/2dust/v2rayNG/releases/download/1.8.18/v2rayNG_1.8.18.apk",
-		"v2rayNG_1.8.18_arm64-v8a.apk":"https://github.com/2dust/v2rayNG/releases/download/1.8.18/v2rayNG_1.8.18_arm64-v8a.apk"
+		"v2rayNG_1.8.19_x86_64.apk":"https://github.com/2dust/v2rayNG/releases/download/1.8.19/v2rayNG_1.8.19_x86_64.apk",
+		"v2rayNG_1.8.19_x86.apk":"https://github.com/2dust/v2rayNG/releases/download/1.8.19/v2rayNG_1.8.19_x86.apk",
+		"v2rayNG_1.8.19_armeabi-v7a.apk":"https://github.com/2dust/v2rayNG/releases/download/1.8.19/v2rayNG_1.8.19_armeabi-v7a.apk",
+		"v2rayNG_1.8.19.apk":"https://github.com/2dust/v2rayNG/releases/download/1.8.19/v2rayNG_1.8.19.apk",
+		"v2rayNG_1.8.19_arm64-v8a.apk":"https://github.com/2dust/v2rayNG/releases/download/1.8.19/v2rayNG_1.8.19_arm64-v8a.apk"
 	},
 	"homepage":"https://github.com/2dust/v2rayNG"
 }

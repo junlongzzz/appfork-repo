@@ -3,7 +3,7 @@
 	"name":"v2rayN (Pre-release)",
 	"description":"A V2Ray client for Windows, support Xray core and v2fly core.",
 	"category":"network",
-	"version":"6.42",
+	"version":"6.41",
 	"platform":"windows",
 	"url":{
 		"v2rayN-32.zip":"https://github.com/2dust/v2rayN/releases/download/6.42/v2rayN-32.zip",
