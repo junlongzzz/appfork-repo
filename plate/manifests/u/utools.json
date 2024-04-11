@@ -1,7 +1,7 @@
 {
 	"author":"福州猿力信息科技有限公司",
 	"name":"uTools",
-	"logo":"https://u.tools/favicon.ico",
+	"logo":"https://res.u-tools.cn/website5/assets/favicon.png",
 	"description":"新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持Windows 7+。视频介绍：\n<div class=\"mdui-video-container\"><video src=\"https://res.u-tools.cn/website/v4/utools-4-video.mp4\" controls>你的浏览器不支持video标签</video></div>",
 	"category":"tools",
 	"version":"4.4.1",
@@ -15,10 +15,10 @@
 		"args":{
 			"regex":"uTools-([\\d.]+)(?:-ia32)?\\.exe",
 			"autoupdate":{
-				"uTools-${version}.exe":"https://res.u-tools.cn/version2/uTools-${version}.exe",
-				"uTools-${version}-ia32.exe":"https://res.u-tools.cn/version2/uTools-${version}-ia32.exe"
+				"uTools-${version}.exe":"https://open.u-tools.cn/download/uTools-${version}.exe",
+				"uTools-${version}-ia32.exe":"https://open.u-tools.cn/download/uTools-${version}-ia32.exe"
 			},
-			"url":"https://u.tools/"
+			"url":"https://u.tools/download/"
 		},
 		"name":"appfork-check-update"
 	}

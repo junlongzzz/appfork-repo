@@ -1,7 +1,7 @@
 {
 	"author":"福州猿力信息科技有限公司",
 	"name":"uTools",
-	"logo":"https://u.tools/favicon.ico",
+	"logo":"https://res.u-tools.cn/website5/assets/favicon.png",
 	"description":"新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持UOS, Deepin, Ubuntu。视频介绍：\n<div class=\"mdui-video-container\"><video src=\"https://res.u-tools.cn/website/v4/utools-4-video.mp4\" controls>你的浏览器不支持video标签</video></div>",
 	"category":"tools",
 	"version":"4.4.1",
@@ -14,9 +14,9 @@
 		"args":{
 			"regex":"utools_([\\d.]+)_amd64\\.deb",
 			"autoupdate":{
-				"utools_${version}_amd64.deb":"https://res.u-tools.cn/version2/utools_${version}_amd64.deb"
+				"utools_${version}_amd64.deb":"https://open.u-tools.cn/download/utools_${version}_amd64.deb"
 			},
-			"url":"https://u.tools/"
+			"url":"https://u.tools/download/"
 		},
 		"name":"appfork-check-update"
 	}
