@@ -38,11 +38,11 @@ static def checkUpdate(manifest, args) {
 
     // 判断是不是腾讯软件中心的检测方式链接，格式为 tsc://<分类ID>/<应用ID>
     // tsc为Tencent Software Center的缩写
-    def urlMatcher = checkUrl =~ 'tsc://(\\d+)/(\\d+)'
+    def urlMatcher = checkUrl =~ '^tsc://(?<categoryId>\\d+)/(?<appId>\\d+)$'
     if (urlMatcher.find()) {
         // 开始通过腾讯软件中心的方式查找版本号和下载链接
-        def categoryId = urlMatcher.group(1)
-        def appId = urlMatcher.group(2)
+        def categoryId = urlMatcher.group('categoryId')
+        def appId = urlMatcher.group('appId')
 
         def response = new JsonSlurper().parseText(httpClient.send(HttpRequest.newBuilder()
                 .uri("https://luban.m.qq.com/api/public/software-manager/softwareProxy".toURI())
@@ -71,14 +71,15 @@ static def checkUpdate(manifest, args) {
         ]
     }
 
-    // 检查是不是github检测更新方式，格式为：gh://<用户名>/<仓库名>
-    urlMatcher = checkUrl =~ 'gh://(.+)/(.+)'
+    // 检查是不是github检测更新方式，格式为：gh://<用户名>/<仓库名> or github://<用户名>/<仓库名>
+    urlMatcher = checkUrl =~ '^(?<protocol>gh|github)://(?<owner>[\\w-]+)/(?<repo>[\\w-]+)$'
     if (urlMatcher.find()) {
-        def owner = urlMatcher.group(1)
-        def repo = urlMatcher.group(2)
+        def owner = urlMatcher.group('owner')
+        def repo = urlMatcher.group('repo')
 
         if (githubParams instanceof Map && !githubParams.isEmpty()) {
-            if (githubParams.assets_jsonpath instanceof String && githubParams.assets_jsonpath) { // 是否检测下载文件jsonpath
+            if (githubParams.assets_jsonpath instanceof String && githubParams.assets_jsonpath) {
+                // 是否检测下载文件jsonpath
                 checkUrl = "https://api.github.com/repos/${owner}/${repo}/releases/latest" as String
                 jsonpath = '$.tag_name' as String
                 // 保存查找下载链接的jsonpath
@@ -90,12 +91,23 @@ static def checkUpdate(manifest, args) {
             }
         }
         // 如果没有额外参数，使用默认方式检测最新版本
-        if (checkUrl.startsWith('gh://')) {
+        if (checkUrl.startsWith('gh://') || checkUrl.startsWith('github://')) {
             // 将检测更新链接转换为github最新release链接
             checkUrl = "https://github.com/${owner}/${repo}/releases/latest" as String
             if (!regex) {
-                regex = '/releases/tag/[vV]?([\\d.-]+)'
+                regex = '/releases/tag/[vV]?(?<version>[\\d.\\-_]+)'
             }
+        }
+    }
+
+    // 检查是不是gitee检测更新方式，格式为：gitee://<用户名>/<仓库名>
+    urlMatcher = checkUrl =~ '^gitee://(?<owner>[\\w-]+)/(?<repo>[\\w-]+)$'
+    if (urlMatcher.find()) {
+        def owner = urlMatcher.group('owner')
+        def repo = urlMatcher.group('repo')
+        checkUrl = "https://gitee.com/${owner}/${repo}/releases/latest" as String
+        if (!regex) {
+            regex = '/releases/tag/[vV]?(?<version>[\\d.\\-_]+)'
         }
     }
 
@@ -115,7 +127,13 @@ static def checkUpdate(manifest, args) {
         if (!matcher.find()) {
             return null
         }
-        version = matcher.group(1)
+        if (regex.contains('?<version>')) {
+            // 通过命名组获取版本号
+            version = matcher.group('version')
+        } else {
+            // 通过索引获取版本号
+            version = matcher.group(1)
+        }
     } else if (jsonpath) { // jsonpath
         def read = JsonPath.read(response, jsonpath)
         if (read instanceof List) {
