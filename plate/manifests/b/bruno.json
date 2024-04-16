@@ -4,11 +4,11 @@
 	"logo":"https://ghproxy.org/https://raw.githubusercontent.com/usebruno/bruno/main/assets/images/logo-transparent.png",
 	"description":"Bruno 是一款全新且创新的 API 客户端，旨在颠覆 Postman/Insomnia 等其他类似工具。",
 	"category":"development",
-	"version":"1.13.0",
+	"version":"1.13.1",
 	"platform":"windows",
 	"url":{
-		"bruno_1.13.0_x64_win.exe":"https://github.com/usebruno/bruno/releases/download/v1.13.0/bruno_1.13.0_x64_win.exe",
-		"bruno_1.13.0_x64_win.zip":"https://github.com/usebruno/bruno/releases/download/v1.13.0/bruno_1.13.0_x64_win.zip"
+		"bruno_1.13.1_x64_win.exe":"https://github.com/usebruno/bruno/releases/download/v1.13.1/bruno_1.13.1_x64_win.exe",
+		"bruno_1.13.1_x64_win.zip":"https://github.com/usebruno/bruno/releases/download/v1.13.1/bruno_1.13.1_x64_win.zip"
 	},
 	"homepage":"https://www.usebruno.com",
 	"script":{
