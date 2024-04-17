@@ -4,20 +4,11 @@
 	"logo":"https://freenginx.org/nginx.png",
 	"description":"The freenginx.org project. The goal of the project is to keep nginx development free from arbitrary corporate actions.",
 	"category":"development",
-	"version":"1.25.5",
+	"version":"1.25.5/1.26.0",
 	"platform":"windows",
 	"url":{
-		"freenginx-1.25.5.zip":"https://freenginx.org/download/freenginx-1.25.5.zip"
+		"freenginx-1.25.5.zip (Mainline)":"https://freenginx.org/download/freenginx-1.25.5.zip",
+		"freenginx-1.26.0.zip (Stable)":"https://freenginx.org/download/freenginx-1.26.0.zip"
 	},
-	"homepage":"https://freenginx.org",
-	"script":{
-		"name":"appfork-check-update",
-		"args":{
-			"url":"https://freenginx.org/en/download.html",
-			"regex":"freenginx/Windows-([\\d.]+)",
-			"autoupdate":{
-				"freenginx-${version}.zip":"https://freenginx.org/download/freenginx-${version}.zip"
-			}
-		}
-	}
+	"homepage":"https://freenginx.org"
 }

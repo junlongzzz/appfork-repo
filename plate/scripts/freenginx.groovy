@@ -1,8 +1,8 @@
 import java.util.regex.Matcher
 
 static def checkUpdate(manifest, args) {
-    def response = 'https://nginx.org/en/download.html'.toURL().text
-    Matcher matcher = response =~ 'nginx/Windows-(?<version>[\\d.]+)'
+    def response = 'https://freenginx.org/en/download.html'.toURL().text
+    Matcher matcher = response =~ 'freenginx/Windows-(?<version>[\\d.]+)'
     def url = [:]
     def versions = []
     for (int i = 0; i < 2; i++) {
@@ -16,7 +16,7 @@ static def checkUpdate(manifest, args) {
         }
         // 添加元素到List
         versions << version
-        url["nginx-${version}.zip (${channel})".toString()] = "https://nginx.org/download/nginx-${version}.zip".toString()
+        url["freenginx-${version}.zip (${channel})".toString()] = "https://freenginx.org/download/freenginx-${version}.zip".toString()
     }
 
     return [

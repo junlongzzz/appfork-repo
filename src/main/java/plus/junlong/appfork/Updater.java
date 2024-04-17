@@ -1,4 +1,4 @@
-package plus.junlong.appfork.updater;
+package plus.junlong.appfork;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
@@ -12,7 +12,6 @@ import groovy.lang.GroovyShell;
 import groovy.lang.Script;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -25,9 +24,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author Junlong
+ */
 @Component
 @Slf4j
-public class AppFork implements CommandLineRunner {
+public final class Updater {
 
     private static final Map<String, String> platforms = new LinkedHashMap<>();
     private static final Map<String, String> categories = new LinkedHashMap<>();
@@ -62,7 +64,6 @@ public class AppFork implements CommandLineRunner {
     @Value("${config.repo-path}")
     private String repoPath;
 
-    @Override
     public void run(String... args) {
         log.info("开始软件库同步[{}]...", repoPath);
 
@@ -267,8 +268,11 @@ public class AppFork implements CommandLineRunner {
 
     }
 
-    private boolean isUrl(String text) {
-        return ReUtil.isMatch("(http[s]?:)?//(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+", text);
+    /**
+     * 判断是否是合法url地址，不匹配 localhost
+     */
+    public boolean isUrl(String text) {
+        return ReUtil.isMatch("^((https?|ftp):)?//[\\w.-]+(?:\\.[\\w.-]+)+[\\w\\-._~:/?#\\[\\]@!$&'()*+,;=%]+", text);
     }
 
 }
