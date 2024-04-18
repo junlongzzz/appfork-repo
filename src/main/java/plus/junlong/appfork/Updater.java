@@ -1,5 +1,6 @@
 package plus.junlong.appfork;
 
+import cn.hutool.core.date.BetweenFormatter;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.ReUtil;
@@ -15,14 +16,16 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.LinkedHashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Stream;
 
 /**
  * @author Junlong
@@ -64,74 +67,78 @@ public final class Updater {
     @Value("${config.repo-path}")
     private String repoPath;
 
+    /**
+     * 运行Updater
+     */
     public void run(String... args) {
-        log.info("开始软件库同步[{}]...", repoPath);
+        log.info("同步软件库开始[{}]...", repoPath);
 
         // 清单文件目录 test环境下使用manifests-test目录
-        File manifestsDir = new File(repoPath, "test".equals(SpringUtil.getActiveProfile()) ? "manifests-test" : "manifests");
+        Path manifestsDir = Path.of(repoPath, "test".equals(SpringUtil.getActiveProfile()) ? "manifests-test" : "manifests");
+        if (!Files.exists(manifestsDir)) {
+            log.error("该目录不存在: {}", manifestsDir);
+            return;
+        }
         // 获取清单文件列表
-        List<File> manifests = new LinkedList<>();
-        findManifests(manifestsDir, manifests);
-        if (manifests.isEmpty()) {
-            log.error("目录内无清单文件或不存在该目录: {}", repoPath);
+        List<Path> manifests;
+        try (Stream<Path> stream = Files.walk(manifestsDir)) {
+            manifests = stream.filter(path -> path.toString().endsWith(".json") &&
+                            Files.isRegularFile(path) &&
+                            Files.isReadable(path) &&
+                            Files.isWritable(path))
+                    .toList();
+            if (manifests.isEmpty()) {
+                log.error("目录内无清单文件: {}", repoPath);
+                return;
+            }
+        } catch (Exception e) {
+            log.error("获取清单文件列表错误: {}", e.getMessage());
             return;
         }
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
         CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -> {
-            int count = 0;
-            for (File manifest : manifests) {
+            int successCount = 0;
+            for (Path manifest : manifests) {
+                File manifestFile = manifest.toFile();
                 try {
-                    sync(manifest);
-                    count++;
+                    if (sync(manifestFile)) {
+                        successCount++;
+                    }
                 } catch (Exception e) {
-                    log.error("sync [{}] error[{}]: {}", manifest.getName(), e.getClass().getSimpleName(), e.getMessage());
+                    log.error("sync [{}] error[{}]: {}", manifestFile.getName(), e.getClass().getSimpleName(), e.getMessage());
                 }
             }
-            return count;
+            return successCount;
         }, executor);
 
         long startTime = System.currentTimeMillis();
         try {
-            int count = future.get(3, TimeUnit.HOURS);
-            log.info("软件库同步完成，同步结果：{}/{}，耗时：{}", count, manifests.size(), DateUtil.formatBetween(System.currentTimeMillis() - startTime));
+            int success = future.get(3, TimeUnit.HOURS);
+            int total = manifests.size();
+            log.info("同步完成, 软件总数为 {} 个, 成功 {} 个, 失败 {} 个", total, success, total - success);
         } catch (Exception e) {
-            log.error("软件库同步出错[{}]：{}，耗时：{}", e.getClass().getSimpleName(), e.getMessage(), DateUtil.formatBetween(System.currentTimeMillis() - startTime));
+            log.error("同步出错[{}]: {}", e.getClass().getSimpleName(), e.getMessage());
             // 同步超时强行中断程序退出
             System.exit(1);
         } finally {
+            log.info("同步耗时: {}", DateUtil.formatBetween(System.currentTimeMillis() - startTime, BetweenFormatter.Level.MILLISECOND));
             // 关闭线程池
             executor.shutdown();
+            // 处理脚本缓存
+            SCRIPT_CACHE.clear();
+            GROOVY_SHELL.resetLoadedClasses();
         }
-
     }
 
     /**
-     * 递归查找清单文件
+     * 同步指定软件清单文件
      */
-    private void findManifests(File dir, List<File> manifestList) {
-        File[] files = dir.listFiles();
-        if (files == null) {
-            return;
-        }
-        for (File file : files) {
-            if (file.isDirectory()) {
-                findManifests(file, manifestList);
-            } else if (file.isFile() &&
-                    file.getName().endsWith(".json") &&
-                    file.length() > 0 &&
-                    file.canRead() &&
-                    file.canWrite()) {
-                manifestList.add(file);
-            }
-        }
-    }
-
-    private void sync(File manifest) throws Exception {
+    private boolean sync(File manifest) throws Exception {
         JSONObject manifestJson = JSON.parseObject(FileUtil.readUtf8String(manifest));
         if (manifestJson == null || manifestJson.isEmpty()) {
             log.error("manifest [{}] parsed is null or empty", manifest.getName());
-            return;
+            return false;
         }
 
         String code = FileUtil.mainName(manifest).toLowerCase();
@@ -151,7 +158,7 @@ public final class Updater {
                 StrUtil.isBlank(category) || !categories.containsKey(category.toLowerCase()) ||
                 StrUtil.isBlank(platform) || !platforms.containsKey(platform.toLowerCase())) {
             log.error("manifest [{}] has illegal attribute", manifest.getName());
-            return;
+            return false;
         }
 
         // 是否更新清单文件
@@ -206,7 +213,7 @@ public final class Updater {
                 Object error = checkUpdate.get("error");
                 if (error != null) {
                     log.error("exec [{}] script [{}] return error: {}", manifest.getName(), scriptFilename, error);
-                    return;
+                    return false;
                 }
 
                 // 通过循环获取脚本返回的属性值是否跟已有清单文件内属性值一致
@@ -266,6 +273,7 @@ public final class Updater {
             log.info("manifest [{}] updated: {}->{}", manifest.getName(), version, manifestJson.getString("version"));
         }
 
+        return true;
     }
 
     /**
