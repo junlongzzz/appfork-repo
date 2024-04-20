@@ -1,7 +1,7 @@
 {
 	"author":"open source project",
 	"name":"MarkText",
-	"logo":"https://ghproxy.org/https://raw.githubusercontent.com/marktext/marktext/develop/static/logo-96px.png",
+	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/marktext/marktext/develop/static/logo-96px.png",
 	"description":"Simple and Elegant Markdown Editor Focused on speed and usability, available for Linux, macOS and Windows.",
 	"category":"reading",
 	"version":"0.17.1",

@@ -1,7 +1,7 @@
 {
 	"author":"the Apache Groovy project",
 	"name":"Groovy",
-	"logo":"https://ghproxy.org/https://raw.githubusercontent.com/groovy/artwork/master/medium.png",
+	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/groovy/artwork/master/medium.png",
 	"description":"Apache Groovy is a powerful, optionally typed and dynamic language, with static-typing and static compilation capabilities, for the Java platform aimed at improving developer productivity thanks to a concise, familiar and easy to learn syntax.",
 	"category":"development",
 	"platform":"other",

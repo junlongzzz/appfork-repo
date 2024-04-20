@@ -1,6 +1,7 @@
 {
 	"author":"Open Source Contributors",
 	"name":"Hugo",
+	"logo":"https://gohugo.io/images/hugo-logo-wide.svg",
 	"description":"The world’s fastest framework for building websites.",
 	"category":"reading",
 	"platform":"windows",
