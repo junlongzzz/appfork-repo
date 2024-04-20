@@ -25,7 +25,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Stream;
 
 /**
  * @author Junlong
@@ -75,48 +74,40 @@ public final class Updater {
 
         // 清单文件目录 test环境下使用manifests-test目录
         Path manifestsDir = Path.of(repoPath, "test".equals(SpringUtil.getActiveProfile()) ? "manifests-test" : "manifests");
-        if (!Files.exists(manifestsDir)) {
+        if (!Files.exists(manifestsDir) || !Files.isDirectory(manifestsDir)) {
             log.error("该目录不存在: {}", manifestsDir);
             return;
         }
-        // 获取清单文件列表
-        List<Path> manifests;
-        try (Stream<Path> stream = Files.walk(manifestsDir)) {
-            manifests = stream.filter(path -> path.toString().endsWith(".json") &&
-                            Files.isRegularFile(path) &&
-                            Files.isReadable(path) &&
-                            Files.isWritable(path))
-                    .toList();
-            if (manifests.isEmpty()) {
-                log.error("目录内无清单文件: {}", repoPath);
-                return;
-            }
-        } catch (Exception e) {
-            log.error("获取清单文件列表错误: {}", e.getMessage());
+        // 获取清单文件列表，目录下所有层级文件夹内的文件
+        List<File> manifests = FileUtil.loopFiles(manifestsDir, pathname ->
+                pathname.getName().toLowerCase().endsWith(".json") &&
+                        pathname.isFile() &&
+                        pathname.canRead() &&
+                        pathname.canWrite());
+        if (manifests.isEmpty()) {
+            log.error("目录内无清单文件: {}", repoPath);
             return;
         }
+        log.info("共扫描到清单文件 {} 个", manifests.size());
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
-        CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -> {
-            int successCount = 0;
-            for (Path manifest : manifests) {
-                File manifestFile = manifest.toFile();
+        CompletableFuture<int[]> future = CompletableFuture.supplyAsync(() -> {
+            int[] count = {0, 0, 0};
+            for (File manifestFile : manifests) {
                 try {
-                    if (sync(manifestFile)) {
-                        successCount++;
-                    }
+                    count[sync(manifestFile)]++;
                 } catch (Exception e) {
+                    count[SYNC_ERROR]++;
                     log.error("sync [{}] error[{}]: {}", manifestFile.getName(), e.getClass().getSimpleName(), e.getMessage());
                 }
             }
-            return successCount;
+            return count;
         }, executor);
 
         long startTime = System.currentTimeMillis();
         try {
-            int success = future.get(3, TimeUnit.HOURS);
-            int total = manifests.size();
-            log.info("同步完成, 软件总数为 {} 个, 成功 {} 个, 失败 {} 个", total, success, total - success);
+            int[] count = future.get(3, TimeUnit.HOURS);
+            log.info("同步完成, 本次更新 {} 个, 失败 {} 个", count[SYNC_UPDATE], count[SYNC_ERROR]);
         } catch (Exception e) {
             log.error("同步出错[{}]: {}", e.getClass().getSimpleName(), e.getMessage());
             // 同步超时强行中断程序退出
@@ -131,14 +122,23 @@ public final class Updater {
         }
     }
 
+    // 正常完成同步
+    private static final int SYNC_NONE = 0;
+    // 正常完成同步并更新了清单文件信息
+    private static final int SYNC_UPDATE = 1;
+    // 未完成同步，失败
+    private static final int SYNC_ERROR = 2;
+
     /**
      * 同步指定软件清单文件
+     *
+     * @return 同步状态
      */
-    private boolean sync(File manifest) throws Exception {
+    private int sync(File manifest) throws Exception {
         JSONObject manifestJson = JSON.parseObject(FileUtil.readUtf8String(manifest));
         if (manifestJson == null || manifestJson.isEmpty()) {
             log.error("manifest [{}] parsed is null or empty", manifest.getName());
-            return false;
+            return SYNC_ERROR;
         }
 
         String code = FileUtil.mainName(manifest).toLowerCase();
@@ -158,7 +158,7 @@ public final class Updater {
                 StrUtil.isBlank(category) || !categories.containsKey(category.toLowerCase()) ||
                 StrUtil.isBlank(platform) || !platforms.containsKey(platform.toLowerCase())) {
             log.error("manifest [{}] has illegal attribute", manifest.getName());
-            return false;
+            return SYNC_ERROR;
         }
 
         // 是否更新清单文件
@@ -213,7 +213,7 @@ public final class Updater {
                 Object error = checkUpdate.get("error");
                 if (error != null) {
                     log.error("exec [{}] script [{}] return error: {}", manifest.getName(), scriptFilename, error);
-                    return false;
+                    return SYNC_ERROR;
                 }
 
                 // 通过循环获取脚本返回的属性值是否跟已有清单文件内属性值一致
@@ -271,9 +271,10 @@ public final class Updater {
             // 将新版清单内容写入文件
             FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
             log.info("manifest [{}] updated: {}->{}", manifest.getName(), version, manifestJson.getString("version"));
+            return SYNC_UPDATE;
         }
 
-        return true;
+        return SYNC_NONE;
     }
 
     /**
