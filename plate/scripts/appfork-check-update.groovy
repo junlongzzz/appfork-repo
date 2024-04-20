@@ -71,43 +71,42 @@ static def checkUpdate(manifest, args) {
         ]
     }
 
-    // 检查是不是github检测更新方式，格式为：gh://<用户名>/<仓库名> or github://<用户名>/<仓库名>
-    urlMatcher = checkUrl =~ '^(?<protocol>gh|github)://(?<owner>[\\w-]+)/(?<repo>[\\w-]+)$'
+    // 检查是不是github|gitee检测更新方式，格式为：<平台名称>://<用户名>/<仓库名>
+    urlMatcher = checkUrl =~ '^(?<protocol>gh|github|gitee)://(?<owner>[\\w-.]+)/(?<repo>[\\w-.]+)$'
     if (urlMatcher.find()) {
+        def protocol = urlMatcher.group('protocol')
         def owner = urlMatcher.group('owner')
         def repo = urlMatcher.group('repo')
 
-        if (githubParams instanceof Map && !githubParams.isEmpty()) {
-            if (githubParams.assets_jsonpath instanceof String && githubParams.assets_jsonpath) {
-                // 是否检测下载文件jsonpath
-                checkUrl = "https://api.github.com/repos/${owner}/${repo}/releases/latest" as String
-                jsonpath = '$.tag_name' as String
-                // 保存查找下载链接的jsonpath
-                githubAssetsJsonpath = githubParams.assets_jsonpath as String
+        if (protocol == 'gh' || protocol == 'github') {
+            // github平台
+            if (githubParams instanceof Map && !githubParams.isEmpty()) {
+                if (githubParams.assets_jsonpath instanceof String && githubParams.assets_jsonpath) {
+                    // 是否检测下载文件jsonpath
+                    checkUrl = "https://api.github.com/repos/${owner}/${repo}/releases/latest" as String
+                    jsonpath = '$.tag_name' as String
+                    // 保存查找下载链接的jsonpath
+                    githubAssetsJsonpath = githubParams.assets_jsonpath as String
+                }
+                if (githubParams.prerelease instanceof Boolean && githubParams.prerelease) { // 是否检测预发布版本
+                    checkUrl = "https://api.github.com/repos/${owner}/${repo}/releases" as String
+                    githubPreRelease = true
+                }
             }
-            if (githubParams.prerelease instanceof Boolean && githubParams.prerelease) { // 是否检测预发布版本
-                checkUrl = "https://api.github.com/repos/${owner}/${repo}/releases" as String
-                githubPreRelease = true
+            // 如果没有额外参数，使用默认方式检测最新版本
+            if (checkUrl.startsWith('gh://') || checkUrl.startsWith('github://')) {
+                // 将检测更新链接转换为github最新release链接
+                checkUrl = "https://github.com/${owner}/${repo}/releases/latest" as String
+                if (!regex) {
+                    regex = '/releases/tag/[vV]?(?<version>[\\d.\\-_]+)'
+                }
             }
-        }
-        // 如果没有额外参数，使用默认方式检测最新版本
-        if (checkUrl.startsWith('gh://') || checkUrl.startsWith('github://')) {
-            // 将检测更新链接转换为github最新release链接
-            checkUrl = "https://github.com/${owner}/${repo}/releases/latest" as String
+        } else if (protocol == 'gitee') {
+            // gitee平台
+            checkUrl = "https://gitee.com/${owner}/${repo}/releases/latest" as String
             if (!regex) {
                 regex = '/releases/tag/[vV]?(?<version>[\\d.\\-_]+)'
             }
-        }
-    }
-
-    // 检查是不是gitee检测更新方式，格式为：gitee://<用户名>/<仓库名>
-    urlMatcher = checkUrl =~ '^gitee://(?<owner>[\\w-]+)/(?<repo>[\\w-]+)$'
-    if (urlMatcher.find()) {
-        def owner = urlMatcher.group('owner')
-        def repo = urlMatcher.group('repo')
-        checkUrl = "https://gitee.com/${owner}/${repo}/releases/latest" as String
-        if (!regex) {
-            regex = '/releases/tag/[vV]?(?<version>[\\d.\\-_]+)'
         }
     }
 
