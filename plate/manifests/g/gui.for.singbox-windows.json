@@ -1,0 +1,26 @@
+{
+	"author":"GUI-for-Cores",
+	"name":"GUI.for.Clash",
+	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/GUI-for-Cores/GUI.for.SingBox/main/build/appicon.png",
+	"description":"A SingBox GUI program developed by vue3 + wails.",
+	"category":"network",
+	"version":"1.6.3",
+	"platform":"windows",
+	"url":{
+		"GUI.for.SingBox-windows-amd64.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.6.3/GUI.for.SingBox-windows-amd64.exe",
+		"GUI.for.SingBox-windows-arm64.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.6.3/GUI.for.SingBox-windows-arm64.exe",
+		"GUI.for.SingBox-windows-386.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.6.3/GUI.for.SingBox-windows-386.exe"
+	},
+	"homepage":"https://gui-for-cores.github.io",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"GUI.for.SingBox-windows-amd64.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v${version}/GUI.for.SingBox-windows-amd64.exe",
+				"GUI.for.SingBox-windows-arm64.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v${version}/GUI.for.SingBox-windows-arm64.exe",
+				"GUI.for.SingBox-windows-386.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v${version}/GUI.for.SingBox-windows-386.exe"
+			},
+			"url":"gh://GUI-for-Cores/GUI.for.SingBox"
+		},
+		"name":"appfork-check-update"
+	}
+}
