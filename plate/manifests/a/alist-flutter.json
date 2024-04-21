@@ -1,0 +1,28 @@
+{
+	"author":"Jing",
+	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/jing332/AListFlutter/master/assets/alist.svg",
+	"name":"AListFlutter",
+	"description":"AListFlutter是一个基于AList的Android客户端，使用Google Flutter作为UI框架。",
+	"category":"network",
+	"platform":"android",
+	"homepage":"https://github.com/jing332/AListFlutter",
+	"version":"1.24.032601",
+	"url":{
+		"AListF-v1.24.032601.apk":"https://github.com/jing332/AListFlutter/releases/download/1.24.032601/AListF-v1.24.032601.apk",
+		"AListF-v1.24.032601_arm64-v8a.apk":"https://github.com/jing332/AListFlutter/releases/download/1.24.032601/AListF-v1.24.032601_arm64-v8a.apk",
+		"AListF-v1.24.032601_armeabi-v7a.apk":"https://github.com/jing332/AListFlutter/releases/download/1.24.032601/AListF-v1.24.032601_armeabi-v7a.apk",
+		"AListF-v1.24.032601_x86_64.apk":"https://github.com/jing332/AListFlutter/releases/download/1.24.032601/AListF-v1.24.032601_x86_64.apk"
+	},
+	"script":{
+		"args":{
+			"url":"github://jing332/AListFlutter",
+			"autoupdate":{
+				"AListF-v${version}.apk":"https://github.com/jing332/AListFlutter/releases/download/${version}/AListF-v${version}.apk",
+				"AListF-v${version}_arm64-v8a.apk":"https://github.com/jing332/AListFlutter/releases/download/${version}/AListF-v${version}_arm64-v8a.apk",
+				"AListF-v${version}_armeabi-v7a.apk":"https://github.com/jing332/AListFlutter/releases/download/${version}/AListF-v${version}_armeabi-v7a.apk",
+				"AListF-v${version}_x86_64.apk":"https://github.com/jing332/AListFlutter/releases/download/${version}/AListF-v${version}_x86_64.apk"
+			}
+		},
+		"name":"appfork-check-update"
+	}
+}
