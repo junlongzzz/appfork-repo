@@ -1,0 +1,19 @@
+{
+  "author": "Apache Software Foundation",
+  "name": "Apache JMeter",
+  "logo": "https://jmeter.apache.org/images/logo.svg",
+  "description": "Application designed to load test functional behavior and measure performance.",
+  "category": "development",
+  "version": "5.6.3",
+  "platform": "other",
+  "url": "https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.6.3.zip",
+  "homepage": "https://jmeter.apache.org",
+  "script": {
+    "args": {
+      "autoupdate": "https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-${version}.zip",
+      "url": "https://jmeter.apache.org/changes.html",
+      "regex": ">Version (?<version>[\\d.]+)"
+    },
+    "name": "appfork-check-update"
+  }
+}
