@@ -4,20 +4,20 @@
 	"logo":"https://1panel.cn/img/favicon.png",
 	"description":"1Panel 是新一代现代化、开源的 Linux 服务器运维管理面板。",
 	"category":"tools",
-	"version":"1.10.5-lts",
+	"version":"1.10.6-lts",
 	"platform":"linux",
 	"url":{
-		"在线文档": "https://1panel.cn/docs/"
+		"在线文档":"https://1panel.cn/docs/"
 	},
 	"homepage":"https://1panel.cn",
-	"script": {
-		"args": {
+	"script":{
+		"args":{
 			"autoupdate":{
-				"在线文档": "https://1panel.cn/docs/"
+				"在线文档":"https://1panel.cn/docs/"
 			},
-			"url": "github://1Panel-dev/1Panel",
-			"regex": "/releases/tag/v(?<version>[\\w.-]+)"
+			"url":"github://1Panel-dev/1Panel",
+			"regex":"/releases/tag/v(?<version>[\\w.-]+)"
 		},
-		"name": "appfork-check-update"
+		"name":"appfork-check-update"
 	}
 }
