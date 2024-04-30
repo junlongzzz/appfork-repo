@@ -1,0 +1,23 @@
+{
+	"author":"广东堡塔安全技术有限公司",
+	"name":"宝塔Linux面板",
+	"logo":"https://www.bt.cn/static/new/images/logo.svg",
+	"description":"安全高效的服务器运维面板。",
+	"category":"tools",
+	"version":"8.1.0",
+	"platform":"linux",
+	"url":{
+		"官方下载安装":"https://www.bt.cn/new/download.html"
+	},
+	"homepage":"https://www.bt.cn/new/product_linux.html",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"官方下载安装":"https://www.bt.cn/new/download.html"
+			},
+			"url":"https://www.bt.cn/new/download.html",
+			"regex":"Linux面板 (?<version>[\\d.]+)"
+		},
+		"name":"appfork-check-update"
+	}
+}
