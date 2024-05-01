@@ -77,6 +77,8 @@ static def checkUpdate(manifest, args) {
         def protocol = urlMatcher.group('protocol')
         def owner = urlMatcher.group('owner')
         def repo = urlMatcher.group('repo')
+        // 默认的git平台版本检测正则表达式：数字、字母、下划线、点、横线
+        def verRegex = '/releases/tag/(?<version>[\\w.-]+)'
 
         if (protocol == 'gh' || protocol == 'github') {
             // github平台
@@ -98,14 +100,14 @@ static def checkUpdate(manifest, args) {
                 // 将检测更新链接转换为github最新release链接
                 checkUrl = "https://github.com/${owner}/${repo}/releases/latest" as String
                 if (!regex) {
-                    regex = '/releases/tag/[vV]?(?<version>[\\d.\\-_]+)'
+                    regex = verRegex
                 }
             }
         } else if (protocol == 'gitee') {
             // gitee平台
             checkUrl = "https://gitee.com/${owner}/${repo}/releases/latest" as String
             if (!regex) {
-                regex = '/releases/tag/[vV]?(?<version>[\\d.\\-_]+)'
+                regex = verRegex
             }
         }
     }

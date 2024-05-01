@@ -15,8 +15,7 @@
 			"autoupdate":{
 				"在线文档":"https://1panel.cn/docs/"
 			},
-			"url":"github://1Panel-dev/1Panel",
-			"regex":"/releases/tag/v(?<version>[\\w.-]+)"
+			"url":"github://1Panel-dev/1Panel"
 		},
 		"name":"appfork-check-update"
 	}
