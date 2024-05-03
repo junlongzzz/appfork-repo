@@ -10,9 +10,9 @@
 	"homepage":"https://ubuntu.com",
 	"script":{
 		"args":{
-			"regex":">Ubuntu ([\\d.]+) LTS<",
+			"regex":">Ubuntu (?<version>[\\d.]+) LTS \\(",
 			"autoupdate":"https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/${version}/ubuntu-${version}-desktop-amd64.iso",
-			"url":"https://ubuntu.com/download/desktop"
+			"url":"https://help.ubuntu.com"
 		},
 		"name":"appfork-check-update"
 	}
