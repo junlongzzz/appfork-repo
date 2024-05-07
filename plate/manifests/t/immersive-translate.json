@@ -1,0 +1,28 @@
+{
+	"author":"上海书同文网络科技有限公司",
+	"name":"沉浸式翻译",
+	"logo":"https://immersivetranslate.com/img/logo.png",
+	"description":"一键开启双语阅读，提升信息获取效率。",
+	"category":"reading",
+	"version":"1.5.1",
+	"platform":"extensions",
+	"url":{
+		"Install on Microsoft Edge":"https://microsoftedge.microsoft.com/addons/detail/amkbmndfnliijdhojkpoglbnaaahippg",
+		"Install on Chrome":"https://chrome.google.com/webstore/detail/immersive-translate/bpoadfkcbjbfhfodiogcnhhhpibjhbnh",
+		"Install on FireFox":"https://addons.mozilla.org/firefox/addon/immersive-translate/",
+		"Install on Safari":"https://apps.apple.com/app/immersive-translate/id6447957425"
+	},
+	"homepage":"https://immersivetranslate.com",
+	"script":{
+		"args":{
+			"url":"github://immersive-translate/immersive-translate",
+			"autoupdate":{
+				"Install on Microsoft Edge":"https://microsoftedge.microsoft.com/addons/detail/amkbmndfnliijdhojkpoglbnaaahippg",
+				"Install on Chrome":"https://chrome.google.com/webstore/detail/immersive-translate/bpoadfkcbjbfhfodiogcnhhhpibjhbnh",
+				"Install on FireFox":"https://addons.mozilla.org/firefox/addon/immersive-translate/",
+				"Install on Safari":"https://apps.apple.com/app/immersive-translate/id6447957425"
+			}
+		},
+		"name":"appfork-check-update"
+	}
+}

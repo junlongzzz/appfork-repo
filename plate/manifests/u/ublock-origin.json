@@ -11,5 +11,16 @@
 		"Install on Chrome":"https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm",
 		"Install on Microsoft Edge":"https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak"
 	},
-	"homepage":"https://github.com/gorhill/uBlock"
+	"homepage":"https://github.com/gorhill/uBlock",
+	"script":{
+		"args":{
+			"url":"github://gorhill/uBlock",
+			"autoupdate":{
+				"Install on FireFox":"https://addons.mozilla.org/addon/ublock-origin/",
+				"Install on Chrome":"https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm",
+				"Install on Microsoft Edge":"https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak"
+			}
+		},
+		"name":"appfork-check-update"
+	}
 }

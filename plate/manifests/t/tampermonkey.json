@@ -12,5 +12,18 @@
 		"Install on Chrome":"https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo",
 		"Install on Microsoft Edge":"https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd"
 	},
-	"homepage":"https://www.tampermonkey.net"
+	"homepage":"https://www.tampermonkey.net",
+	"script":{
+		"args":{
+			"url":"https://www.tampermonkey.net/changelog.php",
+			"regex":">(?<version>[\\d.]+)<",
+			"autoupdate":{
+				"Install on FireFox":"https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/",
+				"Install on Safari":"https://apps.apple.com/app/apple-store/id1482490089",
+				"Install on Chrome":"https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo",
+				"Install on Microsoft Edge":"https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd"
+			}
+		},
+		"name":"appfork-check-update"
+	}
 }
