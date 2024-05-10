@@ -8,6 +8,7 @@ import java.time.Duration
 static def checkUpdate(manifest, args) {
     def httpClient = HttpClient.newBuilder()
             .connectTimeout(Duration.ofMillis(30000))
+            .followRedirects(HttpClient.Redirect.ALWAYS)
             .build()
     def response = httpClient.send(
             HttpRequest.newBuilder('https://yasuo.360.cn/update/versioninfo.json'.toURI())

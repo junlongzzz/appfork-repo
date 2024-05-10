@@ -14,6 +14,7 @@ static def checkUpdate(manifest, args) {
 
     def httpClient = HttpClient.newBuilder()
             .connectTimeout(Duration.ofMillis(30000))
+            .followRedirects(HttpClient.Redirect.ALWAYS)
             .build()
     def response = httpClient.send(
             HttpRequest.newBuilder("https://pan.baidu.com/disk/cmsdata?clienttype=0&app_id=250528&t=${System.currentTimeMillis()}&do=client".toURI())

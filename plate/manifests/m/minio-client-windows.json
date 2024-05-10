@@ -1,0 +1,22 @@
+{
+	"author":"MinIO, Inc.",
+	"name":"MinIO Client",
+	"logo":"https://min.io/resources/img/logo.svg",
+	"description":"The MinIO Client `mc` command line tool provides a modern alternative to UNIX commands like `ls`, `cat`, `cp`, `mirror`, and `diff` with support for both filesystems and Amazon S3-compatible cloud storage services.",
+	"category":"network",
+	"platform":"windows",
+	"homepage":"https://min.io",
+	"version":"RELEASE.2024-05-09T17-04-24Z",
+	"url":{
+		"mc.exe (amd64)":"https://dl.minio.io/client/mc/release/windows-amd64/mc.exe"
+	},
+	"script":{
+		"args":{
+			"autoupdate":{
+				"mc.exe (amd64)":"https://dl.minio.io/client/mc/release/windows-amd64/mc.exe"
+			},
+			"url":"github://minio/mc"
+		},
+		"name":"appfork-check-update"
+	}
+}

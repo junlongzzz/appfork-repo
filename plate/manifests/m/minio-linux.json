@@ -1,0 +1,24 @@
+{
+	"author":"MinIO, Inc.",
+	"name":"MinIO",
+	"logo":"https://min.io/resources/img/logo.svg",
+	"description":"MinIO is a high-performance, S3 compatible object store.",
+	"category":"network",
+	"platform":"linux",
+	"homepage":"https://min.io",
+	"version":"RELEASE.2024-05-10T01-41-38Z",
+	"url":{
+		"minio (amd64)":"https://dl.min.io/server/minio/release/linux-amd64/minio",
+		"minio (arm64)":"https://dl.min.io/server/minio/release/linux-arm64/minio"
+	},
+	"script":{
+		"args":{
+			"autoupdate":{
+				"minio (amd64)":"https://dl.min.io/server/minio/release/linux-amd64/minio",
+				"minio (arm64)":"https://dl.min.io/server/minio/release/linux-arm64/minio"
+			},
+			"url":"github://minio/minio"
+		},
+		"name":"appfork-check-update"
+	}
+}

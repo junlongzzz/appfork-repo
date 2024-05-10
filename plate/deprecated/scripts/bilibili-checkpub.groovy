@@ -17,7 +17,10 @@ static def checkUpdate(manifest, args) {
     }
 
     def ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0'
-    def httpClient = HttpClient.newBuilder().cookieHandler(new CookieManager()).build()
+    def httpClient = HttpClient.newBuilder()
+            .cookieHandler(new CookieManager())
+            .followRedirects(HttpClient.Redirect.ALWAYS)
+            .build()
     // 请求一次主页面拿到cookie，不然访问后面的接口回报-401非法访问错误
     httpClient.send(HttpRequest.newBuilder()
             .uri("https://space.bilibili.com/${mid}".toURI())

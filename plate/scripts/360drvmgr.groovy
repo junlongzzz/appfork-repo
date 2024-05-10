@@ -14,6 +14,7 @@ static def checkUpdate(manifest, args) {
 
     def httpClient = HttpClient.newBuilder()
             .connectTimeout(Duration.ofMillis(30000))
+            .followRedirects(HttpClient.Redirect.ALWAYS)
             .build()
     def response = httpClient.send(
             HttpRequest.newBuilder("https://weishi.360.cn/qudongdashi/updateData.json?callback=jsonpCallback&_=${System.currentTimeMillis()}".toURI())
