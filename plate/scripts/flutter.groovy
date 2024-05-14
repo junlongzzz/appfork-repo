@@ -17,7 +17,8 @@ static def checkUpdate(manifest, args) {
             return null
     }
     // releases_windows releases_linux releases_macos
-    def response = "https://storage.googleapis.com/flutter_infra_release/releases/releases_${platform}.json".toURL().text
+//    def response = "https://storage.googleapis.com/flutter_infra_release/releases/releases_${platform}.json".toURL().text
+    def response = "https://storage.flutter-io.cn/flutter_infra_release/releases/releases_${platform}.json".toURL().text
     def jsonData = new JsonSlurper().parseText(response)
     def stableHash = jsonData.current_release.stable
     for (release in jsonData.releases) {
