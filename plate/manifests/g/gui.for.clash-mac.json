@@ -4,11 +4,11 @@
 	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/GUI-for-Cores/GUI.for.Clash/main/build/appicon.png",
 	"description":"A Clash / (mihomo / meta) GUI program developed by vue3 + wails.",
 	"category":"network",
-	"version":"1.6.9",
+	"version":"1.7.0",
 	"platform":"mac",
 	"url":{
-		"GUI.for.Clash-darwin-amd64.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.6.9/GUI.for.Clash-darwin-amd64.zip",
-		"GUI.for.Clash-darwin-arm64.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.6.9/GUI.for.Clash-darwin-arm64.zip"
+		"GUI.for.Clash-darwin-amd64.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.7.0/GUI.for.Clash-darwin-amd64.zip",
+		"GUI.for.Clash-darwin-arm64.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.7.0/GUI.for.Clash-darwin-arm64.zip"
 	},
 	"homepage":"https://gui-for-cores.github.io",
 	"script":{
