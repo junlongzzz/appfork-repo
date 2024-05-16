@@ -1,7 +1,7 @@
 {
 	"author":"Open Source Software",
 	"name":"Clash Verge Rev",
-	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev/main/src/assets/image/logo.png",
+	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev/main/src-tauri/icons/icon.png",
 	"description":"Continuation of [Clash Verge](https://github.com/zzzgydi/clash-verge) - A [Clash.Meta](https://github.com/MetaCubeX/mihomo) GUI based on Tauri (Windows, MacOS, Linux)",
 	"category":"network",
 	"platform":"windows",
