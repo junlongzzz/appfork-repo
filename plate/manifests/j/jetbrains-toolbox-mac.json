@@ -6,10 +6,15 @@
 	"category":"development",
 	"version":"2.3.1.31116",
 	"platform":"mac",
-	"script":"jetbrains-toolbox",
 	"url":{
 		"macOS Intel":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.1.31116.dmg",
 		"macOS Apple Silicon":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.1.31116-arm64.dmg"
 	},
-	"homepage":"https://www.jetbrains.com/zh-cn/toolbox-app"
+	"homepage":"https://www.jetbrains.com/zh-cn/toolbox-app",
+	"script": {
+		"args": {
+			"codes": "TBA"
+		},
+		"name": "jetbrains-product"
+	}
 }
