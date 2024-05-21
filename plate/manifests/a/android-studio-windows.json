@@ -1,0 +1,24 @@
+{
+	"author":"Google",
+	"name":"Android Studio",
+	"description":"用于开发 Android 应用的官方集成开发环境 (IDE)。",
+	"category":"development",
+	"platform":"windows",
+	"script":{
+		"args":{
+			"regex":"android-studio-(?<version>[\\d.]+)-windows",
+			"autoupdate":{
+				"android-studio-${version}-windows.exe":"https://redirector.gvt1.com/edgedl/android/studio/install/${version}/android-studio-${version}-windows.exe",
+				"android-studio-${version}-windows.zip":"https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${version}/android-studio-${version}-windows.zip"
+			},
+			"url":"https://developer.android.com/studio"
+		},
+		"name":"appfork-check-update"
+	},
+	"homepage":"https://developer.android.com/studio",
+	"version":"2023.3.1.18",
+	"url":{
+		"android-studio-2023.3.1.18-windows.exe":"https://redirector.gvt1.com/edgedl/android/studio/install/2023.3.1.18/android-studio-2023.3.1.18-windows.exe",
+		"android-studio-2023.3.1.18-windows.zip":"https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2023.3.1.18/android-studio-2023.3.1.18-windows.zip"
+	}
+}

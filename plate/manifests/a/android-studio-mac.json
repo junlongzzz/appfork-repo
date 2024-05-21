@@ -1,0 +1,24 @@
+{
+	"author":"Google",
+	"name":"Android Studio",
+	"description":"用于开发 Android 应用的官方集成开发环境 (IDE)。",
+	"category":"development",
+	"platform":"mac",
+	"script":{
+		"args":{
+			"regex":"android-studio-(?<version>[\\d.]+)-mac",
+			"autoupdate":{
+				"android-studio-${version}-mac.dmg":"https://redirector.gvt1.com/edgedl/android/studio/install/${version}/android-studio-${version}-mac.dmg",
+				"android-studio-${version}-mac_arm.dmg":"https://redirector.gvt1.com/edgedl/android/studio/install/${version}/android-studio-${version}-mac_arm.dmg"
+			},
+			"url":"https://developer.android.com/studio"
+		},
+		"name":"appfork-check-update"
+	},
+	"homepage":"https://developer.android.com/studio",
+	"version":"2023.3.1.18",
+	"url":{
+		"android-studio-2023.3.1.18-mac.dmg":"https://redirector.gvt1.com/edgedl/android/studio/install/2023.3.1.18/android-studio-2023.3.1.18-mac.dmg",
+		"android-studio-2023.3.1.18-mac_arm.dmg":"https://redirector.gvt1.com/edgedl/android/studio/install/2023.3.1.18/android-studio-2023.3.1.18-mac_arm.dmg"
+	}
+}
