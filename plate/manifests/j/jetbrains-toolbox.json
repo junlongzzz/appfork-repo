@@ -6,12 +6,14 @@
 	"category":"development",
 	"version":"2.3.1.31116",
 	"platform":"windows",
-	"url":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.1.31116.exe",
+	"url":{
+		"jetbrains-toolbox-2.3.1.31116.exe":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.1.31116.exe"
+	},
 	"homepage":"https://www.jetbrains.com/zh-cn/toolbox-app",
-	"script": {
-		"args": {
-			"codes": "TBA"
+	"script":{
+		"args":{
+			"codes":"TBA"
 		},
-		"name": "jetbrains-product"
+		"name":"jetbrains-product"
 	}
 }

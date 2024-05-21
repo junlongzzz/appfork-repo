@@ -7,14 +7,14 @@
 	"version":"2.3.1.31116",
 	"platform":"mac",
 	"url":{
-		"macOS Intel":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.1.31116.dmg",
-		"macOS Apple Silicon":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.1.31116-arm64.dmg"
+		"jetbrains-toolbox-2.3.1.31116.dmg":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.1.31116.dmg",
+		"jetbrains-toolbox-2.3.1.31116-arm64.dmg":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.1.31116-arm64.dmg"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/toolbox-app",
-	"script": {
-		"args": {
-			"codes": "TBA"
+	"script":{
+		"args":{
+			"codes":"TBA"
 		},
-		"name": "jetbrains-product"
+		"name":"jetbrains-product"
 	}
 }

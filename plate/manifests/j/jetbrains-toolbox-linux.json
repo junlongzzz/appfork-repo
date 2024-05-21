@@ -6,12 +6,15 @@
 	"category":"development",
 	"version":"2.3.1.31116",
 	"platform":"linux",
-	"url":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.1.31116.tar.gz",
+	"url":{
+		"jetbrains-toolbox-2.3.1.31116-arm64.tar.gz":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.1.31116-arm64.tar.gz",
+		"jetbrains-toolbox-2.3.1.31116.tar.gz":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.1.31116.tar.gz"
+	},
 	"homepage":"https://www.jetbrains.com/zh-cn/toolbox-app",
-	"script": {
-		"args": {
-			"codes": "TBA"
+	"script":{
+		"args":{
+			"codes":"TBA"
 		},
-		"name": "jetbrains-product"
+		"name":"jetbrains-product"
 	}
 }
