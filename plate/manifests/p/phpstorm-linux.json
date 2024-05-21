@@ -1,0 +1,20 @@
+{
+	"author":"JetBrains",
+	"name":"PhpStorm",
+	"logo":"https://resources.jetbrains.com/storage/logos/web/phpstorm/phpstorm.svg",
+	"description":"为 PHP 开发者赋能，使用 PHP IDE 更智能地编写代码。",
+	"category":"development",
+	"version":"2024.1.1(241.15989.102)",
+	"platform":"linux",
+	"url":{
+		"PhpStorm-2024.1.1-aarch64.tar.gz": "https://download.jetbrains.com/webide/PhpStorm-2024.1.1-aarch64.tar.gz",
+		"PhpStorm-2024.1.1.tar.gz": "https://download.jetbrains.com/webide/PhpStorm-2024.1.1.tar.gz"
+	},
+	"homepage":"https://www.jetbrains.com/zh-cn/phpstorm/",
+	"script":{
+		"args":{
+			"codes":"PS"
+		},
+		"name":"jetbrains-product"
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"author":"JetBrains",
+	"name":"Aqua",
+	"logo":"https://resources.jetbrains.com/storage/logos/web/aqua/aqua.svg",
+	"description":"测试自动化 IDE，享受更高效的测试体验。",
+	"category":"development",
+	"version":"2024.1.1(241.15989.196)",
+	"platform":"mac",
+	"url":{
+		"aqua-2024.1.1-aarch64.dmg": "https://download.jetbrains.com/aqua/aqua-2024.1.1-aarch64.dmg",
+		"aqua-2024.1.1.dmg": "https://download.jetbrains.com/aqua/aqua-2024.1.1.dmg"
+	},
+	"homepage":"https://www.jetbrains.com/zh-cn/aqua/",
+	"script":{
+		"args":{
+			"codes":"QA"
+		},
+		"name":"jetbrains-product"
+	}
+}
