@@ -1,0 +1,20 @@
+{
+	"author":"JetBrains",
+	"name":"RustRover",
+	"logo":"https://resources.jetbrains.com/storage/logos/web/rustrover/rustrover.svg",
+	"description":"面向 Rust 开发者的强大 IDE。",
+	"category":"development",
+	"version":"2024.1(241.15989.199)",
+	"platform":"mac",
+	"url":{
+		"RustRover-2024.1-aarch64.dmg":"https://download.jetbrains.com/rustrover/RustRover-2024.1-aarch64.dmg",
+		"RustRover-2024.1.dmg":"https://download.jetbrains.com/rustrover/RustRover-2024.1.dmg"
+	},
+	"homepage":"https://www.jetbrains.com/zh-cn/rust/",
+	"script":{
+		"args":{
+			"codes":"RR"
+		},
+		"name":"jetbrains-product"
+	}
+}
