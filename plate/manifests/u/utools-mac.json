@@ -4,11 +4,11 @@
 	"logo":"https://res.u-tools.cn/website5/assets/favicon.png",
 	"description":"新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持macOS 10.10+。视频介绍：\n<div class=\"mdui-video-container\"><video src=\"https://res.u-tools.cn/website/v4/utools-4-video.mp4\" controls>你的浏览器不支持video标签</video></div>",
 	"category":"tools",
-	"version":"5.1.0",
+	"version":"5.1.1",
 	"platform":"mac",
 	"url":{
-		"uTools-5.1.0.dmg":"https://open.u-tools.cn/download/uTools-5.1.0.dmg",
-		"uTools-5.1.0-arm64.dmg":"https://open.u-tools.cn/download/uTools-5.1.0-arm64.dmg"
+		"uTools-5.1.1.dmg":"https://open.u-tools.cn/download/uTools-5.1.1.dmg",
+		"uTools-5.1.1-arm64.dmg":"https://open.u-tools.cn/download/uTools-5.1.1-arm64.dmg"
 	},
 	"homepage":"https://u.tools",
 	"script":{
