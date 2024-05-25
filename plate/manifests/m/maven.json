@@ -4,9 +4,9 @@
 	"logo":"https://maven.apache.org/images/maven-logo-black-on-white.png",
 	"description":"Apache Maven is a software project management and comprehension tool.",
 	"category":"development",
-	"version":"3.9.6",
+	"version":"3.9.7",
 	"platform":"windows",
-	"url":"https://repo.huaweicloud.com/apache/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.zip",
+	"url":"https://repo.huaweicloud.com/apache/maven/maven-3/3.9.7/binaries/apache-maven-3.9.7-bin.zip",
 	"homepage":"https://maven.apache.org",
 	"script":{
 		"args":{
