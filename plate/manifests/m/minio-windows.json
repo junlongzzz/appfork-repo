@@ -6,14 +6,14 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://min.io",
-	"version":"RELEASE.2024-05-10T01-41-38Z",
+	"version":"RELEASE.2024-05-27T19-17-46Z",
 	"url":{
 		"minio.exe (amd64)":"https://dl.min.io/server/minio/release/windows-amd64/minio.exe"
 	},
 	"script":{
 		"args":{
 			"autoupdate":{
-              "minio.exe (amd64)":"https://dl.min.io/server/minio/release/windows-amd64/minio.exe"
+				"minio.exe (amd64)":"https://dl.min.io/server/minio/release/windows-amd64/minio.exe"
 			},
 			"url":"github://minio/minio"
 		},
