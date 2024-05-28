@@ -4,13 +4,13 @@
 	"logo":"https://gerardog.github.io/gsudo/img/AnimatedPrompt.gif",
 	"description":"A Sudo for Windows.",
 	"category":"development",
-	"version":"2.4.4",
+	"version":"2.5.0",
 	"platform":"windows",
 	"url":{
-		"gsudo.portable.zip":"https://github.com/gerardog/gsudo/releases/download/v2.4.4/gsudo.portable.zip",
-		"gsudo.setup.arm64.msi":"https://github.com/gerardog/gsudo/releases/download/v2.4.4/gsudo.setup.arm64.msi",
-		"gsudo.setup.x64.msi":"https://github.com/gerardog/gsudo/releases/download/v2.4.4/gsudo.setup.x64.msi",
-		"gsudo.setup.x86.msi":"https://github.com/gerardog/gsudo/releases/download/v2.4.4/gsudo.setup.x86.msi"
+		"gsudo.portable.zip":"https://github.com/gerardog/gsudo/releases/download/v2.5.0/gsudo.portable.zip",
+		"gsudo.setup.arm64.msi":"https://github.com/gerardog/gsudo/releases/download/v2.5.0/gsudo.setup.arm64.msi",
+		"gsudo.setup.x64.msi":"https://github.com/gerardog/gsudo/releases/download/v2.5.0/gsudo.setup.x64.msi",
+		"gsudo.setup.x86.msi":"https://github.com/gerardog/gsudo/releases/download/v2.5.0/gsudo.setup.x86.msi"
 	},
 	"homepage":"https://gerardog.github.io/gsudo",
 	"script":{
