@@ -13,7 +13,7 @@
     - `plate/scripts` : 存放软件仓库每个软件对应的更新同步脚本代码文件，通过 [`Groovy`](https://github.com/apache/groovy) 语言进行编写和执行
 - `src` : 执行仓库软件清单同步更新的 `Java` 源码，本仓库本身就是一个 `Maven` 项目
 
-> 项目运行环境要求：`Java 17`、`Maven 3+`
+> 项目运行环境要求：`Java 21`、`Maven 3.9.0 or above`
 
 ### 工作原理说明
 
