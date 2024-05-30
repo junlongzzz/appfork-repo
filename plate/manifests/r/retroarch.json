@@ -20,12 +20,12 @@
 		},
 		"name":"appfork-check-update"
 	},
-	"version":"1.17.0",
+	"version":"1.19.0",
 	"url":{
-		"Installer (64bit)":"https://buildbot.libretro.com/stable/1.17.0/windows/x86_64/RetroArch-Win64-setup.exe",
-		"Installer (32bit)":"https://buildbot.libretro.com/stable/1.17.0/windows/x86/RetroArch-Win32-setup.exe",
-		"Download (64bit)":"https://buildbot.libretro.com/stable/1.17.0/windows/x86_64/RetroArch.7z",
-		"Download (32bit)":"https://buildbot.libretro.com/stable/1.17.0/windows/x86/RetroArch.7z",
+		"Installer (64bit)":"https://buildbot.libretro.com/stable/1.19.0/windows/x86_64/RetroArch-Win64-setup.exe",
+		"Installer (32bit)":"https://buildbot.libretro.com/stable/1.19.0/windows/x86/RetroArch-Win32-setup.exe",
+		"Download (64bit)":"https://buildbot.libretro.com/stable/1.19.0/windows/x86_64/RetroArch.7z",
+		"Download (32bit)":"https://buildbot.libretro.com/stable/1.19.0/windows/x86/RetroArch.7z",
 		"Nightly (64bit)":"https://buildbot.libretro.com/nightly/windows/x86_64/RetroArch-Win64-setup.exe"
 	}
 }
