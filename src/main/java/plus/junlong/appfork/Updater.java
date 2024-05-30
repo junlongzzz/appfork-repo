@@ -90,7 +90,7 @@ public final class Updater {
         }
         log.info("共扫描到清单文件 {} 个", manifests.size());
 
-        ExecutorService executor = Executors.newSingleThreadExecutor();
+        ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
         CompletableFuture<int[]> future = CompletableFuture.supplyAsync(() -> {
             int[] count = {0, 0, 0};
             for (File manifestFile : manifests) {
