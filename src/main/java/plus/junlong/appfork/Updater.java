@@ -21,9 +21,9 @@ import java.nio.file.Path;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -63,6 +63,13 @@ public final class Updater {
     private static final GroovyShell GROOVY_SHELL = new GroovyShell();
     private static final Map<String, Script> SCRIPT_CACHE = new LinkedHashMap<>();
 
+    // 正常完成同步
+    private static final int SYNC_NONE = 0;
+    // 正常完成同步并更新了清单文件信息
+    private static final int SYNC_UPDATE = 1;
+    // 未完成同步，失败
+    private static final int SYNC_ERROR = 2;
+
     @Value("${config.repo-path}")
     private String repoPath;
 
@@ -90,23 +97,22 @@ public final class Updater {
         }
         log.info("共扫描到清单文件 {} 个", manifests.size());
 
-        ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
-        CompletableFuture<int[]> future = CompletableFuture.supplyAsync(() -> {
-            int[] count = {0, 0, 0};
-            for (File manifestFile : manifests) {
-                try {
-                    count[sync(manifestFile)]++;
-                } catch (Exception e) {
-                    count[SYNC_ERROR]++;
-                    log.error("sync [{}] error[{}]: {}", manifestFile.getName(), e.getClass().getSimpleName(), e.getMessage());
-                }
-            }
-            return count;
-        }, executor);
-
         long startTime = System.currentTimeMillis();
-        try {
-            int[] count = future.get(3, TimeUnit.HOURS);
+        try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
+            Future<int[]> future = executor.submit(() -> {
+                int[] count = {0, 0, 0};
+                for (File manifestFile : manifests) {
+                    try {
+                        count[sync(manifestFile)]++;
+                    } catch (Exception e) {
+                        count[SYNC_ERROR]++;
+                        log.error("sync [{}] error[{}]: {}", manifestFile.getName(), e.getClass().getSimpleName(), e.getMessage());
+                    }
+                }
+                return count;
+            });
+            // 等待结果超时
+            int[] count = future.get(4, TimeUnit.HOURS);
             log.info("同步完成, 本次更新 {} 个, 失败 {} 个", count[SYNC_UPDATE], count[SYNC_ERROR]);
         } catch (Exception e) {
             log.error("同步出错[{}]: {}", e.getClass().getSimpleName(), e.getMessage());
@@ -114,20 +120,11 @@ public final class Updater {
             System.exit(1);
         } finally {
             log.info("同步耗时: {}", DateUtil.formatBetween(System.currentTimeMillis() - startTime, BetweenFormatter.Level.MILLISECOND));
-            // 关闭线程池
-            executor.shutdown();
             // 处理脚本缓存
             SCRIPT_CACHE.clear();
             GROOVY_SHELL.resetLoadedClasses();
         }
     }
-
-    // 正常完成同步
-    private static final int SYNC_NONE = 0;
-    // 正常完成同步并更新了清单文件信息
-    private static final int SYNC_UPDATE = 1;
-    // 未完成同步，失败
-    private static final int SYNC_ERROR = 2;
 
     /**
      * 同步指定软件清单文件
