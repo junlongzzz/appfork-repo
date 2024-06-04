@@ -18,13 +18,15 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
 
 /**
  * @author Junlong
@@ -99,25 +101,34 @@ public final class Updater {
 
         long startTime = System.currentTimeMillis();
         try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
-            Future<int[]> future = executor.submit(() -> {
-                int[] count = {0, 0, 0};
-                for (File manifestFile : manifests) {
-                    try {
-                        count[sync(manifestFile)]++;
-                    } catch (Exception e) {
-                        count[SYNC_ERROR]++;
-                        log.error("sync [{}] error[{}]: {}", manifestFile.getName(), e.getClass().getSimpleName(), e.getMessage());
-                    }
+            // 统计同步结果
+            int[] count = {0, 0, 0};
+            // 同时执行同步的数量
+            int asyncCount = Math.min(3, manifests.size());
+            // 创建异步任务
+            List<CompletableFuture<Integer>> futures = new ArrayList<>(asyncCount);
+            // 获取同步结果
+            Consumer<CompletableFuture<Integer>> futureConsumer = future -> {
+                try {
+                    count[future.get(30, TimeUnit.MINUTES)]++;
+                } catch (Exception e) {
+                    log.error("获取同步结果出错[{}]: {}", e.getClass().getSimpleName(), e.getMessage());
                 }
-                return count;
-            });
-            // 等待结果超时
-            int[] count = future.get(4, TimeUnit.HOURS);
+            };
+            for (File manifestFile : manifests) {
+                futures.add(CompletableFuture.supplyAsync(() -> sync(manifestFile), executor));
+                if (futures.size() == asyncCount) {
+                    futures.forEach(futureConsumer);
+                    futures.clear();
+                }
+            }
+            if (!futures.isEmpty()) {
+                // 剩余任务
+                futures.forEach(futureConsumer);
+            }
             log.info("同步完成, 本次更新 {} 个, 失败 {} 个", count[SYNC_UPDATE], count[SYNC_ERROR]);
         } catch (Exception e) {
             log.error("同步出错[{}]: {}", e.getClass().getSimpleName(), e.getMessage());
-            // 同步超时强行中断程序退出
-            System.exit(1);
         } finally {
             log.info("同步耗时: {}", DateUtil.formatBetween(System.currentTimeMillis() - startTime, BetweenFormatter.Level.MILLISECOND));
             // 处理脚本缓存
@@ -131,147 +142,152 @@ public final class Updater {
      *
      * @return 同步状态
      */
-    private int sync(File manifest) throws Exception {
-        JSONObject manifestJson = JSON.parseObject(FileUtil.readUtf8String(manifest));
-        if (manifestJson == null || manifestJson.isEmpty()) {
-            log.error("manifest [{}] parsed is null or empty", manifest.getName());
-            return SYNC_ERROR;
-        }
-
-        String code = FileUtil.mainName(manifest).toLowerCase();
-        String name = manifestJson.getString("name");
-        String homepage = manifestJson.getString("homepage");
-        // String logo = manifestJson.getString("logo");
-        String author = manifestJson.getString("author");
-        String description = manifestJson.getString("description");
-        String category = manifestJson.getString("category");
-        String platform = manifestJson.getString("platform");
-        String version = manifestJson.getString("version");
-        // Object url = manifestJson.get("url");
-        Object scriptValue = manifestJson.get("script");
-
-        if (StrUtil.isBlank(name) ||
-                StrUtil.isBlank(homepage) ||
-                StrUtil.isBlank(category) || !categories.containsKey(category.toLowerCase()) ||
-                StrUtil.isBlank(platform) || !platforms.containsKey(platform.toLowerCase())) {
-            log.error("manifest [{}] has illegal attribute", manifest.getName());
-            return SYNC_ERROR;
-        }
-
-        // 是否更新清单文件
-        boolean updateManifest = false;
-
-        if (StrUtil.isBlank(author)) {
-            manifestJson.put("author", "[Unknown]");
-            updateManifest = true;
-        }
-        if (StrUtil.isBlank(description)) {
-            manifestJson.put("description", "[No Description]");
-            updateManifest = true;
-        }
-
-        // 清单文件对应的script脚本文件名 默认为清单文件名一致
-        String scriptName = code;
-        // 脚本文件执行时的额外参数
-        Map<?, ?> scriptArgs = null;
-        if (scriptValue instanceof String) {
-            // 如果脚本值是字符串，那么直接作为脚本文件名
-            scriptName = (String) scriptValue;
-        } else if (scriptValue instanceof Map<?, ?> scriptValueMap) {
-            // 如果脚本值是Map，那么获取脚本文件名和脚本参数
-            Object nameObj = scriptValueMap.get("name");
-            if (nameObj instanceof String) {
-                scriptName = (String) nameObj;
+    private int sync(File manifest) {
+        try {
+            JSONObject manifestJson = JSON.parseObject(FileUtil.readUtf8String(manifest));
+            if (manifestJson == null || manifestJson.isEmpty()) {
+                log.error("manifest [{}] parsed is null or empty", manifest.getName());
+                return SYNC_ERROR;
             }
-            Object argsObj = scriptValueMap.get("args");
-            if (argsObj instanceof Map) {
-                scriptArgs = (Map<?, ?>) argsObj;
-            }
-        }
 
-        // 检查更新脚本
-        File script = new File(repoPath, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
-        if (script.exists() && script.isFile()) {
-            // groovy脚本运行
-            String scriptFilename = script.getName();
-            Script updateScript = SCRIPT_CACHE.get(scriptFilename);
-            if (updateScript == null) {
-                updateScript = GROOVY_SHELL.parse(script);
-                SCRIPT_CACHE.put(scriptFilename, updateScript);
+            String code = FileUtil.mainName(manifest).toLowerCase();
+            String name = manifestJson.getString("name");
+            String homepage = manifestJson.getString("homepage");
+            // String logo = manifestJson.getString("logo");
+            String author = manifestJson.getString("author");
+            String description = manifestJson.getString("description");
+            String category = manifestJson.getString("category");
+            String platform = manifestJson.getString("platform");
+            String version = manifestJson.getString("version");
+            // Object url = manifestJson.get("url");
+            Object scriptValue = manifestJson.get("script");
+
+            if (StrUtil.isBlank(name) ||
+                    StrUtil.isBlank(homepage) ||
+                    StrUtil.isBlank(category) || !categories.containsKey(category.toLowerCase()) ||
+                    StrUtil.isBlank(platform) || !platforms.containsKey(platform.toLowerCase())) {
+                log.error("manifest [{}] has illegal attribute", manifest.getName());
+                return SYNC_ERROR;
             }
-            // 执行检测App更新的脚本指定方法
-            // clone清单文件，避免脚本修改原清单文件内容
-            JSONObject manifestClone = manifestJson.clone();
-            // 清除脚本属性
-            manifestClone.remove("script");
-            Object checkUpdateObj = updateScript.invokeMethod("checkUpdate", new Object[]{manifestClone, scriptArgs});
-            if (checkUpdateObj instanceof Map<?, ?> checkUpdate) {
-                // 获取脚本返回的错误信息
-                Object error = checkUpdate.get("error");
-                if (error != null) {
-                    log.error("exec [{}] script [{}] return error: {}", manifest.getName(), scriptFilename, error);
-                    return SYNC_ERROR;
+
+            // 是否更新清单文件
+            boolean updateManifest = false;
+
+            if (StrUtil.isBlank(author)) {
+                manifestJson.put("author", "[Unknown]");
+                updateManifest = true;
+            }
+            if (StrUtil.isBlank(description)) {
+                manifestJson.put("description", "[No Description]");
+                updateManifest = true;
+            }
+
+            // 清单文件对应的script脚本文件名 默认为清单文件名一致
+            String scriptName = code;
+            // 脚本文件执行时的额外参数
+            Map<?, ?> scriptArgs = null;
+            if (scriptValue instanceof String) {
+                // 如果脚本值是字符串，那么直接作为脚本文件名
+                scriptName = (String) scriptValue;
+            } else if (scriptValue instanceof Map<?, ?> scriptValueMap) {
+                // 如果脚本值是Map，那么获取脚本文件名和脚本参数
+                Object nameObj = scriptValueMap.get("name");
+                if (nameObj instanceof String) {
+                    scriptName = (String) nameObj;
                 }
+                Object argsObj = scriptValueMap.get("args");
+                if (argsObj instanceof Map) {
+                    scriptArgs = (Map<?, ?>) argsObj;
+                }
+            }
 
-                // 通过循环获取脚本返回的属性值是否跟已有清单文件内属性值一致
-                for (Map.Entry<?, ?> entry : checkUpdate.entrySet()) {
-                    String key = (String) entry.getKey();
-                    Object value = entry.getValue();
-
-                    Object manifestValue = manifestJson.get(key);
-                    if (manifestValue == null) {
-                        // 清单文件内不存在该属性，直接添加
-                        manifestJson.put(key, value);
-                        updateManifest = true;
-                        continue;
+            // 检查更新脚本
+            File script = new File(repoPath, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
+            if (script.exists() && script.isFile()) {
+                // groovy脚本运行
+                String scriptFilename = script.getName();
+                Script updateScript = SCRIPT_CACHE.get(scriptFilename);
+                if (updateScript == null) {
+                    updateScript = GROOVY_SHELL.parse(script);
+                    SCRIPT_CACHE.put(scriptFilename, updateScript);
+                }
+                // 执行检测App更新的脚本指定方法
+                // clone清单文件，避免脚本修改原清单文件内容
+                JSONObject manifestClone = manifestJson.clone();
+                // 清除脚本属性
+                manifestClone.remove("script");
+                Object checkUpdateObj = updateScript.invokeMethod("checkUpdate", new Object[]{manifestClone, scriptArgs});
+                if (checkUpdateObj instanceof Map<?, ?> checkUpdate) {
+                    // 获取脚本返回的错误信息
+                    Object error = checkUpdate.get("error");
+                    if (error != null) {
+                        log.error("exec [{}] script [{}] return error: {}", manifest.getName(), scriptFilename, error);
+                        return SYNC_ERROR;
                     }
-                    if (value != null && !JSON.toJSONString(value).equals(JSON.toJSONString(manifestValue))) {
-                        if ("url".equalsIgnoreCase(key)) {
-                            // 开始检查链接是否合法
-                            boolean isUrl = false;
-                            if (value instanceof String valueStr) {
-                                // 只有一个链接，直接检查是否是合法链接形式
-                                if (isUrl(valueStr)) {
-                                    isUrl = true;
-                                }
-                            } else if (value instanceof Map<?, ?> updateUrlMap) {
-                                // 有多个链接，循环检查是否是合法链接形式
-                                if (!updateUrlMap.isEmpty()) {
-                                    isUrl = true;
-                                    for (Object v : updateUrlMap.values()) {
-                                        if (!(v instanceof String) || !isUrl((String) v)) {
-                                            isUrl = false;
-                                            break;
+
+                    // 通过循环获取脚本返回的属性值是否跟已有清单文件内属性值一致
+                    for (Map.Entry<?, ?> entry : checkUpdate.entrySet()) {
+                        String key = (String) entry.getKey();
+                        Object value = entry.getValue();
+
+                        Object manifestValue = manifestJson.get(key);
+                        if (manifestValue == null) {
+                            // 清单文件内不存在该属性，直接添加
+                            manifestJson.put(key, value);
+                            updateManifest = true;
+                            continue;
+                        }
+                        if (value != null && !JSON.toJSONString(value).equals(JSON.toJSONString(manifestValue))) {
+                            if ("url".equalsIgnoreCase(key)) {
+                                // 开始检查链接是否合法
+                                boolean isUrl = false;
+                                if (value instanceof String valueStr) {
+                                    // 只有一个链接，直接检查是否是合法链接形式
+                                    if (isUrl(valueStr)) {
+                                        isUrl = true;
+                                    }
+                                } else if (value instanceof Map<?, ?> updateUrlMap) {
+                                    // 有多个链接，循环检查是否是合法链接形式
+                                    if (!updateUrlMap.isEmpty()) {
+                                        isUrl = true;
+                                        for (Object v : updateUrlMap.values()) {
+                                            if (!(v instanceof String) || !isUrl((String) v)) {
+                                                isUrl = false;
+                                                break;
+                                            }
                                         }
                                     }
                                 }
+                                if (!isUrl) {
+                                    // 如果链接不合法，那么不更新清单文件内的属性值
+                                    continue;
+                                }
+                                // url链接就直接存放对应数据类型，不做String化处理
+                                manifestJson.put(key, value);
+                            } else {
+                                // 如果脚本返回的属性值跟清单文件内的属性值不一致，那么更新清单文件内的属性值
+                                // 其他属性都是String类型，需要进行String化处理
+                                manifestJson.put(key, String.valueOf(value));
                             }
-                            if (!isUrl) {
-                                // 如果链接不合法，那么不更新清单文件内的属性值
-                                continue;
-                            }
-                            // url链接就直接存放对应数据类型，不做String化处理
-                            manifestJson.put(key, value);
-                        } else {
-                            // 如果脚本返回的属性值跟清单文件内的属性值不一致，那么更新清单文件内的属性值
-                            // 其他属性都是String类型，需要进行String化处理
-                            manifestJson.put(key, String.valueOf(value));
+                            updateManifest = true;
                         }
-                        updateManifest = true;
                     }
+
                 }
-
             }
-        }
 
-        if (updateManifest) {
-            // 将新版清单内容写入文件
-            FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
-            log.info("manifest [{}] updated: {}->{}", manifest.getName(), version, manifestJson.getString("version"));
-            return SYNC_UPDATE;
-        }
+            if (updateManifest) {
+                // 将新版清单内容写入文件
+                FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
+                log.info("manifest [{}] updated: {}->{}", manifest.getName(), version, manifestJson.getString("version"));
+                return SYNC_UPDATE;
+            }
 
-        return SYNC_NONE;
+            return SYNC_NONE;
+        } catch (Exception e) {
+            log.error("sync [{}] error[{}]: {}", manifest.getName(), e.getClass().getSimpleName(), e.getMessage());
+            return SYNC_ERROR;
+        }
     }
 
     /**
