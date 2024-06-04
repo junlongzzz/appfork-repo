@@ -4,13 +4,13 @@
 	"logo":"https://golang.google.cn/images/gophers/pilot-bust.svg",
 	"description":"Build fast, reliable, and efficient software at scale",
 	"category":"development",
-	"version":"1.22.3",
+	"version":"1.22.4",
 	"platform":"windows",
 	"url":{
-		"amd64_msi":"https://dl.google.com/go/go1.22.3.windows-amd64.msi",
-		"amd64_zip":"https://dl.google.com/go/go1.22.3.windows-amd64.zip",
-		"arm64_msi":"https://dl.google.com/go/go1.22.3.windows-arm64.msi",
-		"arm64_zip":"https://dl.google.com/go/go1.22.3.windows-arm64.zip"
+		"amd64_msi":"https://dl.google.com/go/go1.22.4.windows-amd64.msi",
+		"amd64_zip":"https://dl.google.com/go/go1.22.4.windows-amd64.zip",
+		"arm64_msi":"https://dl.google.com/go/go1.22.4.windows-arm64.msi",
+		"arm64_zip":"https://dl.google.com/go/go1.22.4.windows-arm64.zip"
 	},
 	"homepage":"https://go.dev",
 	"script":{
