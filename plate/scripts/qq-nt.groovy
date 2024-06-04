@@ -25,15 +25,8 @@ static def checkUpdate(manifest, args) {
         version = object.version
         url = object.x64DownloadUrl
     } else if (platform == 'windows') {
+        version = isNt ? object.ntVersion : object.version
         url = isNt ? object.ntDownloadX64Url : object.downloadUrl
-        def versionMatcher = url =~ (isNt ? '/QQ_([\\d._]+)_x64_(\\d+).exe' : '/QQ_([\\d.]+)_(\\d+).exe')
-        if (!versionMatcher.find()) {
-            return null
-        }
-        version = versionMatcher.group(1)
-        if (isNt) {
-            version = version.replace('_', '.')
-        }
     }
 
     return [
