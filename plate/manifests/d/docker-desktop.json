@@ -4,7 +4,7 @@
 	"logo":"https://docs.docker.com/assets/images/engine.svg",
 	"description":"Docker Desktop is an easy-to-install application for your Mac or Windows environment that enables you to build and share containerized applications and microservices.",
 	"category":"development",
-	"version":"4.30.0",
+	"version":"4.31.0",
 	"platform":"windows",
 	"url":"https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe",
 	"homepage":"https://www.docker.com/products/docker-desktop"
