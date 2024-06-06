@@ -22,11 +22,9 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.function.Consumer;
+import java.util.regex.Pattern;
 
 /**
  * @author Junlong
@@ -63,7 +61,10 @@ public final class Updater {
     }
 
     private static final GroovyShell GROOVY_SHELL = new GroovyShell();
-    private static final Map<String, Script> SCRIPT_CACHE = new LinkedHashMap<>();
+    private static final Map<String, Script> SCRIPT_CACHE = new ConcurrentHashMap<>();
+
+    // 匹配版本号 x.y.z
+    private final Pattern versionPattern = Pattern.compile("^(?<version>[\\d.]+)$");
 
     // 正常完成同步
     private static final int SYNC_NONE = 0;
@@ -104,7 +105,7 @@ public final class Updater {
             // 统计同步结果
             int[] count = {0, 0, 0};
             // 同时执行同步的数量
-            int asyncCount = Math.min(3, manifests.size());
+            int asyncCount = Math.min(4, manifests.size());
             // 创建异步任务
             List<CompletableFuture<Integer>> futures = new ArrayList<>(asyncCount);
             // 获取同步结果
@@ -125,6 +126,7 @@ public final class Updater {
             if (!futures.isEmpty()) {
                 // 剩余任务
                 futures.forEach(futureConsumer);
+                futures.clear();
             }
             log.info("同步完成, 本次更新 {} 个, 失败 {} 个", count[SYNC_UPDATE], count[SYNC_ERROR]);
         } catch (Exception e) {
@@ -238,37 +240,50 @@ public final class Updater {
                             continue;
                         }
                         if (value != null && !JSON.toJSONString(value).equals(JSON.toJSONString(manifestValue))) {
-                            if ("url".equalsIgnoreCase(key)) {
-                                // 开始检查链接是否合法
-                                boolean isUrl = false;
-                                if (value instanceof String valueStr) {
-                                    // 只有一个链接，直接检查是否是合法链接形式
-                                    if (isUrl(valueStr)) {
-                                        isUrl = true;
+                            if ("url".equalsIgnoreCase(key) || "version".equalsIgnoreCase(key)) {
+                                // 开始比较清单文件内的版本号和检测的版本号大小
+                                Object checkVersionVal = checkUpdate.get("version");
+                                String checkVersion = String.valueOf(checkVersionVal == null ? "" : checkVersionVal);
+                                String manifestVersion = manifestJson.getString("version");
+                                if (ReUtil.isMatch(versionPattern, checkVersion) &&
+                                        ReUtil.isMatch(versionPattern, manifestVersion) &&
+                                        StrUtil.compareVersion(checkVersion, manifestVersion) < 0) {
+                                    // 版本号比较，如果脚本返回的版本号小于清单文件内的版本号，则跳过
+                                    // 同时跳过下载地址的更新
+                                    if ("version".equalsIgnoreCase(key)) {
+                                        log.warn("manifest [{}] version [{}] is great than check [{}]", manifest.getName(), manifestVersion, checkVersion);
                                     }
-                                } else if (value instanceof Map<?, ?> updateUrlMap) {
-                                    // 有多个链接，循环检查是否是合法链接形式
-                                    if (!updateUrlMap.isEmpty()) {
-                                        isUrl = true;
-                                        for (Object v : updateUrlMap.values()) {
-                                            if (!(v instanceof String) || !isUrl((String) v)) {
-                                                isUrl = false;
-                                                break;
+                                    continue;
+                                }
+
+                                if ("url".equalsIgnoreCase(key)) {
+                                    // 开始检查链接是否合法
+                                    boolean isUrl = false;
+                                    if (value instanceof String valueStr) {
+                                        // 只有一个链接，直接检查是否是合法链接形式
+                                        if (isUrl(valueStr)) {
+                                            isUrl = true;
+                                        }
+                                    } else if (value instanceof Map<?, ?> updateUrlMap) {
+                                        // 有多个链接，循环检查是否是合法链接形式
+                                        if (!updateUrlMap.isEmpty()) {
+                                            isUrl = true;
+                                            for (Object v : updateUrlMap.values()) {
+                                                if (!(v instanceof String) || !isUrl((String) v)) {
+                                                    isUrl = false;
+                                                    break;
+                                                }
                                             }
                                         }
                                     }
+                                    if (!isUrl) {
+                                        // 如果链接不合法，那么不更新清单文件内的属性值
+                                        continue;
+                                    }
                                 }
-                                if (!isUrl) {
-                                    // 如果链接不合法，那么不更新清单文件内的属性值
-                                    continue;
-                                }
-                                // url链接就直接存放对应数据类型，不做String化处理
-                                manifestJson.put(key, value);
-                            } else {
-                                // 如果脚本返回的属性值跟清单文件内的属性值不一致，那么更新清单文件内的属性值
-                                // 其他属性都是String类型，需要进行String化处理
-                                manifestJson.put(key, String.valueOf(value));
                             }
+                            // 如果脚本返回的属性值跟清单文件内的属性值不一致，那么更新清单文件内的属性值
+                            manifestJson.put(key, value);
                             updateManifest = true;
                         }
                     }
