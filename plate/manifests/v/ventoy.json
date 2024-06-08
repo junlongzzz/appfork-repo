@@ -4,9 +4,9 @@
 	"logo":"https://www.ventoy.net/static/img/ventoy.png?v=1",
 	"description":"新一代多系统启动U盘解决方案。简单来说，Ventoy是一个制作可启动U盘的开源工具。",
 	"category":"tools",
-	"version":"1.0.98",
+	"version":"1.0.99",
 	"platform":"windows",
-	"url":"https://github.com/ventoy/Ventoy/releases/download/v1.0.98/ventoy-1.0.98-windows.zip",
+	"url":"https://github.com/ventoy/Ventoy/releases/download/v1.0.99/ventoy-1.0.99-windows.zip",
 	"homepage":"https://www.ventoy.net/cn/index.html",
 	"script":{
 		"args":{
