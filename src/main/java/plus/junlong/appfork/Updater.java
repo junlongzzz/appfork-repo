@@ -166,6 +166,8 @@ public final class Updater {
 
             if (StrUtil.isBlank(name) ||
                     StrUtil.isBlank(homepage) ||
+                    StrUtil.isBlank(author) ||
+                    StrUtil.isBlank(description) ||
                     StrUtil.isBlank(category) || !categories.containsKey(category.toLowerCase()) ||
                     StrUtil.isBlank(platform) || !platforms.containsKey(platform.toLowerCase())) {
                 log.error("manifest [{}] has illegal attribute", manifest.getName());
@@ -174,15 +176,6 @@ public final class Updater {
 
             // 是否更新清单文件
             boolean updateManifest = false;
-
-            if (StrUtil.isBlank(author)) {
-                manifestJson.put("author", "[Unknown]");
-                updateManifest = true;
-            }
-            if (StrUtil.isBlank(description)) {
-                manifestJson.put("description", "[No Description]");
-                updateManifest = true;
-            }
 
             // 清单文件对应的script脚本文件名 默认为清单文件名一致
             String scriptName = code;
