@@ -6,7 +6,7 @@
 	"category":"network",
 	"platform":"mac",
 	"homepage":"https://min.io",
-	"version":"RELEASE.2024-06-06T09-36-42Z",
+	"version":"RELEASE.2024-06-11T03-13-30Z",
 	"url":{
 		"minio (amd64)":"https://dl.min.io/server/minio/release/darwin-amd64/minio",
 		"minio (arm64)":"https://dl.min.io/server/minio/release/darwin-arm64/minio"
