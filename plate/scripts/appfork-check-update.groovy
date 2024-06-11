@@ -35,6 +35,9 @@ static def checkUpdate(manifest, args) {
             .followRedirects(HttpClient.Redirect.ALWAYS)
             .connectTimeout(Duration.ofMillis(30000))
             .build()
+    // 默认的user-agent
+    def userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
+            'Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0'
 
     // 判断是不是腾讯软件中心的检测方式链接，格式为 tsc://<分类ID>/<应用ID>
     // tsc为Tencent Software Center的缩写
@@ -48,8 +51,7 @@ static def checkUpdate(manifest, args) {
                 .uri("https://luban.m.qq.com/api/public/software-manager/softwareProxy".toURI())
                 .header('Content-Type', 'application/x-www-form-urlencoded')
                 .header('Accept-Language', 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6')
-                .header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
-                        'Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0')
+                .header('User-Agent', userAgent)
                 .POST(HttpRequest.BodyPublishers.ofString("cmdid=3318&jprxReq[req][soft_id_list][]=${appId}")).build(),
                 HttpResponse.BodyHandlers.ofString()).body())
         if (response.resp == null || response.resp.retCode != 0 ||
@@ -112,7 +114,9 @@ static def checkUpdate(manifest, args) {
         }
     }
 
-    def response = httpClient.send(HttpRequest.newBuilder().uri(checkUrl.toURI()).GET().build(), HttpResponse.BodyHandlers.ofString()).body()
+    def response = httpClient.send(
+            HttpRequest.newBuilder().uri(checkUrl.toURI()).header('User-Agent', userAgent).GET().build(),
+            HttpResponse.BodyHandlers.ofString()).body()
     // 开始用对应方式查找版本号
     if (githubPreRelease) { // github预发布版本
         def result = JsonPath.read(response, '$.*[?(@.prerelease == true)]')
