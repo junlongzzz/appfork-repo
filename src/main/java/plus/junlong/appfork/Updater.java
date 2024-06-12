@@ -5,7 +5,6 @@ import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.ReUtil;
 import cn.hutool.core.util.StrUtil;
-import cn.hutool.extra.spring.SpringUtil;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.alibaba.fastjson2.JSONWriter;
@@ -66,26 +65,32 @@ public final class Updater {
     // 匹配版本号 x.y.z
     private final Pattern versionPattern = Pattern.compile("^(?<version>[\\d.]+)$");
 
-    // 正常完成同步
+    // 正常完成同步但未更新
     private static final int SYNC_NONE = 0;
     // 正常完成同步并更新了清单文件信息
     private static final int SYNC_UPDATE = 1;
     // 未完成同步，失败
     private static final int SYNC_ERROR = 2;
 
+    // 程序需要同步的软件库根目录
     @Value("${config.repo-path}")
     private String repoPath;
+
+    // 当前环境 profile
+    @Value("${spring.profiles.active}")
+    private String activeProfile;
 
     /**
      * 运行Updater
      */
     public void run(String... args) {
-        log.info("同步软件库开始[{}]...", repoPath);
+        log.info("同步软件库开始...");
 
         // 清单文件目录 test环境下使用manifests-test目录
-        Path manifestsDir = Path.of(repoPath, "test".equals(SpringUtil.getActiveProfile()) ? "manifests-test" : "manifests");
+        Path manifestsDir = Path.of(repoPath, "manifests" + ("test".equals(activeProfile) ? "-" + activeProfile : ""));
+        log.info("扫描清单文件目录 {}", manifestsDir.toAbsolutePath());
         if (!Files.exists(manifestsDir) || !Files.isDirectory(manifestsDir)) {
-            log.error("该目录不存在: {}", manifestsDir);
+            log.error("清单文件目录不存在");
             return;
         }
         // 获取清单文件列表，目录下所有层级文件夹内的文件
@@ -95,7 +100,7 @@ public final class Updater {
                         pathname.canRead() &&
                         pathname.canWrite());
         if (manifests.isEmpty()) {
-            log.error("目录内无清单文件: {}", repoPath);
+            log.error("目录内无清单文件，同步取消");
             return;
         }
         log.info("共扫描到清单文件 {} 个", manifests.size());
@@ -105,7 +110,7 @@ public final class Updater {
             // 统计同步结果
             int[] count = {0, 0, 0};
             // 同时执行同步的数量
-            int asyncCount = Math.min(4, manifests.size());
+            int asyncCount = Math.min(manifests.size(), 10);
             // 创建异步任务
             List<CompletableFuture<Integer>> futures = new ArrayList<>(asyncCount);
             // 获取同步结果
@@ -128,7 +133,7 @@ public final class Updater {
                 futures.forEach(futureConsumer);
                 futures.clear();
             }
-            log.info("同步完成, 本次更新 {} 个, 失败 {} 个", count[SYNC_UPDATE], count[SYNC_ERROR]);
+            log.info("同步完成: 本次更新 {} 个, 失败 {} 个, 未更新 {} 个", count[SYNC_UPDATE], count[SYNC_ERROR], count[SYNC_NONE]);
         } catch (Exception e) {
             log.error("同步出错[{}]: {}", e.getClass().getSimpleName(), e.getMessage());
         } finally {
