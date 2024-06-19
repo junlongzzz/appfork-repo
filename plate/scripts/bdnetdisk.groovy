@@ -13,7 +13,7 @@ static def checkUpdate(manifest, args) {
     def ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.60'
 
     def httpClient = HttpClient.newBuilder()
-            .connectTimeout(Duration.ofMillis(30000))
+            .connectTimeout(Duration.ofMillis(60000))
             .followRedirects(HttpClient.Redirect.ALWAYS)
             .build()
     def response = httpClient.send(

@@ -33,11 +33,11 @@ static def checkUpdate(manifest, args) {
 
     def httpClient = HttpClient.newBuilder()
             .followRedirects(HttpClient.Redirect.ALWAYS)
-            .connectTimeout(Duration.ofMillis(30000))
+            .connectTimeout(Duration.ofMillis(60000))
             .build()
     // 默认的user-agent
     def userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
-            'Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0'
+            'Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0'
 
     // 判断是不是腾讯软件中心的检测方式链接，格式为 tsc://<分类ID>/<应用ID>
     // tsc为Tencent Software Center的缩写
@@ -174,13 +174,12 @@ static def checkUpdate(manifest, args) {
             url[label ? label : name] = asset.browser_download_url
         }
     } else {
-        def versionReplaceRegex = '\\$\\{?version}?'
         if (updateUrl instanceof String) {
-            url = updateUrl.replaceAll(versionReplaceRegex, version)
+            url = handleVersionReplace(url, version)
         } else if (updateUrl instanceof Map) {
             url = [:]
-            updateUrl.forEach((String k, String v) -> {
-                url[k.replaceAll(versionReplaceRegex, version)] = v.replaceAll(versionReplaceRegex, version)
+            updateUrl.forEach((String key, String value) -> {
+                url[handleVersionReplace(key, version)] = handleVersionReplace(value, version)
             })
         }
     }
@@ -189,4 +188,29 @@ static def checkUpdate(manifest, args) {
             version: version,
             url    : url
     ]
+}
+
+/**
+ * 处理版本号替换
+ * @param str 需要进行替换处理的字符串
+ * @param version 获取到的版本号
+ * @return 处理后的字符串
+ */
+static String handleVersionReplace(String str, String version) {
+    if (str == null || str.isEmpty() || version == null || version.isEmpty()) {
+        return str
+    }
+    def matcher = str =~ '\\$\\{?(?<versionType>[a-zA-Z]+)}?'
+    while (matcher.find()) {
+        def versionType = matcher.group('versionType')
+        def versionReplace = switch (versionType) {
+            case 'cleanVersion' -> version.replaceAll('\\D', '') // 只有纯数字的版本号
+            case 'version' -> version
+            default -> null
+        }
+        if (versionReplace != null) {
+            str = str.replace(matcher.group(), versionReplace)
+        }
+    }
+    return str
 }

@@ -7,5 +7,16 @@
 	"version":"5.5.1.1508",
 	"platform":"windows",
 	"url":"https://download.eassos.cn/DG5511508_x64.zip",
-	"homepage":"https://www.diskgenius.cn"
+	"homepage":"https://www.diskgenius.cn",
+	"script":{
+		"args":{
+			"regex":">[vV](?<version>[\\d.]+)<",
+			"autoupdate":{
+				"64位版本":"https://www.diskgenius.cn/download/downloadURL.php?Name=DG_64",
+				"32位版本":"https://www.diskgenius.cn/download/downloadURL.php?Name=DG_32"
+			},
+			"url":"https://www.diskgenius.cn/download.php"
+		},
+		"name":"appfork-check-update"
+	}
 }

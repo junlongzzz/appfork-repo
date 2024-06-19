@@ -10,5 +10,16 @@
 		"轻巧版":"https://dl.360safe.com/drvmgr/guanwang__360DrvMgrInstaller_beta.exe",
 		"网卡版":"https://dl.360safe.com/drvmgr/gwwk__360DrvMgrInstaller_net.exe"
 	},
-	"homepage":"https://dm.weishi.360.cn/home.html"
+	"homepage":"https://dm.weishi.360.cn/home.html",
+	"script":{
+		"args":{
+			"regex":"\"version\": \"(?<version>[\\d.]+)\"",
+			"autoupdate":{
+				"轻巧版":"https://wsdl.360safe.com/drvmgr/guanwang__360DrvMgrInstaller_beta.exe",
+				"网卡版":"https://down.360safe.com/drvmgr/gwwk__360DrvMgrInstaller_net.exe"
+			},
+			"url":"https://weishi.360.cn/qudongdashi/updateData.json?callback=jsonpCallback"
+		},
+		"name":"appfork-check-update"
+	}
 }
