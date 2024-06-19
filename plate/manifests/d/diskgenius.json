@@ -6,7 +6,10 @@
 	"category":"tools",
 	"version":"5.5.1.1508",
 	"platform":"windows",
-	"url":"https://download.eassos.cn/DG5511508_x64.zip",
+	"url":{
+		"64位版本":"https://www.diskgenius.cn/download/downloadURL.php?Name=DG_64",
+		"32位版本":"https://www.diskgenius.cn/download/downloadURL.php?Name=DG_32"
+	},
 	"homepage":"https://www.diskgenius.cn",
 	"script":{
 		"args":{

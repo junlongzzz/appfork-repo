@@ -7,8 +7,8 @@
 	"version":"2.0.0.2000",
 	"platform":"windows",
 	"url":{
-		"轻巧版":"https://dl.360safe.com/drvmgr/guanwang__360DrvMgrInstaller_beta.exe",
-		"网卡版":"https://dl.360safe.com/drvmgr/gwwk__360DrvMgrInstaller_net.exe"
+		"轻巧版":"https://wsdl.360safe.com/drvmgr/guanwang__360DrvMgrInstaller_beta.exe",
+		"网卡版":"https://down.360safe.com/drvmgr/gwwk__360DrvMgrInstaller_net.exe"
 	},
 	"homepage":"https://dm.weishi.360.cn/home.html",
 	"script":{
