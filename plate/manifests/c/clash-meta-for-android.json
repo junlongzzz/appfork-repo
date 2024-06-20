@@ -1,0 +1,32 @@
+{
+	"author":"MetaCubeX",
+	"name":"Clash Meta for Android",
+	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/ClashMetaForAndroid/main/app/src/main/ic_launcher-playstore.png",
+	"description":"A Graphical user interface of [Clash.Meta](https://github.com/MetaCubeX/mihomo) for Android.",
+	"category":"network",
+	"platform":"android",
+	"homepage":"https://github.com/MetaCubeX/ClashMetaForAndroid",
+	"version":"2.10.1",
+	"url":{
+		"cmfa-2.10.1-meta-arm64-v8a-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.10.1/cmfa-2.10.1-meta-arm64-v8a-release.apk",
+		"cmfa-2.10.1-meta-armeabi-v7a-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.10.1/cmfa-2.10.1-meta-armeabi-v7a-release.apk",
+		"cmfa-2.10.1-meta-universal-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.10.1/cmfa-2.10.1-meta-universal-release.apk",
+		"cmfa-2.10.1-meta-x86-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.10.1/cmfa-2.10.1-meta-x86-release.apk",
+		"cmfa-2.10.1-meta-x86_64-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.10.1/cmfa-2.10.1-meta-x86_64-release.apk",
+		"Get it on F-Droid":"https://f-droid.org/packages/com.github.metacubex.clash.meta/"
+	},
+	"script":{
+		"args":{
+			"autoupdate":{
+				"cmfa-${version}-meta-arm64-v8a-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v${version}/cmfa-${version}-meta-arm64-v8a-release.apk",
+				"cmfa-${version}-meta-armeabi-v7a-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v${version}/cmfa-${version}-meta-armeabi-v7a-release.apk",
+				"cmfa-${version}-meta-universal-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v${version}/cmfa-${version}-meta-universal-release.apk",
+				"cmfa-${version}-meta-x86-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v${version}/cmfa-${version}-meta-x86-release.apk",
+				"cmfa-${version}-meta-x86_64-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v${version}/cmfa-${version}-meta-x86_64-release.apk",
+				"Get it on F-Droid":"https://f-droid.org/packages/com.github.metacubex.clash.meta/"
+			},
+			"url":"github://MetaCubeX/ClashMetaForAndroid"
+		},
+		"name":"appfork-check-update"
+	}
+}
