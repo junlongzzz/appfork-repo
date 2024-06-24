@@ -2,7 +2,10 @@ import groovy.json.JsonSlurper
 
 static def checkUpdate(manifest, args) {
     def response = 'https://im.qq.com/rainbow/TIMDownload/'.toURL().text
-    def matcher = response =~ 'params= *(\\{.*})'
+    if (response == null || response.isEmpty()) {
+        return null
+    }
+    def matcher = response.replace(' ', '') =~ 'params=(\\{.*})'
     if (!matcher.find()) {
         return null
     }

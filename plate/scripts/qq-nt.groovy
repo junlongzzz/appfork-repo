@@ -1,3 +1,4 @@
+import cn.hutool.http.HttpUtil
 import groovy.json.JsonSlurper
 
 static def checkUpdate(manifest, args) {
@@ -12,7 +13,15 @@ static def checkUpdate(manifest, args) {
     if (checkUrl == null) {
         return null
     }
-    def response = checkUrl.toURL().text
+    def response = HttpUtil.createGet(checkUrl, true)
+            .timeout(60000)
+            .header('Accept-Language', 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6')
+            .header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
+                    'Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0')
+            .execute().body()
+    if (response == null || response.isEmpty()) {
+        return null
+    }
     def matcher = response.replace(' ', '') =~ 'params=(\\{.*})'
     if (!matcher.find()) {
         return null
