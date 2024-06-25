@@ -6,12 +6,9 @@
 	"author":"Obsidian Team",
 	"category":"reading",
 	"platform":"windows",
-	"version":"1.6.3",
+	"version":"1.6.5",
 	"url":{
-		"Obsidian.1.6.3-32.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.3/Obsidian.1.6.3-32.exe",
-		"Obsidian.1.6.3-allusers.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.3/Obsidian.1.6.3-allusers.exe",
-		"Obsidian.1.6.3-arm64.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.3/Obsidian.1.6.3-arm64.exe",
-		"Obsidian.1.6.3.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.3/Obsidian.1.6.3.exe"
+		"Obsidian-1.6.5.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.5/Obsidian-1.6.5.exe"
 	},
 	"script":{
 		"args":{
