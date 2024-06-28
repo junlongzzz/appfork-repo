@@ -10,8 +10,8 @@
 		"args":{
 			"autoupdate":{
 				"marktext-setup.exe": "https://github.com/marktext/marktext/releases/download/v${version}/marktext-setup.exe",
-				"marktext-x64-win.zip": "https://github.com/marktext/marktext/releases/download/v{version}/marktext-x64-win.zip",
-				"marktext-ia32-win.zip": "https://github.com/marktext/marktext/releases/download/v{version}/marktext-ia32-win.zip"
+				"marktext-x64-win.zip": "https://github.com/marktext/marktext/releases/download/v${version}/marktext-x64-win.zip",
+				"marktext-ia32-win.zip": "https://github.com/marktext/marktext/releases/download/v${version}/marktext-ia32-win.zip"
 			},
 			"url":"gh://marktext/marktext"
 		},
