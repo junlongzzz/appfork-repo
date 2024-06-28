@@ -17,10 +17,7 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.*;
 import java.util.function.Consumer;
 import java.util.regex.Pattern;
@@ -62,15 +59,15 @@ public final class Updater {
     private static final GroovyShell GROOVY_SHELL = new GroovyShell();
     private static final Map<String, Script> SCRIPT_CACHE = new ConcurrentHashMap<>();
 
-    // 匹配版本号 x.y.z
-    private final Pattern versionPattern = Pattern.compile("^(?<version>[\\d.]+)$");
-
     // 正常完成同步但未更新
     private static final int SYNC_NONE = 0;
     // 正常完成同步并更新了清单文件信息
     private static final int SYNC_UPDATE = 1;
     // 未完成同步，失败
     private static final int SYNC_ERROR = 2;
+
+    // 匹配版本号 x.y.z
+    private final Pattern versionPattern = Pattern.compile("^(?<version>[\\d.]+)$");
 
     // 程序需要同步的软件库根目录
     @Value("${config.repo-path}")
@@ -179,9 +176,6 @@ public final class Updater {
                 return SYNC_ERROR;
             }
 
-            // 是否更新清单文件
-            boolean updateManifest = false;
-
             // 清单文件对应的script脚本文件名 默认为清单文件名一致
             String scriptName = code;
             // 脚本文件执行时的额外参数
@@ -200,6 +194,9 @@ public final class Updater {
                     scriptArgs = (Map<?, ?>) argsObj;
                 }
             }
+
+            // 有更新的属性名称集合
+            List<String> changedAttrs = new LinkedList<>();
 
             // 检查更新脚本
             File script = new File(repoPath, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
@@ -230,15 +227,15 @@ public final class Updater {
                         String key = (String) entry.getKey();
                         Object value = entry.getValue();
 
-                        Object manifestValue = manifestJson.get(key);
-                        if (manifestValue == null) {
-                            // 清单文件内不存在该属性，直接添加
-                            manifestJson.put(key, value);
-                            updateManifest = true;
+                        if (key == null || key.isEmpty() || value == null) {
                             continue;
                         }
-                        if (value != null && !JSON.toJSONString(value).equals(JSON.toJSONString(manifestValue))) {
-                            if ("url".equalsIgnoreCase(key) || "version".equalsIgnoreCase(key)) {
+                        key = key.toLowerCase();
+
+                        // 按照key排序后比较
+                        if (!JSON.toJSONString(value, JSONWriter.Feature.SortMapEntriesByKeys)
+                                .equals(JSON.toJSONString(manifestJson.get(key), JSONWriter.Feature.SortMapEntriesByKeys))) {
+                            if ("url".equals(key) || "version".equals(key)) {
                                 // 开始比较清单文件内的版本号和检测的版本号大小
                                 Object checkVersionVal = checkUpdate.get("version");
                                 String checkVersion = String.valueOf(checkVersionVal == null ? "" : checkVersionVal);
@@ -248,13 +245,13 @@ public final class Updater {
                                         StrUtil.compareVersion(checkVersion, manifestVersion) < 0) {
                                     // 版本号比较，如果脚本返回的版本号小于清单文件内的版本号，则跳过
                                     // 同时跳过下载地址的更新
-                                    if ("version".equalsIgnoreCase(key)) {
+                                    if ("version".equals(key)) {
                                         log.warn("manifest [{}] version [{}] is great than check [{}]", manifest.getName(), manifestVersion, checkVersion);
                                     }
                                     continue;
                                 }
 
-                                if ("url".equalsIgnoreCase(key)) {
+                                if ("url".equals(key)) {
                                     // 开始检查链接是否合法
                                     boolean isUrl = false;
                                     if (value instanceof String valueStr) {
@@ -276,23 +273,32 @@ public final class Updater {
                                     }
                                     if (!isUrl) {
                                         // 如果链接不合法，那么不更新清单文件内的属性值
+                                        log.warn("manifest [{}] url [{}] is not a valid url", manifest.getName(), value);
                                         continue;
                                     }
                                 }
                             }
+
                             // 如果脚本返回的属性值跟清单文件内的属性值不一致，那么更新清单文件内的属性值
                             manifestJson.put(key, value);
-                            updateManifest = true;
+                            // 记录更新属性
+                            changedAttrs.add(key);
                         }
                     }
 
                 }
             }
 
-            if (updateManifest) {
+            if (!changedAttrs.isEmpty()) {
                 // 将新版清单内容写入文件
                 FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
-                log.info("manifest [{}] updated: {}->{}", manifest.getName(), version, manifestJson.getString("version"));
+                String manifestVersion = manifestJson.getString("version");
+                if (!version.equals(manifestVersion)) {
+                    // 版本有变更
+                    log.info("manifest [{}] upgraded: {}->{}", manifest.getName(), version, manifestVersion);
+                } else {
+                    log.info("manifest [{}] attributes updated: {}", manifest.getName(), changedAttrs);
+                }
                 return SYNC_UPDATE;
             }
 
