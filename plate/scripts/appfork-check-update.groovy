@@ -22,7 +22,7 @@ static def checkUpdate(manifest, args) {
     def xpath = args.xpath as String
     def updateUrl = args.autoupdate ? args.autoupdate : args[platform]
 
-    def githubParams = args.gh
+    def githubParams = args.gh == null ? args.github : args.gh
     def githubPreRelease = false
     // github api 返回的json结果内查找assets下载链接的jsonpath
     def githubAssetsJsonpath = null
