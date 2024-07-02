@@ -6,7 +6,9 @@
 	"category":"chat",
 	"version":"1.64.0",
 	"platform":"android",
-	"url":"https://img.kookapp.cn/assets/release/khl_android_release_ci/240702/kook_release_1.64.0%20(2)_1640_12_official-site----mobile_sign.apk?auth_key=1719911822-07e55791d67ae9398a75caed8285aa46-0-722b3a5407eb6b7c4d41953724e252d3",
+	"url":{
+		"官网下载":"https://www.kookapp.cn"
+	},
 	"homepage":"https://www.kookapp.cn",
 	"script":{
 		"args":{
