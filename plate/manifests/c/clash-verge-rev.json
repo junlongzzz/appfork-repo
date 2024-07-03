@@ -6,12 +6,12 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://github.com/clash-verge-rev/clash-verge-rev",
-	"version":"1.7.1",
+	"version":"1.7.2",
 	"url":{
-		"Clash.Verge_1.7.1_x64-setup.exe":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.1/Clash.Verge_1.7.1_x64-setup.exe",
-		"Clash.Verge_1.7.1_x64_portable.zip":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.1/Clash.Verge_1.7.1_x64_portable.zip",
-		"Clash.Verge_1.7.1_x86-setup.exe":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.1/Clash.Verge_1.7.1_x86-setup.exe",
-		"Clash.Verge_1.7.1_x86_portable.zip":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.1/Clash.Verge_1.7.1_x86_portable.zip"
+		"Clash.Verge_1.7.2_x64-setup.exe":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.2/Clash.Verge_1.7.2_x64-setup.exe",
+		"Clash.Verge_1.7.2_x64_portable.zip":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.2/Clash.Verge_1.7.2_x64_portable.zip",
+		"Clash.Verge_1.7.2_x86-setup.exe":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.2/Clash.Verge_1.7.2_x86-setup.exe",
+		"Clash.Verge_1.7.2_x86_portable.zip":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.2/Clash.Verge_1.7.2_x86_portable.zip"
 	},
 	"script":{
 		"args":{
