@@ -6,16 +6,22 @@
 	"category":"development",
 	"platform":"windows",
 	"homepage":"https://tomcat.apache.org",
-	"script":{
-		"name":"tomcat",
-		"args":{
-			"ver":"10"
-		}
-	},
 	"version":"10.1.25",
 	"url":{
 		"apache-tomcat-10.1.25.exe":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.25/bin/apache-tomcat-10.1.25.exe",
 		"apache-tomcat-10.1.25-windows-x64.zip":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.25/bin/apache-tomcat-10.1.25-windows-x64.zip",
 		"apache-tomcat-10.1.25-windows-x86.zip":"https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.25/bin/apache-tomcat-10.1.25-windows-x86.zip"
+	},
+	"script":{
+		"args":{
+			"url":"https://archive.apache.org/dist/tomcat/tomcat-10/?C=M;O=D",
+			"regex":"v(?<version>[\\d.]+)/",
+			"autoupdate":{
+				"apache-tomcat-${version}.exe":"https://archive.apache.org/dist/tomcat/tomcat-10/v${version}/bin/apache-tomcat-${version}.exe",
+				"apache-tomcat-${version}-windows-x64.zip":"https://archive.apache.org/dist/tomcat/tomcat-10/v${version}/bin/apache-tomcat-${version}-windows-x64.zip",
+				"apache-tomcat-${version}-windows-x86.zip":"https://archive.apache.org/dist/tomcat/tomcat-10/v${version}/bin/apache-tomcat-${version}-windows-x86.zip"
+			}
+		},
+		"name":"appfork-check-update"
 	}
 }
