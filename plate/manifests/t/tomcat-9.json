@@ -6,11 +6,11 @@
 	"category":"development",
 	"platform":"windows",
 	"homepage":"https://tomcat.apache.org",
-	"version":"9.0.90",
+	"version":"9.0.91",
 	"url":{
-		"apache-tomcat-9.0.90.exe":"https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.90/bin/apache-tomcat-9.0.90.exe",
-		"apache-tomcat-9.0.90-windows-x64.zip":"https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.90/bin/apache-tomcat-9.0.90-windows-x64.zip",
-		"apache-tomcat-9.0.90-windows-x86.zip":"https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.90/bin/apache-tomcat-9.0.90-windows-x86.zip"
+		"apache-tomcat-9.0.91.exe":"https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.91/bin/apache-tomcat-9.0.91.exe",
+		"apache-tomcat-9.0.91-windows-x64.zip":"https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.91/bin/apache-tomcat-9.0.91-windows-x64.zip",
+		"apache-tomcat-9.0.91-windows-x86.zip":"https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.91/bin/apache-tomcat-9.0.91-windows-x86.zip"
 	},
 	"script":{
 		"args":{
