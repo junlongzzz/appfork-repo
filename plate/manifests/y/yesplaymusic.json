@@ -18,8 +18,8 @@
 		"name":"appfork-check-update"
 	},
 	"url":{
-		"YesPlayMusic-0.4.8-2.exe":"https://github.com/qier222/YesPlayMusic/releases/download/v0.4.8-2/YesPlayMusic-0.4.8-2.exe",
-		"YesPlayMusic-Setup-0.4.8-2.exe":"https://github.com/qier222/YesPlayMusic/releases/download/v0.4.8-2/YesPlayMusic-Setup-0.4.8-2.exe",
+		"YesPlayMusic-0.4.8-2.exe":"https://github.com/qier222/YesPlayMusic/releases/download/v0.4.8-2/YesPlayMusic.0.4.8.exe",
+		"YesPlayMusic-Setup-0.4.8-2.exe":"https://github.com/qier222/YesPlayMusic/releases/download/v0.4.8-2/YesPlayMusic.Setup.0.4.8.exe",
 		"在线使用网页版":"https://music.junlong.plus"
 	},
 	"homepage":"https://github.com/qier222/YesPlayMusic"
