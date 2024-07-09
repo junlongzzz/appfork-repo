@@ -4,10 +4,10 @@
 	"logo":"https://freenginx.org/nginx.png",
 	"description":"The freenginx.org project. The goal of the project is to keep nginx development free from arbitrary corporate actions.",
 	"category":"development",
-	"version":"1.27.1/1.26.0",
+	"version":"1.27.2/1.26.0",
 	"platform":"windows",
 	"url":{
-		"freenginx-1.27.1.zip (Mainline)":"https://freenginx.org/download/freenginx-1.27.1.zip",
+		"freenginx-1.27.2.zip (Mainline)":"https://freenginx.org/download/freenginx-1.27.2.zip",
 		"freenginx-1.26.0.zip (Stable)":"https://freenginx.org/download/freenginx-1.26.0.zip"
 	},
 	"homepage":"https://freenginx.org"
