@@ -201,11 +201,21 @@ static String handleVersionReplace(String str, String version) {
         return str
     }
     def matcher = str =~ '\\$\\{?(?<versionType>[a-zA-Z]+)}?'
+    // 匹配语义化版本号 major.minor.patch-prerelease+buildmetadata
+    def semVerMatcher = version =~ '^(?<major>0|[1-9]\\d*)\\.(?<minor>0|[1-9]\\d*)\\.(?<patch>0|[1-9]\\d*)' +
+            '(?:-(?<prerelease>(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?' +
+            '(?:\\+(?<buildmetadata>[0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$'
+    def isSemVer = semVerMatcher.find()
     while (matcher.find()) {
-        def versionType = matcher.group('versionType')
+        def versionType = matcher.group('versionType').toLowerCase()
         def versionReplace = switch (versionType) {
-            case 'cleanVersion' -> version.replaceAll('\\D', '') // 只有纯数字的版本号
-            case 'version' -> version
+            case ('cleanVersion'.toLowerCase()) -> version.replaceAll('\\D', '') // 只有纯数字的版本号
+            case ('version'.toLowerCase()) -> version
+            case ('majorVersion'.toLowerCase()) -> isSemVer ? semVerMatcher.group('major') : null
+            case ('minorVersion'.toLowerCase()) -> isSemVer ? semVerMatcher.group('minor') : null
+            case ('patchVersion'.toLowerCase()) -> isSemVer ? semVerMatcher.group('patch') : null
+            case ('preReleaseVersion'.toLowerCase()) -> isSemVer ? semVerMatcher.group('prerelease') : null
+            case ('buildMetaDataVersion'.toLowerCase()) -> isSemVer ? semVerMatcher.group('buildmetadata') : null
             default -> null
         }
         if (versionReplace != null) {
