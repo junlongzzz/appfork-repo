@@ -3,6 +3,7 @@
 本仓库为 [AppFork](https://junlong.plus/ztool/appfork) 远程软件仓库，通过 [Github Actions](https://github.com/actions) 进行自动同步更新仓库内的软件清单文件
 
 [![Automatic check repository update](https://github.com/junlongzzz/appfork-repo/actions/workflows/check-update.yml/badge.svg?branch=main)](https://github.com/junlongzzz/appfork-repo/actions/workflows/check-update.yml)
+[![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/junlongzzz/appfork-repo/main)](https://github.com/junlongzzz/appfork-repo/commits/main)
 
 ### 仓库目录说明
 
