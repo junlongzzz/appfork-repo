@@ -210,7 +210,7 @@ static String handleVersionReplace(String str, String version) {
         def versionType = matcher.group('versionType').toLowerCase()
         def versionReplace = switch (versionType) {
             case 'version' -> version
-            case 'cleanversion' -> version.replaceAll('\\D', '') // 只有纯数字的版本号
+            case 'cleanversion', 'clean' -> version.replaceAll('\\D', '') // 只有纯数字的版本号
             case 'majorversion', 'major' -> isSemVer ? semVerMatcher.group('major') : null
             case 'minorversion', 'minor' -> isSemVer ? semVerMatcher.group('minor') : null
             case 'patchversion', 'patch' -> isSemVer ? semVerMatcher.group('patch') : null
