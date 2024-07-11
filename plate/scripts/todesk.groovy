@@ -22,20 +22,34 @@ static def checkUpdate(manifest, args) {
 
     url = switch (platform) {
         case 'windows' -> [
-                '全功能版': 'https://dl.todesk.com/windows/ToDesk_Setup.exe',
-                '精简版'  : 'https://dl.todesk.com/windows/ToDesk_Lite_x64.exe'
+                '在线安装包': 'https://dl.todesk.com/windows/ToDesk.exe',
+                '离线安装包': 'https://dl.todesk.com/windows/ToDesk_Setup.exe',
+                '精简版'    : 'https://dl.todesk.com/windows/ToDesk_Lite.exe'
         ]
         case 'mac' -> "https://dl.todesk.com/macos/ToDesk_${version}.pkg".toString()
-        case 'linux' -> [
-                'Debian/Ubuntu/Mint (x64)'  : "https://dl.todesk.com/linux/todesk_${version}_amd64.deb".toString(),
-                'Arch Linux (x64)'          : "https://dl.todesk.com/linux/todesk_${version}_x86_64.pkg.tar.zst".toString(),
-                'Fedora/CentOS/RedHat (x64)': "https://dl.todesk.com/linux/todesk_${version}_x86_64.rpm".toString(),
-                'Raspberry Pi 4 Arm v7'     : "https://dl.todesk.com/linux/todesk_${version}_armv7l.deb".toString(),
-                'Arm64 & aarch64 (rpm)'     : "https://dl.todesk.com/linux/todesk_${version}_aarch64.rpm".toString(),
-                'Arm64 & aarch64 (deb)'     : "https://dl.todesk.com/linux/todesk_${version}_aarch64.deb".toString(),
-        ]
         case 'android' -> "https://dl.todesk.com/android/ToDesk_${version}.apk".toString()
+        case 'linux' -> {
+            def paramsMatcher = 'https://www.todesk.com/linux.html'.toURL().text =~ 'window.__NUXT__.*(?<funcParams>\\(.*\\))\\);'
+            if (paramsMatcher.find()) {
+                def linuxUrls = [:]
+                paramsMatcher.group('funcParams')
+                        .replaceAll('[ "]', '') // 去除引号和空格
+                        .replaceAll('\\\\u002F', '/') // unicode \u002F 转义
+                        .split(',').each { item ->
+                    if (item.startsWith('https://')) {
+                        linuxUrls[item.substring(item.lastIndexOf('/') + 1)] = item
+                    }
+                }
+                linuxUrls.isEmpty() ? null : linuxUrls
+            } else {
+                null
+            }
+        }
         default -> null
+    }
+
+    if (url == null) {
+        return null
     }
 
     return [
