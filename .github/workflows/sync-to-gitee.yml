@@ -9,6 +9,13 @@ on:
     branches:
       - main
 
+# 防止重复执行
+concurrency:
+  # 任务组名
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # 取消之前的任务
+  cancel-in-progress: true
+
 jobs:
   sync-to-gitee:
     runs-on: ubuntu-latest
