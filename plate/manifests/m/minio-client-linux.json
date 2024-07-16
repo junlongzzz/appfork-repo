@@ -6,7 +6,7 @@
 	"category":"network",
 	"platform":"linux",
 	"homepage":"https://min.io",
-	"version":"RELEASE.2024-07-11T18-01-28Z",
+	"version":"RELEASE.2024-07-15T17-46-06Z",
 	"url":{
 		"mc (amd64)":"https://dl.min.io/client/mc/release/linux-amd64/mc",
 		"mc (arm64)":"https://dl.min.io/client/mc/release/linux-arm64/mc"
