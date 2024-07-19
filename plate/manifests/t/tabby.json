@@ -6,12 +6,12 @@
 	"category":"development",
 	"platform":"windows",
 	"homepage":"https://tabby.sh",
-	"version":"1.0.210",
+	"version":"1.0.211",
 	"url":{
-		"tabby-1.0.210-setup-arm64.exe":"https://github.com/Eugeny/tabby/releases/download/v1.0.210/tabby-1.0.210-setup-arm64.exe",
-		"tabby-1.0.210-setup-x64.exe":"https://github.com/Eugeny/tabby/releases/download/v1.0.210/tabby-1.0.210-setup-x64.exe",
-		"tabby-1.0.210-portable-x64.zip":"https://github.com/Eugeny/tabby/releases/download/v1.0.210/tabby-1.0.210-portable-x64.zip",
-		"tabby-1.0.210-portable-arm64.zip":"https://github.com/Eugeny/tabby/releases/download/v1.0.210/tabby-1.0.210-portable-arm64.zip"
+		"tabby-1.0.211-setup-arm64.exe":"https://github.com/Eugeny/tabby/releases/download/v1.0.211/tabby-1.0.211-setup-arm64.exe",
+		"tabby-1.0.211-setup-x64.exe":"https://github.com/Eugeny/tabby/releases/download/v1.0.211/tabby-1.0.211-setup-x64.exe",
+		"tabby-1.0.211-portable-x64.zip":"https://github.com/Eugeny/tabby/releases/download/v1.0.211/tabby-1.0.211-portable-x64.zip",
+		"tabby-1.0.211-portable-arm64.zip":"https://github.com/Eugeny/tabby/releases/download/v1.0.211/tabby-1.0.211-portable-arm64.zip"
 	},
 	"script":{
 		"args":{
