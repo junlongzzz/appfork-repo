@@ -6,6 +6,9 @@
 	"category":"development",
 	"version":"4.32.0",
 	"platform":"windows",
-	"url":"https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe",
+	"url":{
+		"Amd64":"https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe",
+		"Arm64":"https://desktop.docker.com/win/main/arm64/Docker%20Desktop%20Installer.exe"
+	},
 	"homepage":"https://www.docker.com/products/docker-desktop"
 }
