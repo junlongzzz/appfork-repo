@@ -1,0 +1,30 @@
+{
+	"author":"SagerNet",
+	"name":"sing-box",
+	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/SagerNet/sing-box-for-android/main/app/src/main/ic_launcher-playstore.png",
+	"description":"The universal proxy platform.",
+	"category":"network",
+	"version":"1.9.3",
+	"platform":"android",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"sing-box-${version}-android-amd64.tar.gz":"https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-android-amd64.tar.gz",
+				"sing-box-${version}-android-arm64.tar.gz":"https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-android-arm64.tar.gz",
+				"SFA-${version}-arm64-v8a.apk":"https://github.com/SagerNet/sing-box/releases/download/v${version}/SFA-${version}-arm64-v8a.apk",
+				"SFA-${version}-armeabi-v7a.apk":"https://github.com/SagerNet/sing-box/releases/download/v${version}/SFA-${version}-armeabi-v7a.apk",
+				"SFA-${version}-universal.apk":"https://github.com/SagerNet/sing-box/releases/download/v${version}/SFA-${version}-universal.apk"
+			},
+			"url":"github://SagerNet/sing-box"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"sing-box-1.9.3-android-amd64.tar.gz":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/sing-box-1.9.3-android-amd64.tar.gz",
+		"sing-box-1.9.3-android-arm64.tar.gz":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/sing-box-1.9.3-android-arm64.tar.gz",
+		"SFA-1.9.3-arm64-v8a.apk":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/SFA-1.9.3-arm64-v8a.apk",
+		"SFA-1.9.3-armeabi-v7a.apk":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/SFA-1.9.3-armeabi-v7a.apk",
+		"SFA-1.9.3-universal.apk":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/SFA-1.9.3-universal.apk"
+	},
+	"homepage":"https://github.com/SagerNet/sing-box"
+}

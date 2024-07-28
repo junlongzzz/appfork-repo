@@ -1,0 +1,28 @@
+{
+	"author":"SagerNet",
+	"name":"sing-box",
+	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/SagerNet/sing-box-for-android/main/app/src/main/ic_launcher-playstore.png",
+	"description":"The universal proxy platform.",
+	"category":"network",
+	"version":"1.9.3",
+	"platform":"windows",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"sing-box-${version}-windows-amd64.zip":"https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-windows-amd64.zip",
+				"sing-box-${version}-windows-amd64v3.zip":"https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-windows-amd64v3.zip",
+				"sing-box-${version}-windows-amd64-legacy.zip":"https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-windows-amd64-legacy.zip",
+				"sing-box-${version}-windows-arm64.zip":"https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-windows-arm64.zip"
+			},
+			"url":"github://SagerNet/sing-box"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"sing-box-1.9.3-windows-amd64.zip":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/sing-box-1.9.3-windows-amd64.zip",
+		"sing-box-1.9.3-windows-amd64v3.zip":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/sing-box-1.9.3-windows-amd64v3.zip",
+		"sing-box-1.9.3-windows-amd64-legacy.zip":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/sing-box-1.9.3-windows-amd64-legacy.zip",
+		"sing-box-1.9.3-windows-arm64.zip":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/sing-box-1.9.3-windows-arm64.zip"
+	},
+	"homepage":"https://github.com/SagerNet/sing-box"
+}
