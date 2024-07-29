@@ -4,7 +4,7 @@
 	"logo":"https://immersivetranslate.com/img/logo.png",
 	"description":"一键开启双语阅读，提升信息获取效率。",
 	"category":"reading",
-	"version":"1.7.8",
+	"version":"1.7.9",
 	"platform":"extensions",
 	"url":{
 		"Install on Microsoft Edge":"https://microsoftedge.microsoft.com/addons/detail/amkbmndfnliijdhojkpoglbnaaahippg",
