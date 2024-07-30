@@ -3,7 +3,7 @@
 	"name":"Charles",
 	"description":"Charles is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet.",
 	"category":"tools",
-	"version":"4.6.6",
+	"version":"4.6.7",
 	"platform":"windows",
 	"url":"https://www.charlesproxy.com/assets/release/4.6.6/charles-proxy-4.6.6-win64.msi",
 	"homepage":"https://www.charlesproxy.com",
