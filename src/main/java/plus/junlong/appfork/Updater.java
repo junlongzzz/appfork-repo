@@ -222,6 +222,20 @@ public final class Updater {
                         return SYNC_ERROR;
                     }
 
+                    Object checkVersion = checkUpdate.remove("version");
+                    if (checkVersion instanceof String && !version.equals(checkVersion)) {
+                        // 版本号有变更
+                        String checkVersionStr = checkVersion.toString();
+                        if (ReUtil.isMatch(versionPattern, checkVersionStr) && ReUtil.isMatch(versionPattern, version)
+                                && StrUtil.compareVersion(checkVersionStr, version) < 0) {
+                            // x.y.z类型版本号比较，如果脚本返回的版本号小于清单文件内的版本号，则跳过
+                            log.warn("manifest [{}] version [{}] is great than check [{}]", manifest.getName(), version, checkVersion);
+                        } else {
+                            // 非语义化版本号有变更，直接更新清单文件属性
+                            changedAttrs.put("version", checkVersion);
+                        }
+                    }
+
                     // 通过循环获取脚本返回的属性值是否跟已有清单文件内属性值一致
                     for (Map.Entry<?, ?> entry : checkUpdate.entrySet()) {
                         String key = (String) entry.getKey();
@@ -235,49 +249,32 @@ public final class Updater {
                         // 按照key排序后比较
                         if (!JSON.toJSONString(value, JSONWriter.Feature.SortMapEntriesByKeys)
                                 .equals(JSON.toJSONString(manifestJson.get(key), JSONWriter.Feature.SortMapEntriesByKeys))) {
-                            if ("url".equals(key) || "version".equals(key)) {
-                                // 开始比较清单文件内的版本号和检测的版本号大小
-                                Object checkVersionVal = checkUpdate.get("version");
-                                String checkVersion = String.valueOf(checkVersionVal == null ? "" : checkVersionVal);
-                                String manifestVersion = manifestJson.getString("version");
-                                if (ReUtil.isMatch(versionPattern, checkVersion) &&
-                                        ReUtil.isMatch(versionPattern, manifestVersion) &&
-                                        StrUtil.compareVersion(checkVersion, manifestVersion) < 0) {
-                                    // 版本号比较，如果脚本返回的版本号小于清单文件内的版本号，则跳过
-                                    // 同时跳过下载地址的更新
-                                    if ("version".equals(key)) {
-                                        log.warn("manifest [{}] version [{}] is great than check [{}]", manifest.getName(), manifestVersion, checkVersion);
+                            if ("url".equals(key)) {
+                                // 开始检查链接是否合法
+                                boolean isUrl = false;
+                                if (value instanceof String valueStr) {
+                                    // 只有一个链接，直接检查是否是合法链接形式
+                                    if (isUrl(valueStr)) {
+                                        isUrl = true;
                                     }
-                                    continue;
-                                }
-
-                                if ("url".equals(key)) {
-                                    // 开始检查链接是否合法
-                                    boolean isUrl = false;
-                                    if (value instanceof String valueStr) {
-                                        // 只有一个链接，直接检查是否是合法链接形式
-                                        if (isUrl(valueStr)) {
-                                            isUrl = true;
-                                        }
-                                    } else if (value instanceof Map<?, ?> updateUrlMap) {
-                                        // 有多个链接，循环检查是否是合法链接形式
-                                        if (!updateUrlMap.isEmpty()) {
-                                            isUrl = true;
-                                            for (Object v : updateUrlMap.values()) {
-                                                if (!(v instanceof String) || !isUrl((String) v)) {
-                                                    isUrl = false;
-                                                    break;
-                                                }
+                                } else if (value instanceof Map<?, ?> updateUrlMap) {
+                                    // 有多个链接，循环检查是否是合法链接形式
+                                    if (!updateUrlMap.isEmpty()) {
+                                        isUrl = true;
+                                        for (Object v : updateUrlMap.values()) {
+                                            if (!(v instanceof String) || !isUrl((String) v)) {
+                                                isUrl = false;
+                                                break;
                                             }
                                         }
                                     }
-                                    if (!isUrl) {
-                                        // 如果链接不合法，那么不更新清单文件内的属性值
-                                        log.warn("manifest [{}] url [{}] is not a valid url", manifest.getName(), value);
-                                        // 链接不合法，版本号也不能更新，移除掉
-                                        changedAttrs.remove("version");
-                                        continue;
-                                    }
+                                }
+                                if (!isUrl) {
+                                    // 如果链接不合法，那么不更新清单文件内的属性值
+                                    log.warn("manifest [{}] url [{}] is not a valid url", manifest.getName(), value);
+                                    // 链接不合法，版本号也不能更新，移除掉
+                                    changedAttrs.remove("version");
+                                    continue;
                                 }
                             }
 
@@ -285,7 +282,6 @@ public final class Updater {
                             changedAttrs.put(key, value);
                         }
                     }
-
                 }
             }
 
