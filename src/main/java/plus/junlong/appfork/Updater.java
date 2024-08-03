@@ -196,7 +196,7 @@ public final class Updater {
             }
 
             // 有更新的属性名称集合
-            List<String> changedAttrs = new LinkedList<>();
+            Map<String, Object> changedAttrs = new HashMap<>();
 
             // 检查更新脚本
             File script = new File(repoPath, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
@@ -274,15 +274,15 @@ public final class Updater {
                                     if (!isUrl) {
                                         // 如果链接不合法，那么不更新清单文件内的属性值
                                         log.warn("manifest [{}] url [{}] is not a valid url", manifest.getName(), value);
+                                        // 链接不合法，版本号也不能更新，移除掉
+                                        changedAttrs.remove("version");
                                         continue;
                                     }
                                 }
                             }
 
                             // 如果脚本返回的属性值跟清单文件内的属性值不一致，那么更新清单文件内的属性值
-                            manifestJson.put(key, value);
-                            // 记录更新属性
-                            changedAttrs.add(key);
+                            changedAttrs.put(key, value);
                         }
                     }
 
@@ -291,6 +291,7 @@ public final class Updater {
 
             if (!changedAttrs.isEmpty()) {
                 // 将新版清单内容写入文件
+                manifestJson.putAll(changedAttrs);
                 FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
                 String manifestVersion = manifestJson.getString("version");
                 if (!version.equals(manifestVersion)) {
