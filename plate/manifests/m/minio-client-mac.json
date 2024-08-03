@@ -6,7 +6,7 @@
 	"category":"network",
 	"platform":"mac",
 	"homepage":"https://min.io",
-	"version":"RELEASE.2024-07-26T13-08-44Z",
+	"version":"RELEASE.2024-07-31T15-58-33Z",
 	"url":{
 		"mc (amd64)":"https://dl.min.io/client/mc/release/darwin-amd64/mc",
 		"mc (arm64)":"https://dl.min.io/client/mc/release/darwin-arm64/mc"
