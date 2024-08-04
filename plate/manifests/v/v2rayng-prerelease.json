@@ -4,7 +4,7 @@
 	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/2dust/v2rayNG/master/V2rayNG/app/src/main/ic_launcher-web.png",
 	"description":"A V2Ray client for Android, support Xray core and v2fly core.",
 	"category":"network",
-	"version":"1.8.35",
+	"version":"1.8.34",
 	"platform":"android",
 	"script":{
 		"args":{

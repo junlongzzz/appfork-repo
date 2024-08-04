@@ -222,6 +222,7 @@ public final class Updater {
                         return SYNC_ERROR;
                     }
 
+                    boolean isValidVersion = true;
                     Object checkVersion = checkUpdate.remove("version");
                     if (checkVersion instanceof String && !version.equals(checkVersion)) {
                         // 版本号有变更
@@ -230,6 +231,7 @@ public final class Updater {
                                 && StrUtil.compareVersion(checkVersionStr, version) < 0) {
                             // x.y.z类型版本号比较，如果脚本返回的版本号小于清单文件内的版本号，则跳过
                             log.warn("manifest [{}] version [{}] is great than check [{}]", manifest.getName(), version, checkVersion);
+                            isValidVersion = false;
                         } else {
                             // 非语义化版本号有变更，直接更新清单文件属性
                             changedAttrs.put("version", checkVersion);
@@ -250,6 +252,10 @@ public final class Updater {
                         if (!JSON.toJSONString(value, JSONWriter.Feature.SortMapEntriesByKeys)
                                 .equals(JSON.toJSONString(manifestJson.get(key), JSONWriter.Feature.SortMapEntriesByKeys))) {
                             if ("url".equals(key)) {
+                                if (!isValidVersion) {
+                                    // 合法的版本号才去更新url
+                                    continue;
+                                }
                                 // 开始检查链接是否合法
                                 boolean isUrl = false;
                                 if (value instanceof String valueStr) {
@@ -277,7 +283,6 @@ public final class Updater {
                                     continue;
                                 }
                             }
-
                             // 如果脚本返回的属性值跟清单文件内的属性值不一致，那么更新清单文件内的属性值
                             changedAttrs.put(key, value);
                         }
