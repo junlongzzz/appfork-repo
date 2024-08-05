@@ -224,9 +224,8 @@ public final class Updater {
 
                     boolean isValidVersion = true;
                     Object checkVersion = checkUpdate.remove("version");
-                    if (checkVersion instanceof String && !version.equals(checkVersion)) {
+                    if (checkVersion instanceof String checkVersionStr && !checkVersionStr.equals(version)) {
                         // 版本号有变更
-                        String checkVersionStr = checkVersion.toString();
                         if (ReUtil.isMatch(versionPattern, checkVersionStr) && ReUtil.isMatch(versionPattern, version)
                                 && StrUtil.compareVersion(checkVersionStr, version) < 0) {
                             // x.y.z类型版本号比较，如果脚本返回的版本号小于清单文件内的版本号，则跳过
