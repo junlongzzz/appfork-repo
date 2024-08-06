@@ -4,13 +4,13 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/pycharm/pycharm.svg",
 	"description":"适用于 数据科学 和 Web 开发的 Python IDE。",
 	"category":"development",
-	"version":"2024.1.4(241.18034.82)",
+	"version":"2024.1.5(241.18968.29)",
 	"platform":"linux",
 	"url":{
-		"pycharm-community-2024.1.4-aarch64.tar.gz":"https://download.jetbrains.com/python/pycharm-community-2024.1.4-aarch64.tar.gz",
-		"pycharm-community-2024.1.4.tar.gz":"https://download.jetbrains.com/python/pycharm-community-2024.1.4.tar.gz",
-		"pycharm-professional-2024.1.4-aarch64.tar.gz":"https://download.jetbrains.com/python/pycharm-professional-2024.1.4-aarch64.tar.gz",
-		"pycharm-professional-2024.1.4.tar.gz":"https://download.jetbrains.com/python/pycharm-professional-2024.1.4.tar.gz"
+		"pycharm-community-2024.1.5-aarch64.tar.gz":"https://download.jetbrains.com/python/pycharm-community-2024.1.5-aarch64.tar.gz",
+		"pycharm-community-2024.1.5.tar.gz":"https://download.jetbrains.com/python/pycharm-community-2024.1.5.tar.gz",
+		"pycharm-professional-2024.1.5-aarch64.tar.gz":"https://download.jetbrains.com/python/pycharm-professional-2024.1.5-aarch64.tar.gz",
+		"pycharm-professional-2024.1.5.tar.gz":"https://download.jetbrains.com/python/pycharm-professional-2024.1.5.tar.gz"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/pycharm/",
 	"script":{
