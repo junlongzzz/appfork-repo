@@ -4,13 +4,13 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/pycharm/pycharm.svg",
 	"description":"适用于 数据科学 和 Web 开发的 Python IDE。",
 	"category":"development",
-	"version":"2024.1.4(241.18034.82)",
+	"version":"2024.1.5(241.18968.29)",
 	"platform":"mac",
 	"url":{
-		"pycharm-community-2024.1.4.dmg":"https://download.jetbrains.com/python/pycharm-community-2024.1.4.dmg",
-		"pycharm-community-2024.1.4-aarch64.dmg":"https://download.jetbrains.com/python/pycharm-community-2024.1.4-aarch64.dmg",
-		"pycharm-professional-2024.1.4.dmg":"https://download.jetbrains.com/python/pycharm-professional-2024.1.4.dmg",
-		"pycharm-professional-2024.1.4-aarch64.dmg":"https://download.jetbrains.com/python/pycharm-professional-2024.1.4-aarch64.dmg"
+		"pycharm-community-2024.1.5.dmg":"https://download.jetbrains.com/python/pycharm-community-2024.1.5.dmg",
+		"pycharm-community-2024.1.5-aarch64.dmg":"https://download.jetbrains.com/python/pycharm-community-2024.1.5-aarch64.dmg",
+		"pycharm-professional-2024.1.5.dmg":"https://download.jetbrains.com/python/pycharm-professional-2024.1.5.dmg",
+		"pycharm-professional-2024.1.5-aarch64.dmg":"https://download.jetbrains.com/python/pycharm-professional-2024.1.5-aarch64.dmg"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/pycharm/",
 	"script":{
