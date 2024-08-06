@@ -1,0 +1,23 @@
+{
+	"author":"open source software",
+	"name":"FlClash",
+	"description":"A multi-platform proxy client based on ClashMeta, simple and easy to use, open-source and ad-free.",
+	"category":"network",
+	"version":"0.8.51",
+	"platform":"windows",
+	"script":{
+		"args":{
+			"autoupdate":{
+				"FlClash-${version}-windows-amd64-setup.exe":"https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-windows-amd64-setup.exe",
+				"FlClash-${version}-windows-amd64.zip":"https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-windows-amd64.zip"
+			},
+			"url":"github://chen08209/FlClash"
+		},
+		"name":"appfork-check-update"
+	},
+	"url":{
+		"FlClash-0.8.51-windows-amd64-setup.exe":"https://github.com/chen08209/FlClash/releases/download/v0.8.51/FlClash-0.8.51-windows-amd64-setup.exe",
+		"FlClash-0.8.51-windows-amd64.zip":"https://github.com/chen08209/FlClash/releases/download/v0.8.51/FlClash-0.8.51-windows-amd64.zip"
+	},
+	"homepage":"https://github.com/chen08209/FlClash"
+}
