@@ -6,7 +6,7 @@
   "version": "2022.2.0",
   "platform": "other",
   "url": "https://gitee.com/ja-netfilter/ja-netfilter/releases/download/2022.2.0/ja-netfilter-2022.2.0.zip",
-  "homepage": "https://gitee.com/ja-netfilter",
+  "homepage": "https://gitee.com/ja-netfilter/ja-netfilter",
   "script": {
     "args": {
       "autoupdate": "https://gitee.com/ja-netfilter/ja-netfilter/releases/download/${version}/ja-netfilter-${version}.zip",
