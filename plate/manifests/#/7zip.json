@@ -4,12 +4,12 @@
 	"logo":"https://www.7-zip.org/7ziplogo.png",
 	"description":"7-Zip是一款拥有极高压缩比的开源压缩软件",
 	"category":"tools",
-	"version":"24.07",
+	"version":"24.08",
 	"platform":"windows",
 	"url":{
-		"7z2407-x64.exe":"https://www.7-zip.org/a/7z2407-x64.exe",
-		"7z2407.exe":"https://www.7-zip.org/a/7z2407.exe",
-		"7z2407-arm64.exe":"https://www.7-zip.org/a/7z2407-arm64.exe"
+		"7z2408-x64.exe":"https://www.7-zip.org/a/7z2408-x64.exe",
+		"7z2408.exe":"https://www.7-zip.org/a/7z2408.exe",
+		"7z2408-arm64.exe":"https://www.7-zip.org/a/7z2408-arm64.exe"
 	},
 	"homepage":"https://www.7-zip.org",
 	"script":{

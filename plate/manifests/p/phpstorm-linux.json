@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/phpstorm/phpstorm.svg",
 	"description":"为 PHP 开发者赋能，使用 PHP IDE 更智能地编写代码。",
 	"category":"development",
-	"version":"2024.1.6(241.19072.22)",
+	"version":"2024.2(242.20224.361)",
 	"platform":"linux",
 	"url":{
-		"PhpStorm-2024.1.6-aarch64.tar.gz":"https://download.jetbrains.com/webide/PhpStorm-2024.1.6-aarch64.tar.gz",
-		"PhpStorm-2024.1.6.tar.gz":"https://download.jetbrains.com/webide/PhpStorm-2024.1.6.tar.gz"
+		"PhpStorm-2024.2-aarch64.tar.gz":"https://download.jetbrains.com/webide/PhpStorm-2024.2-aarch64.tar.gz",
+		"PhpStorm-2024.2.tar.gz":"https://download.jetbrains.com/webide/PhpStorm-2024.2.tar.gz"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/phpstorm/",
 	"script":{
