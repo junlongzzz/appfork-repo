@@ -4,7 +4,7 @@
 	"logo":"https://www.deepin.org/wp-content/uploads/2016/12/logo.png",
 	"description":"深度操作系统（deepin）是一个致力于为全球用户提供美观易用、安全稳定服务的Linux发行版，同时也一直是排名最高的来自中国团队研发的Linux发行版。",
 	"category":"image",
-	"version":"20.9",
+	"version":"23",
 	"platform":"linux",
 	"url":"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/20.9/deepin-desktop-community-20.9-amd64.iso",
 	"homepage":"https://www.deepin.org",
