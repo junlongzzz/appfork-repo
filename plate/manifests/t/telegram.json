@@ -7,8 +7,10 @@
 	"version":"5.4.1",
 	"platform":"windows",
 	"url":{
-		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.4.1/tsetup.5.4.1.exe",
-		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.4.1/tportable.5.4.1.zip"
+		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.4.1/tportable-x64.5.4.1.zip",
+		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.4.1/tportable.5.4.1.zip",
+		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.4.1/tsetup-x64.5.4.1.exe",
+		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.4.1/tsetup.5.4.1.exe"
 	},
 	"homepage":"https://telegram.org",
 	"script":{
