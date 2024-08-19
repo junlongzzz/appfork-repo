@@ -4,7 +4,7 @@
 	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/SagerNet/sing-box-for-android/main/app/src/main/ic_launcher-playstore.png",
 	"description":"The universal proxy platform.",
 	"category":"network",
-	"version":"1.9.3",
+	"version":"1.9.4",
 	"platform":"android",
 	"script":{
 		"args":{
@@ -20,11 +20,11 @@
 		"name":"appfork-check-update"
 	},
 	"url":{
-		"sing-box-1.9.3-android-amd64.tar.gz":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/sing-box-1.9.3-android-amd64.tar.gz",
-		"sing-box-1.9.3-android-arm64.tar.gz":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/sing-box-1.9.3-android-arm64.tar.gz",
-		"SFA-1.9.3-arm64-v8a.apk":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/SFA-1.9.3-arm64-v8a.apk",
-		"SFA-1.9.3-armeabi-v7a.apk":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/SFA-1.9.3-armeabi-v7a.apk",
-		"SFA-1.9.3-universal.apk":"https://github.com/SagerNet/sing-box/releases/download/v1.9.3/SFA-1.9.3-universal.apk"
+		"sing-box-1.9.4-android-amd64.tar.gz":"https://github.com/SagerNet/sing-box/releases/download/v1.9.4/sing-box-1.9.4-android-amd64.tar.gz",
+		"sing-box-1.9.4-android-arm64.tar.gz":"https://github.com/SagerNet/sing-box/releases/download/v1.9.4/sing-box-1.9.4-android-arm64.tar.gz",
+		"SFA-1.9.4-arm64-v8a.apk":"https://github.com/SagerNet/sing-box/releases/download/v1.9.4/SFA-1.9.4-arm64-v8a.apk",
+		"SFA-1.9.4-armeabi-v7a.apk":"https://github.com/SagerNet/sing-box/releases/download/v1.9.4/SFA-1.9.4-armeabi-v7a.apk",
+		"SFA-1.9.4-universal.apk":"https://github.com/SagerNet/sing-box/releases/download/v1.9.4/SFA-1.9.4-universal.apk"
 	},
 	"homepage":"https://github.com/SagerNet/sing-box"
 }
