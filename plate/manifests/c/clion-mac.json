@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/clion/clion.svg",
 	"description":"适用于 C 和 C++ 的跨平台 IDE，自如掌控，化繁为简。",
 	"category":"development",
-	"version":"2024.2(242.20224.384)",
+	"version":"2024.2.0.1(242.20224.413)",
 	"platform":"mac",
 	"url":{
-		"CLion-2024.2.dmg":"https://download.jetbrains.com/cpp/CLion-2024.2.dmg",
-		"CLion-2024.2-aarch64.dmg":"https://download.jetbrains.com/cpp/CLion-2024.2-aarch64.dmg"
+		"CLion-2024.2.0.1.dmg":"https://download.jetbrains.com/cpp/CLion-2024.2.0.1.dmg",
+		"CLion-2024.2.0.1-aarch64.dmg":"https://download.jetbrains.com/cpp/CLion-2024.2.0.1-aarch64.dmg"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/clion/",
 	"script":{

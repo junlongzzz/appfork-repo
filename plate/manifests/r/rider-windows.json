@@ -4,13 +4,13 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/rider/rider.svg",
 	"description":"全球最受喜爱的 .NET 和游戏开发 IDE。",
 	"category":"development",
-	"version":"2024.2(242.20224.401)",
+	"version":"2024.2.1(242.20224.418)",
 	"platform":"windows",
 	"url":{
-		"JetBrains.Rider-2024.2.exe":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.2.exe",
-		"JetBrains.Rider-2024.2.win.zip":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.2.win.zip",
-		"JetBrains.Rider-2024.2-aarch64.exe":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.2-aarch64.exe",
-		"JetBrains.Rider-2024.2-aarch64.win.zip":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.2-aarch64.win.zip"
+		"JetBrains.Rider-2024.2.1.exe":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.2.1.exe",
+		"JetBrains.Rider-2024.2.1.win.zip":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.2.1.win.zip",
+		"JetBrains.Rider-2024.2.1-aarch64.exe":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.2.1-aarch64.exe",
+		"JetBrains.Rider-2024.2.1-aarch64.win.zip":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.2.1-aarch64.win.zip"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/rider/",
 	"script":{
