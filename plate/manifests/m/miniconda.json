@@ -15,7 +15,7 @@
 		"name":"appfork-check-update"
 	},
 	"homepage":"https://docs.conda.io/projects/miniconda/en/latest/",
-	"version":"24.5.0",
+	"version":"24.7.1",
 	"url":{
 		"Miniconda3-latest-Windows-x86_64.exe":"https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe"
 	}
