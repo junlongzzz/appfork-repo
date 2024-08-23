@@ -16,15 +16,17 @@
 	},
 	"script":{
 		"args":{
-			"regex":"/node-v([\\d.]+)-win-",
+			"jsonpath":"$..version",
 			"autoupdate":{
 				"Installer (.msi 32-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-x86.msi",
 				"Installer (.msi 64-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-x64.msi",
+				"Installer (.msi Arm64)":"https://nodejs.org/dist/v${version}/node-v${version}-arm64.msi",
 				"Binary (.zip 32-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-win-x86.zip",
 				"Binary (.zip 64-bit)":"https://nodejs.org/dist/v${version}/node-v${version}-win-x64.zip",
+				"Binary (.zip Arm64)":"https://nodejs.org/dist/v${version}/node-v${version}-win-arm64.zip",
 				"Official Docker Image":"https://hub.docker.com/_/node/"
 			},
-			"url":"https://nodejs.org/en/download/current"
+			"url":"https://nodejs.org/dist/index.json"
 		},
 		"name":"appfork-check-update"
 	}
