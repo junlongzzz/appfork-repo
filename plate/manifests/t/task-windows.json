@@ -1,0 +1,28 @@
+{
+  "author": "open source project",
+  "name": "Task",
+  "logo": "https://taskfile.dev/img/logo.svg",
+  "description": "Task is a task runner / build tool that aims to be simpler and easier to use than, for example, <a href=\"https://www.gnu.org/software/make/\" target=\"_blank\">GNU Make<a>.",
+  "category": "development",
+  "platform": "windows",
+  "homepage": "https://taskfile.dev",
+  "version": "3.38.0",
+  "url": {
+    "task_windows_amd64.zip": "https://github.com/go-task/task/releases/download/v3.38.0/task_windows_amd64.zip",
+    "task_windows_386.zip": "https://github.com/go-task/task/releases/download/v3.38.0/task_windows_386.zip",
+    "task_windows_arm64.zip": "https://github.com/go-task/task/releases/download/v3.38.0/task_windows_arm64.zip",
+    "task_windows_arm.zip": "https://github.com/go-task/task/releases/download/v3.38.0/task_windows_arm.zip"
+  },
+  "script": {
+    "args": {
+      "url": "github://go-task/task",
+      "autoupdate": {
+        "task_windows_amd64.zip": "https://github.com/go-task/task/releases/download/v${version}/task_windows_amd64.zip",
+        "task_windows_386.zip": "https://github.com/go-task/task/releases/download/v${version}/task_windows_386.zip",
+        "task_windows_arm64.zip": "https://github.com/go-task/task/releases/download/v${version}/task_windows_arm64.zip",
+        "task_windows_arm.zip": "https://github.com/go-task/task/releases/download/v${version}/task_windows_arm.zip"
+      }
+    },
+    "name": "appfork-check-update"
+  }
+}
