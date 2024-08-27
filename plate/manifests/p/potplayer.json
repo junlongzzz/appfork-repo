@@ -5,10 +5,10 @@
 	"category":"video",
 	"platform":"windows",
 	"homepage":"https://potplayer.daum.net",
-	"version":"240618",
+	"version":"240827",
 	"url":{
-		"64Bit":"https://t1.daumcdn.net/potplayer/PotPlayer/Version/240618/PotPlayerSetup64.exe",
-		"32Bit":"https://t1.daumcdn.net/potplayer/PotPlayer/Version/240618/PotPlayerSetup.exe"
+		"64Bit":"https://t1.daumcdn.net/potplayer/PotPlayer/Version/240827/PotPlayerSetup64.exe",
+		"32Bit":"https://t1.daumcdn.net/potplayer/PotPlayer/Version/240827/PotPlayerSetup.exe"
 	},
 	"script":{
 		"args":{
