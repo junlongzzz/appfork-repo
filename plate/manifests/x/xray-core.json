@@ -3,7 +3,7 @@
 	"name":"Xray-core",
 	"description":"Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.",
 	"category":"network",
-	"version":"1.8.23",
+	"version":"1.8.24",
 	"platform":"windows",
 	"script":{
 		"args":{
@@ -16,8 +16,8 @@
 		"name":"appfork-check-update"
 	},
 	"url":{
-		"Xray-windows-32.zip":"https://github.com/XTLS/Xray-core/releases/download/v1.8.23/Xray-windows-32.zip",
-		"Xray-windows-64.zip":"https://github.com/XTLS/Xray-core/releases/download/v1.8.23/Xray-windows-64.zip"
+		"Xray-windows-32.zip":"https://github.com/XTLS/Xray-core/releases/download/v1.8.24/Xray-windows-32.zip",
+		"Xray-windows-64.zip":"https://github.com/XTLS/Xray-core/releases/download/v1.8.24/Xray-windows-64.zip"
 	},
 	"homepage":"https://github.com/XTLS/Xray-core"
 }
