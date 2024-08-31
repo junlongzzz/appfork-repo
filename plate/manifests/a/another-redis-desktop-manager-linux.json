@@ -3,7 +3,7 @@
 	"name":"Another Redis Desktop Manager",
 	"description":"🚀🚀🚀 更快、更好、更稳定的Redis桌面(GUI)管理客户端，兼容Windows、Mac、Linux，性能出众，轻松加载海量键值。程序包格式为.AppImage，下载后给上运行权限 ‘chmod +x’ 后双击运行即可。支持命令行安装：sudo snap install another-redis-desktop-manager",
 	"category":"development",
-	"version":"1.6.6",
+	"version":"1.6.7",
 	"platform":"linux",
 	"url":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.6.6/Another-Redis-Desktop-Manager.1.6.6.AppImage",
 	"homepage":"https://github.com/qishibo/AnotherRedisDesktopManager",
