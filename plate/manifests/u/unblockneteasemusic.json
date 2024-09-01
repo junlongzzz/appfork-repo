@@ -3,11 +3,11 @@
 	"name":"UnblockNeteaseMusic",
 	"description":"Revive unavailable songs for Netease Cloud Music (Refactored & Enhanced version)",
 	"category":"music",
-	"version":"0.27.8",
+	"version":"0.27.8-patch.1",
 	"platform":"windows",
 	"url":{
-		"amd64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.8/unblockneteasemusic-win-x64.exe",
-		"arm64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.8/unblockneteasemusic-win-arm64.exe"
+		"amd64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.8-patch.1/unblockneteasemusic-win-x64.exe",
+		"arm64":"https://github.com/UnblockNeteaseMusic/server/releases/download/v0.27.8-patch.1/unblockneteasemusic-win-arm64.exe"
 	},
 	"homepage":"https://github.com/UnblockNeteaseMusic/server",
 	"script":{
