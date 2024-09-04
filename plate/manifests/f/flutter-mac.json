@@ -4,9 +4,9 @@
 	"logo":"https://files.flutter-io.cn/images/branding/flutterlogo/flutter-cn-logo.png",
 	"description":"Flutter 为应用开发带来了革新：只要一套代码库，即可构建、测试和发布适用于移动、Web、桌面和嵌入式平台的精美应用。",
 	"category":"development",
-	"version":"3.24.1",
+	"version":"3.24.2",
 	"platform":"mac",
 	"script":"flutter",
-	"url":"https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_3.24.1-stable.zip",
+	"url":"https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_3.24.2-stable.zip",
 	"homepage":"https://flutter.cn"
 }
