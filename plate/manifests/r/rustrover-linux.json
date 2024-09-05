@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/rustrover/rustrover.svg",
 	"description":"面向 Rust 开发者的强大 IDE。",
 	"category":"development",
-	"version":"2024.1.8(241.18968.39)",
+	"version":"2024.2(242.21829.198)",
 	"platform":"linux",
 	"url":{
-		"RustRover-2024.1.8-aarch64.tar.gz":"https://download.jetbrains.com/rustrover/RustRover-2024.1.8-aarch64.tar.gz",
-		"RustRover-2024.1.8.tar.gz":"https://download.jetbrains.com/rustrover/RustRover-2024.1.8.tar.gz"
+		"RustRover-2024.2-aarch64.tar.gz":"https://download.jetbrains.com/rustrover/RustRover-2024.2-aarch64.tar.gz",
+		"RustRover-2024.2.tar.gz":"https://download.jetbrains.com/rustrover/RustRover-2024.2.tar.gz"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/rust/",
 	"script":{

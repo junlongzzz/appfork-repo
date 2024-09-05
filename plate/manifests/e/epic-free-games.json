@@ -3,11 +3,11 @@
 	"name":"Epic商城喜加一",
 	"description":"Epic今天又送什么游戏了？此处的版本号即为赠送的游戏中最晚截止领取时间（北京时间UTC+8），快点击下方按钮进入商城页面领取吧！",
 	"category":"games",
-	"version":"2024-09-05 23:00:00 (3451096800)",
+	"version":"2024-09-12 23:00:00 (3452306400)",
 	"platform":"other",
 	"url":{
-		"Wild Card Football [2024-09-05 23:00:00]":"https://store.epicgames.com/zh-CN/p/wild-card-football",
-		"Fallout® Classic Collection [2024-09-05 23:00:00]":"https://store.epicgames.com/zh-CN/p/fallout-classic-collection"
+		"Football Manager 2024 [2024-09-12 23:00:00]":"https://store.epicgames.com/zh-CN/p/football-manager-2024",
+		"Sniper Ghost Warrior Contracts [2024-09-12 23:00:00]":"https://store.epicgames.com/zh-CN/p/sniper-ghost-warrior-contracts-c772b9"
 	},
 	"homepage":"https://store.epicgames.com/zh-CN/free-games"
 }
