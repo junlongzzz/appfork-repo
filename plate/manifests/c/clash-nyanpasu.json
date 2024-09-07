@@ -6,10 +6,10 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://github.com/libnyanpasu/clash-nyanpasu",
-	"version":"1.6.0",
+	"version":"1.6.1",
 	"url":{
-		"Clash.Nyanpasu_1.6.0_x64-setup.exe":"https://github.com/libnyanpasu/clash-nyanpasu/releases/download/v1.6.0/Clash.Nyanpasu_1.6.0_x64-setup.exe",
-		"Clash.Nyanpasu_1.6.0_x64_portable.zip":"https://github.com/libnyanpasu/clash-nyanpasu/releases/download/v1.6.0/Clash.Nyanpasu_1.6.0_x64_portable.zip"
+		"Clash.Nyanpasu_1.6.1_x64-setup.exe":"https://github.com/libnyanpasu/clash-nyanpasu/releases/download/v1.6.1/Clash.Nyanpasu_1.6.1_x64-setup.exe",
+		"Clash.Nyanpasu_1.6.1_x64_portable.zip":"https://github.com/libnyanpasu/clash-nyanpasu/releases/download/v1.6.1/Clash.Nyanpasu_1.6.1_x64_portable.zip"
 	},
 	"script":{
 		"args":{
