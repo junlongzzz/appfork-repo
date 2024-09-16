@@ -3,7 +3,7 @@
 	"name":"Box4Magisk",
 	"description":"通过 Magisk 、KernelSU 或 APatch 部署 clash、mihomo、sing-box、v2ray、xray、hysteria 代理，支持 REDIRECT（仅 TCP）、TPROXY（TCP + UDP）透明代理，支持由核心提供的 TUN（TCP + UDP）代理，也支持 REDIRECT（TCP） + TUN（UDP） 混合模式代理。",
 	"category":"network",
-	"version":"5.0",
+	"version":"5.1",
 	"platform":"android",
 	"script":{
 		"args":{
