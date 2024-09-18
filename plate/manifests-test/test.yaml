@@ -1,0 +1,13 @@
+author: Author
+name: App Name (Yaml)
+logo: ''
+description: Description
+category: others
+version: beta
+platform: windows
+url: https://junlong.plus/ztool/appfork
+homepage: https://junlong.plus
+script:
+  args:
+    key: value
+    str: this is yaml format manifest

@@ -1,0 +1,16 @@
+author: FIT2CLOUD 飞致云
+name: 1Panel
+logo: https://1panel.cn/img/favicon.png
+description: 1Panel 是新一代现代化、开源的 Linux 服务器运维管理面板。
+category: tools
+version: 1.10.15-lts
+platform: linux
+url:
+  在线文档: https://1panel.cn/docs/
+homepage: https://1panel.cn
+script:
+  args:
+    autoupdate:
+      在线文档: https://1panel.cn/docs/
+    url: github://1Panel-dev/1Panel
+  name: appfork-check-update
