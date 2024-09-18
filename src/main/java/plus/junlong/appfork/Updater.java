@@ -13,6 +13,7 @@ import groovy.lang.Script;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.yaml.snakeyaml.Yaml;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -91,11 +92,9 @@ public final class Updater {
             return;
         }
         // 获取清单文件列表，目录下所有层级文件夹内的文件
-        List<File> manifests = FileUtil.loopFiles(manifestsDir, pathname ->
-                pathname.getName().toLowerCase().endsWith(".json") &&
-                        pathname.isFile() &&
-                        pathname.canRead() &&
-                        pathname.canWrite());
+        List<File> manifests = FileUtil.loopFiles(manifestsDir, pathname -> pathname.isFile() &&
+                (pathname.getName().toLowerCase().endsWith(".json") || pathname.getName().toLowerCase().endsWith(".yaml")) &&
+                pathname.canRead() && pathname.canWrite() && pathname.length() > 0);
         if (manifests.isEmpty()) {
             log.error("目录内无清单文件，同步取消");
             return;
@@ -148,7 +147,14 @@ public final class Updater {
      */
     private int sync(File manifest) {
         try {
-            JSONObject manifestJson = JSON.parseObject(FileUtil.readUtf8String(manifest));
+            // 清单文件格式
+            String format = FileUtil.extName(manifest).toLowerCase();
+            String read = FileUtil.readUtf8String(manifest);
+            JSONObject manifestJson = switch (format) {
+                case "json" -> JSON.parseObject(read);
+                case "yaml" -> new Yaml().loadAs(read, JSONObject.class);
+                default -> null;
+            };
             if (manifestJson == null || manifestJson.isEmpty()) {
                 log.error("manifest [{}] parsed is null or empty", manifest.getName());
                 return SYNC_ERROR;
@@ -292,7 +298,12 @@ public final class Updater {
             if (!changedAttrs.isEmpty()) {
                 // 将新版清单内容写入文件
                 manifestJson.putAll(changedAttrs);
-                FileUtil.writeUtf8String(JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat), manifest);
+                String write = switch (format) {
+                    case "json" -> JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat);
+                    case "yaml" -> new Yaml().dumpAsMap(manifestJson);
+                    default -> read;
+                };
+                FileUtil.writeUtf8String(write, manifest);
                 String manifestVersion = manifestJson.getString("version");
                 if (!version.equals(manifestVersion)) {
                     // 版本有变更

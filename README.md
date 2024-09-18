@@ -9,7 +9,7 @@
 
 - `plate` : 仓库软件源所有相关文件存放目录（重要），又名 `盘子`
     - `plate/deprecated` : 存放废弃的软件 `清单`、`脚本` 文件，不会进行自动同步更新和显示在前端页面内
-    - `plate/manifests` : 存放软件仓库清单文件，一个清单文件对应一个软件，由 `json` 格式编写的文件
+    - `plate/manifests` : 存放软件仓库清单文件，一个清单文件对应一个软件，由 `json`/`yaml` 格式编写的文件
     - `plate/manifests-test` : 存放软件仓库清单文件的测试文件，用于测试清单文件的格式和内容
     - `plate/scripts` : 存放软件仓库每个软件对应的更新同步脚本代码文件，通过 [`Groovy`](https://github.com/apache/groovy) 语言进行编写和执行
 - `src` : 执行仓库软件清单同步更新的 `Java` 源码，本仓库本身就是一个 `Maven` 项目
