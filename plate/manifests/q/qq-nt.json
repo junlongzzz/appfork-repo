@@ -7,7 +7,7 @@
 	"platform":"windows",
 	"homepage":"https://im.qq.com/pcqq/index.shtml",
 	"version":"9.9.15",
-	"url":"https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.15_240902_x64_01.exe",
+	"url":"https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.15_240919_x64_01.exe",
 	"script":{
 		"args":{
 			"nt":true
