@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/rubymine/rubymine.svg",
 	"description":"为 Ruby 开发者赋能，借助 Ruby on Rails IDE 更智能地编码。",
 	"category":"development",
-	"version":"2024.2.1(242.21829.150)",
+	"version":"2024.2.2(242.22855.77)",
 	"platform":"linux",
 	"url":{
-		"RubyMine-2024.2.1-aarch64.tar.gz":"https://download.jetbrains.com/ruby/RubyMine-2024.2.1-aarch64.tar.gz",
-		"RubyMine-2024.2.1.tar.gz":"https://download.jetbrains.com/ruby/RubyMine-2024.2.1.tar.gz"
+		"RubyMine-2024.2.2-aarch64.tar.gz":"https://download.jetbrains.com/ruby/RubyMine-2024.2.2-aarch64.tar.gz",
+		"RubyMine-2024.2.2.tar.gz":"https://download.jetbrains.com/ruby/RubyMine-2024.2.2.tar.gz"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/ruby/",
 	"script":{
