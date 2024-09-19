@@ -1,0 +1,19 @@
+author: '360'
+name: 360驱动大师
+logo: https://p1.ssl.qhimg.com/t01142a5003c283acb5.png
+description: 百万级驱动库，最新驱动全程自动安装。轻巧版：小巧便捷，全面修复驱动&系统问题；网卡版：集成万能网卡驱动，适用无网络情况。
+category: tools
+version: 2.0.0.2000
+platform: windows
+url:
+  轻巧版: https://dl.360safe.com/drvmgr/guanwang__360DrvMgrInstaller_beta.exe
+  网卡版: https://dl.360safe.com/drvmgr/360DrvMgrInstaller_net.exe
+homepage: https://dm.weishi.360.cn/home.html
+script:
+  args:
+    regex: '"version": "(?<version>[\d.]+)"'
+    autoupdate:
+      轻巧版: https://dl.360safe.com/drvmgr/guanwang__360DrvMgrInstaller_beta.exe
+      网卡版: https://dl.360safe.com/drvmgr/360DrvMgrInstaller_net.exe
+    url: https://weishi.360.cn/qudongdashi/updateData.json?callback=jsonpCallback
+  name: appfork-check-update
