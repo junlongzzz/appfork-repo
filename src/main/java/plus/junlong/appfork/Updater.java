@@ -262,25 +262,36 @@ public final class Updater {
                                     continue;
                                 }
                                 // 开始检查链接是否合法
-                                boolean isUrl = false;
-                                if (value instanceof String valueStr) {
+                                boolean correctUrl = switch (value) {
                                     // 只有一个链接，直接检查是否是合法链接形式
-                                    if (isUrl(valueStr)) {
-                                        isUrl = true;
-                                    }
-                                } else if (value instanceof Map<?, ?> updateUrlMap) {
+                                    case String updateUrlStr -> isUrl(updateUrlStr);
                                     // 有多个链接，循环检查是否是合法链接形式
-                                    if (!updateUrlMap.isEmpty()) {
-                                        isUrl = true;
+                                    case Map<?, ?> updateUrlMap -> {
+                                        if (updateUrlMap.isEmpty()) {
+                                            yield false;
+                                        }
                                         for (Object v : updateUrlMap.values()) {
-                                            if (!(v instanceof String) || !isUrl((String) v)) {
-                                                isUrl = false;
-                                                break;
+                                            if (!(v instanceof String str) || !isUrl(str)) {
+                                                yield false;
                                             }
                                         }
+                                        yield true;
                                     }
-                                }
-                                if (!isUrl) {
+                                    // 有多个链接，循环检查是否是合法链接形式
+                                    case List<?> updateUrlList -> {
+                                        if (updateUrlList.isEmpty()) {
+                                            yield false;
+                                        }
+                                        for (Object v : updateUrlList) {
+                                            if (!(v instanceof String str) || !isUrl(str)) {
+                                                yield false;
+                                            }
+                                        }
+                                        yield true;
+                                    }
+                                    default -> false;
+                                };
+                                if (!correctUrl) {
                                     // 如果链接不合法，那么不更新清单文件内的属性值
                                     log.warn("manifest [{}] url [{}] is not a valid url", manifest.getName(), value);
                                     // 链接不合法，版本号也不能更新，移除掉

@@ -181,6 +181,11 @@ static def checkUpdate(manifest, args) {
             updateUrl.forEach((String key, String value) -> {
                 url[handleVersionReplace(key, version)] = handleVersionReplace(value, version)
             })
+        } else if (updateUrl instanceof List) {
+            url = []
+            updateUrl.forEach((String item) -> {
+                url << handleVersionReplace(item, version)
+            })
         }
     }
 
