@@ -6,11 +6,11 @@
 	"author":"Python Software Foundation",
 	"category":"development",
 	"platform":"windows",
-	"version":"3.12.4",
+	"version":"3.12.6",
 	"url":{
-		"Installer (32-bit)":"https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe",
-		"Installer (64-bit)":"https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe",
-		"Installer (ARM64)":"https://www.python.org/ftp/python/3.12.4/python-3.12.4-arm64.exe"
+		"Installer (32-bit)":"https://www.python.org/ftp/python/3.12.6/python-3.12.6.exe",
+		"Installer (64-bit)":"https://www.python.org/ftp/python/3.12.6/python-3.12.6-amd64.exe",
+		"Installer (ARM64)":"https://www.python.org/ftp/python/3.12.6/python-3.12.6-arm64.exe"
 	},
 	"script":{
 		"args":{
