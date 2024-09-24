@@ -1,7 +1,7 @@
 {
 	"author":"SagerNet",
 	"name":"sing-box",
-	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/SagerNet/sing-box-for-android/main/app/src/main/ic_launcher-playstore.png",
+	"logo":"https://ghp.ci/https://raw.githubusercontent.com/SagerNet/sing-box-for-android/main/app/src/main/ic_launcher-playstore.png",
 	"description":"The universal proxy platform.",
 	"category":"network",
 	"version":"1.9.6",

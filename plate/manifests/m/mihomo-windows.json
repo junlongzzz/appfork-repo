@@ -1,7 +1,7 @@
 {
 	"author":"MetaCubeX",
 	"name":"Mihomo",
-	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/mihomo/Meta/Meta.png",
+	"logo":"https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/mihomo/Meta/Meta.png",
 	"description":"Clash.Meta Kernel, Another Mihomo Kernel",
 	"category":"network",
 	"platform":"windows",

@@ -1,7 +1,7 @@
 {
 	"author":"Docker Inc.",
 	"name":"Docker Compose",
-	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/docker/compose/main/logo.png",
+	"logo":"https://ghp.ci/https://raw.githubusercontent.com/docker/compose/main/logo.png",
 	"description":"Docker Compose is a tool for running multi-container applications on Docker defined using the Compose file format.",
 	"category":"development",
 	"version":"2.29.7",

@@ -1,7 +1,7 @@
 {
 	"author":"open source project",
 	"name":"Bruno",
-	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/usebruno/bruno/main/assets/images/logo-transparent.png",
+	"logo":"https://ghp.ci/https://raw.githubusercontent.com/usebruno/bruno/main/assets/images/logo-transparent.png",
 	"description":"Bruno 是一款全新且创新的 API 客户端，旨在颠覆 Postman/Insomnia 等其他类似工具。",
 	"category":"development",
 	"version":"1.30.1",

@@ -1,7 +1,7 @@
 {
 	"author":"2dust",
 	"name":"v2rayN",
-	"logo":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/2dust/v2rayN/master/v2rayN/v2rayN/v2rayN.ico",
+	"logo":"https://ghp.ci/https://raw.githubusercontent.com/2dust/v2rayN/master/v2rayN/v2rayN/v2rayN.ico",
 	"description":"A V2Ray client for Windows, support Xray core and v2fly core.",
 	"category":"network",
 	"version":"6.60",
