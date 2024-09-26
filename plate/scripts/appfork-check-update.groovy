@@ -36,12 +36,11 @@ static def checkUpdate(manifest, args) {
             .connectTimeout(Duration.ofMillis(60000))
             .build()
     // 默认的user-agent
-    def userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
-            'Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0'
+    def userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0'
 
     // 判断是不是腾讯软件中心的检测方式链接，格式为 tsc://<分类ID>/<应用ID>
     // tsc为Tencent Software Center的缩写
-    def urlMatcher = checkUrl =~ '^tsc://(?<categoryId>\\d+)/(?<appId>\\d+)$'
+    def urlMatcher = checkUrl =~ '(?i)^tsc://(?<categoryId>\\d+)/(?<appId>\\d+)$'
     if (urlMatcher.find()) {
         // 开始通过腾讯软件中心的方式查找版本号和下载链接
         def categoryId = urlMatcher.group('categoryId')
@@ -73,8 +72,14 @@ static def checkUpdate(manifest, args) {
         ]
     }
 
+    // 判断是否是github或gitee平台的项目地址，转换为特定平台协议开头的链接地址，如 github://<owner>/<repo>
+    urlMatcher = checkUrl =~ '(?i)^https://(?<protocol>github|gitee).com/(?<owner>[\\w-.]+)/(?<repo>[\\w-.]+)$'
+    if (urlMatcher.find()) {
+        checkUrl = "${urlMatcher.group('protocol')}://${urlMatcher.group('owner')}/${urlMatcher.group('repo')}"
+    }
+
     // 检查是不是github|gitee检测更新方式，格式为：<平台名称>://<用户名>/<仓库名>
-    urlMatcher = checkUrl =~ '^(?<protocol>gh|github|gitee)://(?<owner>[\\w-.]+)/(?<repo>[\\w-.]+)$'
+    urlMatcher = checkUrl =~ '(?i)^(?<protocol>gh|github|gitee)://(?<owner>[\\w-.]+)/(?<repo>[\\w-.]+)$'
     if (urlMatcher.find()) {
         def protocol = urlMatcher.group('protocol')
         def owner = urlMatcher.group('owner')

@@ -7,17 +7,16 @@
 	"platform":"windows",
 	"script":{
 		"args":{
-			"autoupdate":{
-				"Xray-windows-32.zip":"https://github.com/XTLS/Xray-core/releases/download/v${version}/Xray-windows-32.zip",
-				"Xray-windows-64.zip":"https://github.com/XTLS/Xray-core/releases/download/v${version}/Xray-windows-64.zip"
-			},
-			"url":"gh://XTLS/Xray-core"
+			"autoupdate":[
+				"https://github.com/XTLS/Xray-core/releases/download/v${version}/Xray-windows-32.zip",
+				"https://github.com/XTLS/Xray-core/releases/download/v${version}/Xray-windows-64.zip"
+			]
 		},
 		"name":"appfork-check-update"
 	},
-	"url":{
-		"Xray-windows-32.zip":"https://github.com/XTLS/Xray-core/releases/download/v1.8.24/Xray-windows-32.zip",
-		"Xray-windows-64.zip":"https://github.com/XTLS/Xray-core/releases/download/v1.8.24/Xray-windows-64.zip"
-	},
+	"url":[
+		"https://github.com/XTLS/Xray-core/releases/download/v1.8.24/Xray-windows-32.zip",
+		"https://github.com/XTLS/Xray-core/releases/download/v1.8.24/Xray-windows-64.zip"
+	],
 	"homepage":"https://github.com/XTLS/Xray-core"
 }
