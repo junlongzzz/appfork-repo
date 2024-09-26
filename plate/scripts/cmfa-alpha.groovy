@@ -22,7 +22,7 @@ static def checkUpdate(manifest, args) {
     def url = []
     def urlPrefix = 'https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/'
     jsonData.elements.each {
-        url << "${urlPrefix}${it.outputFile}"
+        url.add("${urlPrefix}${it.outputFile}" as String)
     }
 
     return [
