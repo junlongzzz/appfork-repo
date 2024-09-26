@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/aqua/aqua.svg",
 	"description":"测试自动化 IDE，享受更高效的测试体验。",
 	"category":"development",
-	"version":"2024.2(242.20224.331)",
+	"version":"2024.2.1(242.22855.128)",
 	"platform":"linux",
 	"url":{
-		"aqua-2024.2-aarch64.tar.gz":"https://download.jetbrains.com/aqua/aqua-2024.2-aarch64.tar.gz",
-		"aqua-2024.2.tar.gz":"https://download.jetbrains.com/aqua/aqua-2024.2.tar.gz"
+		"aqua-2024.2.1-aarch64.tar.gz":"https://download.jetbrains.com/aqua/aqua-2024.2.1-aarch64.tar.gz",
+		"aqua-2024.2.1.tar.gz":"https://download.jetbrains.com/aqua/aqua-2024.2.1.tar.gz"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/aqua/",
 	"script":{
