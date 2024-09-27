@@ -6,11 +6,11 @@
 	"category":"reading",
 	"platform":"windows",
 	"homepage":"https://gohugo.io",
-	"version":"0.134.3",
+	"version":"0.135.0",
 	"url":{
-		"hugo_0.134.3_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.134.3/hugo_0.134.3_windows-amd64.zip",
-		"hugo_0.134.3_windows-arm64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.134.3/hugo_0.134.3_windows-arm64.zip",
-		"hugo_extended_0.134.3_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.134.3/hugo_extended_0.134.3_windows-amd64.zip"
+		"hugo_0.135.0_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.135.0/hugo_0.135.0_windows-amd64.zip",
+		"hugo_0.135.0_windows-arm64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.135.0/hugo_0.135.0_windows-arm64.zip",
+		"hugo_extended_0.135.0_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.135.0/hugo_extended_0.135.0_windows-amd64.zip"
 	},
 	"script":{
 		"args":{
