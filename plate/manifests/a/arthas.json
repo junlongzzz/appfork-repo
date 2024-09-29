@@ -7,7 +7,7 @@
 	"platform":"other",
 	"homepage":"https://arthas.aliyun.com",
 	"version":"4.0.1",
-	"url":"https://arthas.aliyun.com/download/3.7.2?mirror=aliyun",
+	"url":"https://arthas.aliyun.com/download/4.0.1?mirror=aliyun",
 	"script":{
 		"args":{
 			"url":"gh://alibaba/arthas",

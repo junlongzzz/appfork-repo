@@ -5,7 +5,7 @@
 	"category":"image",
 	"version":"2024.09.01",
 	"platform":"linux",
-	"url":"https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/archlinux-2024.06.01-x86_64.iso",
+	"url":"https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/archlinux-2024.09.01-x86_64.iso",
 	"homepage":"https://archlinux.org",
 	"script":{
 		"args":{

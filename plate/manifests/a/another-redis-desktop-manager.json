@@ -5,7 +5,7 @@
 	"category":"development",
 	"version":"1.6.7",
 	"platform":"windows",
-	"url":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.6.6/Another-Redis-Desktop-Manager.1.6.6.exe",
+	"url":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.6.7/Another-Redis-Desktop-Manager.1.6.7.exe",
 	"homepage":"https://github.com/qishibo/AnotherRedisDesktopManager",
 	"script":{
 		"args":{
