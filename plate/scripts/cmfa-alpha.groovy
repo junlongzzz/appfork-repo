@@ -26,6 +26,6 @@ static def checkUpdate(manifest, args) {
     }
 
     return [
-            url: url
+            url: url.sort()
     ]
 }

@@ -180,7 +180,7 @@ static def checkUpdate(manifest, args) {
         }
     } else {
         if (updateUrl instanceof String) {
-            url = handleVersionReplace(url, version)
+            url = handleVersionReplace(updateUrl, version)
         } else if (updateUrl instanceof Map) {
             url = [:]
             updateUrl.forEach((String key, String value) -> {

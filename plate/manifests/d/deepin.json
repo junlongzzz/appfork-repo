@@ -6,12 +6,20 @@
 	"category":"image",
 	"version":"23",
 	"platform":"linux",
-	"url":"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/20.9/deepin-desktop-community-20.9-amd64.iso",
+	"url":[
+		"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/23/amd64/deepin-desktop-community-23-amd64.iso",
+		"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/23/arm64/deepin-desktop-community-23-arm64.iso",
+		"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/23/loongarch64/deepin-desktop-community-23-loong64.iso"
+	],
 	"homepage":"https://www.deepin.org",
 	"script":{
 		"args":{
 			"regex":"/releases/([\\d.]+)/",
-			"autoupdate":"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/${version}/deepin-desktop-community-${version}-amd64.iso",
+			"autoupdate":[
+				"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/${version}/amd64/deepin-desktop-community-${version}-amd64.iso",
+				"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/${version}/arm64/deepin-desktop-community-${version}-arm64.iso",
+				"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/${version}/loongarch64/deepin-desktop-community-${version}-loong64.iso"
+			],
 			"url":"https://www.deepin.org/zh/download/"
 		},
 		"name":"appfork-check-update"
