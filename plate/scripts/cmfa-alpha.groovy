@@ -1,4 +1,5 @@
 import groovy.json.JsonSlurper
+import plus.junlong.appfork.ScriptVars
 
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
@@ -12,8 +13,7 @@ static def checkUpdate(manifest, args) {
             .build()
     def response = httpClient.send(
             HttpRequest.newBuilder('https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/output-metadata.json'.toURI())
-                    .header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
-                            'Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0')
+                    .header('User-Agent', ScriptVars.USER_AGENT)
                     .build(),
             HttpResponse.BodyHandlers.ofString()
     ).body()

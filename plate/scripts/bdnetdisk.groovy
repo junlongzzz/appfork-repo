@@ -1,4 +1,5 @@
 import groovy.json.JsonSlurper
+import plus.junlong.appfork.ScriptVars
 
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
@@ -10,15 +11,13 @@ static def checkUpdate(manifest, args) {
 
     def platform = manifest.platform as String
 
-    def ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.60'
-
     def httpClient = HttpClient.newBuilder()
             .connectTimeout(Duration.ofMillis(60000))
             .followRedirects(HttpClient.Redirect.ALWAYS)
             .build()
     def response = httpClient.send(
             HttpRequest.newBuilder("https://pan.baidu.com/disk/cmsdata?clienttype=0&app_id=250528&t=${System.currentTimeMillis()}&do=client".toURI())
-                    .header("user-agent", ua)
+                    .header("user-agent", ScriptVars.USER_AGENT)
                     .build(),
             HttpResponse.BodyHandlers.ofString()
     ).body()

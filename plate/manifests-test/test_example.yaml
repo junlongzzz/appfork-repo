@@ -8,6 +8,7 @@ platform: windows
 url: https://junlong.plus/ztool/appfork
 homepage: https://junlong.plus
 script:
+  name: example
   args:
     key: value
     str: this is yaml format manifest

@@ -5,6 +5,7 @@ import cn.hutool.http.HttpUtil
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 import org.jsoup.Jsoup
+import plus.junlong.appfork.ScriptVars
 
 static def checkUpdate(manifest, args) {
     println('=====================================')
@@ -60,7 +61,7 @@ static tsc(appUrl, regex = '>版本：([\\d.]+)<') {
     def categoryId = urlMatcher.group(1)
     def appId = urlMatcher.group(2)
     def document = Jsoup.connect("https://pc.qq.com/detail/${categoryId}/detail_${appId}.html").timeout(30000)
-            .headers(['User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.41'])
+            .headers(['User-Agent': ScriptVars.USER_AGENT])
             .get()
     def matcher = document.html() =~ regex
     if (!matcher.find()) {
@@ -87,7 +88,7 @@ static def lestore(url, body) {
     def resp = HttpUtil.createPost("${baseUrl}${url}")
             .timeout(30000)
             .contentType('application/json')
-            .header('user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.41')
+            .header('user-agent', ScriptVars.USER_AGENT)
             .header('origin', baseUrl)
             .header('referer', "${baseUrl}/detail/${softId}")
             .body(JsonOutput.toJson(

@@ -1,6 +1,7 @@
 import com.jayway.jsonpath.JsonPath
 import groovy.json.JsonSlurper
 import org.dom4j.DocumentHelper
+import plus.junlong.appfork.ScriptVars
 
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
@@ -36,7 +37,7 @@ static def checkUpdate(manifest, args) {
             .connectTimeout(Duration.ofMillis(60000))
             .build()
     // 默认的user-agent
-    def userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0'
+    def userAgent = ScriptVars.USER_AGENT
 
     // 判断是不是腾讯软件中心的检测方式链接，格式为 tsc://<分类ID>/<应用ID>
     // tsc为Tencent Software Center的缩写
