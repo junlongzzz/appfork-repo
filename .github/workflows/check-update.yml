@@ -23,7 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set Timezone
-        run: sudo timedatectl set-timezone 'Asia/Shanghai'
+        run: |
+          sudo timedatectl set-timezone 'Asia/Shanghai'
+          date
 
       - uses: actions/checkout@v4
 
@@ -39,7 +41,7 @@ jobs:
         run: mvn -B -DskipTests=true package --file pom.xml
 
       - name: Run updater
-        run: java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -jar ./target/appfork-repo-updater.jar --spring.profiles.active=prod
+        run: java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -Duser.timezone=Asia/Shanghai -jar ./target/appfork-repo-updater.jar --spring.profiles.active=prod
 
       - name: Commit files
         id: commit-files
