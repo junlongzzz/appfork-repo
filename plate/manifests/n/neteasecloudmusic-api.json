@@ -8,7 +8,7 @@
 		"args":{
 			"autoupdate":{
 				"文档查看":"https://docs-neteasecloudmusicapi.vercel.app",
-				"Docker Image":"https://hub.docker.com/r/junlongzzz/netease_cloud_music_api"
+				"Docker Image":"https://hub.docker.com/r/binaryify/netease_cloud_music_api"
 			},
 			"url":"https://gitlab.com/Binaryify/neteasecloudmusicapi/-/raw/main/package.json?ref_type=heads",
 			"jsonpath":"$.version"
@@ -19,6 +19,6 @@
 	"version":"4.23.3",
 	"url":{
 		"文档查看":"https://docs-neteasecloudmusicapi.vercel.app",
-		"Docker Image":"https://hub.docker.com/r/junlongzzz/netease_cloud_music_api"
+		"Docker Image":"https://hub.docker.com/r/binaryify/netease_cloud_music_api"
 	}
 }
