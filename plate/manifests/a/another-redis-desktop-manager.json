@@ -3,9 +3,9 @@
 	"name":"Another Redis Desktop Manager",
 	"description":"🚀🚀🚀 更快、更好、更稳定的Redis桌面(GUI)管理客户端，兼容Windows、Mac、Linux，性能出众，轻松加载海量键值。",
 	"category":"development",
-	"version":"1.6.7",
+	"version":"1.6.8",
 	"platform":"windows",
-	"url":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.6.7/Another-Redis-Desktop-Manager.1.6.7.exe",
+	"url":"https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.6.8/Another-Redis-Desktop-Manager.1.6.8.exe",
 	"homepage":"https://github.com/qishibo/AnotherRedisDesktopManager",
 	"script":{
 		"args":{
