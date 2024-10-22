@@ -1,3 +1,5 @@
+import plus.junlong.appfork.ScriptVars
+
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
@@ -19,8 +21,9 @@ static def checkUpdate(manifest, args) {
 //    connection.setInstanceFollowRedirects(false)
 //    def location = connection.getHeaderField('Location')
 
-    def httpClient = HttpClient.newHttpClient()
+    def httpClient = ScriptVars.newHttpClientBuilder().followRedirects(HttpClient.Redirect.NEVER).build()
     def request = HttpRequest.newBuilder(URI.create(url))
+            .header('User-Agent', ScriptVars.USER_AGENT)
             .method('HEAD', HttpRequest.BodyPublishers.noBody())
             .build()
     def response = httpClient.send(request, HttpResponse.BodyHandlers.discarding())

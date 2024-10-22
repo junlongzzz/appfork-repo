@@ -1,11 +1,11 @@
+import plus.junlong.appfork.ScriptVars
+
 import cn.hutool.crypto.Mode
 import cn.hutool.crypto.Padding
 import cn.hutool.crypto.symmetric.AES
 import cn.hutool.http.HttpUtil
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
-import org.jsoup.Jsoup
-import plus.junlong.appfork.ScriptVars
 
 static def checkUpdate(manifest, args) {
     println('=====================================')
@@ -15,8 +15,6 @@ static def checkUpdate(manifest, args) {
     println('=====================================')
 
     checkUpdateTest(manifest, args)
-
-//    println(tsc('tsc://0/26980'))
 
     // 获取应用详情
 //    def respJson = lestore('/api/webstorecontents/app/details', [
@@ -49,31 +47,6 @@ static def checkUpdate(manifest, args) {
 
 static def checkUpdateTest(manifest, args) {
     // test script here
-}
-
-static tsc(appUrl, regex = '>版本：([\\d.]+)<') {
-    // 从腾讯软件中心获取版本号和下载链接
-    def urlMatcher = appUrl =~ 'tsc://(\\d+)/(\\d+)'
-    if (!urlMatcher.find()) {
-        return null
-    }
-
-    def categoryId = urlMatcher.group(1)
-    def appId = urlMatcher.group(2)
-    def document = Jsoup.connect("https://pc.qq.com/detail/${categoryId}/detail_${appId}.html").timeout(30000)
-            .headers(['User-Agent': ScriptVars.USER_AGENT])
-            .get()
-    def matcher = document.html() =~ regex
-    if (!matcher.find()) {
-        return null
-    }
-    def version = matcher.group(1)
-    def url = document.selectFirst("a[data-id='${appId}']").attr('href')
-
-    return [
-            version: version,
-            url    : url
-    ]
 }
 
 static def lestore(url, body) {

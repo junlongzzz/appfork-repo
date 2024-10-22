@@ -1,17 +1,11 @@
 import groovy.json.JsonSlurper
 import plus.junlong.appfork.ScriptVars
 
-import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
-import java.time.Duration
 
 static def checkUpdate(manifest, args) {
-    def httpClient = HttpClient.newBuilder()
-            .connectTimeout(Duration.ofMillis(60000))
-            .followRedirects(HttpClient.Redirect.ALWAYS)
-            .build()
-    def response = httpClient.send(
+    def response = ScriptVars.HTTP_CLIENT.send(
             HttpRequest.newBuilder('https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/output-metadata.json'.toURI())
                     .header('User-Agent', ScriptVars.USER_AGENT)
                     .build(),

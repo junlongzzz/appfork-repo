@@ -3,10 +3,8 @@ import groovy.json.JsonSlurper
 import org.dom4j.DocumentHelper
 import plus.junlong.appfork.ScriptVars
 
-import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
-import java.time.Duration
 
 static def checkUpdate(manifest, args) {
     if (args == null) {
@@ -32,10 +30,7 @@ static def checkUpdate(manifest, args) {
         return null
     }
 
-    def httpClient = HttpClient.newBuilder()
-            .followRedirects(HttpClient.Redirect.ALWAYS)
-            .connectTimeout(Duration.ofMillis(60000))
-            .build()
+    def httpClient = ScriptVars.HTTP_CLIENT
     // 默认的user-agent
     def userAgent = ScriptVars.USER_AGENT
 
