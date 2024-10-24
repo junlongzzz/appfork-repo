@@ -1,11 +1,10 @@
-import plus.junlong.appfork.ScriptVars
-
 import cn.hutool.crypto.Mode
 import cn.hutool.crypto.Padding
 import cn.hutool.crypto.symmetric.AES
 import cn.hutool.http.HttpUtil
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
+import plus.junlong.appfork.ScriptVars
 
 static def checkUpdate(manifest, args) {
     println('=====================================')

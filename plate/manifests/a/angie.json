@@ -1,22 +1,22 @@
 {
 	"author":"Web Server LLC",
 	"name":"Angie",
-	"logo":"https://angie.software/en/_static/logo-oss.svg",
-	"description":"Angie /ˈendʒi/ is an efficient, powerful, and scalable web server that was forked from nginx.",
+	"logo":"https://en.angie.software/_static/icons/logo.svg",
+	"description":"Angie /ˈendʒi/ is an efficient, powerful, and scalable web server that was forked from nginx to act as a drop-in replacement, so you can use existing setups without major changes to module layout or configuration.",
 	"category":"development",
 	"version":"1.7.0",
 	"platform":"windows",
 	"url":{
-		"Installation Doc":"https://angie.software/en/install/"
+		"Installation Doc":"https://en.angie.software/angie/docs/installation/"
 	},
-	"homepage":"https://angie.software/en/",
+	"homepage":"https://en.angie.software",
 	"script":{
 		"name":"appfork-check-update",
 		"args":{
-			"url":"https://angie.software/en/",
-			"regex":">Angie ([\\d.]+)<",
+			"url":"github://webserver-llc/angie",
+			"regex":"/releases/tag/Angie-(?<version>[\\w.]+)",
 			"autoupdate":{
-				"Installation Doc":"https://angie.software/en/install/"
+				"Installation Doc":"https://en.angie.software/angie/docs/installation/"
 			}
 		}
 	}
