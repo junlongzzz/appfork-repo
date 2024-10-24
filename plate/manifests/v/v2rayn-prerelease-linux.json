@@ -1,0 +1,23 @@
+{
+	"author":"2dust",
+	"name":"v2rayN (Pre-release)",
+	"logo":"https://ghp.ci/https://raw.githubusercontent.com/2dust/v2rayN/master/v2rayN/v2rayN/Resources/v2rayN.ico",
+	"description":"A V2Ray client for Windows, support Xray core and v2fly core.",
+	"category":"network",
+	"version":"7.0.0",
+	"platform":"linux",
+	"url":{
+		"v2rayN-linux-64.zip":"https://github.com/2dust/v2rayN/releases/download/7.0.0/v2rayN-linux-64.zip"
+	},
+	"homepage":"https://github.com/2dust/v2rayN",
+	"script":{
+		"args":{
+			"url":"github://2dust/v2rayN",
+			"gh":{
+				"prerelease":true,
+				"assets_jsonpath":"$.assets[?(@.name =~ /.*-linux-.*(.zip|.7z)/i)]"
+			}
+		},
+		"name":"appfork-check-update"
+	}
+}
