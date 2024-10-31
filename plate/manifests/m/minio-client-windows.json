@@ -6,7 +6,7 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://min.io",
-	"version":"RELEASE.2024-10-08T09-37-26Z",
+	"version":"RELEASE.2024-10-29T15-34-59Z",
 	"url":{
 		"mc.exe (amd64)":"https://dl.minio.io/client/mc/release/windows-amd64/mc.exe"
 	},
