@@ -6,13 +6,13 @@
 	"category":"network",
 	"platform":"android",
 	"homepage":"https://github.com/MetaCubeX/ClashMetaForAndroid",
-	"version":"2.11.1",
+	"version":"2.11.2",
 	"url":{
-		"cmfa-2.11.1-meta-arm64-v8a-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.1/cmfa-2.11.1-meta-arm64-v8a-release.apk",
-		"cmfa-2.11.1-meta-armeabi-v7a-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.1/cmfa-2.11.1-meta-armeabi-v7a-release.apk",
-		"cmfa-2.11.1-meta-universal-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.1/cmfa-2.11.1-meta-universal-release.apk",
-		"cmfa-2.11.1-meta-x86-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.1/cmfa-2.11.1-meta-x86-release.apk",
-		"cmfa-2.11.1-meta-x86_64-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.1/cmfa-2.11.1-meta-x86_64-release.apk",
+		"cmfa-2.11.2-meta-arm64-v8a-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.2/cmfa-2.11.2-meta-arm64-v8a-release.apk",
+		"cmfa-2.11.2-meta-armeabi-v7a-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.2/cmfa-2.11.2-meta-armeabi-v7a-release.apk",
+		"cmfa-2.11.2-meta-universal-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.2/cmfa-2.11.2-meta-universal-release.apk",
+		"cmfa-2.11.2-meta-x86-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.2/cmfa-2.11.2-meta-x86-release.apk",
+		"cmfa-2.11.2-meta-x86_64-release.apk":"https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.2/cmfa-2.11.2-meta-x86_64-release.apk",
 		"Get it on F-Droid":"https://f-droid.org/packages/com.github.metacubex.clash.meta/"
 	},
 	"script":{
