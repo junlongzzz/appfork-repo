@@ -4,7 +4,7 @@
 	"logo":"https://avatars.githubusercontent.com/u/18120975?s=200&v=4",
 	"description":"An efficient blocker add-on for various browsers. Fast, potent, and lean.",
 	"category":"network",
-	"version":"1.60.0",
+	"version":"1.61.0",
 	"platform":"extensions",
 	"url":{
 		"Install on FireFox":"https://addons.mozilla.org/addon/ublock-origin/",
