@@ -6,12 +6,12 @@
 	"category":"reading",
 	"platform":"windows",
 	"homepage":"https://gohugo.io",
-	"version":"0.137.1",
+	"version":"0.138.0",
 	"url":{
-		"hugo_0.137.1_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.137.1/hugo_0.137.1_windows-amd64.zip",
-		"hugo_0.137.1_windows-arm64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.137.1/hugo_0.137.1_windows-arm64.zip",
-		"hugo_extended_0.137.1_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.137.1/hugo_extended_0.137.1_windows-amd64.zip",
-		"hugo_extended_withdeploy_0.137.1_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.137.1/hugo_extended_withdeploy_0.137.1_windows-amd64.zip"
+		"hugo_0.138.0_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.138.0/hugo_0.138.0_windows-amd64.zip",
+		"hugo_0.138.0_windows-arm64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.138.0/hugo_0.138.0_windows-arm64.zip",
+		"hugo_extended_0.138.0_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.138.0/hugo_extended_0.138.0_windows-amd64.zip",
+		"hugo_extended_withdeploy_0.138.0_windows-amd64.zip":"https://github.com/gohugoio/hugo/releases/download/v0.138.0/hugo_extended_withdeploy_0.138.0_windows-amd64.zip"
 	},
 	"script":{
 		"args":{
