@@ -7,17 +7,17 @@
 	"platform":"other",
 	"script":{
 		"args":{
-			"autoupdate":{
-				"nacos-server-${version}.tar.gz":"https://github.com/alibaba/nacos/releases/download/${version}/nacos-server-${version}.tar.gz",
-				"nacos-server-${version}.zip":"https://github.com/alibaba/nacos/releases/download/${version}/nacos-server-${version}.zip"
-			},
+			"autoupdate":[
+				"https://github.com/alibaba/nacos/releases/download/${version}/nacos-server-${version}.tar.gz",
+				"https://github.com/alibaba/nacos/releases/download/${version}/nacos-server-${version}.zip"
+			],
 			"url":"gh://alibaba/nacos"
 		},
 		"name":"appfork-check-update"
 	},
-	"url":{
-		"nacos-server-2.4.3.tar.gz":"https://github.com/alibaba/nacos/releases/download/2.4.3/nacos-server-2.4.3.tar.gz",
-		"nacos-server-2.4.3.zip":"https://github.com/alibaba/nacos/releases/download/2.4.3/nacos-server-2.4.3.zip"
-	},
+	"url":[
+		"https://github.com/alibaba/nacos/releases/download/2.4.3/nacos-server-2.4.3.tar.gz",
+		"https://github.com/alibaba/nacos/releases/download/2.4.3/nacos-server-2.4.3.zip"
+	],
 	"homepage":"https://nacos.io"
 }
