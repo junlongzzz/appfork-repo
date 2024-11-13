@@ -3,7 +3,7 @@
 	"name":"Windows Subsystem for Linux",
 	"description":"适用于 Linux 的 Windows 子系统 (WSL) 可让开发人员直接在 Windows 上按原样运行 GNU/Linux 环境（包括大多数命令行工具、实用工具和应用程序），且不会产生传统虚拟机或双启动设置开销。",
 	"category":"tools",
-	"version":"2.3.24",
+	"version":"2.3.26",
 	"platform":"windows",
 	"url":{
 		"Docs for WSL":"https://docs.microsoft.com/windows/wsl"
