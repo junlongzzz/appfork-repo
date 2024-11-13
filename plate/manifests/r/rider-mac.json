@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/rider/rider.svg",
 	"description":"全球最受喜爱的 .NET 和游戏开发 IDE。",
 	"category":"development",
-	"version":"2024.2.7(242.23726.100)",
+	"version":"2024.3(243.21565.191)",
 	"platform":"mac",
 	"url":{
-		"JetBrains.Rider-2024.2.7.dmg":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.2.7.dmg",
-		"JetBrains.Rider-2024.2.7-aarch64.dmg":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.2.7-aarch64.dmg"
+		"JetBrains.Rider-2024.3.dmg":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.3.dmg",
+		"JetBrains.Rider-2024.3-aarch64.dmg":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.3-aarch64.dmg"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/rider/",
 	"script":{
