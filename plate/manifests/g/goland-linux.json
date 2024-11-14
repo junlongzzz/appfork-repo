@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/goland/goland.svg",
 	"description":"为 Go 开发者打造的完整 IDE。",
 	"category":"development",
-	"version":"2024.2.3(242.23339.24)",
+	"version":"2024.3(243.21565.208)",
 	"platform":"linux",
 	"url":{
-		"goland-2024.2.3-aarch64.tar.gz":"https://download.jetbrains.com/go/goland-2024.2.3-aarch64.tar.gz",
-		"goland-2024.2.3.tar.gz":"https://download.jetbrains.com/go/goland-2024.2.3.tar.gz"
+		"goland-2024.3-aarch64.tar.gz":"https://download.jetbrains.com/go/goland-2024.3-aarch64.tar.gz",
+		"goland-2024.3.tar.gz":"https://download.jetbrains.com/go/goland-2024.3.tar.gz"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/go/",
 	"script":{
