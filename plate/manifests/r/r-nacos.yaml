@@ -5,21 +5,21 @@ description: Rust 语言实现的 Nacos 服务平台，兼容 Nacos(Java)，启�
 category: development
 platform: other
 homepage: https://github.com/nacos-group/r-nacos
-version: 0.6.5
+version: 0.6.6
 url:
-  - https://github.com/nacos-group/r-nacos/releases/download/v0.6.5/rnacos-x86_64-pc-windows-msvc-v0.6.5.zip
-  - https://github.com/nacos-group/r-nacos/releases/download/v0.6.5/rnacos-aarch64-pc-windows-msvc-v0.6.5.zip
-  - https://github.com/nacos-group/r-nacos/releases/download/v0.6.5/rnacos-x86_64-unknown-linux-musl-v0.6.5.tar.gz
-  - https://github.com/nacos-group/r-nacos/releases/download/v0.6.5/rnacos-aarch64-unknown-linux-musl-v0.6.5.tar.gz
-  - https://github.com/nacos-group/r-nacos/releases/download/v0.6.5/rnacos-x86_64-apple-darwin-v0.6.5.tar.gz
-  - https://github.com/nacos-group/r-nacos/releases/download/v0.6.5/rnacos-aarch64-apple-darwin-v0.6.5.tar.gz
+- https://github.com/nacos-group/r-nacos/releases/download/v0.6.6/rnacos-x86_64-pc-windows-msvc-v0.6.6.zip
+- https://github.com/nacos-group/r-nacos/releases/download/v0.6.6/rnacos-aarch64-pc-windows-msvc-v0.6.6.zip
+- https://github.com/nacos-group/r-nacos/releases/download/v0.6.6/rnacos-x86_64-unknown-linux-musl-v0.6.6.tar.gz
+- https://github.com/nacos-group/r-nacos/releases/download/v0.6.6/rnacos-aarch64-unknown-linux-musl-v0.6.6.tar.gz
+- https://github.com/nacos-group/r-nacos/releases/download/v0.6.6/rnacos-x86_64-apple-darwin-v0.6.6.tar.gz
+- https://github.com/nacos-group/r-nacos/releases/download/v0.6.6/rnacos-aarch64-apple-darwin-v0.6.6.tar.gz
 script:
   args:
     autoupdate:
-      - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-x86_64-pc-windows-msvc-v${version}.zip
-      - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-aarch64-pc-windows-msvc-v${version}.zip
-      - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-x86_64-unknown-linux-musl-v${version}.tar.gz
-      - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-aarch64-unknown-linux-musl-v${version}.tar.gz
-      - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-x86_64-apple-darwin-v${version}.tar.gz
-      - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-aarch64-apple-darwin-v${version}.tar.gz
+    - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-x86_64-pc-windows-msvc-v${version}.zip
+    - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-aarch64-pc-windows-msvc-v${version}.zip
+    - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-x86_64-unknown-linux-musl-v${version}.tar.gz
+    - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-aarch64-unknown-linux-musl-v${version}.tar.gz
+    - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-x86_64-apple-darwin-v${version}.tar.gz
+    - https://github.com/nacos-group/r-nacos/releases/download/v${version}/rnacos-aarch64-apple-darwin-v${version}.tar.gz
   name: appfork-check-update
