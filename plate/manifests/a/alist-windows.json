@@ -6,11 +6,11 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://alist.nn.ci",
-	"version":"3.39.1",
+	"version":"3.39.2",
 	"url":{
-		"alist-windows-amd64.zip":"https://github.com/alist-org/alist/releases/download/v3.39.1/alist-windows-amd64.zip",
-		"alist-windows-arm64.zip":"https://github.com/alist-org/alist/releases/download/v3.39.1/alist-windows-arm64.zip",
-		"alist-windows-386.zip":"https://github.com/alist-org/alist/releases/download/v3.39.1/alist-windows-386.zip"
+		"alist-windows-amd64.zip":"https://github.com/alist-org/alist/releases/download/v3.39.2/alist-windows-amd64.zip",
+		"alist-windows-arm64.zip":"https://github.com/alist-org/alist/releases/download/v3.39.2/alist-windows-arm64.zip",
+		"alist-windows-386.zip":"https://github.com/alist-org/alist/releases/download/v3.39.2/alist-windows-386.zip"
 	},
 	"script":{
 		"args":{
