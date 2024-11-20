@@ -16,11 +16,11 @@
 		"args":{
 			"url":"https://raw.githubusercontent.com/dotnet/core/refs/heads/main/release-notes/releases-index.json",
 			"jsonpath":"$.releases-index[?(@.release-type == \"sts\")].latest-runtime",
-			"autoupdate":{
-				"x64":"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x64.exe",
-				"x86":"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x86.exe",
-				"arm64":"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-arm64.exe"
-			}
+			"autoupdate":[
+				"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x64.exe",
+				"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x86.exe",
+				"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-arm64.exe"
+			]
 		},
 		"name":"appfork-check-update"
 	}
