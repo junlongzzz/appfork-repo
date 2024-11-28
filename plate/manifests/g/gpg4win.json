@@ -4,9 +4,9 @@
 	"logo":"https://www.gpg4win.org/img/src/gpg4win_lock_white.png",
 	"description":"Gpg4win (GNU Privacy Guard for Windows) is an encryption software to sign and encrypt files and emails.",
 	"category":"tools",
-	"version":"4.3.1",
+	"version":"4.4.0",
 	"platform":"windows",
-	"url":"https://files.gpg4win.org/gpg4win-4.3.1.exe",
+	"url":"https://files.gpg4win.org/gpg4win-4.4.0.exe",
 	"homepage":"https://www.gpg4win.org",
 	"script":{
 		"args":{
