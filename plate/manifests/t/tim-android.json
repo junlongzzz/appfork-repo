@@ -4,9 +4,9 @@
 	"logo":"https://qd.myapp.com/myapp/qqteam/TIM_WEB/img/TIM_PC/function.png",
 	"description":"QQ办公简洁版。专注团队沟通协作，支持云文件、在线文档、邮件收发、日程等办公功能。",
 	"category":"chat",
-	"version":"4.0.95",
+	"version":"4.0.96",
 	"platform":"android",
 	"script":"tim",
-	"url":"https://tim-1258344701.shiply-cdn.qq.com/apprelease/gray/ad6b501b0e/prod/1732245378/tim_4.0.95.4008_r3b8db658_64_t2024-11-19_v4008_GuanWang_537249218_cid2017_release-signed.apk",
+	"url":"https://tim-1258344701.shiply-cdn.qq.com/apprelease/gray/ad6b501b0e/prod/1732893586/tim_4.0.96.4010_r6c784d54_64_t2024-11-29_v4010_GuanWang_537261131_cid2017_release-signed.apk",
 	"homepage":"https://office.qq.com/"
 }
