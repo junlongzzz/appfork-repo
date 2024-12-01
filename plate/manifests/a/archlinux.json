@@ -3,9 +3,9 @@
 	"name":"Arch Linux",
 	"description":"A lightweight and flexible Linux® distribution that tries to Keep It Simple.",
 	"category":"image",
-	"version":"2024.11.01",
+	"version":"2024.12.01",
 	"platform":"linux",
-	"url":"https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/archlinux-2024.11.01-x86_64.iso",
+	"url":"https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/archlinux-2024.12.01-x86_64.iso",
 	"homepage":"https://archlinux.org",
 	"script":{
 		"args":{
