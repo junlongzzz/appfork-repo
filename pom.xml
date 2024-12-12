@@ -58,8 +58,11 @@
 
         <dependency>
             <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
+            <artifactId>hutool-bom</artifactId>
             <version>${hutool.version}</version>
+            <!-- 加不加这句都能跑，区别只有是否告警  -->
+            <type>pom</type>
+            <!-- 可以使用 exclusions 不引入不需要的模块 -->
         </dependency>
 
         <dependency>
