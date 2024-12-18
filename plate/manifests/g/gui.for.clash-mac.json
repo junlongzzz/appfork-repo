@@ -1,7 +1,7 @@
 {
 	"author":"GUI-for-Cores",
 	"name":"GUI.for.Clash",
-	"logo":"https://ghp.ci/https://raw.githubusercontent.com/GUI-for-Cores/GUI.for.Clash/main/build/appicon.png",
+	"logo":"https://raw.githubusercontent.com/GUI-for-Cores/GUI.for.Clash/main/build/appicon.png",
 	"description":"A Clash / (mihomo / meta) GUI program developed by vue3 + wails.",
 	"category":"network",
 	"version":"1.8.9",

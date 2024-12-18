@@ -1,6 +1,6 @@
 author: MetaCubeX
 name: Clash Meta for Android Alpha
-logo: https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/ClashMetaForAndroid/main/app/src/main/ic_launcher-playstore.png
+logo: https://raw.githubusercontent.com/MetaCubeX/ClashMetaForAndroid/main/app/src/main/ic_launcher-playstore.png
 description: A Graphical user interface of [Clash.Meta](https://github.com/MetaCubeX/mihomo)
   for Android.
 category: network

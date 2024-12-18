@@ -1,7 +1,7 @@
 {
 	"author":"Open Source Software",
 	"name":"Clash Nyanpasu",
-	"logo":"https://ghp.ci/https://raw.githubusercontent.com/libnyanpasu/clash-nyanpasu/main/frontend/nyanpasu/src/assets/image/logo.svg",
+	"logo":"https://raw.githubusercontent.com/libnyanpasu/clash-nyanpasu/main/frontend/nyanpasu/src/assets/image/logo.svg",
 	"description":"An opinionated Clash GUI based on Tauri.",
 	"category":"network",
 	"platform":"windows",

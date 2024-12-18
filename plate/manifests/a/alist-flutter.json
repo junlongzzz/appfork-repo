@@ -1,6 +1,6 @@
 {
 	"author":"Jing",
-	"logo":"https://ghp.ci/https://raw.githubusercontent.com/jing332/AListFlutter/master/assets/alist.svg",
+	"logo":"https://raw.githubusercontent.com/jing332/AListFlutter/master/assets/alist.svg",
 	"name":"AListFlutter",
 	"description":"AListFlutter是一个基于AList的Android客户端，使用Google Flutter作为UI框架。",
 	"category":"network",

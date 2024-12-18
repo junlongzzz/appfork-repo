@@ -1,7 +1,7 @@
 {
 	"author":"open source software",
 	"name":"Magisk",
-	"logo":"https://ghp.ci/https://raw.githubusercontent.com/topjohnwu/Magisk/master/docs/images/logo.png",
+	"logo":"https://raw.githubusercontent.com/topjohnwu/Magisk/master/docs/images/logo.png",
 	"description":"Magisk is a suite of open source software for customizing Android, supporting devices higher than Android 6.0.",
 	"category":"tools",
 	"version":"28.1",
