@@ -1,6 +1,6 @@
 name: R-Nacos
-logo: https://r-nacos.github.io/docs/logo2.svg
-author: heqingpan <heqingpan@126.com>, 许大仙 <1900919313@qq.com>
+logo: https://r-nacos.github.io/docs/logo.svg
+author: R-Nacos
 description: Rust 语言实现的 Nacos 服务平台，兼容 Nacos(Java)，启动更快、占用系统资源更小（初始内存小于10M）、性能更高、运行更稳定的服务。
 category: development
 platform: other
