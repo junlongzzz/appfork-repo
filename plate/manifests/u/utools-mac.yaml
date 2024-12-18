@@ -1,21 +1,21 @@
 author: 福州猿力信息科技有限公司
 name: uTools
-logo: https://res.u-tools.cn/website5/assets/favicon.png
+logo: https://res.u-tools.cn/website5/static/assets/favicon.png
 description: |-
   新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持macOS 10.10+。视频介绍：
-  <div class="mdui-video-container"><video src="https://res.u-tools.cn/website/v4/utools-4-video.mp4" controls>你的浏览器不支持video标签</video></div>
+  <div class="mdui-video-container"><video src="https://res.u-tools.cn/upload/v5/utools5.0.mp4" controls>你的浏览器不支持video标签</video></div>
 category: tools
 version: 6.0.0
 platform: mac
 url:
-  uTools-6.0.0.dmg: https://open.u-tools.cn/download/uTools-6.0.0.dmg
-  uTools-6.0.0-arm64.dmg: https://open.u-tools.cn/download/uTools-6.0.0-arm64.dmg
+  - https://open.u-tools.cn/download/uTools-6.0.0.dmg
+  - https://open.u-tools.cn/download/uTools-6.0.0-arm64.dmg
 homepage: https://u.tools
 script:
   args:
     regex: uTools-([\d.]+)(?:-arm64)?\.dmg
     autoupdate:
-      uTools-${version}.dmg: https://open.u-tools.cn/download/uTools-${version}.dmg
-      uTools-${version}-arm64.dmg: https://open.u-tools.cn/download/uTools-${version}-arm64.dmg
+      - https://open.u-tools.cn/download/uTools-${version}.dmg
+      - https://open.u-tools.cn/download/uTools-${version}-arm64.dmg
     url: https://u.tools/download/
   name: appfork-check-update
