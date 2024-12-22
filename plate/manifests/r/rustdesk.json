@@ -4,9 +4,9 @@
 	"logo":"https://raw.githubusercontent.com/rustdesk/rustdesk/refs/heads/master/res/logo.svg",
 	"description":"An open-source remote desktop, and alternative to TeamViewer.",
 	"category":"tools",
-	"version":"1.3.5",
+	"version":"1.3.6",
 	"platform":"windows",
-	"url":"https://github.com/rustdesk/rustdesk/releases/download/1.3.5/rustdesk-1.3.5-x86_64.exe",
+	"url":"https://github.com/rustdesk/rustdesk/releases/download/1.3.6/rustdesk-1.3.6-x86_64.exe",
 	"homepage":"https://rustdesk.com",
 	"script":{
 		"args":{
