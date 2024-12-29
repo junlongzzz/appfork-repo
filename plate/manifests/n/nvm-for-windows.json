@@ -5,11 +5,11 @@
 	"category":"development",
 	"platform":"windows",
 	"homepage":"https://github.com/coreybutler/nvm-windows",
-	"version":"1.1.12",
+	"version":"1.2.1",
 	"url":{
-		"nvm-noinstall.zip":"https://github.com/coreybutler/nvm-windows/releases/download/1.1.12/nvm-noinstall.zip",
-		"nvm-setup.exe":"https://github.com/coreybutler/nvm-windows/releases/download/1.1.12/nvm-setup.exe",
-		"nvm-setup.zip":"https://github.com/coreybutler/nvm-windows/releases/download/1.1.12/nvm-setup.zip"
+		"nvm-noinstall.zip":"https://github.com/coreybutler/nvm-windows/releases/download/1.2.1/nvm-noinstall.zip",
+		"nvm-setup.exe":"https://github.com/coreybutler/nvm-windows/releases/download/1.2.1/nvm-setup.exe",
+		"nvm-setup.zip":"https://github.com/coreybutler/nvm-windows/releases/download/1.2.1/nvm-setup.zip"
 	},
 	"script":{
 		"args":{
