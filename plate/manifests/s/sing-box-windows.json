@@ -4,7 +4,7 @@
 	"logo":"https://raw.githubusercontent.com/SagerNet/sing-box-for-android/main/app/src/main/ic_launcher-playstore.png",
 	"description":"The universal proxy platform.",
 	"category":"network",
-	"version":"1.10.5",
+	"version":"1.10.6",
 	"platform":"windows",
 	"script":{
 		"args":{
@@ -17,9 +17,9 @@
 		"name":"appfork-check-update"
 	},
 	"url":[
-		"https://github.com/SagerNet/sing-box/releases/download/v1.10.5/sing-box-1.10.5-windows-amd64.zip",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.10.5/sing-box-1.10.5-windows-amd64-legacy.zip",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.10.5/sing-box-1.10.5-windows-arm64.zip"
+		"https://github.com/SagerNet/sing-box/releases/download/v1.10.6/sing-box-1.10.6-windows-amd64.zip",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.10.6/sing-box-1.10.6-windows-amd64-legacy.zip",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.10.6/sing-box-1.10.6-windows-arm64.zip"
 	],
 	"homepage":"https://github.com/SagerNet/sing-box"
 }

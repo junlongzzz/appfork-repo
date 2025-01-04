@@ -4,7 +4,7 @@
 	"logo":"https://raw.githubusercontent.com/SagerNet/sing-box-for-android/main/app/src/main/ic_launcher-playstore.png",
 	"description":"The universal proxy platform.",
 	"category":"network",
-	"version":"1.10.5",
+	"version":"1.10.6",
 	"platform":"mac",
 	"script":{
 		"args":{
@@ -18,10 +18,10 @@
 		"name":"appfork-check-update"
 	},
 	"url":[
-		"https://github.com/SagerNet/sing-box/releases/download/v1.10.5/sing-box-1.10.5-darwin-amd64.tar.gz",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.10.5/sing-box-1.10.5-darwin-amd64-legacy.tar.gz",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.10.5/sing-box-1.10.5-darwin-arm64.tar.gz",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.10.5/SFM-1.10.5-universal.dmg"
+		"https://github.com/SagerNet/sing-box/releases/download/v1.10.6/sing-box-1.10.6-darwin-amd64.tar.gz",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.10.6/sing-box-1.10.6-darwin-amd64-legacy.tar.gz",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.10.6/sing-box-1.10.6-darwin-arm64.tar.gz",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.10.6/SFM-1.10.6-universal.dmg"
 	],
 	"homepage":"https://github.com/SagerNet/sing-box"
 }
