@@ -12,13 +12,13 @@ static def checkUpdate(manifest, args) {
         return null
     }
 
-    def response = new URL('https://code.visualstudio.com/sha?build=stable').text
+    def response = 'https://code.visualstudio.com/sha?build=stable'.toURL().text
     def read = JsonPath.read(response, jsonpath)
     def version = null
     def url = [:]
     if (read instanceof List) {
         read.forEach(product -> {
-            version = product.name
+            version = product.productVersion
             url[product.platform.prettyname as String] = "https://update.code.visualstudio.com/${version}/${product.platform.os}/stable" as String
         })
     } else {
