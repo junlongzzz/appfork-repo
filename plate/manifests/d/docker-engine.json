@@ -4,7 +4,7 @@
 	"logo":"https://docs.docker.com/assets/images/engine.svg",
 	"description":"Docker Engine is an open source containerization technology for building and containerizing your applications.",
 	"category":"development",
-	"version":"27.4.1",
+	"version":"27.5.0",
 	"platform":"linux",
 	"url":{
 		"Install Docker Engine":"https://docs.docker.com/engine/install/"
