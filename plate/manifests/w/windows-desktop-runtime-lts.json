@@ -6,11 +6,11 @@
 	"platform":"windows",
 	"logo":"https://dotnet.microsoft.com/favicon.ico",
 	"homepage":"https://dotnet.microsoft.com",
-	"version":"8.0.11",
+	"version":"8.0.12",
 	"url":[
-		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.11/windowsdesktop-runtime-8.0.11-win-x64.exe",
-		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.11/windowsdesktop-runtime-8.0.11-win-x86.exe",
-		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.11/windowsdesktop-runtime-8.0.11-win-arm64.exe"
+		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.12/windowsdesktop-runtime-8.0.12-win-x64.exe",
+		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.12/windowsdesktop-runtime-8.0.12-win-x86.exe",
+		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.12/windowsdesktop-runtime-8.0.12-win-arm64.exe"
 	],
 	"script":{
 		"args":{
