@@ -1,5 +1,7 @@
 import com.jayway.jsonpath.JsonPath
 
+import java.util.regex.Pattern
+
 static def checkUpdate(manifest, args) {
     def jsonpath = switch (manifest.platform) {
         case 'windows' -> '$.products[?(@.platform.os =~ /win32(.*)/i)]'
@@ -17,9 +19,16 @@ static def checkUpdate(manifest, args) {
     def version = null
     def url = [:]
     if (read instanceof List) {
+        def versionPattern = Pattern.compile('^[\\d.]+$')
         read.forEach(product -> {
-            version = product.productVersion
-            url[product.platform.prettyname as String] = "https://update.code.visualstudio.com/${version}/${product.platform.os}/stable" as String
+            def productVersion = product.productVersion
+            // 正则判断需要符合 x.y.z 格式
+            if (productVersion.matches(versionPattern)) {
+                if (version == null || version < productVersion) {
+                    version = productVersion
+                }
+                url[product.platform.prettyname as String] = "https://update.code.visualstudio.com/${version}/${product.platform.os}/stable" as String
+            }
         })
     } else {
         return null
