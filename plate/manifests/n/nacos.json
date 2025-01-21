@@ -3,7 +3,7 @@
 	"name":"Nacos",
 	"description":"Nacos /nɑ:kəʊs/ 是 Dynamic Naming and Configuration Service的首字母简称，一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。",
 	"category":"development",
-	"version":"2.4.3",
+	"version":"2.5.0",
 	"platform":"other",
 	"script":{
 		"args":{
@@ -16,8 +16,8 @@
 		"name":"appfork-check-update"
 	},
 	"url":[
-		"https://github.com/alibaba/nacos/releases/download/2.4.3/nacos-server-2.4.3.tar.gz",
-		"https://github.com/alibaba/nacos/releases/download/2.4.3/nacos-server-2.4.3.zip"
+		"https://github.com/alibaba/nacos/releases/download/2.5.0/nacos-server-2.5.0.tar.gz",
+		"https://github.com/alibaba/nacos/releases/download/2.5.0/nacos-server-2.5.0.zip"
 	],
 	"homepage":"https://nacos.io"
 }
