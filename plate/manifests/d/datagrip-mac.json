@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/datagrip/datagrip.svg",
 	"description":"适用于关系数据库和 NoSQL 数据库的强大跨平台工具。",
 	"category":"development",
-	"version":"2024.3.3(243.23654.19)",
+	"version":"2024.3.4(243.23654.183)",
 	"platform":"mac",
 	"url":{
-		"datagrip-2024.3.3.dmg":"https://download.jetbrains.com/datagrip/datagrip-2024.3.3.dmg",
-		"datagrip-2024.3.3-aarch64.dmg":"https://download.jetbrains.com/datagrip/datagrip-2024.3.3-aarch64.dmg"
+		"datagrip-2024.3.4.dmg":"https://download.jetbrains.com/datagrip/datagrip-2024.3.4.dmg",
+		"datagrip-2024.3.4-aarch64.dmg":"https://download.jetbrains.com/datagrip/datagrip-2024.3.4-aarch64.dmg"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/datagrip/",
 	"script":{
