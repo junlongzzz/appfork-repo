@@ -1,7 +1,7 @@
 {
 	"author":"Docker Inc.",
 	"name":"Docker Engine",
-	"logo":"https://docs.docker.com/assets/images/engine.svg",
+	"logo":"https://avatars.githubusercontent.com/u/5429470?s=200&v=4",
 	"description":"Docker Engine is an open source containerization technology for building and containerizing your applications.",
 	"category":"development",
 	"version":"27.5.1",
