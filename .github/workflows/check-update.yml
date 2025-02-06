@@ -48,8 +48,13 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          if [ -n "$(git status -s)" ]; then
-            git commit -m "Automatic update" -a
+          # 获取变更的文件列表，并格式化为每行一个文件名
+          changed_files=$(git status -s | cut -c4- | while read -r path; do
+              basename "$path"
+          done | sort -u | sed 's/^/- /')
+          if [ -n "$changed_files" ]; then
+            # 生成提交信息并提交变更
+            git commit -m "Automatic update"$'\n\n'"$changed_files" -a
             echo "changed=true" >> "$GITHUB_OUTPUT"
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
