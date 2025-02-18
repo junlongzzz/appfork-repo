@@ -6,9 +6,9 @@
 	"author":"Obsidian Team",
 	"category":"reading",
 	"platform":"windows",
-	"version":"1.8.4",
+	"version":"1.8.7",
 	"url":{
-		"Obsidian-1.8.4.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.4/Obsidian-1.8.4.exe"
+		"Obsidian-1.8.7.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.7/Obsidian-1.8.7.exe"
 	},
 	"script":{
 		"args":{
