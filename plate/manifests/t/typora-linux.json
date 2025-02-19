@@ -6,7 +6,7 @@
 	"category":"reading",
 	"platform":"linux",
 	"script":"typora",
-	"url":"https://download2.typoraio.cn/linux/Typora-linux-x64-1.9.3.tar.gz",
+	"url":"https://download2.typoraio.cn/linux/Typora-linux-x64-1.10.7.tar.gz",
 	"homepage":"https://typoraio.cn",
-	"version":"1.9.3"
+	"version":"1.10.7"
 }
