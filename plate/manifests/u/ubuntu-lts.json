@@ -4,9 +4,9 @@
 	"logo":"https://cn.ubuntu.com/static/img/favicon.ico",
 	"description":"开源的Ubuntu桌面操作系统为全球数百万的PC和笔记本电脑提供了生产力。此处为LTS（长期支持）版。",
 	"category":"image",
-	"version":"24.04.1",
+	"version":"24.04.2",
 	"platform":"linux",
-	"url":"https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/24.04.1/ubuntu-24.04.1-desktop-amd64.iso",
+	"url":"https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/24.04.2/ubuntu-24.04.2-desktop-amd64.iso",
 	"homepage":"https://ubuntu.com",
 	"script":{
 		"args":{
