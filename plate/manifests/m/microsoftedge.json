@@ -4,7 +4,7 @@
 	"logo":"https://edgestatic.azureedge.net/welcome/static/favicon.png",
 	"description":"基于 `Chromium` 内核的 `Microsoft Edge` 网络浏览器",
 	"category":"network",
-	"version":"133.0.3065.69",
+	"version":"133.0.3065.82",
 	"platform":"windows",
 	"url":{
 		"官网下载":"https://www.microsoft.com/zh-cn/edge/download"
