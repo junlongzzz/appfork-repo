@@ -1,0 +1,20 @@
+name: Etcher
+logo: https://etcher.balena.io/images/balenaEtcher_logo_white.svg
+author: Balena
+description: |-
+  Flash OS images to SD cards & USB drives, safely and easily.
+  ![steps](https://etcher.balena.io/images/Etcher_steps.gif)
+category: tools
+platform: windows
+homepage: https://etcher.balena.io
+version: 1.19.25
+url:
+  - https://github.com/balena-io/etcher/releases/download/v1.19.25/balenaEtcher-1.19.25.Setup.exe
+  - https://github.com/balena-io/etcher/releases/download/v1.19.25/balenaEtcher-win32-x64-1.19.25.zip
+script:
+  args:
+    url: github://balena-io/etcher
+    autoupdate:
+      - https://github.com/balena-io/etcher/releases/download/v${version}/balenaEtcher-${version}.Setup.exe
+      - https://github.com/balena-io/etcher/releases/download/v${version}/balenaEtcher-win32-x64-${version}.zip
+  name: appfork-check-update
