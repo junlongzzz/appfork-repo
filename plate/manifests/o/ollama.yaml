@@ -3,18 +3,18 @@ name: Ollama
 logo: https://ollama.com/public/ollama.png
 description: Get up and running with large language models.
 category: tools
-version: 0.5.11
+version: 0.5.12
 platform: windows
 script:
   args:
     autoupdate:
-      - https://github.com/ollama/ollama/releases/download/v${version}/OllamaSetup.exe
-      - https://github.com/ollama/ollama/releases/download/v${version}/ollama-windows-amd64.zip
-      - https://github.com/ollama/ollama/releases/download/v${version}/ollama-windows-arm64.zip
+    - https://github.com/ollama/ollama/releases/download/v${version}/OllamaSetup.exe
+    - https://github.com/ollama/ollama/releases/download/v${version}/ollama-windows-amd64.zip
+    - https://github.com/ollama/ollama/releases/download/v${version}/ollama-windows-arm64.zip
     url: github://ollama/ollama
   name: appfork-check-update
 url:
-  - https://github.com/ollama/ollama/releases/download/v0.5.11/OllamaSetup.exe
-  - https://github.com/ollama/ollama/releases/download/v0.5.11/ollama-windows-amd64.zip
-  - https://github.com/ollama/ollama/releases/download/v0.5.11/ollama-windows-arm64.zip
+- https://github.com/ollama/ollama/releases/download/v0.5.12/OllamaSetup.exe
+- https://github.com/ollama/ollama/releases/download/v0.5.12/ollama-windows-amd64.zip
+- https://github.com/ollama/ollama/releases/download/v0.5.12/ollama-windows-arm64.zip
 homepage: https://ollama.com
