@@ -6,20 +6,20 @@
 	"platform":"windows",
 	"logo":"https://dotnet.microsoft.com/favicon.ico",
 	"homepage":"https://dotnet.microsoft.com",
-	"version":"10.0.0-preview.1.25080.5",
+	"version":"8.0.13",
 	"url":[
-		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/10.0.0-preview.1.25080.5/windowsdesktop-runtime-10.0.0-preview.1.25080.5-win-x64.exe",
-		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/10.0.0-preview.1.25080.5/windowsdesktop-runtime-10.0.0-preview.1.25080.5-win-x86.exe",
-		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/10.0.0-preview.1.25080.5/windowsdesktop-runtime-10.0.0-preview.1.25080.5-win-arm64.exe"
+		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.13/windowsdesktop-runtime-8.0.13-win-x64.exe",
+		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.13/windowsdesktop-runtime-8.0.13-win-x86.exe",
+		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.13/windowsdesktop-runtime-8.0.13-win-arm64.exe"
 	],
 	"script":{
 		"args":{
 			"url":"https://raw.githubusercontent.com/dotnet/core/refs/heads/main/release-notes/releases-index.json",
-			"jsonpath":"$.releases-index[?(@.release-type == \"lts\")].latest-runtime",
+			"jsonpath":"$.releases-index[?(@.release-type == \"lts\" && @.support-phase == \"active\")].latest-runtime",
 			"autoupdate":[
-				"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x64.exe",
-				"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x86.exe",
-				"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-arm64.exe"
+				"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x64.exe",
+				"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x86.exe",
+				"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-arm64.exe"
 			]
 		},
 		"name":"appfork-check-update"

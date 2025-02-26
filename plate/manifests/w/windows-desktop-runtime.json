@@ -8,18 +8,18 @@
 	"homepage":"https://dotnet.microsoft.com",
 	"version":"9.0.2",
 	"url":[
-		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/9.0.2/windowsdesktop-runtime-9.0.2-win-x64.exe",
-		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/9.0.2/windowsdesktop-runtime-9.0.2-win-x86.exe",
-		"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/9.0.2/windowsdesktop-runtime-9.0.2-win-arm64.exe"
+		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.2/windowsdesktop-runtime-9.0.2-win-x64.exe",
+		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.2/windowsdesktop-runtime-9.0.2-win-x86.exe",
+		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.2/windowsdesktop-runtime-9.0.2-win-arm64.exe"
 	],
 	"script":{
 		"args":{
 			"url":"https://raw.githubusercontent.com/dotnet/core/refs/heads/main/release-notes/releases-index.json",
-			"jsonpath":"$.releases-index[?(@.release-type == \"sts\")].latest-runtime",
+			"jsonpath":"$.releases-index[?(@.release-type == \"sts\" && @.support-phase == \"active\")].latest-runtime",
 			"autoupdate":[
-				"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x64.exe",
-				"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x86.exe",
-				"https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-arm64.exe"
+				"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x64.exe",
+				"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x86.exe",
+				"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-arm64.exe"
 			]
 		},
 		"name":"appfork-check-update"
