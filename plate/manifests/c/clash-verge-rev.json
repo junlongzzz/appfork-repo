@@ -6,22 +6,18 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://github.com/clash-verge-rev/clash-verge-rev",
-	"version":"2.1.1",
-	"url":{
-		"Clash.Verge_2.1.1_x64-setup.exe":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.1/Clash.Verge_2.1.1_x64-setup.exe",
-		"Clash.Verge_2.1.1_x64_portable.zip":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.1/Clash.Verge_2.1.1_x64_portable.zip",
-		"Clash.Verge_2.1.1_x86-setup.exe":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.1/Clash.Verge_2.1.1_x86-setup.exe",
-		"Clash.Verge_2.1.1_x86_portable.zip":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.1/Clash.Verge_2.1.1_x86_portable.zip"
-	},
+	"version":"2.0.3",
+	"url":[
+		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.0.3/Clash.Verge_2.0.3_x64-setup.exe",
+		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.0.3/Clash.Verge_2.0.3_arm64-setup.exe"
+	],
 	"script":{
 		"args":{
-			"autoupdate":{
-				"Clash.Verge_${version}_x64-setup.exe":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_x64-setup.exe",
-				"Clash.Verge_${version}_x64_portable.zip":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_x64_portable.zip",
-				"Clash.Verge_${version}_x86-setup.exe":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_x86-setup.exe",
-				"Clash.Verge_${version}_x86_portable.zip":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_x86_portable.zip"
-			},
-			"url":"gh://clash-verge-rev/clash-verge-rev"
+			"autoupdate":[
+				"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_x64-setup.exe",
+				"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_arm64-setup.exe"
+			],
+			"url":"github://clash-verge-rev/clash-verge-rev"
 		},
 		"name":"appfork-check-update"
 	}
