@@ -7,14 +7,14 @@ description: |-
 category: tools
 platform: windows
 homepage: https://etcher.balena.io
-version: 1.19.25
+version: 2.1.0
 url:
-  - https://github.com/balena-io/etcher/releases/download/v1.19.25/balenaEtcher-1.19.25.Setup.exe
-  - https://github.com/balena-io/etcher/releases/download/v1.19.25/balenaEtcher-win32-x64-1.19.25.zip
+- https://github.com/balena-io/etcher/releases/download/v2.1.0/balenaEtcher-2.1.0.Setup.exe
+- https://github.com/balena-io/etcher/releases/download/v2.1.0/balenaEtcher-win32-x64-2.1.0.zip
 script:
   args:
     url: github://balena-io/etcher
     autoupdate:
-      - https://github.com/balena-io/etcher/releases/download/v${version}/balenaEtcher-${version}.Setup.exe
-      - https://github.com/balena-io/etcher/releases/download/v${version}/balenaEtcher-win32-x64-${version}.zip
+    - https://github.com/balena-io/etcher/releases/download/v${version}/balenaEtcher-${version}.Setup.exe
+    - https://github.com/balena-io/etcher/releases/download/v${version}/balenaEtcher-win32-x64-${version}.zip
   name: appfork-check-update
