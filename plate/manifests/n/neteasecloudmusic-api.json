@@ -7,18 +7,18 @@
 	"script":{
 		"args":{
 			"autoupdate":{
-				"文档查看":"https://docs-neteasecloudmusicapi.vercel.app",
+                "npm":"https://www.npmjs.com/package/NeteaseCloudMusicApi",
 				"Docker Image":"https://hub.docker.com/r/binaryify/netease_cloud_music_api"
 			},
-			"url":"https://gitlab.com/Binaryify/neteasecloudmusicapi/-/raw/main/package.json?ref_type=heads",
+			"url":"https://cdn.jsdelivr.net/npm/NeteaseCloudMusicApi/package.json",
 			"jsonpath":"$.version"
 		},
 		"name":"appfork-check-update"
 	},
-	"homepage":"https://gitlab.com/Binaryify/neteasecloudmusicapi",
+	"homepage":"https://github.com/Binaryify/NeteaseCloudMusicApi",
 	"version":"4.25.0",
 	"url":{
-		"文档查看":"https://docs-neteasecloudmusicapi.vercel.app",
+		"npm":"https://www.npmjs.com/package/NeteaseCloudMusicApi",
 		"Docker Image":"https://hub.docker.com/r/binaryify/netease_cloud_music_api"
 	}
 }
