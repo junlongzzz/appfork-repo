@@ -6,11 +6,11 @@
 	"category":"chat",
 	"platform":"linux",
 	"homepage":"https://im.qq.com/linuxqq/index.shtml",
-	"version":"3.2.15",
+	"version":"3.2.16",
 	"url":{
-		"deb":"https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.15_250110_amd64_01.deb",
-		"rpm":"https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.15_250110_x86_64_01.rpm",
-		"appimage":"https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.15_250110_x86_64_01.AppImage"
+		"deb":"https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.16_250307_amd64_01.deb",
+		"rpm":"https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.16_250307_x86_64_01.rpm",
+		"appimage":"https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.16_250307_x86_64_01.AppImage"
 	},
 	"script":"qq-nt"
 }
