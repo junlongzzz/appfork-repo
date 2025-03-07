@@ -4,15 +4,11 @@
 	"logo":"https://avatars.githubusercontent.com/u/6113871?s=200&v=4",
 	"description":"Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
 	"category":"chat",
-	"version":"5.11.1",
+	"version":"5.12.0",
 	"platform":"windows",
 	"url":{
-		"Windows on ARM: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.11.1/tportable-arm64.5.11.1.zip",
-		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.11.1/tportable-x64.5.11.1.zip",
-		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.11.1/tportable.5.11.1.zip",
-		"Windows on ARM: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.11.1/tsetup-arm64.5.11.1.exe",
-		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.11.1/tsetup-x64.5.11.1.exe",
-		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.11.1/tsetup.5.11.1.exe"
+		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.12.0/tsetup.5.12.0.exe",
+		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.12.0/tportable.5.12.0.zip"
 	},
 	"homepage":"https://telegram.org",
 	"script":{
