@@ -6,10 +6,10 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://github.com/clash-verge-rev/clash-verge-rev",
-	"version":"updater",
+	"version":"2.1.2",
 	"url":[
-		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/vupdater/Clash.Verge_updater_x64-setup.exe",
-		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/vupdater/Clash.Verge_updater_arm64-setup.exe"
+		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.2/Clash.Verge_2.1.2_x64-setup.exe",
+		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.2/Clash.Verge_2.1.2_arm64-setup.exe"
 	],
 	"script":{
 		"args":{
@@ -17,7 +17,8 @@
 				"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_x64-setup.exe",
 				"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_arm64-setup.exe"
 			],
-			"url":"github://clash-verge-rev/clash-verge-rev"
+			"url":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/updater/update.json",
+			"jsonpath":"$.name"
 		},
 		"name":"appfork-check-update"
 	}
