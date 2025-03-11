@@ -6,11 +6,11 @@
 	"platform":"windows",
 	"logo":"https://dotnet.microsoft.com/favicon.ico",
 	"homepage":"https://dotnet.microsoft.com",
-	"version":"9.0.2",
+	"version":"9.0.3",
 	"url":[
-		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.2/windowsdesktop-runtime-9.0.2-win-x64.exe",
-		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.2/windowsdesktop-runtime-9.0.2-win-x86.exe",
-		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.2/windowsdesktop-runtime-9.0.2-win-arm64.exe"
+		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.3/windowsdesktop-runtime-9.0.3-win-x64.exe",
+		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.3/windowsdesktop-runtime-9.0.3-win-x86.exe",
+		"https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.3/windowsdesktop-runtime-9.0.3-win-arm64.exe"
 	],
 	"script":{
 		"args":{
