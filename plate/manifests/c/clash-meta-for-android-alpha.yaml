@@ -8,9 +8,9 @@ platform: android
 homepage: https://github.com/MetaCubeX/ClashMetaForAndroid
 version: Prerelease-alpha
 url:
-- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.6-alpha-arm64-v8a-release.apk
-- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.6-alpha-armeabi-v7a-release.apk
-- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.6-alpha-universal-release.apk
-- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.6-alpha-x86-release.apk
-- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.6-alpha-x86_64-release.apk
+- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.7-alpha-arm64-v8a-release.apk
+- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.7-alpha-armeabi-v7a-release.apk
+- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.7-alpha-universal-release.apk
+- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.7-alpha-x86-release.apk
+- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.7-alpha-x86_64-release.apk
 script: cmfa-alpha
