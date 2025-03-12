@@ -3,10 +3,10 @@ name: LM Studio
 logo: https://avatars.githubusercontent.com/u/133744619?s=200&v=4
 description: Discover, download, and run local LLMs.
 category: tools
-version: 0.3.12-1
+version: 0.3.13-1
 platform: windows
 script: lmstudio
 url:
-- https://installers.lmstudio.ai/win32/x64/0.3.12-1/LM-Studio-0.3.12-1-x64.exe
-- https://installers.lmstudio.ai/win32/arm64/0.3.12-1/LM-Studio-0.3.12-1-arm64.exe
+- https://installers.lmstudio.ai/win32/x64/0.3.13-1/LM-Studio-0.3.13-1-x64.exe
+- https://installers.lmstudio.ai/win32/arm64/0.3.13-1/LM-Studio-0.3.13-1-arm64.exe
 homepage: https://lmstudio.ai
