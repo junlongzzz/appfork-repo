@@ -5,13 +5,19 @@
 	"category":"tools",
 	"version":"5.0",
 	"platform":"windows",
-	"url":"https://www.charlesproxy.com/assets/release/5.0/charles-proxy-5.0-win64.msi",
+	"url":[
+		"https://www.charlesproxy.com/assets/release/5.0/charles-proxy-5.0-win-x86_64.appx",
+		"https://www.charlesproxy.com/assets/release/5.0/charles-proxy-5.0-win-arm64.appx"
+	],
 	"homepage":"https://www.charlesproxy.com",
 	"script":{
 		"args":{
 			"url":"https://www.charlesproxy.com/download/",
 			"regex":"The latest version of Charles is ([\\d.]+)\\.",
-			"autoupdate":"https://www.charlesproxy.com/assets/release/${version}/charles-proxy-${version}-win64.msi"
+			"autoupdate":[
+				"https://www.charlesproxy.com/assets/release/${version}/charles-proxy-${version}-win-x86_64.appx",
+				"https://www.charlesproxy.com/assets/release/${version}/charles-proxy-${version}-win-arm64.appx"
+			]
 		},
 		"name":"appfork-check-update"
 	}
