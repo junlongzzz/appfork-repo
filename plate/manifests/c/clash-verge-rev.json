@@ -6,10 +6,10 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://github.com/clash-verge-rev/clash-verge-rev",
-	"version":"2.2.0",
+	"version":"2.2.1",
 	"url":[
-		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.0/Clash.Verge_2.2.0_x64-setup.exe",
-		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.0/Clash.Verge_2.2.0_arm64-setup.exe"
+		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.1/Clash.Verge_2.2.1_x64-setup.exe",
+		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.1/Clash.Verge_2.2.1_arm64-setup.exe"
 	],
 	"script":{
 		"args":{
