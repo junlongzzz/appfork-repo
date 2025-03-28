@@ -1,21 +1,20 @@
 author: Open Source Software
 name: Hoppscotch
 logo: https://hoppscotch.io/icons/pwa-192x192.png
-description: >-
-  Hoppscotch is a lightweight, web-based API development suite. 
-  It was built from the ground up with ease of use and accessibility in mind 
-  providing all the functionality needed for developers with minimalist, unobtrusive UI.
+description: Hoppscotch is a lightweight, web-based API development suite.  It was
+  built from the ground up with ease of use and accessibility in mind  providing all
+  the functionality needed for developers with minimalist, unobtrusive UI.
 category: development
-version: 25.2.3-0
+version: 25.3.0-0
 platform: windows
 url:
-  - https://github.com/hoppscotch/releases/releases/download/v25.2.3-0/Hoppscotch_win_x64.msi
-  - https://hoppscotch.io
+- https://github.com/hoppscotch/releases/releases/download/v25.3.0-0/Hoppscotch_win_x64.msi
+- https://hoppscotch.io
 homepage: https://hoppscotch.com
 script:
   args:
     autoupdate:
-      - https://github.com/hoppscotch/releases/releases/download/v${version}/Hoppscotch_win_x64.msi
-      - https://hoppscotch.io
+    - https://github.com/hoppscotch/releases/releases/download/v${version}/Hoppscotch_win_x64.msi
+    - https://hoppscotch.io
     url: github://hoppscotch/releases
   name: appfork-check-update
