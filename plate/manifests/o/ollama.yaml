@@ -3,7 +3,7 @@ name: Ollama
 logo: https://ollama.com/public/ollama.png
 description: Get up and running with large language models.
 category: tools
-version: 0.6.2
+version: 0.6.3
 platform: windows
 script:
   args:
@@ -14,7 +14,7 @@ script:
     url: github://ollama/ollama
   name: appfork-check-update
 url:
-- https://github.com/ollama/ollama/releases/download/v0.6.2/OllamaSetup.exe
-- https://github.com/ollama/ollama/releases/download/v0.6.2/ollama-windows-amd64.zip
-- https://github.com/ollama/ollama/releases/download/v0.6.2/ollama-windows-arm64.zip
+- https://github.com/ollama/ollama/releases/download/v0.6.3/OllamaSetup.exe
+- https://github.com/ollama/ollama/releases/download/v0.6.3/ollama-windows-amd64.zip
+- https://github.com/ollama/ollama/releases/download/v0.6.3/ollama-windows-arm64.zip
 homepage: https://ollama.com
