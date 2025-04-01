@@ -5,11 +5,11 @@ description: |-
   新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持Windows 7+。视频介绍：
   <div class="mdui-video-container"><video src="https://res.u-tools.cn/upload/v5/utools5.0.mp4" controls>你的浏览器不支持video标签</video></div>
 category: tools
-version: 6.1.0
+version: 7.0.0
 platform: windows
 url:
-- https://open.u-tools.cn/download/uTools-6.1.0.exe
-- https://open.u-tools.cn/download/uTools-6.1.0-ia32.exe
+- https://open.u-tools.cn/download/uTools-7.0.0.exe
+- https://open.u-tools.cn/download/uTools-7.0.0-ia32.exe
 homepage: https://u.tools
 script:
   args:
