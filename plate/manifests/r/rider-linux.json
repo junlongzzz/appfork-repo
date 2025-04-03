@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/rider/rider.svg",
 	"description":"全球最受喜爱的 .NET 和游戏开发 IDE。",
 	"category":"development",
-	"version":"2024.3.6(243.25659.34)",
+	"version":"2024.3.7(243.26053.56)",
 	"platform":"linux",
 	"url":{
-		"JetBrains.Rider-2024.3.6-aarch64.tar.gz":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.3.6-aarch64.tar.gz",
-		"JetBrains.Rider-2024.3.6.tar.gz":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.3.6.tar.gz"
+		"JetBrains.Rider-2024.3.7-aarch64.tar.gz":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.3.7-aarch64.tar.gz",
+		"JetBrains.Rider-2024.3.7.tar.gz":"https://download.jetbrains.com/rider/JetBrains.Rider-2024.3.7.tar.gz"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/rider/",
 	"script":{
