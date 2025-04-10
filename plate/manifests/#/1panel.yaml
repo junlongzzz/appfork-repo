@@ -3,7 +3,7 @@ name: 1Panel
 logo: https://1panel.cn/img/favicon.png
 description: 1Panel 是新一代现代化、开源的 Linux 服务器运维管理面板。
 category: tools
-version: 1.10.28-lts
+version: 1.10.29-lts
 platform: linux
 url:
   在线文档: https://1panel.cn/docs/
