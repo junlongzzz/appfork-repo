@@ -4,12 +4,12 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/phpstorm/phpstorm.svg",
 	"description":"为 PHP 开发者赋能，使用 PHP IDE 更智能地编写代码。",
 	"category":"development",
-	"version":"2024.3.5(243.26053.13)",
+	"version":"2025.1(251.23774.436)",
 	"platform":"windows",
 	"url":{
-		"PhpStorm-2024.3.5.exe":"https://download.jetbrains.com/webide/PhpStorm-2024.3.5.exe",
-		"PhpStorm-2024.3.5.win.zip":"https://download.jetbrains.com/webide/PhpStorm-2024.3.5.win.zip",
-		"PhpStorm-2024.3.5-aarch64.exe":"https://download.jetbrains.com/webide/PhpStorm-2024.3.5-aarch64.exe"
+		"PhpStorm-2025.1.exe":"https://download.jetbrains.com/webide/PhpStorm-2025.1.exe",
+		"PhpStorm-2025.1.win.zip":"https://download.jetbrains.com/webide/PhpStorm-2025.1.win.zip",
+		"PhpStorm-2025.1-aarch64.exe":"https://download.jetbrains.com/webide/PhpStorm-2025.1-aarch64.exe"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/phpstorm/",
 	"script":{
