@@ -4,7 +4,7 @@
 	"logo":"https://caddyserver.com/resources/images/favicon.png",
 	"description":"Caddy 2 is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go.",
 	"category":"development",
-	"version":"2.9.1",
+	"version":"2.10.0",
 	"platform":"windows",
 	"script":{
 		"args":{
@@ -17,8 +17,8 @@
 		"name":"appfork-check-update"
 	},
 	"url":{
-		"arm64":"https://github.com/caddyserver/caddy/releases/download/v2.9.1/caddy_2.9.1_windows_arm64.zip",
-		"amd64":"https://github.com/caddyserver/caddy/releases/download/v2.9.1/caddy_2.9.1_windows_amd64.zip"
+		"arm64":"https://github.com/caddyserver/caddy/releases/download/v2.10.0/caddy_2.10.0_windows_arm64.zip",
+		"amd64":"https://github.com/caddyserver/caddy/releases/download/v2.10.0/caddy_2.10.0_windows_amd64.zip"
 	},
 	"homepage":"https://caddyserver.com"
 }
