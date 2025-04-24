@@ -4,7 +4,7 @@
 	"logo":"https://avatars.githubusercontent.com/u/25557326?s=200&v=4",
 	"description":"A lightweight (uses a few MB of RAM and almost no CPU) utility that makes the Windows taskbar translucent/transparent on Windows 10 and Windows 11.",
 	"category":"beautify",
-	"version":"2024.3",
+	"version":"2025.1",
 	"platform":"windows",
 	"script":{
 		"args":{
