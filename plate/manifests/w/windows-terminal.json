@@ -3,13 +3,13 @@
 	"name":"Windows Terminal",
 	"description":"Windows 终端是一个新式主机应用程序，它面向你喜爱的命令行 shell，如命令提示符、PowerShell 和 bash（通过适用于 Linux 的 Windows 子系统 (WSL)）。",
 	"category":"development",
-	"version":"1.22.10731.0",
+	"version":"1.22.11141.0",
 	"platform":"windows",
 	"url":{
-		"x64-zip":"https://github.com/microsoft/terminal/releases/download/v1.22.10731.0/Microsoft.WindowsTerminal_1.22.10731.0_x64.zip",
-		"x86-zip":"https://github.com/microsoft/terminal/releases/download/v1.22.10731.0/Microsoft.WindowsTerminal_1.22.10731.0_x86.zip",
-		"arm64-zip":"https://github.com/microsoft/terminal/releases/download/v1.22.10731.0/Microsoft.WindowsTerminal_1.22.10731.0_arm64.zip",
-		"msixbundle":"https://github.com/microsoft/terminal/releases/download/v1.22.10731.0/Microsoft.WindowsTerminal_1.22.10731.0_8wekyb3d8bbwe.msixbundle",
+		"x64-zip":"https://github.com/microsoft/terminal/releases/download/v1.22.11141.0/Microsoft.WindowsTerminal_1.22.11141.0_x64.zip",
+		"x86-zip":"https://github.com/microsoft/terminal/releases/download/v1.22.11141.0/Microsoft.WindowsTerminal_1.22.11141.0_x86.zip",
+		"arm64-zip":"https://github.com/microsoft/terminal/releases/download/v1.22.11141.0/Microsoft.WindowsTerminal_1.22.11141.0_arm64.zip",
+		"msixbundle":"https://github.com/microsoft/terminal/releases/download/v1.22.11141.0/Microsoft.WindowsTerminal_1.22.11141.0_8wekyb3d8bbwe.msixbundle",
 		"Get it on Microsoft Store":"https://aka.ms/terminal"
 	},
 	"homepage":"https://github.com/microsoft/terminal",
