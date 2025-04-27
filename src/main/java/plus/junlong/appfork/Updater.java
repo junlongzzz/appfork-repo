@@ -8,10 +8,10 @@ import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.alibaba.fastjson2.JSONWriter;
-import groovy.lang.GroovyShell;
-import groovy.lang.Script;
+import groovy.lang.GroovyClassLoader;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.yaml.snakeyaml.Yaml;
 
@@ -19,7 +19,10 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
-import java.util.concurrent.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import java.util.regex.Pattern;
 
@@ -28,44 +31,45 @@ import java.util.regex.Pattern;
  */
 @Component
 @Slf4j
-public final class Updater {
+public final class Updater implements CommandLineRunner {
 
-    private static final Map<String, String> platforms = new LinkedHashMap<>();
-    private static final Map<String, String> categories = new LinkedHashMap<>();
+    // 平台列表
+    private final Map<String, String> platforms = new LinkedHashMap<>() {
+        {
+            this.put("windows", "Windows");
+            this.put("linux", "Linux");
+            this.put("mac", "macOS");
+            this.put("android", "Android");
+            this.put("extensions", "浏览器扩展");
+            this.put("other", "Other");
+        }
+    };
 
-    static {
-        // 平台列表
-        platforms.put("windows", "Windows");
-        platforms.put("linux", "Linux");
-        platforms.put("mac", "macOS");
-        platforms.put("android", "Android");
-        platforms.put("extensions", "浏览器扩展");
-        platforms.put("other", "Other");
-        // 分类列表
-        categories.put("network", "网络应用");
-        categories.put("chat", "社交沟通");
-        categories.put("music", "音乐欣赏");
-        categories.put("video", "视频播放");
-        categories.put("graphics", "图形图像");
-        categories.put("games", "游戏娱乐");
-        categories.put("office", "办公学习");
-        categories.put("reading", "阅读翻译");
-        categories.put("development", "编程开发");
-        categories.put("tools", "系统工具");
-        categories.put("beautify", "主题美化");
-        categories.put("others", "其他应用");
-        categories.put("image", "系统镜像");
-    }
-
-    private static final GroovyShell GROOVY_SHELL = new GroovyShell();
-    private static final Map<String, Script> SCRIPT_CACHE = new ConcurrentHashMap<>();
+    // 分类列表
+    private final Map<String, String> categories = new LinkedHashMap<>() {
+        {
+            this.put("network", "网络应用");
+            this.put("chat", "社交沟通");
+            this.put("music", "音乐欣赏");
+            this.put("video", "视频播放");
+            this.put("graphics", "图形图像");
+            this.put("games", "游戏娱乐");
+            this.put("office", "办公学习");
+            this.put("reading", "阅读翻译");
+            this.put("development", "编程开发");
+            this.put("tools", "系统工具");
+            this.put("beautify", "主题美化");
+            this.put("others", "其他应用");
+            this.put("image", "系统镜像");
+        }
+    };
 
     // 正常完成同步但未更新
-    private static final int SYNC_NONE = 0;
+    private final int SYNC_NONE = 0;
     // 正常完成同步并更新了清单文件信息
-    private static final int SYNC_UPDATE = 1;
+    private final int SYNC_UPDATE = 1;
     // 未完成同步，失败
-    private static final int SYNC_ERROR = 2;
+    private final int SYNC_ERROR = 2;
 
     // 匹配版本号 x.y.z
     private final Pattern versionPattern = Pattern.compile("^(?<version>[\\d.]+)$");
@@ -81,6 +85,7 @@ public final class Updater {
     /**
      * 运行Updater
      */
+    @Override
     public void run(String... args) {
         log.info("同步软件库开始...");
 
@@ -102,7 +107,8 @@ public final class Updater {
         log.info("共扫描到清单文件 {} 个", manifests.size());
 
         long startTime = System.currentTimeMillis();
-        try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
+        try (GroovyClassLoader groovyClassLoader = new GroovyClassLoader();
+             ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
             // 统计同步结果
             int[] count = {0, 0, 0};
             // 同时执行同步的数量
@@ -118,7 +124,7 @@ public final class Updater {
                 }
             };
             for (File manifestFile : manifests) {
-                futures.add(CompletableFuture.supplyAsync(() -> sync(manifestFile), executor));
+                futures.add(CompletableFuture.supplyAsync(() -> sync(manifestFile, groovyClassLoader), executor));
                 if (futures.size() == asyncCount) {
                     futures.forEach(futureConsumer);
                     futures.clear();
@@ -134,18 +140,16 @@ public final class Updater {
             log.error("同步出错[{}]: {}", e.getClass().getSimpleName(), e.getMessage());
         } finally {
             log.info("同步耗时: {}", DateUtil.formatBetween(System.currentTimeMillis() - startTime, BetweenFormatter.Level.MILLISECOND));
-            // 处理脚本缓存
-            SCRIPT_CACHE.clear();
-            GROOVY_SHELL.resetLoadedClasses();
         }
     }
 
     /**
      * 同步指定软件清单文件
      *
+     * @param groovyClassLoader 脚本类加载器
      * @return 同步状态
      */
-    private int sync(File manifest) {
+    private int sync(File manifest, GroovyClassLoader groovyClassLoader) {
         try {
             // 清单文件格式
             String format = FileUtil.extName(manifest).toLowerCase();
@@ -206,25 +210,21 @@ public final class Updater {
 
             // 检查更新脚本
             File script = new File(repoPath, "scripts" + File.separator + scriptName.toLowerCase() + ".groovy");
-            if (script.exists() && script.isFile()) {
+            if (groovyClassLoader != null && script.exists() && script.isFile()) {
                 // groovy脚本运行
-                String scriptFilename = script.getName();
-                Script updateScript = SCRIPT_CACHE.get(scriptFilename);
-                if (updateScript == null) {
-                    updateScript = GROOVY_SHELL.parse(script);
-                    SCRIPT_CACHE.put(scriptFilename, updateScript);
-                }
-                // 执行检测App更新的脚本指定方法
                 // clone清单文件，避免脚本修改原清单文件内容
                 JSONObject manifestClone = manifestJson.clone();
                 // 清除脚本属性
                 manifestClone.remove("script");
-                Object checkUpdateObj = updateScript.invokeMethod("checkUpdate", new Object[]{manifestClone, scriptArgs});
+                Class<?> scriptClass = groovyClassLoader.parseClass(script);
+                // 反射获取执行检测App更新的脚本指定方法并执行
+                Object checkUpdateObj = scriptClass.getMethod("checkUpdate", Object.class, Object.class)
+                        .invoke(scriptClass.getConstructor().newInstance(), manifestClone, scriptArgs);
                 if (checkUpdateObj instanceof Map<?, ?> checkUpdate) {
                     // 获取脚本返回的错误信息
                     Object error = checkUpdate.get("error");
                     if (error != null) {
-                        log.error("exec [{}] script [{}] return error: {}", manifest.getName(), scriptFilename, error);
+                        log.error("exec [{}] script [{}] return error: {}", manifest.getName(), script.getName(), error);
                         return SYNC_ERROR;
                     }
 
