@@ -4,12 +4,12 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/rider/rider.svg",
 	"description":"全球最受喜爱的 .NET 和游戏开发 IDE。",
 	"category":"development",
-	"version":"2025.1(251.23774.437)",
+	"version":"2025.1.1(251.23774.471)",
 	"platform":"windows",
 	"url":{
-		"JetBrains.Rider-2025.1.exe":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.1.exe",
-		"JetBrains.Rider-2025.1.win.zip":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.1.win.zip",
-		"JetBrains.Rider-2025.1-aarch64.exe":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.1-aarch64.exe"
+		"JetBrains.Rider-2025.1.1.exe":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.1.1.exe",
+		"JetBrains.Rider-2025.1.1.win.zip":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.1.1.win.zip",
+		"JetBrains.Rider-2025.1.1-aarch64.exe":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.1.1-aarch64.exe"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/rider/",
 	"script":{
