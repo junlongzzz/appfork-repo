@@ -7,8 +7,10 @@
 	"version":"5.14.2",
 	"platform":"windows",
 	"url":{
+		"Windows on ARM: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.14.2/tportable-arm64.5.14.2.zip",
 		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.14.2/tportable-x64.5.14.2.zip",
 		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.14.2/tportable.5.14.2.zip",
+		"Windows on ARM: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.14.2/tsetup-arm64.5.14.2.exe",
 		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.14.2/tsetup-x64.5.14.2.exe",
 		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v5.14.2/tsetup.5.14.2.exe"
 	},
