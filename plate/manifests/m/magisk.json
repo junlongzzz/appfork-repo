@@ -4,7 +4,7 @@
 	"logo":"https://raw.githubusercontent.com/topjohnwu/Magisk/master/docs/images/logo.png",
 	"description":"Magisk is a suite of open source software for customizing Android, supporting devices higher than Android 6.0.",
 	"category":"tools",
-	"version":"28.1",
+	"version":"29.0",
 	"platform":"android",
 	"script":{
 		"args":{
@@ -13,6 +13,6 @@
 		},
 		"name":"appfork-check-update"
 	},
-	"url":"https://github.com/topjohnwu/Magisk/releases/download/v28.1/Magisk-v28.1.apk",
+	"url":"https://github.com/topjohnwu/Magisk/releases/download/v29.0/Magisk-v29.0.apk",
 	"homepage":"https://github.com/topjohnwu/Magisk"
 }
