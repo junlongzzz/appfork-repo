@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/dataspell/dataspell.svg",
 	"description":"轻松将数据转化为洞察。",
 	"category":"development",
-	"version":"2025.1(251.23774.439)",
+	"version":"2025.1.1(251.25410.158)",
 	"platform":"windows",
 	"url":{
-		"dataspell-2025.1.exe":"https://download.jetbrains.com/python/dataspell-2025.1.exe",
-		"dataspell-2025.1-aarch64.exe":"https://download.jetbrains.com/python/dataspell-2025.1-aarch64.exe"
+		"dataspell-2025.1.1.exe":"https://download.jetbrains.com/python/dataspell-2025.1.1.exe",
+		"dataspell-2025.1.1-aarch64.exe":"https://download.jetbrains.com/python/dataspell-2025.1.1-aarch64.exe"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/dataspell/",
 	"script":{
