@@ -4,7 +4,7 @@
 	"logo":"https://www.diskgenius.cn/favicon.ico",
 	"description":"DiskGenius 是一款专业级的 数据恢复软件 ，算法精湛、功能强大，用户群体广泛；支持各种情况下的文件恢复、分区恢复，恢复效果好；文件预览、扇区编辑、加密分区恢复、Ext4分区恢复、RAID恢复等高级功能应有尽有，二十年匠心之作！",
 	"category":"tools",
-	"version":"6.0.0.1631",
+	"version":"6.0.1.1645",
 	"platform":"windows",
 	"url":{
 		"64位版本":"https://www.diskgenius.cn/download/downloadURL.php?Name=DG_64",
