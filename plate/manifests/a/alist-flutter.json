@@ -6,12 +6,12 @@
 	"category":"network",
 	"platform":"android",
 	"homepage":"https://github.com/jing332/AListFlutter",
-	"version":"1.25.032801",
+	"version":"1.25.052501",
 	"url":{
-		"AListF-v1.25.032801.apk":"https://github.com/jing332/AListFlutter/releases/download/1.25.032801/AListF-v1.25.032801.apk",
-		"AListF-v1.25.032801_arm64-v8a.apk":"https://github.com/jing332/AListFlutter/releases/download/1.25.032801/AListF-v1.25.032801_arm64-v8a.apk",
-		"AListF-v1.25.032801_armeabi-v7a.apk":"https://github.com/jing332/AListFlutter/releases/download/1.25.032801/AListF-v1.25.032801_armeabi-v7a.apk",
-		"AListF-v1.25.032801_x86_64.apk":"https://github.com/jing332/AListFlutter/releases/download/1.25.032801/AListF-v1.25.032801_x86_64.apk"
+		"AListF-v1.25.052501.apk":"https://github.com/jing332/AListFlutter/releases/download/1.25.052501/AListF-v1.25.052501.apk",
+		"AListF-v1.25.052501_arm64-v8a.apk":"https://github.com/jing332/AListFlutter/releases/download/1.25.052501/AListF-v1.25.052501_arm64-v8a.apk",
+		"AListF-v1.25.052501_armeabi-v7a.apk":"https://github.com/jing332/AListFlutter/releases/download/1.25.052501/AListF-v1.25.052501_armeabi-v7a.apk",
+		"AListF-v1.25.052501_x86_64.apk":"https://github.com/jing332/AListFlutter/releases/download/1.25.052501/AListF-v1.25.052501_x86_64.apk"
 	},
 	"script":{
 		"args":{
