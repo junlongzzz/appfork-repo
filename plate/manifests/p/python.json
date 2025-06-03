@@ -6,11 +6,11 @@
 	"author":"Python Software Foundation",
 	"category":"development",
 	"platform":"windows",
-	"version":"3.13.3",
+	"version":"3.13.4",
 	"url":{
-		"Installer (32-bit)":"https://www.python.org/ftp/python/3.13.3/python-3.13.3.exe",
-		"Installer (64-bit)":"https://www.python.org/ftp/python/3.13.3/python-3.13.3-amd64.exe",
-		"Installer (ARM64)":"https://www.python.org/ftp/python/3.13.3/python-3.13.3-arm64.exe"
+		"Installer (32-bit)":"https://www.python.org/ftp/python/3.13.4/python-3.13.4.exe",
+		"Installer (64-bit)":"https://www.python.org/ftp/python/3.13.4/python-3.13.4-amd64.exe",
+		"Installer (ARM64)":"https://www.python.org/ftp/python/3.13.4/python-3.13.4-arm64.exe"
 	},
 	"script":{
 		"args":{

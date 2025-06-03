@@ -4,19 +4,19 @@
 	"logo":"https://opensource.microsoft.com/assets/images/projects/vsc-icon.svg",
 	"description":"Code editing. Redefined. Free. Built on open source. Runs everywhere.",
 	"category":"development",
-	"version":"1.100.2",
+	"version":"1.100.3",
 	"platform":"linux",
 	"script":"vscode",
 	"url":{
-		"Linux .deb (x64)":"https://update.code.visualstudio.com/1.100.2/linux-deb-x64/stable",
-		"Linux .rpm (x64)":"https://update.code.visualstudio.com/1.100.2/linux-rpm-x64/stable",
-		"Linux .tar.gz (x64)":"https://update.code.visualstudio.com/1.100.2/linux-x64/stable",
-		"Linux .tar.gz (Arm32)":"https://update.code.visualstudio.com/1.100.2/linux-armhf/stable",
-		"Linux .deb (Arm32)":"https://update.code.visualstudio.com/1.100.2/linux-deb-armhf/stable",
-		"Linux .rpm (Arm32)":"https://update.code.visualstudio.com/1.100.2/linux-rpm-armhf/stable",
-		"Linux .tar.gz (Arm64)":"https://update.code.visualstudio.com/1.100.2/linux-arm64/stable",
-		"Linux .deb (Arm64)":"https://update.code.visualstudio.com/1.100.2/linux-deb-arm64/stable",
-		"Linux .rpm (Arm64)":"https://update.code.visualstudio.com/1.100.2/linux-rpm-arm64/stable"
+		"Linux .deb (x64)":"https://update.code.visualstudio.com/1.100.3/linux-deb-x64/stable",
+		"Linux .rpm (x64)":"https://update.code.visualstudio.com/1.100.3/linux-rpm-x64/stable",
+		"Linux .tar.gz (x64)":"https://update.code.visualstudio.com/1.100.3/linux-x64/stable",
+		"Linux .tar.gz (Arm32)":"https://update.code.visualstudio.com/1.100.3/linux-armhf/stable",
+		"Linux .deb (Arm32)":"https://update.code.visualstudio.com/1.100.3/linux-deb-armhf/stable",
+		"Linux .rpm (Arm32)":"https://update.code.visualstudio.com/1.100.3/linux-rpm-armhf/stable",
+		"Linux .tar.gz (Arm64)":"https://update.code.visualstudio.com/1.100.3/linux-arm64/stable",
+		"Linux .deb (Arm64)":"https://update.code.visualstudio.com/1.100.3/linux-deb-arm64/stable",
+		"Linux .rpm (Arm64)":"https://update.code.visualstudio.com/1.100.3/linux-rpm-arm64/stable"
 	},
 	"homepage":"https://code.visualstudio.com"
 }
