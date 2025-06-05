@@ -1,16 +1,17 @@
 author: Junlong
 name: Gohomo
-description: Wrapper for [Mihomo](https://github.com/MetaCubeX/mihomo) written in Golang.
+description: Wrapper for [Mihomo](https://github.com/MetaCubeX/mihomo) written in
+  Golang.
 category: network
 platform: windows
 homepage: https://github.com/junlongzzz/gohomo
-version: 20250604
+version: '20250605'
 url:
-  - https://github.com/junlongzzz/gohomo/releases/download/20250604/gohomo-windows-amd64-20250604.zip
-  - https://github.com/junlongzzz/gohomo/releases/download/20250604/gohomo-windows-arm64-20250604.zip
+- https://github.com/junlongzzz/gohomo/releases/download/20250605/gohomo-windows-amd64-20250605.zip
+- https://github.com/junlongzzz/gohomo/releases/download/20250605/gohomo-windows-arm64-20250605.zip
 script:
   args:
     autoupdate:
-      - https://github.com/junlongzzz/gohomo/releases/download/${version}/gohomo-windows-amd64-${version}.zip
-      - https://github.com/junlongzzz/gohomo/releases/download/${version}/gohomo-windows-arm64-${version}.zip
+    - https://github.com/junlongzzz/gohomo/releases/download/${version}/gohomo-windows-amd64-${version}.zip
+    - https://github.com/junlongzzz/gohomo/releases/download/${version}/gohomo-windows-arm64-${version}.zip
   name: appfork-check-update

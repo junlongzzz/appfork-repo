@@ -4,12 +4,12 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/goland/goland.svg",
 	"description":"为 Go 开发者打造的完整 IDE。",
 	"category":"development",
-	"version":"2025.1.1(251.25410.140)",
+	"version":"2025.1.2(251.26094.127)",
 	"platform":"windows",
 	"url":{
-		"goland-2025.1.1.exe":"https://download.jetbrains.com/go/goland-2025.1.1.exe",
-		"goland-2025.1.1.win.zip":"https://download.jetbrains.com/go/goland-2025.1.1.win.zip",
-		"goland-2025.1.1-aarch64.exe":"https://download.jetbrains.com/go/goland-2025.1.1-aarch64.exe"
+		"goland-2025.1.2.exe":"https://download.jetbrains.com/go/goland-2025.1.2.exe",
+		"goland-2025.1.2.win.zip":"https://download.jetbrains.com/go/goland-2025.1.2.win.zip",
+		"goland-2025.1.2-aarch64.exe":"https://download.jetbrains.com/go/goland-2025.1.2-aarch64.exe"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/go/",
 	"script":{
