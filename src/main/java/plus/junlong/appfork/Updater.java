@@ -316,7 +316,7 @@ public final class Updater implements CommandLineRunner {
                 };
                 FileUtil.writeUtf8String(write, manifest);
                 String manifestVersion = manifestJson.getString("version");
-                if (!version.equals(manifestVersion)) {
+                if (!StrUtil.equals(manifestVersion, version)) {
                     // 版本有变更
                     log.info("manifest [{}] upgraded: {}->{}", manifest.getName(), version, manifestVersion);
                 } else {
