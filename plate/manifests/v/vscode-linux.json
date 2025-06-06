@@ -1,7 +1,7 @@
 {
 	"author":"微软Microsoft",
 	"name":"Visual Studio Code",
-	"logo":"https://opensource.microsoft.com/assets/images/projects/vsc-icon.svg",
+	"logo":"https://code.visualstudio.com/assets/favicon.ico",
 	"description":"Code editing. Redefined. Free. Built on open source. Runs everywhere.",
 	"category":"development",
 	"version":"1.100.3",
