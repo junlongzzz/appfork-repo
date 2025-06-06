@@ -1,7 +1,9 @@
 author: Junlong
 name: Gohomo
-description: Wrapper for [Mihomo](https://github.com/MetaCubeX/mihomo) written in
-  Golang.
+logo: https://raw.githubusercontent.com/junlongzzz/gohomo/main/logo.png
+description: >-
+  Wrapper for [Mihomo](https://github.com/MetaCubeX/mihomo)
+  written in [Golang](https://go.dev).
 category: network
 platform: windows
 homepage: https://github.com/junlongzzz/gohomo
