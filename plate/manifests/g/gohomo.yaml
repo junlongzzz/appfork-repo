@@ -1,16 +1,15 @@
 author: Junlong
 name: Gohomo
 logo: https://raw.githubusercontent.com/junlongzzz/gohomo/main/logo.png
-description: >-
-  Wrapper for [Mihomo](https://github.com/MetaCubeX/mihomo)
-  written in [Golang](https://go.dev).
+description: Wrapper for [Mihomo](https://github.com/MetaCubeX/mihomo) written in
+  [Golang](https://go.dev).
 category: network
 platform: windows
 homepage: https://github.com/junlongzzz/gohomo
-version: '20250605'
+version: '20250609'
 url:
-- https://github.com/junlongzzz/gohomo/releases/download/20250605/gohomo-windows-amd64-20250605.zip
-- https://github.com/junlongzzz/gohomo/releases/download/20250605/gohomo-windows-arm64-20250605.zip
+- https://github.com/junlongzzz/gohomo/releases/download/20250609/gohomo-windows-amd64-20250609.zip
+- https://github.com/junlongzzz/gohomo/releases/download/20250609/gohomo-windows-arm64-20250609.zip
 script:
   args:
     autoupdate:
