@@ -1,0 +1,16 @@
+name: Maven Daemon
+author: The Apache Software Foundation
+description: The Maven (mvn) Daemon is based on GraalVM and allows for faster Maven builds.
+category: development
+platform: windows
+homepage: https://github.com/apache/maven-mvnd
+version: 1.0.2
+url:
+  - https://github.com/apache/maven-mvnd/releases/download/1.0.2/maven-mvnd-1.0.2-windows-amd64.zip
+  - https://github.com/apache/maven-mvnd/releases/download/1.0.2/maven-mvnd-1.0.2-windows-amd64.tar.gz
+script:
+  args:
+    autoupdate:
+      - https://github.com/apache/maven-mvnd/releases/download/${version}/maven-mvnd-${version}-windows-amd64.zip
+      - https://github.com/apache/maven-mvnd/releases/download/${version}/maven-mvnd-${version}-windows-amd64.tar.gz
+  name: appfork-check-update
