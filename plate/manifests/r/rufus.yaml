@@ -5,13 +5,13 @@ description: Rufus 是一款格式化和创建 USB 启动盘的辅助工具。
 category: tools
 platform: windows
 homepage: https://rufus.ie
-version: '4.7'
+version: '4.8'
 url:
-- https://github.com/pbatard/rufus/releases/download/v4.7/rufus-4.7p.exe
-- https://github.com/pbatard/rufus/releases/download/v4.7/rufus-4.7.exe
-- https://github.com/pbatard/rufus/releases/download/v4.7/rufus-4.7_x86.exe
-- https://github.com/pbatard/rufus/releases/download/v4.7/rufus-4.7_arm.exe
-- https://github.com/pbatard/rufus/releases/download/v4.7/rufus-4.7_arm64.exe
+- https://github.com/pbatard/rufus/releases/download/v4.8/rufus-4.8p.exe
+- https://github.com/pbatard/rufus/releases/download/v4.8/rufus-4.8.exe
+- https://github.com/pbatard/rufus/releases/download/v4.8/rufus-4.8_x86.exe
+- https://github.com/pbatard/rufus/releases/download/v4.8/rufus-4.8_arm.exe
+- https://github.com/pbatard/rufus/releases/download/v4.8/rufus-4.8_arm64.exe
 script:
   args:
     url: github://pbatard/rufus
