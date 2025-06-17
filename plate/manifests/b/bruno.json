@@ -4,11 +4,11 @@
 	"logo":"https://raw.githubusercontent.com/usebruno/bruno/main/assets/images/logo-transparent.png",
 	"description":"Bruno 是一款全新且创新的 API 客户端，旨在颠覆 Postman/Insomnia 等其他类似工具。",
 	"category":"development",
-	"version":"2.5.0",
+	"version":"2.6.0",
 	"platform":"windows",
 	"url":{
-		"bruno_2.5.0_x64_win.exe":"https://github.com/usebruno/bruno/releases/download/v2.5.0/bruno_2.5.0_x64_win.exe",
-		"bruno_2.5.0_x64_win.zip":"https://github.com/usebruno/bruno/releases/download/v2.5.0/bruno_2.5.0_x64_win.zip"
+		"bruno_2.6.0_x64_win.exe":"https://github.com/usebruno/bruno/releases/download/v2.6.0/bruno_2.6.0_x64_win.exe",
+		"bruno_2.6.0_x64_win.zip":"https://github.com/usebruno/bruno/releases/download/v2.6.0/bruno_2.6.0_x64_win.zip"
 	},
 	"homepage":"https://www.usebruno.com",
 	"script":{
