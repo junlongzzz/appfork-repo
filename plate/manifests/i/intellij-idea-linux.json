@@ -4,13 +4,13 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/intellij-idea/intellij-idea.svg",
 	"description":"领先的 Java 和 Kotlin IDE，使开发更高效、更愉快的 IDE。\nideaIC: Community Edition, ideaIU: Ultimate",
 	"category":"development",
-	"version":"2025.1.2(251.26094.121)",
+	"version":"2025.1.3(251.26927.53)",
 	"platform":"linux",
 	"url":{
-		"ideaIC-2025.1.2-aarch64.tar.gz":"https://download.jetbrains.com/idea/ideaIC-2025.1.2-aarch64.tar.gz",
-		"ideaIC-2025.1.2.tar.gz":"https://download.jetbrains.com/idea/ideaIC-2025.1.2.tar.gz",
-		"ideaIU-2025.1.2-aarch64.tar.gz":"https://download.jetbrains.com/idea/ideaIU-2025.1.2-aarch64.tar.gz",
-		"ideaIU-2025.1.2.tar.gz":"https://download.jetbrains.com/idea/ideaIU-2025.1.2.tar.gz"
+		"ideaIC-2025.1.3-aarch64.tar.gz":"https://download.jetbrains.com/idea/ideaIC-2025.1.3-aarch64.tar.gz",
+		"ideaIC-2025.1.3.tar.gz":"https://download.jetbrains.com/idea/ideaIC-2025.1.3.tar.gz",
+		"ideaIU-2025.1.3-aarch64.tar.gz":"https://download.jetbrains.com/idea/ideaIU-2025.1.3-aarch64.tar.gz",
+		"ideaIU-2025.1.3.tar.gz":"https://download.jetbrains.com/idea/ideaIU-2025.1.3.tar.gz"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/idea/",
 	"script":{
