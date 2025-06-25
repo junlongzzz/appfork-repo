@@ -6,14 +6,14 @@
 	"author":"OpenJS Foundation and Node.js contributors.",
 	"category":"development",
 	"platform":"windows",
-	"version":"22.16.0",
+	"version":"22.17.0",
 	"url":{
-		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v22.16.0/node-v22.16.0-x86.msi",
-		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v22.16.0/node-v22.16.0-x64.msi",
-		"Installer (.msi Arm64)":"https://nodejs.org/dist/v22.16.0/node-v22.16.0-arm64.msi",
-		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v22.16.0/node-v22.16.0-win-x86.zip",
-		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v22.16.0/node-v22.16.0-win-x64.zip",
-		"Binary (.zip Arm64)":"https://nodejs.org/dist/v22.16.0/node-v22.16.0-win-arm64.zip",
+		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v22.17.0/node-v22.17.0-x86.msi",
+		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v22.17.0/node-v22.17.0-x64.msi",
+		"Installer (.msi Arm64)":"https://nodejs.org/dist/v22.17.0/node-v22.17.0-arm64.msi",
+		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v22.17.0/node-v22.17.0-win-x86.zip",
+		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v22.17.0/node-v22.17.0-win-x64.zip",
+		"Binary (.zip Arm64)":"https://nodejs.org/dist/v22.17.0/node-v22.17.0-win-arm64.zip",
 		"Official Docker Image":"https://hub.docker.com/_/node/"
 	},
 	"script":{
