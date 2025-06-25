@@ -5,11 +5,11 @@ description: |-
   新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持macOS 10.10+。视频介绍：
   <div class="mdui-video-container"><video src="https://res.u-tools.cn/upload/v5/utools5.0.mp4" controls>你的浏览器不支持video标签</video></div>
 category: tools
-version: 7.1.1
+version: 7.2.0
 platform: mac
 url:
-- https://open.u-tools.cn/download/uTools-7.1.1.dmg
-- https://open.u-tools.cn/download/uTools-7.1.1-arm64.dmg
+- https://open.u-tools.cn/download/uTools-7.2.0.dmg
+- https://open.u-tools.cn/download/uTools-7.2.0-arm64.dmg
 homepage: https://u.tools
 script:
   args:
