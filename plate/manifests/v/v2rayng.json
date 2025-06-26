@@ -4,7 +4,7 @@
 	"logo":"https://raw.githubusercontent.com/2dust/v2rayNG/master/V2rayNG/app/src/main/ic_launcher-web.png",
 	"description":"A V2Ray client for Android, support Xray core and v2fly core.",
 	"category":"network",
-	"version":"1.10.4",
+	"version":"1.10.7",
 	"platform":"android",
 	"script":{
 		"args":{
@@ -20,11 +20,11 @@
 		"name":"appfork-check-update"
 	},
 	"url":{
-		"v2rayNG_1.10.4_x86_64.apk":"https://github.com/2dust/v2rayNG/releases/download/1.10.4/v2rayNG_1.10.4_x86_64.apk",
-		"v2rayNG_1.10.4_x86.apk":"https://github.com/2dust/v2rayNG/releases/download/1.10.4/v2rayNG_1.10.4_x86.apk",
-		"v2rayNG_1.10.4_armeabi-v7a.apk":"https://github.com/2dust/v2rayNG/releases/download/1.10.4/v2rayNG_1.10.4_armeabi-v7a.apk",
-		"v2rayNG_1.10.4.apk":"https://github.com/2dust/v2rayNG/releases/download/1.10.4/v2rayNG_1.10.4.apk",
-		"v2rayNG_1.10.4_arm64-v8a.apk":"https://github.com/2dust/v2rayNG/releases/download/1.10.4/v2rayNG_1.10.4_arm64-v8a.apk"
+		"v2rayNG_1.10.7_x86_64.apk":"https://github.com/2dust/v2rayNG/releases/download/1.10.7/v2rayNG_1.10.7_x86_64.apk",
+		"v2rayNG_1.10.7_x86.apk":"https://github.com/2dust/v2rayNG/releases/download/1.10.7/v2rayNG_1.10.7_x86.apk",
+		"v2rayNG_1.10.7_armeabi-v7a.apk":"https://github.com/2dust/v2rayNG/releases/download/1.10.7/v2rayNG_1.10.7_armeabi-v7a.apk",
+		"v2rayNG_1.10.7.apk":"https://github.com/2dust/v2rayNG/releases/download/1.10.7/v2rayNG_1.10.7.apk",
+		"v2rayNG_1.10.7_arm64-v8a.apk":"https://github.com/2dust/v2rayNG/releases/download/1.10.7/v2rayNG_1.10.7_arm64-v8a.apk"
 	},
 	"homepage":"https://github.com/2dust/v2rayNG"
 }
