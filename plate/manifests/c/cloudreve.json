@@ -4,11 +4,11 @@
 	"logo":"https://cloudreve.org/favicon.ico",
 	"description":"Cloudreve 可以让您快速搭建起公私兼备的网盘系统。Cloudreve 在底层支持不同的云存储平台，用户在实际使用时无须关心物理存储方式。你可以使用 Cloudreve 搭建个人用网盘、文件分享系统，亦或是针对大小团体的公有云系统。",
 	"category":"network",
-	"version":"4.1.0",
+	"version":"4.1.2",
 	"platform":"windows",
 	"url":{
-		"cloudreve_4.1.0_windows_amd64.zip":"https://github.com/cloudreve/Cloudreve/releases/download/4.1.0/cloudreve_4.1.0_windows_amd64.zip",
-		"cloudreve_4.1.0_windows_arm64.zip":"https://github.com/cloudreve/Cloudreve/releases/download/4.1.0/cloudreve_4.1.0_windows_arm64.zip"
+		"cloudreve_4.1.2_windows_amd64.zip":"https://github.com/cloudreve/Cloudreve/releases/download/4.1.2/cloudreve_4.1.2_windows_amd64.zip",
+		"cloudreve_4.1.2_windows_arm64.zip":"https://github.com/cloudreve/Cloudreve/releases/download/4.1.2/cloudreve_4.1.2_windows_arm64.zip"
 	},
 	"homepage":"https://github.com/cloudreve/Cloudreve",
 	"script":{
