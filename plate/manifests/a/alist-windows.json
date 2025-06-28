@@ -1,25 +1,25 @@
 {
-	"author":"AList-Org",
-	"logo":"https://alist.nn.ci/logo.svg",
+	"author":"AList",
+	"logo":"https://avatars.githubusercontent.com/u/184931308?s=200&v=4",
 	"name":"AList",
-	"description":"🗂️ 一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs。更多信息请查看官网获取。",
+	"description":"🗂️ 一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs。",
 	"category":"network",
 	"platform":"windows",
-	"homepage":"https://alist.nn.ci",
+	"homepage":"https://alistgo.com",
 	"version":"3.45.1",
-	"url":{
-		"alist-windows-amd64.zip":"https://github.com/alist-org/alist/releases/download/v3.45.1/alist-windows-amd64.zip",
-		"alist-windows-arm64.zip":"https://github.com/alist-org/alist/releases/download/v3.45.1/alist-windows-arm64.zip",
-		"alist-windows-386.zip":"https://github.com/alist-org/alist/releases/download/v3.45.1/alist-windows-386.zip"
-	},
+	"url":[
+		"https://github.com/AlistGo/alist/releases/download/v3.45.1/alist-windows-amd64.zip",
+		"https://github.com/AlistGo/alist/releases/download/v3.45.1/alist-windows-arm64.zip",
+		"https://github.com/AlistGo/alist/releases/download/v3.45.1/alist-windows-386.zip"
+	],
 	"script":{
 		"args":{
-			"url":"github://alist-org/alist",
-			"autoupdate":{
-				"alist-windows-amd64.zip":"https://github.com/alist-org/alist/releases/download/v${version}/alist-windows-amd64.zip",
-				"alist-windows-arm64.zip":"https://github.com/alist-org/alist/releases/download/v${version}/alist-windows-arm64.zip",
-				"alist-windows-386.zip":"https://github.com/alist-org/alist/releases/download/v${version}/alist-windows-386.zip"
-			}
+			"url":"github://AlistGo/alist",
+			"autoupdate":[
+				"https://github.com/AlistGo/alist/releases/download/v${version}/alist-windows-amd64.zip",
+				"https://github.com/AlistGo/alist/releases/download/v${version}/alist-windows-arm64.zip",
+				"https://github.com/AlistGo/alist/releases/download/v${version}/alist-windows-386.zip"
+			]
 		},
 		"name":"appfork-check-update"
 	}
