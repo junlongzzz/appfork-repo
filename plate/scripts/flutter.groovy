@@ -17,16 +17,19 @@ static def checkUpdate(manifest, args) {
             return null
     }
     // releases_windows releases_linux releases_macos
-//    def response = "https://storage.googleapis.com/flutter_infra_release/releases/releases_${platform}.json".toURL().text
-    def response = "https://storage.flutter-io.cn/flutter_infra_release/releases/releases_${platform}.json".toURL().text
+    def response = "https://storage.googleapis.com/flutter_infra_release/releases/releases_${platform}.json".toURL().text
+//    def response = "https://storage.flutter-io.cn/flutter_infra_release/releases/releases_${platform}.json".toURL().text
     def jsonData = new JsonSlurper().parseText(response)
     def stableHash = jsonData.current_release.stable
-    for (release in jsonData.releases) {
-        if (release.hash == stableHash) {
-            return [
-                    'version': release.version,
-                    'url'    : "${jsonData.base_url}/${release.archive}".toString()
-            ]
-        }
+    def version = null
+    def url = []
+    jsonData.releases.findAll { it.hash == stableHash }.each {
+        version = it.version
+        url << "${jsonData.base_url}/${it.archive}".toString()
     }
+
+    return [
+            'version': version,
+            'url'    : url
+    ]
 }
