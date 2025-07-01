@@ -7,6 +7,8 @@
 	"version":"3.32.5",
 	"platform":"linux",
 	"script":"flutter",
-	"url":"https://storage.flutter-io.cn/flutter_infra_release/releases/stable/linux/flutter_linux_3.32.5-stable.tar.xz",
+	"url":[
+		"https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.32.5-stable.tar.xz"
+	],
 	"homepage":"https://flutter.cn"
 }

@@ -7,6 +7,9 @@
 	"version":"3.32.5",
 	"platform":"mac",
 	"script":"flutter",
-	"url":"https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_3.32.5-stable.zip",
+	"url":[
+		"https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_3.32.5-stable.zip",
+		"https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.32.5-stable.zip"
+	],
 	"homepage":"https://flutter.cn"
 }
