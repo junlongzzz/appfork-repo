@@ -120,7 +120,7 @@ public final class Updater implements CommandLineRunner {
                 try {
                     count[future.get(30, TimeUnit.MINUTES)]++;
                 } catch (Exception e) {
-                    log.error("获取同步结果出错[{}]: {}", e.getClass().getSimpleName(), e.getMessage());
+                    log.error("获取同步结果出错: {}", e.getCause().toString());
                 }
             };
             for (File manifestFile : manifests) {
@@ -137,7 +137,7 @@ public final class Updater implements CommandLineRunner {
             }
             log.info("同步完成: 本次更新 {} 个, 失败 {} 个, 未更新 {} 个", count[SYNC_UPDATE], count[SYNC_ERROR], count[SYNC_NONE]);
         } catch (Exception e) {
-            log.error("同步出错[{}]: {}", e.getClass().getSimpleName(), e.getMessage());
+            log.error("同步出错: {}", e.getCause().toString());
         } finally {
             log.info("同步耗时: {}", DateUtil.formatBetween(System.currentTimeMillis() - startTime, BetweenFormatter.Level.MILLISECOND));
         }
@@ -327,7 +327,7 @@ public final class Updater implements CommandLineRunner {
 
             return SYNC_NONE;
         } catch (Exception e) {
-            log.error("sync [{}] error[{}]: {}", manifest.getName(), e.getClass().getSimpleName(), e.getMessage());
+            log.error("sync [{}] error: {}", manifest.getName(), e.getCause().toString());
             return SYNC_ERROR;
         }
     }
