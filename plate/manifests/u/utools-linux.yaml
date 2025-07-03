@@ -5,10 +5,10 @@ description: |-
   新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持UOS, Deepin, Ubuntu。视频介绍：
   <div class="mdui-video-container"><video src="https://res.u-tools.cn/upload/v5/utools5.0.mp4" controls>你的浏览器不支持video标签</video></div>
 category: tools
-version: 7.2.0
+version: 7.2.1
 platform: linux
 url:
-- https://open.u-tools.cn/download/utools_7.2.0_amd64.deb
+- https://open.u-tools.cn/download/utools_7.2.1_amd64.deb
 homepage: https://u.tools
 script:
   args:
