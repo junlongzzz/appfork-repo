@@ -4,18 +4,18 @@
 	"logo":"https://www.halo.run/logo",
 	"description":"Halo [ˈheɪloʊ]，强大易用的开源建站工具。",
 	"category":"reading",
-	"version":"2.21.2",
+	"version":"2.21.3",
 	"platform":"other",
 	"url":{
 		"via Docker":"https://hub.docker.com/r/halohub/halo",
-		"Halo Docs": "https://docs.halo.run"
+		"Halo Docs":"https://docs.halo.run"
 	},
 	"homepage":"https://www.halo.run",
 	"script":{
 		"args":{
 			"autoupdate":{
 				"via Docker":"https://hub.docker.com/r/halohub/halo",
-				"Halo Docs": "https://docs.halo.run"
+				"Halo Docs":"https://docs.halo.run"
 			},
 			"url":"gh://halo-dev/halo"
 		},
