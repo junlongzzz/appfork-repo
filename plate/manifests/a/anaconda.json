@@ -7,10 +7,10 @@
 	"script":{
 		"args":{
 			"regex":"Anaconda3-([\\d.-]+)-Windows",
-			"autoupdate":{
-				"Anaconda3-${version}-Windows-x86_64.exe":"https://repo.anaconda.com/archive/Anaconda3-${version}-Windows-x86_64.exe"
-			},
-			"url":"https://www.anaconda.com/download"
+			"autoupdate":[
+				"https://repo.anaconda.com/archive/Anaconda3-${version}-Windows-x86_64.exe"
+			],
+			"url":"https://repo.anaconda.com/archive/"
 		},
 		"name":"appfork-check-update"
 	},

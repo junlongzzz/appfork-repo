@@ -6,17 +6,19 @@
 	"platform":"windows",
 	"script":{
 		"args":{
-			"regex":"Latest - Conda ([\\d.-]+)",
-			"autoupdate":{
-				"Miniconda3-latest-Windows-x86_64.exe":"https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe"
-			},
-			"url":"https://docs.conda.io/projects/miniconda/en/latest/"
+			"regex":"Miniconda3-py(?<py>\\d{3})_(?<version>[\\d.-]+)-Windows",
+			"autoupdate":[
+				"https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe",
+				"https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86.exe"
+			],
+			"url":"https://repo.anaconda.com/miniconda/"
 		},
 		"name":"appfork-check-update"
 	},
 	"homepage":"https://docs.conda.io/projects/miniconda/en/latest/",
 	"version":"24.9.2",
-	"url":{
-		"Miniconda3-latest-Windows-x86_64.exe":"https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe"
-	}
+	"url":[
+		"https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe",
+		"https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86.exe"
+	]
 }

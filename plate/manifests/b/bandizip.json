@@ -9,7 +9,7 @@
 	"url":"https://www.bandisoft.com/bandizip/dl.php?web",
 	"script":{
 		"args":{
-			"regex":"v([\\d.]+)</font>",
+			"regex":">v([\\d.]+)<",
 			"windows":"https://www.bandisoft.com/bandizip/dl.php?web",
 			"url":"https://www.bandisoft.com/bandizip/history/"
 		},
