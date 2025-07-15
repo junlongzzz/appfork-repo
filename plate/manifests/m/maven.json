@@ -4,9 +4,9 @@
 	"logo":"https://maven.apache.org/images/maven-logo-black-on-white.png",
 	"description":"Apache Maven is a software project management and comprehension tool.",
 	"category":"development",
-	"version":"3.9.10",
+	"version":"3.9.11",
 	"platform":"windows",
-	"url":"https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.zip",
+	"url":"https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.zip",
 	"homepage":"https://maven.apache.org",
 	"script":{
 		"args":{
