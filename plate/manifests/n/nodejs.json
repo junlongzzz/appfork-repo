@@ -6,14 +6,14 @@
 	"author":"OpenJS Foundation and Node.js contributors.",
 	"category":"development",
 	"platform":"windows",
-	"version":"24.4.0",
+	"version":"24.4.1",
 	"url":{
-		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v24.4.0/node-v24.4.0-x86.msi",
-		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v24.4.0/node-v24.4.0-x64.msi",
-		"Installer (.msi Arm64)":"https://nodejs.org/dist/v24.4.0/node-v24.4.0-arm64.msi",
-		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v24.4.0/node-v24.4.0-win-x86.zip",
-		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v24.4.0/node-v24.4.0-win-x64.zip",
-		"Binary (.zip Arm64)":"https://nodejs.org/dist/v24.4.0/node-v24.4.0-win-arm64.zip",
+		"Installer (.msi 32-bit)":"https://nodejs.org/dist/v24.4.1/node-v24.4.1-x86.msi",
+		"Installer (.msi 64-bit)":"https://nodejs.org/dist/v24.4.1/node-v24.4.1-x64.msi",
+		"Installer (.msi Arm64)":"https://nodejs.org/dist/v24.4.1/node-v24.4.1-arm64.msi",
+		"Binary (.zip 32-bit)":"https://nodejs.org/dist/v24.4.1/node-v24.4.1-win-x86.zip",
+		"Binary (.zip 64-bit)":"https://nodejs.org/dist/v24.4.1/node-v24.4.1-win-x64.zip",
+		"Binary (.zip Arm64)":"https://nodejs.org/dist/v24.4.1/node-v24.4.1-win-arm64.zip",
 		"Official Docker Image":"https://hub.docker.com/_/node/"
 	},
 	"script":{
