@@ -6,7 +6,7 @@
 	"category":"network",
 	"platform":"linux",
 	"homepage":"https://min.io",
-	"version":"RELEASE.2025-07-18T21-56-31Z",
+	"version":"RELEASE.2025-07-23T15-54-02Z",
 	"url":{
 		"minio (amd64)":"https://dl.min.io/server/minio/release/linux-amd64/minio",
 		"minio (arm64)":"https://dl.min.io/server/minio/release/linux-arm64/minio"
