@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/webstorm/webstorm.svg",
 	"description":"JavaScript 和 TypeScript IDE，让开发更加高效愉快。",
 	"category":"development",
-	"version":"2025.1.4(251.27812.2)",
+	"version":"2025.1.3(251.26927.40)",
 	"platform":"mac",
 	"url":{
-		"WebStorm-2025.1.4.dmg":"https://download.jetbrains.com/webstorm/WebStorm-2025.1.4.dmg",
-		"WebStorm-2025.1.4-aarch64.dmg":"https://download.jetbrains.com/webstorm/WebStorm-2025.1.4-aarch64.dmg"
+		"WebStorm-2025.1.3.dmg":"https://download.jetbrains.com/webstorm/WebStorm-2025.1.3.dmg",
+		"WebStorm-2025.1.3-aarch64.dmg":"https://download.jetbrains.com/webstorm/WebStorm-2025.1.3-aarch64.dmg"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/webstorm/",
 	"script":{
