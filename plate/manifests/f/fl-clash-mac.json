@@ -3,7 +3,7 @@
 	"name":"FlClash",
 	"description":"A multi-platform proxy client based on ClashMeta, simple and easy to use, open-source and ad-free.",
 	"category":"network",
-	"version":"0.8.86",
+	"version":"0.8.87",
 	"platform":"mac",
 	"script":{
 		"args":{
@@ -16,8 +16,8 @@
 		"name":"appfork-check-update"
 	},
 	"url":{
-		"FlClash-0.8.86-macos-amd64.dmg":"https://github.com/chen08209/FlClash/releases/download/v0.8.86/FlClash-0.8.86-macos-amd64.dmg",
-		"FlClash-0.8.86-macos-arm64.dmg":"https://github.com/chen08209/FlClash/releases/download/v0.8.86/FlClash-0.8.86-macos-arm64.dmg"
+		"FlClash-0.8.87-macos-amd64.dmg":"https://github.com/chen08209/FlClash/releases/download/v0.8.87/FlClash-0.8.87-macos-amd64.dmg",
+		"FlClash-0.8.87-macos-arm64.dmg":"https://github.com/chen08209/FlClash/releases/download/v0.8.87/FlClash-0.8.87-macos-arm64.dmg"
 	},
 	"homepage":"https://github.com/chen08209/FlClash"
 }
