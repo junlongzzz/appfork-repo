@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/toolbox/toolbox.svg",
 	"description":"JetBrains 官方推出的旗下IDE管理工具，管理（下载、安装、升级等）工具变得毫不费力！强烈推荐！包含了IntelliJ IDEA、PyCharm、GoLand等等所有官方IDE工具，同时还有更多功能等你发掘！",
 	"category":"development",
-	"version":"2.7.0.48109",
+	"version":"2.8.0.51430",
 	"platform":"windows",
 	"url":{
-		"jetbrains-toolbox-2.7.0.48109.exe":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.7.0.48109.exe",
-		"jetbrains-toolbox-2.7.0.48109-arm64.exe":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.7.0.48109-arm64.exe"
+		"jetbrains-toolbox-2.8.0.51430.exe":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.8.0.51430.exe",
+		"jetbrains-toolbox-2.8.0.51430-arm64.exe":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.8.0.51430-arm64.exe"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/toolbox-app/",
 	"script":{
