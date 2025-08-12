@@ -8,6 +8,7 @@
 	"platform":"windows",
 	"url":{
 		"官方下载安装":"https://www.bt.cn/new/download.html",
+		"BtSoft.exe":"https://download.bt.cn/win/panel/go/BtSoft.exe",
 		"BtSoft.zip":"https://download.bt.cn/win/panel/BtSoft.zip"
 	},
 	"homepage":"https://www.bt.cn/new/product_windows.html",
@@ -15,7 +16,7 @@
 		"args":{
 			"autoupdate":{
 				"官方下载安装":"https://www.bt.cn/new/download.html",
-                "BtSoft.exe":"https://download.bt.cn/win/panel/go/BtSoft.exe",
+				"BtSoft.exe":"https://download.bt.cn/win/panel/go/BtSoft.exe",
 				"BtSoft.zip":"https://download.bt.cn/win/panel/BtSoft.zip"
 			},
 			"url":"https://www.bt.cn/new/download.html",
