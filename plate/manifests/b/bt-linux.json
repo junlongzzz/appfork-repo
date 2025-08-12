@@ -16,7 +16,7 @@
 				"官方下载安装":"https://www.bt.cn/new/download.html"
 			},
 			"url":"https://www.bt.cn/new/download.html",
-			"regex":"Linux面板 (?<version>[\\d.]+)"
+			"regex":"var[0-9a-zA-Z= ]+'(?<version>[\\d.]+)'"
 		},
 		"name":"appfork-check-update"
 	}

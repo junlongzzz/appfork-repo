@@ -6,7 +6,7 @@ static def checkUpdate(manifest, args) {
     }
 
     def response = 'https://docs.docker.com/desktop/release-notes/'.toURL().text
-    def matcher = response =~ '>([\\d.]+)<'
+    def matcher = response =~ '>([\\d.]+)</a>'
     if (!matcher.find()) {
         return null
     }
