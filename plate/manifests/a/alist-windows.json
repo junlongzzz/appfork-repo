@@ -6,11 +6,11 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://alistgo.com",
-	"version":"3.50.0",
+	"version":"3.51.0",
 	"url":[
-		"https://github.com/AlistGo/alist/releases/download/v3.50.0/alist-windows-amd64.zip",
-		"https://github.com/AlistGo/alist/releases/download/v3.50.0/alist-windows-arm64.zip",
-		"https://github.com/AlistGo/alist/releases/download/v3.50.0/alist-windows-386.zip"
+		"https://github.com/AlistGo/alist/releases/download/v3.51.0/alist-windows-amd64.zip",
+		"https://github.com/AlistGo/alist/releases/download/v3.51.0/alist-windows-arm64.zip",
+		"https://github.com/AlistGo/alist/releases/download/v3.51.0/alist-windows-386.zip"
 	],
 	"script":{
 		"args":{
