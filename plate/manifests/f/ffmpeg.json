@@ -5,12 +5,12 @@
 	"category":"tools",
 	"platform":"windows",
 	"homepage":"https://ffmpeg.org",
-	"version":"7.1.1",
+	"version":"8.0",
 	"url":{
-		"essentials.7z":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-7.1.1-essentials_build.7z",
-		"essentials.zip":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-7.1.1-essentials_build.zip",
-		"full.7z [recommend]":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-7.1.1-full_build.7z",
-		"full-shared.7z":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-7.1.1-full_build-shared.7z"
+		"essentials.7z":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-8.0-essentials_build.7z",
+		"essentials.zip":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-8.0-essentials_build.zip",
+		"full.7z [recommend]":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-8.0-full_build.7z",
+		"full-shared.7z":"https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-8.0-full_build-shared.7z"
 	},
 	"script":{
 		"args":{
