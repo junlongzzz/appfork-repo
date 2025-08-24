@@ -16,8 +16,8 @@
 		"name":"appfork-check-update"
 	},
 	"homepage":"https://groovy-lang.org",
-	"version":"4.0.28",
+	"version":"5.0.0",
 	"url":{
-		"apache-groovy-binary-4.0.28.zip":"https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-4.0.28.zip"
+		"apache-groovy-binary-5.0.0.zip":"https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-5.0.0.zip"
 	}
 }
