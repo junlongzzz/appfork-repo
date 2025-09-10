@@ -5,10 +5,10 @@ description: An Advanced Web Panel • Built on Xray Core • X-UI variant
 category: network
 platform: linux
 homepage: https://github.com/MHSanaei/3x-ui
-version: 2.6.8
+version: 2.7.0
 url:
-- https://github.com/MHSanaei/3x-ui/releases/download/v2.6.8/x-ui-linux-amd64.tar.gz
-- https://github.com/MHSanaei/3x-ui/releases/download/v2.6.8/x-ui-linux-arm64.tar.gz
+- https://github.com/MHSanaei/3x-ui/releases/download/v2.7.0/x-ui-linux-amd64.tar.gz
+- https://github.com/MHSanaei/3x-ui/releases/download/v2.7.0/x-ui-linux-arm64.tar.gz
 script:
   args:
     autoupdate:
