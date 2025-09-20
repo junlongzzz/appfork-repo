@@ -3,11 +3,11 @@
 	"name":"Charles",
 	"description":"Charles is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet.",
 	"category":"tools",
-	"version":"5.0.2",
+	"version":"5.0.3",
 	"platform":"windows",
 	"url":[
-		"https://www.charlesproxy.com/assets/release/5.0.2/charles-proxy-5.0.2-win-x86_64.appx",
-		"https://www.charlesproxy.com/assets/release/5.0.2/charles-proxy-5.0.2-win-arm64.appx"
+		"https://www.charlesproxy.com/assets/release/5.0.3/charles-proxy-5.0.3-win-x86_64.appx",
+		"https://www.charlesproxy.com/assets/release/5.0.3/charles-proxy-5.0.3-win-arm64.appx"
 	],
 	"homepage":"https://www.charlesproxy.com",
 	"script":{
