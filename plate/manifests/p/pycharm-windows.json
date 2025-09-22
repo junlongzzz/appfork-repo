@@ -4,17 +4,17 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/pycharm/pycharm.svg",
 	"description":"适用于 数据科学 和 Web 开发的 Python IDE。",
 	"category":"development",
-	"version":"2025.2.1.1(252.25557.178)",
+	"version":"2025.2.2(252.26199.168)",
 	"platform":"windows",
 	"url":{
-		"pycharm-community-2025.2.1.1.exe":"https://download.jetbrains.com/python/pycharm-community-2025.2.1.1.exe",
-		"pycharm-community-2025.2.1.1.win.zip":"https://download.jetbrains.com/python/pycharm-community-2025.2.1.1.win.zip",
-		"pycharm-community-2025.2.1.1-aarch64.exe":"https://download.jetbrains.com/python/pycharm-community-2025.2.1.1-aarch64.exe",
-		"pycharm-community-2025.2.1.1-aarch64.win.zip":"https://download.jetbrains.com/python/pycharm-community-2025.2.1.1-aarch64.win.zip",
-		"pycharm-2025.2.1.1.exe":"https://download.jetbrains.com/python/pycharm-2025.2.1.1.exe",
-		"pycharm-2025.2.1.1.win.zip":"https://download.jetbrains.com/python/pycharm-2025.2.1.1.win.zip",
-		"pycharm-2025.2.1.1-aarch64.exe":"https://download.jetbrains.com/python/pycharm-2025.2.1.1-aarch64.exe",
-		"pycharm-2025.2.1.1-aarch64.win.zip":"https://download.jetbrains.com/python/pycharm-2025.2.1.1-aarch64.win.zip"
+		"pycharm-community-2025.2.2.exe":"https://download.jetbrains.com/python/pycharm-community-2025.2.2.exe",
+		"pycharm-community-2025.2.2.win.zip":"https://download.jetbrains.com/python/pycharm-community-2025.2.2.win.zip",
+		"pycharm-community-2025.2.2-aarch64.exe":"https://download.jetbrains.com/python/pycharm-community-2025.2.2-aarch64.exe",
+		"pycharm-community-2025.2.2-aarch64.win.zip":"https://download.jetbrains.com/python/pycharm-community-2025.2.2-aarch64.win.zip",
+		"pycharm-2025.2.2.exe":"https://download.jetbrains.com/python/pycharm-2025.2.2.exe",
+		"pycharm-2025.2.2.win.zip":"https://download.jetbrains.com/python/pycharm-2025.2.2.win.zip",
+		"pycharm-2025.2.2-aarch64.exe":"https://download.jetbrains.com/python/pycharm-2025.2.2-aarch64.exe",
+		"pycharm-2025.2.2-aarch64.win.zip":"https://download.jetbrains.com/python/pycharm-2025.2.2-aarch64.win.zip"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/pycharm/",
 	"script":{

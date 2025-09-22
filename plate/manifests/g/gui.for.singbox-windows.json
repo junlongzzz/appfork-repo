@@ -4,12 +4,12 @@
 	"logo":"https://raw.githubusercontent.com/GUI-for-Cores/GUI.for.SingBox/main/build/appicon.png",
 	"description":"A SingBox GUI program developed by vue3 + wails.",
 	"category":"network",
-	"version":"1.9.9",
+	"version":"1.10.0",
 	"platform":"windows",
 	"url":{
-		"GUI.for.SingBox-windows-amd64.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.9.9/GUI.for.SingBox-windows-amd64.exe",
-		"GUI.for.SingBox-windows-arm64.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.9.9/GUI.for.SingBox-windows-arm64.exe",
-		"GUI.for.SingBox-windows-386.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.9.9/GUI.for.SingBox-windows-386.exe"
+		"GUI.for.SingBox-windows-amd64.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.10.0/GUI.for.SingBox-windows-amd64.exe",
+		"GUI.for.SingBox-windows-arm64.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.10.0/GUI.for.SingBox-windows-arm64.exe",
+		"GUI.for.SingBox-windows-386.exe":"https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.10.0/GUI.for.SingBox-windows-386.exe"
 	},
 	"homepage":"https://gui-for-cores.github.io",
 	"script":{

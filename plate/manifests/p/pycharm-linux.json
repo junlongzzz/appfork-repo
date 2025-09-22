@@ -4,13 +4,13 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/pycharm/pycharm.svg",
 	"description":"适用于 数据科学 和 Web 开发的 Python IDE。",
 	"category":"development",
-	"version":"2025.2.1.1(252.25557.178)",
+	"version":"2025.2.2(252.26199.168)",
 	"platform":"linux",
 	"url":{
-		"pycharm-community-2025.2.1.1-aarch64.tar.gz":"https://download.jetbrains.com/python/pycharm-community-2025.2.1.1-aarch64.tar.gz",
-		"pycharm-community-2025.2.1.1.tar.gz":"https://download.jetbrains.com/python/pycharm-community-2025.2.1.1.tar.gz",
-		"pycharm-2025.2.1.1-aarch64.tar.gz":"https://download.jetbrains.com/python/pycharm-2025.2.1.1-aarch64.tar.gz",
-		"pycharm-2025.2.1.1.tar.gz":"https://download.jetbrains.com/python/pycharm-2025.2.1.1.tar.gz"
+		"pycharm-community-2025.2.2-aarch64.tar.gz":"https://download.jetbrains.com/python/pycharm-community-2025.2.2-aarch64.tar.gz",
+		"pycharm-community-2025.2.2.tar.gz":"https://download.jetbrains.com/python/pycharm-community-2025.2.2.tar.gz",
+		"pycharm-2025.2.2-aarch64.tar.gz":"https://download.jetbrains.com/python/pycharm-2025.2.2-aarch64.tar.gz",
+		"pycharm-2025.2.2.tar.gz":"https://download.jetbrains.com/python/pycharm-2025.2.2.tar.gz"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/pycharm/",
 	"script":{
