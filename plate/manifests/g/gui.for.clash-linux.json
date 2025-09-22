@@ -4,10 +4,10 @@
 	"logo":"https://raw.githubusercontent.com/GUI-for-Cores/GUI.for.Clash/main/build/appicon.png",
 	"description":"A Clash / (mihomo / meta) GUI program developed by vue3 + wails.",
 	"category":"network",
-	"version":"1.9.10",
+	"version":"1.10.0",
 	"platform":"linux",
 	"url":{
-		"GUI.for.Clash-linux-amd64.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.9.10/GUI.for.Clash-linux-amd64.zip"
+		"GUI.for.Clash-linux-amd64.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.10.0/GUI.for.Clash-linux-amd64.zip"
 	},
 	"homepage":"https://gui-for-cores.github.io",
 	"script":{
