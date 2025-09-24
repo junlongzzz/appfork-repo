@@ -4,17 +4,17 @@ description: Another [Mihomo](https://github.com/MetaCubeX/mihomo) GUI
 category: network
 platform: windows
 homepage: https://github.com/xishang0128/sparkle
-version: 1.6.11
+version: 1.6.12
 url:
-  - https://github.com/xishang0128/sparkle/releases/download/1.6.11/sparkle-windows-1.6.11-x64-setup.exe
-  - https://github.com/xishang0128/sparkle/releases/download/1.6.11/sparkle-windows-1.6.11-x64-portable.7z
-  - https://github.com/xishang0128/sparkle/releases/download/1.6.11/sparkle-windows-1.6.11-arm64-setup.exe
-  - https://github.com/xishang0128/sparkle/releases/download/1.6.11/sparkle-windows-1.6.11-arm64-portable.7z
+- https://github.com/xishang0128/sparkle/releases/download/1.6.12/sparkle-windows-1.6.12-x64-setup.exe
+- https://github.com/xishang0128/sparkle/releases/download/1.6.12/sparkle-windows-1.6.12-x64-portable.7z
+- https://github.com/xishang0128/sparkle/releases/download/1.6.12/sparkle-windows-1.6.12-arm64-setup.exe
+- https://github.com/xishang0128/sparkle/releases/download/1.6.12/sparkle-windows-1.6.12-arm64-portable.7z
 script:
   args:
     autoupdate:
-      - https://github.com/xishang0128/sparkle/releases/download/${version}/sparkle-windows-${version}-x64-setup.exe
-      - https://github.com/xishang0128/sparkle/releases/download/${version}/sparkle-windows-${version}-x64-portable.7z
-      - https://github.com/xishang0128/sparkle/releases/download/${version}/sparkle-windows-${version}-arm64-setup.exe
-      - https://github.com/xishang0128/sparkle/releases/download/${version}/sparkle-windows-${version}-arm64-portable.7z
+    - https://github.com/xishang0128/sparkle/releases/download/${version}/sparkle-windows-${version}-x64-setup.exe
+    - https://github.com/xishang0128/sparkle/releases/download/${version}/sparkle-windows-${version}-x64-portable.7z
+    - https://github.com/xishang0128/sparkle/releases/download/${version}/sparkle-windows-${version}-arm64-setup.exe
+    - https://github.com/xishang0128/sparkle/releases/download/${version}/sparkle-windows-${version}-arm64-portable.7z
   name: appfork-check-update
