@@ -5,7 +5,7 @@ description: Rust 语言实现的 Nacos 服务平台，兼容 Nacos(Java)，启�
 category: development
 platform: other
 homepage: https://github.com/nacos-group/r-nacos
-version: 0.7.1
+version: 0.7.2
 url:
   via GitHub Release: https://github.com/nacos-group/r-nacos/releases/latest
   via Docker: https://hub.docker.com/r/qingpan/rnacos
