@@ -4,7 +4,7 @@
 	"logo":"https://raw.githubusercontent.com/SagerNet/sing-box-for-android/main/app/src/main/ic_launcher-playstore.png",
 	"description":"The universal proxy platform.",
 	"category":"network",
-	"version":"1.12.8",
+	"version":"1.12.9",
 	"platform":"android",
 	"script":{
 		"args":{
@@ -23,15 +23,15 @@
 		"name":"appfork-check-update"
 	},
 	"url":[
-		"https://github.com/SagerNet/sing-box/releases/download/v1.12.8/sing-box-1.12.8-android-amd64.tar.gz",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.12.8/sing-box-1.12.8-android-arm64.tar.gz",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.12.8/sing-box-1.12.8-android-armv7.tar.gz",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.12.8/SFA-1.12.8-arm64-v8a.apk",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.12.8/SFA-1.12.8-armeabi-v7a.apk",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.12.8/SFA-1.12.8-foss-universal.apk",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.12.8/SFA-1.12.8-universal.apk",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.12.8/SFA-1.12.8-x86.apk",
-		"https://github.com/SagerNet/sing-box/releases/download/v1.12.8/SFA-1.12.8-x86_64.apk"
+		"https://github.com/SagerNet/sing-box/releases/download/v1.12.9/sing-box-1.12.9-android-amd64.tar.gz",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.12.9/sing-box-1.12.9-android-arm64.tar.gz",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.12.9/sing-box-1.12.9-android-armv7.tar.gz",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.12.9/SFA-1.12.9-arm64-v8a.apk",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.12.9/SFA-1.12.9-armeabi-v7a.apk",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.12.9/SFA-1.12.9-foss-universal.apk",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.12.9/SFA-1.12.9-universal.apk",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.12.9/SFA-1.12.9-x86.apk",
+		"https://github.com/SagerNet/sing-box/releases/download/v1.12.9/SFA-1.12.9-x86_64.apk"
 	],
 	"homepage":"https://github.com/SagerNet/sing-box"
 }
