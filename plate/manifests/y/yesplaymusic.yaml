@@ -3,7 +3,7 @@ name: YesPlayMusic
 logo: https://raw.githubusercontent.com/qier222/YesPlayMusic/master/images/logo.png
 description: 高颜值的第三方网易云音乐播放器
 category: music
-version: 0.4.9
+version: 0.4.10
 platform: windows
 script:
   args:
@@ -12,6 +12,6 @@ script:
     - https://github.com/qier222/YesPlayMusic/releases/download/v${version}/YesPlayMusic.Setup.${major}.${minor}.${patch}.exe
   name: appfork-check-update
 url:
-- https://github.com/qier222/YesPlayMusic/releases/download/v0.4.9/YesPlayMusic.0.4.9.exe
-- https://github.com/qier222/YesPlayMusic/releases/download/v0.4.9/YesPlayMusic.Setup.0.4.9.exe
+- https://github.com/qier222/YesPlayMusic/releases/download/v0.4.10/YesPlayMusic.0.4.10.exe
+- https://github.com/qier222/YesPlayMusic/releases/download/v0.4.10/YesPlayMusic.Setup.0.4.10.exe
 homepage: https://github.com/qier222/YesPlayMusic
