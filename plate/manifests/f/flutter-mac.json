@@ -8,8 +8,8 @@
 	"platform":"mac",
 	"script":"flutter",
 	"url":[
-		"https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.35.6-stable.zip",
-		"https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_3.35.6-stable.zip"
+		"https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_3.35.6-stable.zip",
+		"https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.35.6-stable.zip"
 	],
 	"homepage":"https://flutter.cn"
 }
