@@ -13,8 +13,8 @@ static def checkUpdate(manifest, args) {
     ]
 
     // 先获取网页，从网页内获取版本信息请求地址
-    def html = HttpUtil.createGet(manifest.homepage as String, true).timeout(timeout).headerMap(headers, true)
-            .execute().body()
+    def html = HttpUtil.createGet(manifest.homepage as String, true).setProxy(Proxy.NO_PROXY)
+            .timeout(timeout).headerMap(headers, true).execute().body()
     def urlMatcher = ((html == null || html.isEmpty()) ? '' : html).replace(' ', '') =~ 'varrainbowConfigUrl="(?<url>.*)";'
     def checkUrl
     if (urlMatcher.find()) {
@@ -31,8 +31,8 @@ static def checkUpdate(manifest, args) {
         return null
     }
 
-    def response = HttpUtil.createGet(checkUrl, true).timeout(timeout).headerMap(headers, true)
-            .execute().body()
+    def response = HttpUtil.createGet(checkUrl, true).setProxy(Proxy.NO_PROXY)
+            .timeout(timeout).headerMap(headers, true).execute().body()
     if (response == null || response.isEmpty()) {
         return null
     }
