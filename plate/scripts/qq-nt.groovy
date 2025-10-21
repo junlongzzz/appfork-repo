@@ -19,6 +19,13 @@ static def checkUpdate(manifest, args) {
     def checkUrl
     if (urlMatcher.find()) {
         checkUrl = urlMatcher.group('url')
+        if (!checkUrl.startsWithAny('https://', 'http://')) {
+            if (checkUrl.startsWith('//')) {
+                checkUrl = 'https:' + checkUrl
+            } else {
+                checkUrl = 'https://' + checkUrl
+            }
+        }
     } else {
         // 网页内未找到，使用默认地址
         checkUrl = switch (platform) {
