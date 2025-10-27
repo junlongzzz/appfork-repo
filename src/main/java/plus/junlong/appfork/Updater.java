@@ -235,7 +235,7 @@ public final class Updater implements CommandLineRunner {
                         if (ReUtil.isMatch(versionPattern, checkVersionStr) && ReUtil.isMatch(versionPattern, version)
                                 && StrUtil.compareVersion(checkVersionStr, version) < 0) {
                             // x.y.z类型版本号比较，如果脚本返回的版本号小于清单文件内的版本号，则跳过
-                            log.warn("manifest [{}] version [{}] is great than check [{}]", manifest.getName(), version, checkVersion);
+                            log.warn("manifest [{}] version [{}] is greater than check [{}]", manifest.getName(), version, checkVersion);
                             isValidVersion = false;
                         } else {
                             // 非语义化版本号有变更，直接更新清单文件属性
