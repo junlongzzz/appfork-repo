@@ -6,10 +6,10 @@ description: Tailscale a WireGuard based mesh VPN, used to connect your computer
 category: network
 platform: mac
 homepage: https://tailscale.com
-version: 1.90.3
+version: 1.90.4
 url:
-- https://pkgs.tailscale.com/stable/Tailscale-1.90.3-macos.pkg
-- https://pkgs.tailscale.com/stable/Tailscale-1.90.3-macos.zip
+- https://pkgs.tailscale.com/stable/Tailscale-1.90.4-macos.pkg
+- https://pkgs.tailscale.com/stable/Tailscale-1.90.4-macos.zip
 script:
   args:
     url: https://pkgs.tailscale.com/stable/
