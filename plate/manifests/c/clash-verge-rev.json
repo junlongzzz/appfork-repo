@@ -17,8 +17,8 @@
 				"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_x64-setup.exe",
 				"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_arm64-setup.exe"
 			],
-			"url":"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/updater/update.json",
-			"jsonpath":"$.name"
+			"url":"https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/latest.json",
+			"jsonpath":"$.version"
 		},
 		"name":"appfork-check-update"
 	}
