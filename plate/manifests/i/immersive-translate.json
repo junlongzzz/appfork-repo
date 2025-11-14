@@ -4,7 +4,7 @@
 	"logo":"https://avatars.githubusercontent.com/u/117679712?s=200&v=4",
 	"description":"一键开启双语阅读，提升信息获取效率。",
 	"category":"reading",
-	"version":"1.23.4",
+	"version":"1.23.5",
 	"platform":"extensions",
 	"url":{
 		"Install on Microsoft Edge":"https://microsoftedge.microsoft.com/addons/detail/amkbmndfnliijdhojkpoglbnaaahippg",
