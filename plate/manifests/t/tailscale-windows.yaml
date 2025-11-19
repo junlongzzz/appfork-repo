@@ -6,10 +6,10 @@ description: Tailscale a WireGuard based mesh VPN, used to connect your computer
 category: network
 platform: windows
 homepage: https://tailscale.com
-version: 1.90.6
+version: 1.90.8
 url:
-- https://pkgs.tailscale.com/stable/tailscale-setup-1.90.6-amd64.msi
-- https://pkgs.tailscale.com/stable/tailscale-setup-1.90.6-arm64.msi
+- https://pkgs.tailscale.com/stable/tailscale-setup-1.90.8-amd64.msi
+- https://pkgs.tailscale.com/stable/tailscale-setup-1.90.8-arm64.msi
 script:
   args:
     url: https://pkgs.tailscale.com/stable/
