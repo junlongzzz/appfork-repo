@@ -4,12 +4,12 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/webstorm/webstorm.svg",
 	"description":"JavaScript 和 TypeScript IDE，让开发更加高效愉快。",
 	"category":"development",
-	"version":"2025.2.4(252.27397.92)",
+	"version":"2025.2.5(252.28238.10)",
 	"platform":"windows",
 	"url":{
-		"WebStorm-2025.2.4.exe":"https://download.jetbrains.com/webstorm/WebStorm-2025.2.4.exe",
-		"WebStorm-2025.2.4.win.zip":"https://download.jetbrains.com/webstorm/WebStorm-2025.2.4.win.zip",
-		"WebStorm-2025.2.4-aarch64.exe":"https://download.jetbrains.com/webstorm/WebStorm-2025.2.4-aarch64.exe"
+		"WebStorm-2025.2.5.exe":"https://download.jetbrains.com/webstorm/WebStorm-2025.2.5.exe",
+		"WebStorm-2025.2.5.win.zip":"https://download.jetbrains.com/webstorm/WebStorm-2025.2.5.win.zip",
+		"WebStorm-2025.2.5-aarch64.exe":"https://download.jetbrains.com/webstorm/WebStorm-2025.2.5-aarch64.exe"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/webstorm/",
 	"script":{
