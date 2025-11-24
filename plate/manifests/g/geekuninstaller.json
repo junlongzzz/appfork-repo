@@ -4,7 +4,7 @@
 	"logo":"https://geekuninstaller.com/assets/images/boxshot.png",
 	"description":"Basic uninstaller though powerful and lightning fast.(for personal use)",
 	"category":"tools",
-	"version":"1.5.2.165",
+	"version":"1.5.3.170",
 	"platform":"windows",
 	"script":{
 		"args":{
