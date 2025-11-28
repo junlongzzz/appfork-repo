@@ -4,17 +4,17 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/pycharm/pycharm.svg",
 	"description":"适用于 数据科学 和 Web 开发的 Python IDE。",
 	"category":"development",
-	"version":"2025.2.4(252.27397.106)",
+	"version":"2025.2.5(252.28238.29)",
 	"platform":"windows",
 	"url":{
-		"pycharm-community-2025.2.4.exe":"https://download.jetbrains.com/python/pycharm-community-2025.2.4.exe",
-		"pycharm-community-2025.2.4.win.zip":"https://download.jetbrains.com/python/pycharm-community-2025.2.4.win.zip",
-		"pycharm-community-2025.2.4-aarch64.exe":"https://download.jetbrains.com/python/pycharm-community-2025.2.4-aarch64.exe",
-		"pycharm-community-2025.2.4-aarch64.win.zip":"https://download.jetbrains.com/python/pycharm-community-2025.2.4-aarch64.win.zip",
-		"pycharm-2025.2.4.exe":"https://download.jetbrains.com/python/pycharm-2025.2.4.exe",
-		"pycharm-2025.2.4.win.zip":"https://download.jetbrains.com/python/pycharm-2025.2.4.win.zip",
-		"pycharm-2025.2.4-aarch64.exe":"https://download.jetbrains.com/python/pycharm-2025.2.4-aarch64.exe",
-		"pycharm-2025.2.4-aarch64.win.zip":"https://download.jetbrains.com/python/pycharm-2025.2.4-aarch64.win.zip"
+		"pycharm-community-2025.2.5.exe":"https://download.jetbrains.com/python/pycharm-community-2025.2.5.exe",
+		"pycharm-community-2025.2.5.win.zip":"https://download.jetbrains.com/python/pycharm-community-2025.2.5.win.zip",
+		"pycharm-community-2025.2.5-aarch64.exe":"https://download.jetbrains.com/python/pycharm-community-2025.2.5-aarch64.exe",
+		"pycharm-community-2025.2.5-aarch64.win.zip":"https://download.jetbrains.com/python/pycharm-community-2025.2.5-aarch64.win.zip",
+		"pycharm-2025.2.5.exe":"https://download.jetbrains.com/python/pycharm-2025.2.5.exe",
+		"pycharm-2025.2.5.win.zip":"https://download.jetbrains.com/python/pycharm-2025.2.5.win.zip",
+		"pycharm-2025.2.5-aarch64.exe":"https://download.jetbrains.com/python/pycharm-2025.2.5-aarch64.exe",
+		"pycharm-2025.2.5-aarch64.win.zip":"https://download.jetbrains.com/python/pycharm-2025.2.5-aarch64.win.zip"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/pycharm/",
 	"script":{
