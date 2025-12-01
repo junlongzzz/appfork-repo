@@ -1,9 +1,10 @@
 author: Mountain Loop Labs
 name: Yaak
 logo: https://yaak.app/static/logo.svg
-description: A fast, privacy-first API client for REST, GraphQL, SSE, WebSocket, and gRPC – built with Tauri, Rust, and React.
+description: A fast, privacy-first API client for REST, GraphQL, SSE, WebSocket, and
+  gRPC – built with Tauri, Rust, and React.
 category: development
-version: 2025.8.2
+version: 2025.9.0
 platform: windows
 script:
   args:
@@ -12,5 +13,5 @@ script:
     - https://github.com/mountain-loop/yaak/releases/download/v${version}/Yaak_${version}_x64-setup_windows.exe
   name: appfork-check-update
 url:
-- https://github.com/mountain-loop/yaak/releases/download/v2025.8.2/Yaak_2025.8.2_x64-setup_windows.exe
+- https://github.com/mountain-loop/yaak/releases/download/v2025.9.0/Yaak_2025.9.0_x64-setup_windows.exe
 homepage: https://yaak.app
