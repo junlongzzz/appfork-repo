@@ -5,10 +5,10 @@ description: Hoppscotch is a lightweight, web-based API development suite.  It w
   built from the ground up with ease of use and accessibility in mind  providing all
   the functionality needed for developers with minimalist, unobtrusive UI.
 category: development
-version: 25.11.0-0
+version: 25.11.1-0
 platform: windows
 url:
-- https://github.com/hoppscotch/releases/releases/download/v25.11.0-0/Hoppscotch_win_x64.msi
+- https://github.com/hoppscotch/releases/releases/download/v25.11.1-0/Hoppscotch_win_x64.msi
 - https://hoppscotch.io
 homepage: https://hoppscotch.com
 script:
