@@ -7,8 +7,10 @@
 	"version":"6.3.6",
 	"platform":"windows",
 	"url":{
+		"Windows on ARM: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.3.6/tportable-arm64.6.3.6.zip",
 		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.3.6/tportable-x64.6.3.6.zip",
 		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.3.6/tportable.6.3.6.zip",
+		"Windows on ARM: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.3.6/tsetup-arm64.6.3.6.exe",
 		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.3.6/tsetup-x64.6.3.6.exe",
 		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.3.6/tsetup.6.3.6.exe"
 	},
