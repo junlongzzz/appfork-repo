@@ -4,12 +4,12 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/rustrover/rustrover.svg",
 	"description":"面向 Rust 开发者的强大 IDE。",
 	"category":"development",
-	"version":"2025.2.5(252.28238.28)",
+	"version":"2025.3(253.28294.352)",
 	"platform":"windows",
 	"url":{
-		"RustRover-2025.2.5.exe":"https://download.jetbrains.com/rustrover/RustRover-2025.2.5.exe",
-		"RustRover-2025.2.5.win.zip":"https://download.jetbrains.com/rustrover/RustRover-2025.2.5.win.zip",
-		"RustRover-2025.2.5-aarch64.exe":"https://download.jetbrains.com/rustrover/RustRover-2025.2.5-aarch64.exe"
+		"RustRover-2025.3.exe":"https://download.jetbrains.com/rustrover/RustRover-2025.3.exe",
+		"RustRover-2025.3.win.zip":"https://download.jetbrains.com/rustrover/RustRover-2025.3.win.zip",
+		"RustRover-2025.3-aarch64.exe":"https://download.jetbrains.com/rustrover/RustRover-2025.3-aarch64.exe"
 	},
 	"homepage":"https://www.jetbrains.com/zh-cn/rust/",
 	"script":{
