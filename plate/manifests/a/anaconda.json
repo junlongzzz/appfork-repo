@@ -15,8 +15,8 @@
 		"name":"appfork-check-update"
 	},
 	"homepage":"https://www.anaconda.com",
-	"version":"2025.06-1",
+	"version":"2025.12-1",
 	"url":[
-		"https://repo.anaconda.com/archive/Anaconda3-2025.06-1-Windows-x86_64.exe"
+		"https://repo.anaconda.com/archive/Anaconda3-2025.12-1-Windows-x86_64.exe"
 	]
 }
