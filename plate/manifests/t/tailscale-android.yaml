@@ -6,9 +6,9 @@ description: Tailscale a WireGuard based mesh VPN, used to connect your computer
 category: network
 platform: android
 homepage: https://tailscale.com
-version: 1.90.9
+version: 1.92.2
 url:
-- https://pkgs.tailscale.com/stable/tailscale-android-universal-1.90.9.apk
+- https://pkgs.tailscale.com/stable/tailscale-android-universal-1.92.2.apk
 script:
   args:
     url: https://pkgs.tailscale.com/stable/
