@@ -5,9 +5,9 @@ description: Mihomo Dashboard, The Official One, XD
 category: network
 platform: other
 homepage: https://github.com/MetaCubeX/metacubexd
-version: 1.229.0
+version: 1.230.0
 url:
-  compressed-dist.tgz: https://github.com/MetaCubeX/metacubexd/releases/download/v1.229.0/compressed-dist.tgz
+  compressed-dist.tgz: https://github.com/MetaCubeX/metacubexd/releases/download/v1.230.0/compressed-dist.tgz
   Official: https://d.metacubex.one
   GH Pages: https://metacubex.github.io/metacubexd
   Cloudflare Pages: https://metacubexd.pages.dev
