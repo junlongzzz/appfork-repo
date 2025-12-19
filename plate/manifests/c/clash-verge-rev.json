@@ -6,10 +6,10 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://github.com/clash-verge-rev/clash-verge-rev",
-	"version":"2.4.3",
+	"version":"2.4.4",
 	"url":[
-		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.4.3/Clash.Verge_2.4.3_x64-setup.exe",
-		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.4.3/Clash.Verge_2.4.3_arm64-setup.exe"
+		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.4.4/Clash.Verge_2.4.4_x64-setup.exe",
+		"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.4.4/Clash.Verge_2.4.4_arm64-setup.exe"
 	],
 	"script":{
 		"args":{
