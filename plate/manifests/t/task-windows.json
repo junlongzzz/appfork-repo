@@ -6,12 +6,12 @@
 	"category":"development",
 	"platform":"windows",
 	"homepage":"https://taskfile.dev",
-	"version":"3.46.2",
+	"version":"3.46.3",
 	"url":{
-		"task_windows_amd64.zip":"https://github.com/go-task/task/releases/download/v3.46.2/task_windows_amd64.zip",
-		"task_windows_386.zip":"https://github.com/go-task/task/releases/download/v3.46.2/task_windows_386.zip",
-		"task_windows_arm64.zip":"https://github.com/go-task/task/releases/download/v3.46.2/task_windows_arm64.zip",
-		"task_windows_arm.zip":"https://github.com/go-task/task/releases/download/v3.46.2/task_windows_arm.zip"
+		"task_windows_amd64.zip":"https://github.com/go-task/task/releases/download/v3.46.3/task_windows_amd64.zip",
+		"task_windows_386.zip":"https://github.com/go-task/task/releases/download/v3.46.3/task_windows_386.zip",
+		"task_windows_arm64.zip":"https://github.com/go-task/task/releases/download/v3.46.3/task_windows_arm64.zip",
+		"task_windows_arm.zip":"https://github.com/go-task/task/releases/download/v3.46.3/task_windows_arm.zip"
 	},
 	"script":{
 		"args":{
