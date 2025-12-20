@@ -16,7 +16,7 @@
 		"name":"appfork-check-update"
 	},
 	"homepage":"https://github.com/NeteaseCloudMusicApiEnhanced/api-enhanced",
-	"version":"4.29.18",
+	"version":"4.29.19",
 	"url":{
 		"npm":"https://www.npmjs.com/package/@neteasecloudmusicapienhanced/api",
 		"Docker Image":"https://hub.docker.com/r/moefurina/ncm-api"
