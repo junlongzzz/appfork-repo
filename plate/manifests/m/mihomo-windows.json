@@ -6,11 +6,11 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://github.com/MetaCubeX/mihomo",
-	"version":"1.19.17",
+	"version":"1.19.18",
 	"url":[
-		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.17/mihomo-windows-amd64-v1.19.17.zip",
-		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.17/mihomo-windows-amd64-compatible-v1.19.17.zip",
-		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.17/mihomo-windows-arm64-v1.19.17.zip"
+		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.18/mihomo-windows-amd64-v1.19.18.zip",
+		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.18/mihomo-windows-amd64-compatible-v1.19.18.zip",
+		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.18/mihomo-windows-arm64-v1.19.18.zip"
 	],
 	"script":{
 		"args":{
@@ -20,8 +20,8 @@
 				"https://github.com/MetaCubeX/mihomo/releases/download/v${version}/mihomo-windows-arm64-v${version}.zip"
 			],
 			"_url":"https://github.com/MetaCubeX/mihomo/releases/latest/download/version.txt",
-            "_regex":"v(?<version>[\\d.]+)"
-        },
+			"_regex":"v(?<version>[\\d.]+)"
+		},
 		"name":"appfork-check-update"
 	}
 }
