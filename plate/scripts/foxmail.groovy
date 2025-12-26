@@ -36,6 +36,6 @@ static def checkUpdate(manifest, args) {
 
     return [
             version: matcher.group(1),
-            url    : location
+            url    : url
     ]
 }
