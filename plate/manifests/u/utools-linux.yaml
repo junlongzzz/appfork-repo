@@ -1,13 +1,12 @@
 author: 福州猿力信息科技有限公司
 name: uTools
 logo: https://www.u-tools.cn/assets/favicon.png
-description: |-
-  新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持UOS, Deepin, Ubuntu
+description: 新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持UOS, Deepin, Ubuntu
 category: tools
-version: 7.3.2
+version: 7.5.0
 platform: linux
 url:
-- https://open.u-tools.cn/download/utools_7.3.2_amd64.deb
+- https://open.u-tools.cn/download/utools_7.5.0_amd64.deb
 homepage: https://www.u-tools.cn
 script:
   args:

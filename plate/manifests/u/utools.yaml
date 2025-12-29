@@ -1,14 +1,13 @@
 author: 福州猿力信息科技有限公司
 name: uTools
 logo: https://www.u-tools.cn/assets/favicon.png
-description: |-
-  新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持Windows 7, 10, 11
+description: 新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持Windows 7, 10, 11
 category: tools
-version: 7.3.2
+version: 7.5.0
 platform: windows
 url:
-- https://open.u-tools.cn/download/uTools-7.3.2.exe
-- https://open.u-tools.cn/download/uTools-7.3.2-ia32.exe
+- https://open.u-tools.cn/download/uTools-7.5.0.exe
+- https://open.u-tools.cn/download/uTools-7.5.0-ia32.exe
 homepage: https://www.u-tools.cn
 script:
   args:
