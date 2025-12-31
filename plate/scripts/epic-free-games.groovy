@@ -1,78 +1,85 @@
 import cn.hutool.core.date.DateUtil
+import com.alibaba.fastjson2.JSONObject
 import groovy.json.JsonSlurper
+import plus.junlong.appfork.script.ScriptUpdater
 
-static def checkUpdate(manifest, args) {
-    def versionDate = null
-    def url = [:]
+class UpdateScript implements ScriptUpdater {
 
-    def time = 0L
+    @Override
+    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+        def versionDate = null
+        def url = [:]
 
-    def response = 'https://store-site-backend-static-ipv4.ak.epicgames.com/freeGamesPromotions?locale=zh-CN&country=CN&allowCountries=CN'.toURL().text
-    def object = new JsonSlurper().parseText(response)
-    def searchStore = object.data.Catalog.searchStore
-    if (searchStore.paging.total <= 0) {
-        return null
-    }
-    def elements = searchStore.elements
-    for (element in elements) {
-        if (element.price == null) {
-            continue
+        def time = 0L
+
+        def response = 'https://store-site-backend-static-ipv4.ak.epicgames.com/freeGamesPromotions?locale=zh-CN&country=CN&allowCountries=CN'.toURL().text
+        def object = new JsonSlurper().parseText(response)
+        def searchStore = object.data.Catalog.searchStore
+        if (searchStore.paging.total <= 0) {
+            return null
         }
-        // 折扣价为0
-        if (element.price.totalPrice.discountPrice <= 0) {
-            def flag = false
-            // 付款规则（优惠）
-            def offers = []
-            // 折扣
-            offers.addAll(element.price.lineOffers)
-            if (element.promotions != null) {
-                // 促销
-                offers.addAll(element.promotions.promotionalOffers)
+        def elements = searchStore.elements
+        for (element in elements) {
+            if (element.price == null) {
+                continue
             }
-            for (offer in offers) {
-                // 规则
-                def rules = offer.appliedRules
-                if (rules == null) {
-                    rules = offer.promotionalOffers
+            // 折扣价为0
+            if (element.price.totalPrice.discountPrice <= 0) {
+                def flag = false
+                // 付款规则（优惠）
+                def offers = []
+                // 折扣
+                offers.addAll(element.price.lineOffers)
+                if (element.promotions != null) {
+                    // 促销
+                    offers.addAll(element.promotions.promotionalOffers)
                 }
-                for (rule in rules) {
-                    // 折扣优惠结束时间在今日之后表示正在进行优惠折扣
-                    if (rule.endDate) {
-                        def endDate = DateUtil.parse(rule.endDate).setTimeZone(TimeZone.getDefault())
-                        def nowDate = new Date()
-                        if (endDate.isAfter(nowDate)) {
-                            if (versionDate == null) {
-                                versionDate = endDate
-                            } else if (endDate.isAfter(versionDate)) {
-                                versionDate = endDate
+                for (offer in offers) {
+                    // 规则
+                    def rules = offer.appliedRules
+                    if (rules == null) {
+                        rules = offer.promotionalOffers
+                    }
+                    for (rule in rules) {
+                        // 折扣优惠结束时间在今日之后表示正在进行优惠折扣
+                        if (rule.endDate) {
+                            def endDate = DateUtil.parse(rule.endDate).setTimeZone(TimeZone.getDefault())
+                            def nowDate = new Date()
+                            if (endDate.isAfter(nowDate)) {
+                                if (versionDate == null) {
+                                    versionDate = endDate
+                                } else if (endDate.isAfter(versionDate)) {
+                                    versionDate = endDate
+                                }
+                                // 游戏商城链接
+                                String slug
+                                if (element.catalogNs.mappings) {
+                                    slug = element.catalogNs.mappings[0].pageSlug
+                                } else {
+                                    slug = element.productSlug
+                                }
+                                url["${element.title} [${endDate}]" as String] = "https://store.epicgames.com/zh-CN/p/${slug}".toString()
+                                time += endDate.time / 1000
+                                flag = true
+                                break
                             }
-                            // 游戏商城链接
-                            String slug
-                            if (element.catalogNs.mappings) {
-                                slug = element.catalogNs.mappings[0].pageSlug
-                            } else {
-                                slug = element.productSlug
-                            }
-                            url["${element.title} [${endDate}]" as String] = "https://store.epicgames.com/zh-CN/p/${slug}".toString()
-                            time += endDate.time / 1000
-                            flag = true
-                            break
                         }
                     }
-                }
-                if (flag) {
-                    break
+                    if (flag) {
+                        break
+                    }
                 }
             }
         }
+
+        if (versionDate) {
+            return [
+                    'version': "${versionDate} (${time})" as String,
+                    'url'    : url
+            ]
+        }
+
+        return null
     }
 
-    if (versionDate) {
-        return [
-                'version': "${versionDate} (${time})" as String,
-                'url'    : url
-        ]
-    }
-
-    return null
 }

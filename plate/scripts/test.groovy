@@ -2,20 +2,27 @@ import cn.hutool.crypto.Mode
 import cn.hutool.crypto.Padding
 import cn.hutool.crypto.symmetric.AES
 import cn.hutool.http.HttpUtil
+import com.alibaba.fastjson2.JSONObject
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
-import plus.junlong.appfork.ScriptVars
+import plus.junlong.appfork.script.ScriptUpdater
+import plus.junlong.appfork.script.ScriptVars
 
-static def checkUpdate(manifest, args) {
-    println('=====================================')
-    println('>> This is test script')
-    println(">> manifest: \n${JsonOutput.prettyPrint(JsonOutput.toJson(manifest as Map))}")
-    println(">> script args: \n${JsonOutput.prettyPrint(JsonOutput.toJson(args as Map))}")
-    println('=====================================')
+class UpdateScript implements ScriptUpdater {
 
-    checkUpdateTest(manifest, args)
+    @Override
+    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+        return checkUpdateTest(manifest, args)
+    }
 
-    // 获取应用详情
+    static def checkUpdateTest(manifest, args) {
+        println('=====================================')
+        println('>> This is test script')
+        println(">> manifest: \n${JsonOutput.prettyPrint(JsonOutput.toJson(manifest as Map))}")
+        println(">> script args: \n${JsonOutput.prettyPrint(JsonOutput.toJson(args as Map))}")
+        println('=====================================')
+
+        // 获取应用详情
 //    def respJson = lestore('/api/webstorecontents/app/details', [
 //            softId: '13407'
 //    ])
@@ -25,7 +32,7 @@ static def checkUpdate(manifest, args) {
 //        println(respJson.data)
 //    }
 
-    // 获取应用的下载链接地址
+        // 获取应用的下载链接地址
 //    def respJson = lestore('/api/webstorecontents/download/getDownloadUrl', [
 //            bizType: 1,
 //            product: 3,
@@ -38,35 +45,33 @@ static def checkUpdate(manifest, args) {
 //        println(respJson.data)
 //    }
 
-    return [
-            version: 'beta',
-            url    : 'https://junlong.plus/ztool/appfork'
-    ]
-}
+        return [
+                version: 'beta',
+                url    : 'https://junlong.plus/ztool/appfork'
+        ]
+    }
 
-static def checkUpdateTest(manifest, args) {
-    // test script here
-}
+    static def lestore(url, body) {
+        // 联想软件商店的请求参数AES加密解密 https://lestore.lenovo.com/
+        // AES加密密钥，必须与加密时使用的密钥相同
+        String key = '65023EC4BA7420BB' // 16字节的密钥
+        // cbc pkcs7padding(与pkcs5大体一致) iv向量加密解密
+        AES aes = new AES(Mode.CBC, Padding.PKCS5Padding, key.getBytes(), key.getBytes())
+        def softId = body.softId
 
-static def lestore(url, body) {
-    // 联想软件商店的请求参数AES加密解密 https://lestore.lenovo.com/
-    // AES加密密钥，必须与加密时使用的密钥相同
-    String key = '65023EC4BA7420BB' // 16字节的密钥
-    // cbc pkcs7padding(与pkcs5大体一致) iv向量加密解密
-    AES aes = new AES(Mode.CBC, Padding.PKCS5Padding, key.getBytes(), key.getBytes())
-    def softId = body.softId
+        def baseUrl = 'https://lestore.lenovo.com'
+        def resp = HttpUtil.createPost("${baseUrl}${url}")
+                .timeout(30000)
+                .contentType('application/json')
+                .header('user-agent', ScriptVars.USER_AGENT)
+                .header('origin', baseUrl)
+                .header('referer', "${baseUrl}/detail/${softId}")
+                .body(JsonOutput.toJson(
+                        [
+                                data: aes.encryptBase64(JsonOutput.toJson(body as Map))
+                        ]
+                )).execute()
+        return new JsonSlurper().parseText(resp.body())
+    }
 
-    def baseUrl = 'https://lestore.lenovo.com'
-    def resp = HttpUtil.createPost("${baseUrl}${url}")
-            .timeout(30000)
-            .contentType('application/json')
-            .header('user-agent', ScriptVars.USER_AGENT)
-            .header('origin', baseUrl)
-            .header('referer', "${baseUrl}/detail/${softId}")
-            .body(JsonOutput.toJson(
-                    [
-                            data: aes.encryptBase64(JsonOutput.toJson(body as Map))
-                    ]
-            )).execute()
-    return new JsonSlurper().parseText(resp.body())
 }

@@ -5,6 +5,7 @@ import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.ReUtil;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.crypto.digest.DigestUtil;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.alibaba.fastjson2.JSONWriter;
@@ -14,15 +15,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.yaml.snakeyaml.Yaml;
+import plus.junlong.appfork.script.ScriptUpdater;
 
 import java.io.File;
+import java.io.Serial;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.function.Consumer;
 import java.util.regex.Pattern;
 
@@ -35,6 +35,9 @@ public final class Updater implements CommandLineRunner {
 
     // 平台列表
     private final Map<String, String> platforms = new LinkedHashMap<>() {
+        @Serial
+        private static final long serialVersionUID = 1L;
+
         {
             this.put("windows", "Windows");
             this.put("linux", "Linux");
@@ -47,6 +50,9 @@ public final class Updater implements CommandLineRunner {
 
     // 分类列表
     private final Map<String, String> categories = new LinkedHashMap<>() {
+        @Serial
+        private static final long serialVersionUID = 1L;
+
         {
             this.put("network", "网络应用");
             this.put("chat", "社交沟通");
@@ -70,6 +76,11 @@ public final class Updater implements CommandLineRunner {
     private final int SYNC_UPDATE = 1;
     // 未完成同步，失败
     private final int SYNC_ERROR = 2;
+
+    // 缓存已加载的脚本
+    private final Map<String, Class<? extends ScriptUpdater>> scriptCache = new ConcurrentHashMap<>();
+    // 脚本解析锁
+    private final Object groovyParseLock = new Object();
 
     // 匹配版本号 x.y.z
     private final Pattern versionPattern = Pattern.compile("^(?<version>[\\d.]+)$");
@@ -149,6 +160,7 @@ public final class Updater implements CommandLineRunner {
      * @param groovyClassLoader 脚本类加载器
      * @return 同步状态
      */
+    @SuppressWarnings("unchecked")
     private int sync(File manifest, GroovyClassLoader groovyClassLoader) {
         try {
             // 清单文件格式
@@ -189,7 +201,7 @@ public final class Updater implements CommandLineRunner {
             // 清单文件对应的script脚本文件名 默认为清单文件名一致
             String scriptName = code;
             // 脚本文件执行时的额外参数
-            Map<?, ?> scriptArgs = null;
+            JSONObject scriptArgs = null;
             if (scriptValue instanceof String) {
                 // 如果脚本值是字符串，那么直接作为脚本文件名
                 scriptName = (String) scriptValue;
@@ -200,8 +212,8 @@ public final class Updater implements CommandLineRunner {
                     scriptName = (String) nameObj;
                 }
                 Object argsObj = scriptValueMap.get("args");
-                if (argsObj instanceof Map) {
-                    scriptArgs = (Map<?, ?>) argsObj;
+                if (argsObj instanceof Map<?, ?> argsMap) {
+                    scriptArgs = new JSONObject(argsMap);
                 }
             }
 
@@ -216,11 +228,20 @@ public final class Updater implements CommandLineRunner {
                 JSONObject manifestClone = manifestJson.clone();
                 // 清除脚本属性
                 manifestClone.remove("script");
-                Class<?> scriptClass = groovyClassLoader.parseClass(script);
+                Class<? extends ScriptUpdater> scriptClass = scriptCache.computeIfAbsent(script.getAbsolutePath(), key -> {
+                    synchronized (groovyParseLock) {
+                        // 构建脚本独有包名，避免类名重复导致的解析问题
+                        String original = FileUtil.readUtf8String(script);
+                        String pkg = "scripts.auto.p" + DigestUtil.md5Hex(key);
+                        if (!original.trim().startsWith("package ")) {
+                            original = "package " + pkg + ";" + original;
+                        }
+                        return groovyClassLoader.parseClass(original, script.getName());
+                    }
+                });
                 // 反射获取执行检测App更新的脚本指定方法并执行
-                Object checkUpdateObj = scriptClass.getMethod("checkUpdate", Object.class, Object.class)
-                        .invoke(scriptClass.getConstructor().newInstance(), manifestClone, scriptArgs);
-                if (checkUpdateObj instanceof Map<?, ?> checkUpdate) {
+                Map<String, Object> checkUpdate = scriptClass.getConstructor().newInstance().checkUpdate(manifestClone, scriptArgs);
+                if (checkUpdate != null && !checkUpdate.isEmpty()) {
                     // 获取脚本返回的错误信息
                     Object error = checkUpdate.get("error");
                     if (error != null) {

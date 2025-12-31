@@ -27,7 +27,7 @@ jobs:
           sudo timedatectl set-timezone 'Asia/Shanghai'
           date
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Set up JDK
         uses: actions/setup-java@v5
@@ -69,7 +69,7 @@ jobs:
 
       - name: Trigger Sync to Gitee workflow
         if: steps.commit-files.outputs.changed == 'true' # 有变更才触发
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           event-type: sync-to-gitee

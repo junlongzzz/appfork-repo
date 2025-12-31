@@ -1,5 +1,5 @@
 import groovy.json.JsonSlurper
-import plus.junlong.appfork.ScriptVars
+import plus.junlong.appfork.script.ScriptVars
 
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
