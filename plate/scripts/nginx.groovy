@@ -8,7 +8,7 @@ class UpdateScript implements ScriptUpdater {
     @Override
     Object checkUpdate(JSONObject manifest, JSONObject args) {
         def response = 'https://nginx.org/en/download.html'.toURL().text
-        Matcher matcher = response =~ 'nginx/Windows-(?<version>[\\d.]+)'
+        Matcher matcher = response =~ '>nginx/Windows-(?<version>[\\d.]+)<'
         def url = [:]
         def versions = []
         for (int i = 0; i < 2; i++) {
