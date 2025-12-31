@@ -7,7 +7,7 @@ import java.util.regex.Pattern
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         def jsonpath = switch (manifest.platform) {
             case 'windows' -> '$.products[?(@.platform.os =~ /win32(.*)/i)]'
             case 'linux' -> '$.products[?(@.platform.os =~ /linux(.*)/i)]'

@@ -6,7 +6,7 @@ import java.util.regex.Matcher
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         def response = 'https://nginx.org/en/download.html'.toURL().text
         Matcher matcher = response =~ 'nginx/Windows-(?<version>[\\d.]+)'
         def url = [:]

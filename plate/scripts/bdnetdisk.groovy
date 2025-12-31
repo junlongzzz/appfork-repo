@@ -9,7 +9,7 @@ import java.net.http.HttpResponse
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         // def response = "https://pan.baidu.com/disk/cmsdata?clienttype=0&app_id=250528&t=${System.currentTimeMillis()}&do=client".toURL().text
 
         def platform = manifest.platform as String

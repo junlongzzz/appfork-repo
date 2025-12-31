@@ -10,7 +10,7 @@ import java.net.http.HttpResponse
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         def request = HttpRequest.newBuilder('https://www.virtualbox.org/wiki/Downloads'.toURI())
                 .header('User-Agent', ScriptVars.USER_AGENT).GET().build()
         def response = ScriptVars.HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofString())

@@ -5,7 +5,7 @@ import plus.junlong.appfork.script.ScriptUpdater
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         def response = 'https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml'.toURL().text
         def chromechecker = new XmlSlurper().parseText(response)
         def version = chromechecker.stable64.version.text()
@@ -23,7 +23,7 @@ class UpdateScript implements ScriptUpdater {
         return [
                 'version': version,
                 'url'    : url
-        ] as Map<String, Object>
+        ]
     }
 
 }

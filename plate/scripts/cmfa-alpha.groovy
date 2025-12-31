@@ -9,7 +9,7 @@ import java.net.http.HttpResponse
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         def response = ScriptVars.HTTP_CLIENT.send(
                 HttpRequest.newBuilder('https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/output-metadata.json'.toURI())
                         .header('User-Agent', ScriptVars.USER_AGENT)

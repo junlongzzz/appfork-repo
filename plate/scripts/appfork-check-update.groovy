@@ -11,7 +11,7 @@ import java.net.http.HttpResponse
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         if (args == null) {
             return null
         }

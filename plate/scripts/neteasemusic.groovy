@@ -9,7 +9,7 @@ import java.net.http.HttpResponse
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         def request = HttpRequest.newBuilder()
                 .uri('https://music.163.com/api/appcustomconfig/get?key=web-pc-beta-download-links'.toURI())
                 .header('User-Agent', ScriptVars.USER_AGENT)

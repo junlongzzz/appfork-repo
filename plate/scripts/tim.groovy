@@ -5,7 +5,7 @@ import plus.junlong.appfork.script.ScriptUpdater
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         def response = 'https://im.qq.com/rainbow/TIMDownload/'.toURL().text
         if (response == null || response.isEmpty()) {
             return null

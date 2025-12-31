@@ -7,7 +7,7 @@ import plus.junlong.appfork.script.ScriptVars
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         def platform = manifest.platform as String
         def isNt = args ? (args.nt as Boolean) : false
 
@@ -67,7 +67,7 @@ class UpdateScript implements ScriptUpdater {
         return [
                 version: version,
                 url    : url
-        ] as Map<String, Object>
+        ]
     }
 
 }

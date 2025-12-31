@@ -19,6 +19,7 @@ import plus.junlong.appfork.script.ScriptUpdater;
 
 import java.io.File;
 import java.io.Serial;
+import java.lang.reflect.Modifier;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
@@ -236,12 +237,30 @@ public final class Updater implements CommandLineRunner {
                         if (!original.trim().startsWith("package ")) {
                             original = "package " + pkg + ";" + original;
                         }
-                        return groovyClassLoader.parseClass(original, script.getName());
+                        Class<?> clazz = groovyClassLoader.parseClass(original, script.getName());
+                        if (!ScriptUpdater.class.isAssignableFrom(clazz)) {
+                            throw new RuntimeException("脚本文件 [" + script.getName() + "] 类必须实现 " + ScriptUpdater.class.getName() + " 接口");
+                        }
+                        if (clazz.isInterface()) {
+                            throw new RuntimeException("脚本文件 [" + script.getName() + "] 类不能是接口");
+                        }
+                        if (Modifier.isAbstract(clazz.getModifiers())) {
+                            throw new RuntimeException("脚本文件 [" + script.getName() + "] 类不能是抽象类");
+                        }
+                        if (!Modifier.isPublic(clazz.getModifiers())) {
+                            throw new RuntimeException("脚本文件 [" + script.getName() + "] 类必须是 public 的");
+                        }
+                        try {
+                            clazz.getConstructor();
+                        } catch (NoSuchMethodException e) {
+                            throw new RuntimeException("脚本文件 [" + script.getName() + "] 必须提供 public 无参构造器");
+                        }
+                        return clazz.asSubclass(ScriptUpdater.class);
                     }
                 });
                 // 反射获取执行检测App更新的脚本指定方法并执行
-                Map<String, Object> checkUpdate = scriptClass.getConstructor().newInstance().checkUpdate(manifestClone, scriptArgs);
-                if (checkUpdate != null && !checkUpdate.isEmpty()) {
+                Object checkUpdateObj = scriptClass.getConstructor().newInstance().checkUpdate(manifestClone, scriptArgs);
+                if (checkUpdateObj instanceof Map<?, ?> checkUpdate) {
                     // 获取脚本返回的错误信息
                     Object error = checkUpdate.get("error");
                     if (error != null) {

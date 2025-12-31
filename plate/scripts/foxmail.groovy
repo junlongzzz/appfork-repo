@@ -9,7 +9,7 @@ import java.net.http.HttpResponse
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         def (url, regex) = switch (manifest.platform) {
             case 'windows' -> ['https://www.foxmail.com/win/download', 'FoxmailSetup_([\\d.]+).exe']
             case 'mac' -> ['https://www.foxmail.com/mac/download', 'Foxmail_for_Mac_([\\d.]+).dmg']

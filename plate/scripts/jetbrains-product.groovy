@@ -5,7 +5,7 @@ import plus.junlong.appfork.script.ScriptUpdater
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         // codes是JB产品的唯一编码，多个使用英文逗号分隔
         def codes = args ? args.codes as String : null
         if (codes == null || codes == '') {

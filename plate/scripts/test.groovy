@@ -11,7 +11,7 @@ import plus.junlong.appfork.script.ScriptVars
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         return checkUpdateTest(manifest, args)
     }
 

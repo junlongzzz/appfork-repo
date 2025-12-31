@@ -4,7 +4,7 @@ import plus.junlong.appfork.script.ScriptUpdater
 class UpdateScript implements ScriptUpdater {
 
     @Override
-    Map<String, Object> checkUpdate(JSONObject manifest, JSONObject args) {
+    Object checkUpdate(JSONObject manifest, JSONObject args) {
         def platform = manifest.platform as String
 
         // 目前所有平台版本一致
