@@ -4,12 +4,12 @@
 	"logo":"https://raw.githubusercontent.com/GUI-for-Cores/GUI.for.Clash/main/build/appicon.png",
 	"description":"A Clash / (mihomo / meta) GUI program developed by vue3 + wails.",
 	"category":"network",
-	"version":"1.16.0",
+	"version":"1.17.0",
 	"platform":"windows",
 	"url":{
-		"GUI.for.Clash-windows-amd64.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.16.0/GUI.for.Clash-windows-amd64.zip",
-		"GUI.for.Clash-windows-arm64.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.16.0/GUI.for.Clash-windows-arm64.zip",
-		"GUI.for.Clash-windows-386.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.16.0/GUI.for.Clash-windows-386.zip"
+		"GUI.for.Clash-windows-amd64.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.17.0/GUI.for.Clash-windows-amd64.zip",
+		"GUI.for.Clash-windows-arm64.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.17.0/GUI.for.Clash-windows-arm64.zip",
+		"GUI.for.Clash-windows-386.zip":"https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.17.0/GUI.for.Clash-windows-386.zip"
 	},
 	"homepage":"https://gui-for-cores.github.io",
 	"script":{
