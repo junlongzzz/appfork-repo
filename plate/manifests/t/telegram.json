@@ -4,15 +4,15 @@
 	"logo":"https://avatars.githubusercontent.com/u/6113871?s=200&v=4",
 	"description":"Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
 	"category":"chat",
-	"version":"6.4.0",
+	"version":"6.4.1",
 	"platform":"windows",
 	"url":{
-		"Windows on ARM: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.0/tportable-arm64.6.4.0.zip",
-		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.0/tportable-x64.6.4.0.zip",
-		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.0/tportable.6.4.0.zip",
-		"Windows on ARM: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.0/tsetup-arm64.6.4.0.exe",
-		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.0/tsetup-x64.6.4.0.exe",
-		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.0/tsetup.6.4.0.exe"
+		"Windows on ARM: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.1/tportable-arm64.6.4.1.zip",
+		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.1/tportable-x64.6.4.1.zip",
+		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.1/tportable.6.4.1.zip",
+		"Windows on ARM: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.1/tsetup-arm64.6.4.1.exe",
+		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.1/tsetup-x64.6.4.1.exe",
+		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.4.1/tsetup.6.4.1.exe"
 	},
 	"homepage":"https://telegram.org",
 	"script":{
