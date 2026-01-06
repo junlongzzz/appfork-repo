@@ -3,17 +3,19 @@ package plus.junlong.appfork;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.TimeZone;
+
 /**
  * @author Junlong
  */
 @SpringBootApplication
 public class AppForkApplication {
 
+    static {
+        TimeZone.setDefault(TimeZone.getTimeZone("Asia/Shanghai"));
+    }
+
     public static void main(String[] args) {
-        if (!System.getProperties().containsKey("user.timezone")) {
-            // 如果时区属性为空则设置默认时区
-            System.setProperty("user.timezone", "Asia/Shanghai");
-        }
         SpringApplication.run(AppForkApplication.class, args);
     }
 

@@ -7,6 +7,7 @@ import com.alibaba.fastjson2.JSONObject;
 import com.alibaba.fastjson2.JSONWriter;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.File;
@@ -15,6 +16,10 @@ import java.nio.file.Path;
 
 @Slf4j
 public class AppForkTests {
+
+    @Test
+    public void test() {
+    }
 
     @Test
     public void convertJsonOrYaml() {
@@ -36,7 +41,12 @@ public class AppForkTests {
             // convert to yaml
             format = "yaml";
             JSONObject manifestJson = JSON.parseObject(read);
-            write = new Yaml().dumpAsMap(manifestJson);
+            DumperOptions options = new DumperOptions();
+            options.setIndent(2);
+            options.setIndicatorIndent(2);
+            options.setIndentWithIndicator(true);
+            options.setSplitLines(false);
+            write = new Yaml(options).dumpAsMap(manifestJson);
         } else if ("yaml".equals(format)) {
             // convert to json
             format = "json";

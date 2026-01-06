@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;
 import plus.junlong.appfork.script.ScriptUpdater;
 
@@ -161,7 +162,6 @@ public final class Updater implements CommandLineRunner {
      * @param groovyClassLoader 脚本类加载器
      * @return 同步状态
      */
-    @SuppressWarnings("unchecked")
     private int sync(File manifest, GroovyClassLoader groovyClassLoader) {
         try {
             // 清单文件格式
@@ -351,7 +351,14 @@ public final class Updater implements CommandLineRunner {
                 manifestJson.putAll(changedAttrs);
                 String write = switch (format) {
                     case "json" -> JSON.toJSONString(manifestJson, JSONWriter.Feature.PrettyFormat);
-                    case "yaml" -> new Yaml().dumpAsMap(manifestJson);
+                    case "yaml" -> {
+                        DumperOptions options = new DumperOptions();
+                        options.setIndent(2);
+                        options.setIndicatorIndent(2);
+                        options.setIndentWithIndicator(true);
+                        options.setSplitLines(false);
+                        yield new Yaml(options).dumpAsMap(manifestJson);
+                    }
                     default -> read;
                 };
                 FileUtil.writeUtf8String(write, manifest);
