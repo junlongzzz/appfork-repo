@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/intellij-idea/intellij-idea.svg",
 	"description":"领先的 Java 和 Kotlin IDE，使开发更高效、更愉快的 IDE。\nideaIC: Community Edition, ideaIU: Ultimate",
 	"category":"development",
-	"version":"2025.2.6(252.28539.13),2025.3.1.1(253.29346.240)",
+	"version":"2025.2.6.1(252.28539.33),2025.3.1.1(253.29346.240)",
 	"platform":"mac",
 	"url":{
-		"ideaIC-2025.2.6.dmg":"https://download.jetbrains.com/idea/ideaIC-2025.2.6.dmg",
-		"ideaIC-2025.2.6-aarch64.dmg":"https://download.jetbrains.com/idea/ideaIC-2025.2.6-aarch64.dmg",
+		"ideaIC-2025.2.6.1.dmg":"https://download.jetbrains.com/idea/ideaIC-2025.2.6.1.dmg",
+		"ideaIC-2025.2.6.1-aarch64.dmg":"https://download.jetbrains.com/idea/ideaIC-2025.2.6.1-aarch64.dmg",
 		"idea-2025.3.1.1.dmg":"https://download.jetbrains.com/idea/idea-2025.3.1.1.dmg",
 		"idea-2025.3.1.1-aarch64.dmg":"https://download.jetbrains.com/idea/idea-2025.3.1.1-aarch64.dmg"
 	},
