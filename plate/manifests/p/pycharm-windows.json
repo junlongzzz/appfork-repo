@@ -19,7 +19,7 @@
 	"homepage":"https://www.jetbrains.com/zh-cn/pycharm/",
 	"script":{
 		"args":{
-			"codes":"PCC,PCP",
+			"codes":"PCP",
 			"#":"Community Edition,Professional Edition"
 		},
 		"name":"jetbrains-product"

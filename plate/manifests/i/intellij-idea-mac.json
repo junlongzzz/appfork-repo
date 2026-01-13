@@ -15,7 +15,7 @@
 	"homepage":"https://www.jetbrains.com/zh-cn/idea/",
 	"script":{
 		"args":{
-			"codes":"IIC,IIU",
+			"codes":"IIU",
 			"#":"Community Edition,Ultimate"
 		},
 		"name":"jetbrains-product"

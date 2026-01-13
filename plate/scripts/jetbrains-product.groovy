@@ -16,7 +16,7 @@ class UpdateScript implements ScriptUpdater {
 
         def codeArr = codes.split(',')
         def version = null
-        def url = [:]
+        def url = []
         for (final String code in codeArr) {
             def productInfo = responseJson[code][0]
             def productVersion = productInfo['version'] as String
@@ -36,7 +36,7 @@ class UpdateScript implements ScriptUpdater {
                 // 以 windows,linux,mac 开头的就是对应平台的下载地址
                 if (entry.getKey().startsWith(manifest.platform as String)) {
                     def link = entry.getValue()['link'] as String
-                    url[link.substring(link.lastIndexOf('/') + 1)] = link
+                    url << link
                 }
             }
         }
