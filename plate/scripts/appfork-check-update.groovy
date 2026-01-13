@@ -25,6 +25,7 @@ class UpdateScript implements ScriptUpdater {
         def jsonpath = args.jsonpath as String
         def xpath = args.xpath as String
         def updateUrl = args.autoupdate ? args.autoupdate : args[platform]
+        def headers = args.headers as Map
 
         def githubParams = args.gh == null ? args.github : args.gh
         def githubPreRelease = false
@@ -120,9 +121,15 @@ class UpdateScript implements ScriptUpdater {
             }
         }
 
-        def response = httpClient.send(
-                HttpRequest.newBuilder().uri(checkUrl.toURI()).header('User-Agent', userAgent).GET().build(),
-                HttpResponse.BodyHandlers.ofString()).body()
+        def request = HttpRequest.newBuilder().uri(checkUrl.toURI()).GET()
+        if (headers != null) {
+            for (header in headers) {
+                request.header(header.key as String, header.value ? header.value as String : '')
+            }
+        } else {
+            request.header('User-Agent', userAgent)
+        }
+        def response = httpClient.send(request.build(), HttpResponse.BodyHandlers.ofString()).body()
         // 开始用对应方式查找版本号
         if (githubPreRelease) { // github预发布版本
             def result = JsonPath.read(response, '$.*[?(@.prerelease == true)]')

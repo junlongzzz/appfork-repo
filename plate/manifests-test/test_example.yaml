@@ -1,6 +1,6 @@
 author: Author
 name: App Name (Yaml)
-logo: ''
+logo: '<logo url here>'
 description: Description
 category: others
 version: beta
@@ -10,5 +10,7 @@ homepage: https://junlong.plus
 script:
   name: example
   args:
-    key: value
+    key: 123
     str: this is yaml format manifest
+    headers:
+      name: value

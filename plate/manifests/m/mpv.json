@@ -14,11 +14,13 @@
 	"script":{
 		"args":{
 			"regex":"mpv-([\\d.]+)-",
-			"autoupdate":{
-				"64Bit":"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-x86_64.7z",
-				"32Bit":"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-i686.7z"
-			},
-			"url":"https://sourceforge.net/projects/mpv-player-windows/files/release/"
+			"autoupdate":[
+				"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-x86_64.7z",
+				"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-i686.7z",
+				"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-aarch64.7z"
+			],
+			"url":"https://sourceforge.net/projects/mpv-player-windows/files/release/",
+			"headers":{}
 		},
 		"name":"appfork-check-update"
 	}
