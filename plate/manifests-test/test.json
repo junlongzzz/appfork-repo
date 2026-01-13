@@ -10,10 +10,10 @@
 	"homepage":"https://junlong.plus",
 	"script":{
 		"args":{
-			"key": 123,
+			"key":123,
 			"str":"this is json format manifest",
-			"headers": {
-				"name": "value"
+			"headers":{
+				"name":"value"
 			}
 		}
 	}
