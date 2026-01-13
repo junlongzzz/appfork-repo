@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"3.2.0.65851",
 	"platform":"linux",
-	"url":{
-		"jetbrains-toolbox-3.2.0.65851-arm64.tar.gz":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851-arm64.tar.gz",
-		"jetbrains-toolbox-3.2.0.65851.tar.gz":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851.tar.gz"
-	},
+	"url":[
+		"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851-arm64.tar.gz",
+		"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851.tar.gz"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/toolbox-app/",
 	"script":{
 		"args":{

@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"3.2.0.65851",
 	"platform":"windows",
-	"url":{
-		"jetbrains-toolbox-3.2.0.65851.exe":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851.exe",
-		"jetbrains-toolbox-3.2.0.65851-arm64.exe":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851-arm64.exe"
-	},
+	"url":[
+		"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851.exe",
+		"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851-arm64.exe"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/toolbox-app/",
 	"script":{
 		"args":{

@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"3.2.0.65851",
 	"platform":"mac",
-	"url":{
-		"jetbrains-toolbox-3.2.0.65851.dmg":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851.dmg",
-		"jetbrains-toolbox-3.2.0.65851-arm64.dmg":"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851-arm64.dmg"
-	},
+	"url":[
+		"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851.dmg",
+		"https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.2.0.65851-arm64.dmg"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/toolbox-app/",
 	"script":{
 		"args":{

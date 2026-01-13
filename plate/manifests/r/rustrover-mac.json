@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"2025.3.1(253.29346.139)",
 	"platform":"mac",
-	"url":{
-		"RustRover-2025.3.1-aarch64.dmg":"https://download.jetbrains.com/rustrover/RustRover-2025.3.1-aarch64.dmg",
-		"RustRover-2025.3.1.dmg":"https://download.jetbrains.com/rustrover/RustRover-2025.3.1.dmg"
-	},
+	"url":[
+		"https://download.jetbrains.com/rustrover/RustRover-2025.3.1-aarch64.dmg",
+		"https://download.jetbrains.com/rustrover/RustRover-2025.3.1.dmg"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/rust/",
 	"script":{
 		"args":{

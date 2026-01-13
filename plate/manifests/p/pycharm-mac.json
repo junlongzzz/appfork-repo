@@ -4,14 +4,12 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/pycharm/pycharm.svg",
 	"description":"适用于 数据科学 和 Web 开发的 Python IDE。",
 	"category":"development",
-	"version":"2025.2.6(252.28539.27),2025.3.1.1(253.29346.308)",
+	"version":"2025.3.1.1(253.29346.308)",
 	"platform":"mac",
-	"url":{
-		"pycharm-community-2025.2.6.dmg":"https://download.jetbrains.com/python/pycharm-community-2025.2.6.dmg",
-		"pycharm-community-2025.2.6-aarch64.dmg":"https://download.jetbrains.com/python/pycharm-community-2025.2.6-aarch64.dmg",
-		"pycharm-2025.3.1.1.dmg":"https://download.jetbrains.com/python/pycharm-2025.3.1.1.dmg",
-		"pycharm-2025.3.1.1-aarch64.dmg":"https://download.jetbrains.com/python/pycharm-2025.3.1.1-aarch64.dmg"
-	},
+	"url":[
+		"https://download.jetbrains.com/python/pycharm-2025.3.1.1.dmg",
+		"https://download.jetbrains.com/python/pycharm-2025.3.1.1-aarch64.dmg"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/pycharm/",
 	"script":{
 		"args":{

@@ -6,11 +6,11 @@
 	"category":"development",
 	"version":"2025.3.1.1(253.29346.307)",
 	"platform":"windows",
-	"url":{
-		"CLion-2025.3.1.1.exe":"https://download.jetbrains.com/cpp/CLion-2025.3.1.1.exe",
-		"CLion-2025.3.1.1.win.zip":"https://download.jetbrains.com/cpp/CLion-2025.3.1.1.win.zip",
-		"CLion-2025.3.1.1-aarch64.exe":"https://download.jetbrains.com/cpp/CLion-2025.3.1.1-aarch64.exe"
-	},
+	"url":[
+		"https://download.jetbrains.com/cpp/CLion-2025.3.1.1.exe",
+		"https://download.jetbrains.com/cpp/CLion-2025.3.1.1.win.zip",
+		"https://download.jetbrains.com/cpp/CLion-2025.3.1.1-aarch64.exe"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/clion/",
 	"script":{
 		"args":{

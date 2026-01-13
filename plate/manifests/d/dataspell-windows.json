@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"2025.3.1(253.29346.157)",
 	"platform":"windows",
-	"url":{
-		"dataspell-2025.3.1.exe":"https://download.jetbrains.com/python/dataspell-2025.3.1.exe",
-		"dataspell-2025.3.1-aarch64.exe":"https://download.jetbrains.com/python/dataspell-2025.3.1-aarch64.exe"
-	},
+	"url":[
+		"https://download.jetbrains.com/python/dataspell-2025.3.1.exe",
+		"https://download.jetbrains.com/python/dataspell-2025.3.1-aarch64.exe"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/dataspell/",
 	"script":{
 		"args":{

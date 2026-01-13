@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"2025.3.1(253.29346.157)",
 	"platform":"mac",
-	"url":{
-		"dataspell-2025.3.1.dmg":"https://download.jetbrains.com/python/dataspell-2025.3.1.dmg",
-		"dataspell-2025.3.1-aarch64.dmg":"https://download.jetbrains.com/python/dataspell-2025.3.1-aarch64.dmg"
-	},
+	"url":[
+		"https://download.jetbrains.com/python/dataspell-2025.3.1.dmg",
+		"https://download.jetbrains.com/python/dataspell-2025.3.1-aarch64.dmg"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/dataspell/",
 	"script":{
 		"args":{

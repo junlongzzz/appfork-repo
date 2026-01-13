@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"2025.3.3(253.29346.270)",
 	"platform":"mac",
-	"url":{
-		"datagrip-2025.3.3.dmg":"https://download.jetbrains.com/datagrip/datagrip-2025.3.3.dmg",
-		"datagrip-2025.3.3-aarch64.dmg":"https://download.jetbrains.com/datagrip/datagrip-2025.3.3-aarch64.dmg"
-	},
+	"url":[
+		"https://download.jetbrains.com/datagrip/datagrip-2025.3.3.dmg",
+		"https://download.jetbrains.com/datagrip/datagrip-2025.3.3-aarch64.dmg"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/datagrip/",
 	"script":{
 		"args":{

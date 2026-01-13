@@ -4,18 +4,14 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/pycharm/pycharm.svg",
 	"description":"适用于 数据科学 和 Web 开发的 Python IDE。",
 	"category":"development",
-	"version":"2025.2.6(252.28539.27),2025.3.1.1(253.29346.308)",
+	"version":"2025.3.1.1(253.29346.308)",
 	"platform":"windows",
-	"url":{
-		"pycharm-community-2025.2.6.exe":"https://download.jetbrains.com/python/pycharm-community-2025.2.6.exe",
-		"pycharm-community-2025.2.6.win.zip":"https://download.jetbrains.com/python/pycharm-community-2025.2.6.win.zip",
-		"pycharm-community-2025.2.6-aarch64.exe":"https://download.jetbrains.com/python/pycharm-community-2025.2.6-aarch64.exe",
-		"pycharm-community-2025.2.6-aarch64.win.zip":"https://download.jetbrains.com/python/pycharm-community-2025.2.6-aarch64.win.zip",
-		"pycharm-2025.3.1.1.exe":"https://download.jetbrains.com/python/pycharm-2025.3.1.1.exe",
-		"pycharm-2025.3.1.1.win.zip":"https://download.jetbrains.com/python/pycharm-2025.3.1.1.win.zip",
-		"pycharm-2025.3.1.1-aarch64.exe":"https://download.jetbrains.com/python/pycharm-2025.3.1.1-aarch64.exe",
-		"pycharm-2025.3.1.1-aarch64.win.zip":"https://download.jetbrains.com/python/pycharm-2025.3.1.1-aarch64.win.zip"
-	},
+	"url":[
+		"https://download.jetbrains.com/python/pycharm-2025.3.1.1.exe",
+		"https://download.jetbrains.com/python/pycharm-2025.3.1.1.win.zip",
+		"https://download.jetbrains.com/python/pycharm-2025.3.1.1-aarch64.exe",
+		"https://download.jetbrains.com/python/pycharm-2025.3.1.1-aarch64.win.zip"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/pycharm/",
 	"script":{
 		"args":{

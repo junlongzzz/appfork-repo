@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"2025.3.1(253.29346.144)",
 	"platform":"mac",
-	"url":{
-		"JetBrains.Rider-2025.3.1.dmg":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1.dmg",
-		"JetBrains.Rider-2025.3.1-aarch64.dmg":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1-aarch64.dmg"
-	},
+	"url":[
+		"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1.dmg",
+		"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1-aarch64.dmg"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/rider/",
 	"script":{
 		"args":{

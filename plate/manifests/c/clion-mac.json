@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"2025.3.1.1(253.29346.307)",
 	"platform":"mac",
-	"url":{
-		"CLion-2025.3.1.1.dmg":"https://download.jetbrains.com/cpp/CLion-2025.3.1.1.dmg",
-		"CLion-2025.3.1.1-aarch64.dmg":"https://download.jetbrains.com/cpp/CLion-2025.3.1.1-aarch64.dmg"
-	},
+	"url":[
+		"https://download.jetbrains.com/cpp/CLion-2025.3.1.1.dmg",
+		"https://download.jetbrains.com/cpp/CLion-2025.3.1.1-aarch64.dmg"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/clion/",
 	"script":{
 		"args":{

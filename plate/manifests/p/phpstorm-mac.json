@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"2025.3.1.1(253.29346.257)",
 	"platform":"mac",
-	"url":{
-		"PhpStorm-2025.3.1.1.dmg":"https://download.jetbrains.com/webide/PhpStorm-2025.3.1.1.dmg",
-		"PhpStorm-2025.3.1.1-aarch64.dmg":"https://download.jetbrains.com/webide/PhpStorm-2025.3.1.1-aarch64.dmg"
-	},
+	"url":[
+		"https://download.jetbrains.com/webide/PhpStorm-2025.3.1.1.dmg",
+		"https://download.jetbrains.com/webide/PhpStorm-2025.3.1.1-aarch64.dmg"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/phpstorm/",
 	"script":{
 		"args":{

@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"2025.3.1(253.29346.255)",
 	"platform":"mac",
-	"url":{
-		"goland-2025.3.1.dmg":"https://download.jetbrains.com/go/goland-2025.3.1.dmg",
-		"goland-2025.3.1-aarch64.dmg":"https://download.jetbrains.com/go/goland-2025.3.1-aarch64.dmg"
-	},
+	"url":[
+		"https://download.jetbrains.com/go/goland-2025.3.1.dmg",
+		"https://download.jetbrains.com/go/goland-2025.3.1-aarch64.dmg"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/go/",
 	"script":{
 		"args":{

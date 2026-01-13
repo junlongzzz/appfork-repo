@@ -6,12 +6,12 @@
 	"category":"development",
 	"version":"2025.3.1(253.29346.144)",
 	"platform":"windows",
-	"url":{
-		"JetBrains.Rider-2025.3.1.exe":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1.exe",
-		"JetBrains.Rider-2025.3.1.win.zip":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1.win.zip",
-		"JetBrains.Rider-2025.3.1-aarch64.exe":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1-aarch64.exe",
-		"JetBrains.Rider-2025.3.1-aarch64.win.zip":"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1-aarch64.win.zip"
-	},
+	"url":[
+		"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1.exe",
+		"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1.win.zip",
+		"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1-aarch64.exe",
+		"https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1-aarch64.win.zip"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/rider/",
 	"script":{
 		"args":{

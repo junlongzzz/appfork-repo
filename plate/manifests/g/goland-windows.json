@@ -6,11 +6,11 @@
 	"category":"development",
 	"version":"2025.3.1(253.29346.255)",
 	"platform":"windows",
-	"url":{
-		"goland-2025.3.1.exe":"https://download.jetbrains.com/go/goland-2025.3.1.exe",
-		"goland-2025.3.1.win.zip":"https://download.jetbrains.com/go/goland-2025.3.1.win.zip",
-		"goland-2025.3.1-aarch64.exe":"https://download.jetbrains.com/go/goland-2025.3.1-aarch64.exe"
-	},
+	"url":[
+		"https://download.jetbrains.com/go/goland-2025.3.1.exe",
+		"https://download.jetbrains.com/go/goland-2025.3.1.win.zip",
+		"https://download.jetbrains.com/go/goland-2025.3.1-aarch64.exe"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/go/",
 	"script":{
 		"args":{

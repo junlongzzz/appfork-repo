@@ -6,11 +6,11 @@
 	"category":"development",
 	"version":"2025.3.1.1(253.29346.331)",
 	"platform":"windows",
-	"url":{
-		"RubyMine-2025.3.1.1.exe":"https://download.jetbrains.com/ruby/RubyMine-2025.3.1.1.exe",
-		"RubyMine-2025.3.1.1.win.zip":"https://download.jetbrains.com/ruby/RubyMine-2025.3.1.1.win.zip",
-		"RubyMine-2025.3.1.1-aarch64.exe":"https://download.jetbrains.com/ruby/RubyMine-2025.3.1.1-aarch64.exe"
-	},
+	"url":[
+		"https://download.jetbrains.com/ruby/RubyMine-2025.3.1.1.exe",
+		"https://download.jetbrains.com/ruby/RubyMine-2025.3.1.1.win.zip",
+		"https://download.jetbrains.com/ruby/RubyMine-2025.3.1.1-aarch64.exe"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/ruby/",
 	"script":{
 		"args":{

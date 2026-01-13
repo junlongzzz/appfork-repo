@@ -6,10 +6,10 @@
 	"category":"development",
 	"version":"2025.3.1.1(253.29346.242)",
 	"platform":"mac",
-	"url":{
-		"WebStorm-2025.3.1.1.dmg":"https://download.jetbrains.com/webstorm/WebStorm-2025.3.1.1.dmg",
-		"WebStorm-2025.3.1.1-aarch64.dmg":"https://download.jetbrains.com/webstorm/WebStorm-2025.3.1.1-aarch64.dmg"
-	},
+	"url":[
+		"https://download.jetbrains.com/webstorm/WebStorm-2025.3.1.1.dmg",
+		"https://download.jetbrains.com/webstorm/WebStorm-2025.3.1.1-aarch64.dmg"
+	],
 	"homepage":"https://www.jetbrains.com/zh-cn/webstorm/",
 	"script":{
 		"args":{
