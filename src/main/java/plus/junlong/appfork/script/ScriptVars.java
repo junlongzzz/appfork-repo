@@ -25,13 +25,13 @@ public final class ScriptVars {
     /**
      * 创建一个 HttpClient.Builder
      * * 自动跟随重定向
-     * * 连接超时 120s
+     * * 连接超时 30s
      * * 使用虚拟线程
      */
     public static HttpClient.Builder newHttpClientBuilder() {
         return HttpClient.newBuilder()
                 .followRedirects(HttpClient.Redirect.ALWAYS)
-                .connectTimeout(Duration.ofMillis(120000))
+                .connectTimeout(Duration.ofMillis(30000))
                 // 虚拟线程
                 .executor(Executors.newVirtualThreadPerTaskExecutor());
     }
