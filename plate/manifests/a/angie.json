@@ -4,7 +4,7 @@
 	"logo":"https://en.angie.software/_static/icons/logo.svg",
 	"description":"Angie /ˈendʒi/ is an efficient, powerful, and scalable web server that was forked from nginx to act as a drop-in replacement, so you can use existing setups without major changes to module layout or configuration.",
 	"category":"development",
-	"version":"1.11.1",
+	"version":"1.11.2",
 	"platform":"windows",
 	"url":{
 		"Installation Doc":"https://en.angie.software/angie/docs/installation/"
