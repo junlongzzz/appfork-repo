@@ -1,16 +1,15 @@
 author: MetaCubeX
 name: Clash Meta for Android Alpha
 logo: https://raw.githubusercontent.com/MetaCubeX/ClashMetaForAndroid/main/app/src/main/ic_launcher-playstore.png
-description: A Graphical user interface of [Clash.Meta](https://github.com/MetaCubeX/mihomo)
-  for Android.
+description: A Graphical user interface of [Clash.Meta](https://github.com/MetaCubeX/mihomo) for Android.
 category: network
 platform: android
 homepage: https://github.com/MetaCubeX/ClashMetaForAndroid
 version: Prerelease-alpha
 url:
-- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.20-alpha-arm64-v8a-release.apk
-- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.20-alpha-armeabi-v7a-release.apk
-- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.20-alpha-universal-release.apk
-- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.20-alpha-x86-release.apk
-- https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.20-alpha-x86_64-release.apk
+  - https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.21-alpha-arm64-v8a-release.apk
+  - https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.21-alpha-armeabi-v7a-release.apk
+  - https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.21-alpha-universal-release.apk
+  - https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.21-alpha-x86-release.apk
+  - https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/Prerelease-alpha/cmfa-2.11.21-alpha-x86_64-release.apk
 script: cmfa-alpha
