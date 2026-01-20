@@ -4,12 +4,12 @@
 	"logo":"https://www.deepin.org/wp-content/uploads/2016/12/logo.png",
 	"description":"深度操作系统（deepin）是一个致力于为全球用户提供美观易用、安全稳定服务的Linux发行版，同时也一直是排名最高的来自中国团队研发的Linux发行版。",
 	"category":"image",
-	"version":"25.0.1",
+	"version":"25.0.10",
 	"platform":"linux",
 	"url":[
-		"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/25.0.1/amd64/deepin-desktop-community-25.0.1-amd64.iso",
-		"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/25.0.1/arm64/deepin-desktop-community-25.0.1-arm64.iso",
-		"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/25.0.1/loongarch64/deepin-desktop-community-25.0.1-loong64.iso"
+		"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/25.0.10/amd64/deepin-desktop-community-25.0.10-amd64.iso",
+		"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/25.0.10/arm64/deepin-desktop-community-25.0.10-arm64.iso",
+		"https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/25.0.10/loongarch64/deepin-desktop-community-25.0.10-loong64.iso"
 	],
 	"homepage":"https://www.deepin.org",
 	"script":{

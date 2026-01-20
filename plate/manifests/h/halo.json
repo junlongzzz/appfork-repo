@@ -4,7 +4,7 @@
 	"logo":"https://www.halo.run/logo",
 	"description":"Halo [ˈheɪloʊ]，强大易用的开源建站工具。",
 	"category":"reading",
-	"version":"2.22.10",
+	"version":"2.22.11",
 	"platform":"other",
 	"url":{
 		"via Docker":"https://hub.docker.com/r/halohub/halo",
