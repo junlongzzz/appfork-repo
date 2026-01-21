@@ -4,8 +4,8 @@
 	"logo":"https://www.google.cn/chrome/static/images/chrome-logo.svg",
 	"description":"由 Google 打造的网络浏览器",
 	"category":"network",
-	"version":"144.0.7559.60",
+	"version":"144.0.7559.97",
 	"platform":"windows",
-	"url":"https://dl.google.com/release2/chrome/acz5qwfw7e6ogbe5gd3hixxbfmuq_144.0.7559.60/144.0.7559.60_chrome_installer_uncompressed.exe",
+	"url":"https://dl.google.com/release2/chrome/bjd6wfixseytdq5tsf6amm7x5m_144.0.7559.97/144.0.7559.97_chrome_installer_uncompressed.exe",
 	"homepage":"https://www.google.cn/chrome/index.html"
 }
