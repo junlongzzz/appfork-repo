@@ -1,20 +1,19 @@
 name: Tailscale
 logo: https://tailscale.com/favicon.png
 author: Tailscale Inc.
-description: Tailscale a WireGuard based mesh VPN, used to connect your computers
-  and other devices together securely without proxies.
+description: Tailscale a WireGuard based mesh VPN, used to connect your computers and other devices together securely without proxies.
 category: network
 platform: mac
 homepage: https://tailscale.com
-version: 1.92.3
+version: 1.94.1
 url:
-- https://pkgs.tailscale.com/stable/Tailscale-1.92.3-macos.pkg
-- https://pkgs.tailscale.com/stable/Tailscale-1.92.3-macos.zip
+  - https://pkgs.tailscale.com/stable/Tailscale-1.94.1-macos.pkg
+  - https://pkgs.tailscale.com/stable/Tailscale-1.94.1-macos.zip
 script:
   args:
     url: https://pkgs.tailscale.com/stable/
     regex: Tailscale-(?<version>[\d.]+)-macos\.pkg
     autoupdate:
-    - https://pkgs.tailscale.com/stable/Tailscale-${version}-macos.pkg
-    - https://pkgs.tailscale.com/stable/Tailscale-${version}-macos.zip
+      - https://pkgs.tailscale.com/stable/Tailscale-${version}-macos.pkg
+      - https://pkgs.tailscale.com/stable/Tailscale-${version}-macos.zip
   name: appfork-check-update
