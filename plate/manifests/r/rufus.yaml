@@ -5,20 +5,20 @@ description: Rufus 是一款格式化和创建 USB 启动盘的辅助工具。
 category: tools
 platform: windows
 homepage: https://rufus.ie
-version: '4.11'
+version: '4.12'
 url:
-- https://github.com/pbatard/rufus/releases/download/v4.11/rufus-4.11p.exe
-- https://github.com/pbatard/rufus/releases/download/v4.11/rufus-4.11.exe
-- https://github.com/pbatard/rufus/releases/download/v4.11/rufus-4.11_x86.exe
-- https://github.com/pbatard/rufus/releases/download/v4.11/rufus-4.11_arm.exe
-- https://github.com/pbatard/rufus/releases/download/v4.11/rufus-4.11_arm64.exe
+  - https://github.com/pbatard/rufus/releases/download/v4.12/rufus-4.12p.exe
+  - https://github.com/pbatard/rufus/releases/download/v4.12/rufus-4.12.exe
+  - https://github.com/pbatard/rufus/releases/download/v4.12/rufus-4.12_x86.exe
+  - https://github.com/pbatard/rufus/releases/download/v4.12/rufus-4.12_arm.exe
+  - https://github.com/pbatard/rufus/releases/download/v4.12/rufus-4.12_arm64.exe
 script:
   args:
     url: github://pbatard/rufus
     autoupdate:
-    - https://github.com/pbatard/rufus/releases/download/v${version}/rufus-${version}p.exe
-    - https://github.com/pbatard/rufus/releases/download/v${version}/rufus-${version}.exe
-    - https://github.com/pbatard/rufus/releases/download/v${version}/rufus-${version}_x86.exe
-    - https://github.com/pbatard/rufus/releases/download/v${version}/rufus-${version}_arm.exe
-    - https://github.com/pbatard/rufus/releases/download/v${version}/rufus-${version}_arm64.exe
+      - https://github.com/pbatard/rufus/releases/download/v${version}/rufus-${version}p.exe
+      - https://github.com/pbatard/rufus/releases/download/v${version}/rufus-${version}.exe
+      - https://github.com/pbatard/rufus/releases/download/v${version}/rufus-${version}_x86.exe
+      - https://github.com/pbatard/rufus/releases/download/v${version}/rufus-${version}_arm.exe
+      - https://github.com/pbatard/rufus/releases/download/v${version}/rufus-${version}_arm64.exe
   name: appfork-check-update
