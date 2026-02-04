@@ -4,11 +4,11 @@
 	"logo":"https://raw.githubusercontent.com/2dust/v2rayN/master/v2rayN/v2rayN/Resources/v2rayN.ico",
 	"description":"A V2Ray client for Windows, support Xray core and v2fly core.",
 	"category":"network",
-	"version":"7.17.3",
+	"version":"7.18.0",
 	"platform":"linux",
 	"url":{
-		"v2rayN-linux-64.zip":"https://github.com/2dust/v2rayN/releases/download/7.17.3/v2rayN-linux-64.zip",
-		"v2rayN-linux-arm64.zip":"https://github.com/2dust/v2rayN/releases/download/7.17.3/v2rayN-linux-arm64.zip"
+		"v2rayN-linux-64.zip":"https://github.com/2dust/v2rayN/releases/download/7.18.0/v2rayN-linux-64.zip",
+		"v2rayN-linux-arm64.zip":"https://github.com/2dust/v2rayN/releases/download/7.18.0/v2rayN-linux-arm64.zip"
 	},
 	"homepage":"https://github.com/2dust/v2rayN",
 	"script":{
