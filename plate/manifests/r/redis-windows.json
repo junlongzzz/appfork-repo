@@ -5,10 +5,10 @@
 	"category":"development",
 	"platform":"windows",
 	"homepage":"https://redis.io",
-	"version":"8.4.0",
+	"version":"8.4.1",
 	"url":{
-		"Redis-8.4.0-Windows-x64-with-Service.tar.gz":"https://github.com/redis-windows/redis-windows/releases/download/8.4.0/Redis-8.4.0-Windows-x64-with-Service.tar.gz",
-		"Redis-8.4.0-Windows-x64.tar.gz":"https://github.com/redis-windows/redis-windows/releases/download/8.4.0/Redis-8.4.0-Windows-x64.tar.gz"
+		"Redis-8.4.1-Windows-x64-with-Service.tar.gz":"https://github.com/redis-windows/redis-windows/releases/download/8.4.1/Redis-8.4.1-Windows-x64-with-Service.tar.gz",
+		"Redis-8.4.1-Windows-x64.tar.gz":"https://github.com/redis-windows/redis-windows/releases/download/8.4.1/Redis-8.4.1-Windows-x64.tar.gz"
 	},
 	"script":{
 		"args":{
