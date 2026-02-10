@@ -3,11 +3,11 @@ name: uv
 logo: https://docs.astral.sh/uv/assets/logo-letter.svg
 description: An extremely fast Python package and project manager, written in Rust.
 category: development
-version: 0.10.0
+version: 0.10.1
 platform: windows
 url:
-  - https://github.com/astral-sh/uv/releases/download/0.10.0/uv-x86_64-pc-windows-msvc.zip
-  - https://github.com/astral-sh/uv/releases/download/0.10.0/uv-aarch64-pc-windows-msvc.zip
+  - https://github.com/astral-sh/uv/releases/download/0.10.1/uv-x86_64-pc-windows-msvc.zip
+  - https://github.com/astral-sh/uv/releases/download/0.10.1/uv-aarch64-pc-windows-msvc.zip
 homepage: https://github.com/astral-sh/uv
 script:
   args:
