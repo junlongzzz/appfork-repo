@@ -16,7 +16,7 @@
 		"name":"appfork-check-update"
 	},
 	"homepage":"https://github.com/Binaryify/NeteaseCloudMusicApi",
-	"version":"4.28.1",
+	"version":"4.29.0",
 	"url":{
 		"npm":"https://www.npmjs.com/package/NeteaseCloudMusicApi",
 		"Docker Image":"https://hub.docker.com/r/binaryify/netease_cloud_music_api"
