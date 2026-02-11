@@ -4,13 +4,13 @@
 	"logo":"https://code.visualstudio.com/assets/favicon.ico",
 	"description":"Code editing. Redefined. Free. Built on open source. Runs everywhere.",
 	"category":"development",
-	"version":"1.109.1",
+	"version":"1.109.2",
 	"platform":"mac",
 	"script":"vscode",
 	"url":{
-		"Mac for Apple silicon":"https://update.code.visualstudio.com/1.109.1/darwin-arm64-dmg/stable",
-		"Mac for Intel chip":"https://update.code.visualstudio.com/1.109.1/darwin-x64-dmg/stable",
-		"Mac Universal Build":"https://update.code.visualstudio.com/1.109.1/darwin-universal-dmg/stable"
+		"Mac for Apple silicon":"https://update.code.visualstudio.com/1.109.2/darwin-arm64-dmg/stable",
+		"Mac for Intel chip":"https://update.code.visualstudio.com/1.109.2/darwin-x64-dmg/stable",
+		"Mac Universal Build":"https://update.code.visualstudio.com/1.109.2/darwin-universal-dmg/stable"
 	},
 	"homepage":"https://code.visualstudio.com"
 }
