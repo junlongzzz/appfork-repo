@@ -4,11 +4,11 @@ logo: https://opencode.ai/favicon-96x96-v3.png
 description: The open source AI coding agent.
 homepage: https://opencode.ai
 category: development
-version: 1.1.60
+version: 1.1.61
 platform: windows
 url:
-  - https://github.com/anomalyco/opencode/releases/download/v1.1.60/opencode-windows-x64.zip
-  - https://github.com/anomalyco/opencode/releases/download/v1.1.60/opencode-desktop-windows-x64.exe
+  - https://github.com/anomalyco/opencode/releases/download/v1.1.61/opencode-windows-x64.zip
+  - https://github.com/anomalyco/opencode/releases/download/v1.1.61/opencode-desktop-windows-x64.exe
 script:
   name: appfork-check-update
   args:
