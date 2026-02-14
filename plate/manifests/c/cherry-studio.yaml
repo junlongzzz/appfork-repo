@@ -4,13 +4,13 @@ logo: https://avatars.githubusercontent.com/u/187777663?s=200&v=4
 description: 'AI Agent + Coding Agent + 300+ assistants: agentic AI desktop with autonomous coding, intelligent automation, and unified access to frontier LLMs.'
 homepage: https://cherry-ai.com
 category: tools
-version: 1.7.18
+version: 1.7.19
 platform: windows
 url:
-  - https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.18/Cherry-Studio-1.7.18-x64-setup.exe
-  - https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.18/Cherry-Studio-1.7.18-x64-portable.exe
-  - https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.18/Cherry-Studio-1.7.18-arm64-setup.exe
-  - https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.18/Cherry-Studio-1.7.18-arm64-portable.exe
+  - https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.19/Cherry-Studio-1.7.19-x64-setup.exe
+  - https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.19/Cherry-Studio-1.7.19-x64-portable.exe
+  - https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.19/Cherry-Studio-1.7.19-arm64-setup.exe
+  - https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.19/Cherry-Studio-1.7.19-arm64-portable.exe
 script:
   name: appfork-check-update
   args:
