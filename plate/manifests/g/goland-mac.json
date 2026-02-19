@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/goland/goland.svg",
 	"description":"为 Go 开发者打造的完整 IDE。",
 	"category":"development",
-	"version":"2025.3.2(253.30387.193)",
+	"version":"2025.3.3(253.31033.129)",
 	"platform":"mac",
 	"url":[
-		"https://download.jetbrains.com/go/goland-2025.3.2.dmg",
-		"https://download.jetbrains.com/go/goland-2025.3.2-aarch64.dmg"
+		"https://download.jetbrains.com/go/goland-2025.3.3.dmg",
+		"https://download.jetbrains.com/go/goland-2025.3.3-aarch64.dmg"
 	],
 	"homepage":"https://www.jetbrains.com/zh-cn/go/",
 	"script":{
