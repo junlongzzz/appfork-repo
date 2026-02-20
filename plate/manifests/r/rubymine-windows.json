@@ -4,12 +4,12 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/rubymine/rubymine.svg",
 	"description":"为 Ruby 开发者赋能，借助 Ruby on Rails IDE 更智能地编码。",
 	"category":"development",
-	"version":"2025.3.2(253.30387.79)",
+	"version":"2025.3.3(253.31033.144)",
 	"platform":"windows",
 	"url":[
-		"https://download.jetbrains.com/ruby/RubyMine-2025.3.2.exe",
-		"https://download.jetbrains.com/ruby/RubyMine-2025.3.2.win.zip",
-		"https://download.jetbrains.com/ruby/RubyMine-2025.3.2-aarch64.exe"
+		"https://download.jetbrains.com/ruby/RubyMine-2025.3.3.exe",
+		"https://download.jetbrains.com/ruby/RubyMine-2025.3.3.win.zip",
+		"https://download.jetbrains.com/ruby/RubyMine-2025.3.3-aarch64.exe"
 	],
 	"homepage":"https://www.jetbrains.com/zh-cn/ruby/",
 	"script":{
