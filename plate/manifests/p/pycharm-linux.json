@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/pycharm/pycharm.svg",
 	"description":"适用于 数据科学 和 Web 开发的 Python IDE。",
 	"category":"development",
-	"version":"2025.3.2.1(253.30387.173)",
+	"version":"2025.3.3(253.31033.139)",
 	"platform":"linux",
 	"url":[
-		"https://download.jetbrains.com/python/pycharm-2025.3.2.1-aarch64.tar.gz",
-		"https://download.jetbrains.com/python/pycharm-2025.3.2.1.tar.gz"
+		"https://download.jetbrains.com/python/pycharm-2025.3.3-aarch64.tar.gz",
+		"https://download.jetbrains.com/python/pycharm-2025.3.3.tar.gz"
 	],
 	"homepage":"https://www.jetbrains.com/zh-cn/pycharm/",
 	"script":{
