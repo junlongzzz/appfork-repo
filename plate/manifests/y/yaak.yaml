@@ -3,7 +3,7 @@ name: Yaak
 logo: https://yaak.app/static/logo.svg
 description: A fast, privacy-first API client for REST, GraphQL, SSE, WebSocket, and gRPC – built with Tauri, Rust, and React.
 category: development
-version: 2026.2.2
+version: 2026.2.3
 platform: windows
 script:
   args:
@@ -12,5 +12,5 @@ script:
       - https://github.com/mountain-loop/yaak/releases/download/v${version}/Yaak_${version}_x64-setup_windows.exe
   name: appfork-check-update
 url:
-  - https://github.com/mountain-loop/yaak/releases/download/v2026.2.2/Yaak_2026.2.2_x64-setup_windows.exe
+  - https://github.com/mountain-loop/yaak/releases/download/v2026.2.3/Yaak_2026.2.3_x64-setup_windows.exe
 homepage: https://yaak.app
