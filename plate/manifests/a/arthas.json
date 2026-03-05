@@ -6,8 +6,8 @@
 	"category":"development",
 	"platform":"other",
 	"homepage":"https://arthas.aliyun.com",
-	"version":"4.1.6",
-	"url":"https://arthas.aliyun.com/download/4.1.6?mirror=aliyun",
+	"version":"4.1.7",
+	"url":"https://arthas.aliyun.com/download/4.1.7?mirror=aliyun",
 	"script":{
 		"args":{
 			"url":"gh://alibaba/arthas",
