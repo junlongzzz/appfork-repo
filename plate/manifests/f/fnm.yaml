@@ -1,0 +1,14 @@
+name: Fast Node Manager (fnm)
+author: Gal Schlezinger <gal@spitfire.co.il>
+description: 🚀 Fast and simple Node.js version manager, built in Rust
+homepage: https://github.com/Schniz/fnm
+category: development
+version: 1.39.0
+platform: windows
+url:
+  - https://github.com/Schniz/fnm/releases/download/v1.39.0/fnm-windows.zip
+script:
+  name: appfork-check-update
+  args:
+    autoupdate:
+      - https://github.com/Schniz/fnm/releases/download/v${version}/fnm-windows.zip
