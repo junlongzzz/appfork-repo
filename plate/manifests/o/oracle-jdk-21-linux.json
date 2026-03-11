@@ -1,0 +1,31 @@
+{
+	"author":"Oracle",
+	"name":"Oracle JDK 21",
+	"logo":"https://avatars.githubusercontent.com/u/4430336?s=200&v=4",
+	"description":"Oracle JDK 21 (LTS) - Oracle 官方 Java 开发工具包，免费用于生产环境 (NFTC 许可)",
+	"category":"development",
+	"version":"21.0.10",
+	"platform":"linux",
+	"url":{
+		"x64 (tar.gz)":"https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz",
+		"x64 (rpm)":"https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm",
+		"x64 (deb)":"https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb",
+		"aarch64 (tar.gz)":"https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.tar.gz",
+		"aarch64 (rpm)":"https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.rpm"
+	},
+	"homepage":"https://www.oracle.com/java/technologies/downloads/#java21",
+	"script":{
+		"args":{
+			"regex":"Java SE Development Kit (21[\\d.]+) downloads",
+			"autoupdate":{
+				"x64 (tar.gz)":"https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz",
+				"x64 (rpm)":"https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm",
+				"x64 (deb)":"https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb",
+				"aarch64 (tar.gz)":"https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.tar.gz",
+				"aarch64 (rpm)":"https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.rpm"
+			},
+			"url":"https://www.oracle.com/java/technologies/downloads/"
+		},
+		"name":"appfork-check-update"
+	}
+}

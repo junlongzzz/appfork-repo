@@ -1,0 +1,24 @@
+{
+	"author":"Eclipse Adoptium",
+	"name":"Eclipse Temurin JDK 17",
+	"logo":"https://adoptium.net/images/adoptium-icon.png",
+	"description":"Eclipse Temurin JDK 17 (LTS) - 开源免费的 Java 开发工具包，基于 OpenJDK 构建",
+	"category":"development",
+	"version":"17.0.18+8",
+	"platform":"linux",
+	"url":{
+		"x64 (tar.gz)":"https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.18%2B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.18_8.tar.gz",
+		"aarch64 (tar.gz)":"https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.18%2B8/OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.18_8.tar.gz"
+	},
+	"homepage":"https://adoptium.net/",
+	"script":{
+		"args":{
+			"url":"github://adoptium/temurin17-binaries",
+			"regex":"\"tag_name\":\\s*\"jdk-(?<version>[^\"]+)\"",
+			"gh":{
+				"assets_jsonpath":"$.assets[?(@.name =~ /OpenJDK17U-jdk_(x64|aarch64)_linux_hotspot_[\\d._]+\\.tar\\.gz$/i)]"
+			}
+		},
+		"name":"appfork-check-update"
+	}
+}

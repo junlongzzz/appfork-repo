@@ -1,0 +1,24 @@
+{
+	"author":"Oracle GraalVM",
+	"name":"GraalVM Community Edition",
+	"logo":"https://www.graalvm.org/resources/img/home/logo_mobile_openmenu.svg",
+	"description":"GraalVM Community Edition - 高性能 JDK，支持 AOT 原生镜像编译",
+	"category":"development",
+	"version":"25.0.2",
+	"platform":"linux",
+	"url":{
+		"x64 (tar.gz)":"https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-25.0.2/graalvm-community-jdk-25.0.2_linux-x64_bin.tar.gz",
+		"aarch64 (tar.gz)":"https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-25.0.2/graalvm-community-jdk-25.0.2_linux-aarch64_bin.tar.gz"
+	},
+	"homepage":"https://www.graalvm.org/",
+	"script":{
+		"args":{
+			"url":"github://graalvm/graalvm-ce-builds",
+			"regex":"\"tag_name\":\\s*\"jdk-(?<version>[^\"]+)\"",
+			"gh":{
+				"assets_jsonpath":"$.assets[?(@.name =~ /graalvm-community-jdk-[\\d.]+_linux-(x64|aarch64)_bin\\.tar\\.gz$/i)]"
+			}
+		},
+		"name":"appfork-check-update"
+	}
+}

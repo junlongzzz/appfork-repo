@@ -1,0 +1,27 @@
+{
+	"author":"Oracle",
+	"name":"Oracle JDK 21",
+	"logo":"https://avatars.githubusercontent.com/u/4430336?s=200&v=4",
+	"description":"Oracle JDK 21 (LTS) - Oracle 官方 Java 开发工具包，免费用于生产环境 (NFTC 许可)",
+	"category":"development",
+	"version":"21.0.10",
+	"platform":"windows",
+	"url":{
+		"x64 (zip)":"https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip",
+		"x64 (exe)":"https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe",
+		"x64 (msi)":"https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.msi"
+	},
+	"homepage":"https://www.oracle.com/java/technologies/downloads/#java21",
+	"script":{
+		"args":{
+			"regex":"Java SE Development Kit (21[\\d.]+) downloads",
+			"autoupdate":{
+				"x64 (zip)":"https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip",
+				"x64 (exe)":"https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe",
+				"x64 (msi)":"https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.msi"
+			},
+			"url":"https://www.oracle.com/java/technologies/downloads/"
+		},
+		"name":"appfork-check-update"
+	}
+}
