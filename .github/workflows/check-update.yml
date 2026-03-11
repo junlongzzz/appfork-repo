@@ -5,7 +5,7 @@ on:
   schedule:
     # 定时执行
     # 注：github action执行服务器在国外，时区为utc+0，比北京时间晚8小时，同时服务器资源问题会排队执行，所以定时时间是不会准确执行的
-    - cron: '0 3,9,15,21 * * *'
+    - cron: '0 3/6 * * *'
 
 # 防止重复执行 还可以指定到job内
 concurrency:
@@ -22,12 +22,9 @@ jobs:
   check-update:
     runs-on: ubuntu-latest
     steps:
-      - name: Set Timezone
-        run: |
-          sudo timedatectl set-timezone 'Asia/Shanghai'
-          date
-
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Set up JDK
         uses: actions/setup-java@v5
@@ -41,34 +38,33 @@ jobs:
         run: mvn -B -DskipTests=true package --file pom.xml
 
       - name: Run updater
-        run: java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -Duser.timezone=Asia/Shanghai -jar ./target/appfork-repo-updater.jar --spring.profiles.active=prod
+        run: |
+          java -Djava.awt.headless=true \
+               -Dfile.encoding=UTF-8 \
+               -Dsun.jnu.encoding=UTF-8 \
+               -Duser.timezone=Asia/Shanghai \
+               -jar ./target/appfork-repo-updater.jar \
+               --spring.profiles.active=prod
 
-      - name: Commit files
-        id: commit-files
+      - name: Commit and Push changes
+        id: commit-and-push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          # 获取变更的文件列表，并格式化为每行一个文件名
-          changed_files=$(git status -s | cut -c4- | while read -r path; do
-              basename "$path"
-          done | sort -u | sed 's/^/- /')
-          if [ -n "$changed_files" ]; then
-            # 生成提交信息并提交变更
-            git commit -m "Automatic update"$'\n\n'"$changed_files" -a
+          # 检查是否有文件变动
+          if [ -n "$(git status --porcelain)" ]; then
+            # 获取变更的文件列表，并格式化为每行一个文件名
+            changed_files=$(git status -s | cut -c4- | awk -F/ '{print "- " $NF}' | sort -u)
+            git add .
+            git commit -m "Automatic update" -m "$changed_files"
+            git push origin ${{ github.ref_name }}
             echo "changed=true" >> "$GITHUB_OUTPUT"
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Push changes
-        if: steps.commit-files.outputs.changed == 'true' # 有变更才触发
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-
       - name: Trigger Sync to Gitee workflow
-        if: steps.commit-files.outputs.changed == 'true' # 有变更才触发
+        if: steps.commit-and-push.outputs.changed == 'true' # 有变更才触发
         uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
