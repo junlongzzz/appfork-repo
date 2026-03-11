@@ -7,10 +7,8 @@
 	"version":"11.0.30+7",
 	"platform":"windows",
 	"url":{
-		"x64 (msi)":"https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_x64_windows_hotspot_11.0.30_7.msi",
-		"x64 (zip)":"https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_x64_windows_hotspot_11.0.30_7.zip",
-		"aarch64 (msi)":"https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_aarch64_windows_hotspot_11.0.30_7.msi",
-		"aarch64 (zip)":"https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_aarch64_windows_hotspot_11.0.30_7.zip"
+		"OpenJDK11U-jdk_x64_windows_hotspot_11.0.30_7.msi":"https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_x64_windows_hotspot_11.0.30_7.msi",
+		"OpenJDK11U-jdk_x64_windows_hotspot_11.0.30_7.zip":"https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_x64_windows_hotspot_11.0.30_7.zip"
 	},
 	"homepage":"https://adoptium.net/",
 	"script":{

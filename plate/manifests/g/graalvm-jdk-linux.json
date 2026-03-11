@@ -7,8 +7,8 @@
 	"version":"25.0.2",
 	"platform":"linux",
 	"url":{
-		"x64 (tar.gz)":"https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-25.0.2/graalvm-community-jdk-25.0.2_linux-x64_bin.tar.gz",
-		"aarch64 (tar.gz)":"https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-25.0.2/graalvm-community-jdk-25.0.2_linux-aarch64_bin.tar.gz"
+		"graalvm-community-jdk-25.0.2_linux-aarch64_bin.tar.gz":"https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-25.0.2/graalvm-community-jdk-25.0.2_linux-aarch64_bin.tar.gz",
+		"graalvm-community-jdk-25.0.2_linux-x64_bin.tar.gz":"https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-25.0.2/graalvm-community-jdk-25.0.2_linux-x64_bin.tar.gz"
 	},
 	"homepage":"https://www.graalvm.org/",
 	"script":{

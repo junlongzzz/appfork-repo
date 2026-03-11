@@ -7,10 +7,10 @@
 	"version":"21.0.10+7",
 	"platform":"windows",
 	"url":{
-		"x64 (msi)":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_x64_windows_hotspot_21.0.10_7.msi",
-		"x64 (zip)":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_x64_windows_hotspot_21.0.10_7.zip",
-		"aarch64 (msi)":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.10_7.msi",
-		"aarch64 (zip)":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.10_7.zip"
+		"OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.10_7.msi":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.10_7.msi",
+		"OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.10_7.zip":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.10_7.zip",
+		"OpenJDK21U-jdk_x64_windows_hotspot_21.0.10_7.msi":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_x64_windows_hotspot_21.0.10_7.msi",
+		"OpenJDK21U-jdk_x64_windows_hotspot_21.0.10_7.zip":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_x64_windows_hotspot_21.0.10_7.zip"
 	},
 	"homepage":"https://adoptium.net/",
 	"script":{

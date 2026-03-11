@@ -7,7 +7,7 @@
 	"version":"25.0.2",
 	"platform":"windows",
 	"url":{
-		"x64 (zip)":"https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-25.0.2/graalvm-community-jdk-25.0.2_windows-x64_bin.zip"
+		"graalvm-community-jdk-25.0.2_windows-x64_bin.zip":"https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-25.0.2/graalvm-community-jdk-25.0.2_windows-x64_bin.zip"
 	},
 	"homepage":"https://www.graalvm.org/",
 	"script":{

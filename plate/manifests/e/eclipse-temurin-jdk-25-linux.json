@@ -7,8 +7,8 @@
 	"version":"25.0.2+10",
 	"platform":"linux",
 	"url":{
-		"x64 (tar.gz)":"https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_x64_linux_hotspot_25.0.2_10.tar.gz",
-		"aarch64 (tar.gz)":"https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_aarch64_linux_hotspot_25.0.2_10.tar.gz"
+		"OpenJDK25U-jdk_aarch64_linux_hotspot_25.0.2_10.tar.gz":"https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_aarch64_linux_hotspot_25.0.2_10.tar.gz",
+		"OpenJDK25U-jdk_x64_linux_hotspot_25.0.2_10.tar.gz":"https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_x64_linux_hotspot_25.0.2_10.tar.gz"
 	},
 	"homepage":"https://adoptium.net/",
 	"script":{
