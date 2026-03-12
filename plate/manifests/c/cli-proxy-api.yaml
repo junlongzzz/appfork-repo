@@ -1,0 +1,18 @@
+name: CLI Proxy API
+author: router-for-me
+logo: https://avatars.githubusercontent.com/u/233033915?s=200&v=4
+description: OpenAI/Gemini/Claude/Codex compatible API proxy service for CLI tools.
+homepage: https://github.com/router-for-me/CLIProxyAPI
+category: tools
+version: 6.8.51
+platform: windows
+url:
+  - https://github.com/router-for-me/CLIProxyAPI/releases/download/v6.8.51/CLIProxyAPI_6.8.51_windows_amd64.zip
+  - https://github.com/router-for-me/CLIProxyAPI/releases/download/v6.8.51/CLIProxyAPI_6.8.51_windows_arm64.zip
+script:
+  name: appfork-check-update
+  args:
+    url: github://router-for-me/CLIProxyAPI
+    autoupdate:
+      - https://github.com/router-for-me/CLIProxyAPI/releases/download/v${version}/CLIProxyAPI_${version}_windows_amd64.zip
+      - https://github.com/router-for-me/CLIProxyAPI/releases/download/v${version}/CLIProxyAPI_${version}_windows_arm64.zip

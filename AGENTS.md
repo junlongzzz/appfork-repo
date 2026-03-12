@@ -126,7 +126,7 @@ Follow existing style in `Updater` and tests:
 
 ## Manifest Conventions
 
-- Supported formats: `.json` and `.yaml`.
+- Supported formats: `.json` and `.yaml` (recommended).
 - Directory pattern: `plate/manifests/<letter-or-#>/<name>.<ext>`.
 - Required keys: `name`, `homepage`, `author`, `description`, `category`, `platform`, `version`, `url`.
 - Optional keys: `logo`, `script`.
