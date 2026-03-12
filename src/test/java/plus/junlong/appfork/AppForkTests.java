@@ -53,22 +53,7 @@ public class AppForkTests {
     public void verifyManifests() throws Exception {
         // ====== 在这里指定需要验证的清单文件路径 ======
         String[] manifestPaths = {
-                "plate/manifests/e/eclipse-temurin-jdk-8.json",
-                "plate/manifests/e/eclipse-temurin-jdk-8-linux.json",
-                "plate/manifests/e/eclipse-temurin-jdk-11.json",
-                "plate/manifests/e/eclipse-temurin-jdk-11-linux.json",
-                "plate/manifests/e/eclipse-temurin-jdk-17.json",
-                "plate/manifests/e/eclipse-temurin-jdk-17-linux.json",
-                "plate/manifests/e/eclipse-temurin-jdk-21.json",
-                "plate/manifests/e/eclipse-temurin-jdk-21-linux.json",
-                "plate/manifests/e/eclipse-temurin-jdk-25.json",
-                "plate/manifests/e/eclipse-temurin-jdk-25-linux.json",
-                "plate/manifests/o/oracle-jdk-21.json",
-                "plate/manifests/o/oracle-jdk-21-linux.json",
-                "plate/manifests/o/oracle-jdk-25.json",
-                "plate/manifests/o/oracle-jdk-25-linux.json",
-                "plate/manifests/g/graalvm-jdk.json",
-                "plate/manifests/g/graalvm-jdk-linux.json",
+                "plate/manifests/g/git-for-windows.json",
         };
         // =============================================
 
