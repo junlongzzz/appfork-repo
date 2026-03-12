@@ -1,0 +1,19 @@
+name: Codex
+author: OpenAI
+logo: https://github.com/openai.png
+description: OpenAI's open source coding agent that runs in your terminal.
+homepage: https://github.com/openai/codex
+category: development
+version: 0.114.0
+platform: windows
+url:
+  - https://github.com/openai/codex/releases/download/rust-v0.114.0/codex-x86_64-pc-windows-msvc.exe
+  - https://github.com/openai/codex/releases/download/rust-v0.114.0/codex-aarch64-pc-windows-msvc.exe
+script:
+  name: appfork-check-update
+  args:
+    url: github://openai/codex
+    regex: /releases/tag/rust-v(?<version>[\w.-]+)
+    autoupdate:
+      - https://github.com/openai/codex/releases/download/rust-v${version}/codex-x86_64-pc-windows-msvc.exe
+      - https://github.com/openai/codex/releases/download/rust-v${version}/codex-aarch64-pc-windows-msvc.exe
