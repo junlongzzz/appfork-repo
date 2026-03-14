@@ -126,7 +126,7 @@ Follow existing style in `Updater` and tests:
 
 ## Manifest Conventions
 
-- Supported formats: `.json` and `.yaml` (recommended).
+- Supported formats: `.json` and `.yaml` (`.yaml` is the top priority).
 - Directory pattern: `plate/manifests/<letter-or-#>/<name>.<ext>`.
 - Required keys: `name`, `homepage`, `author`, `description`, `category`, `platform`, `version`, `url`.
 - Optional keys: `logo`, `script`.
@@ -143,6 +143,10 @@ Follow existing style in `Updater` and tests:
 - `verifyManifests` executes scripts and validates returned URLs with HEAD/GET fallback.
 - Network-related timeout/reset errors may be treated as warnings in that test logic.
 - When adding tests, keep method-targetable names so `-Dtest=Class#method` remains practical.
+- When generating new manifest files, ask the user whether to run the manifest verification test.
+  - If the user confirms, run `mvn test -Dtest=AppForkTests#verifyManifests`.
+  - Before running, set the test method's `manifestPaths` to include only the newly generated manifest file paths (supports multiple).
+  - After the test finishes (success or failure), restore `manifestPaths` to its original value.
 
 ## CI/CD Behavior
 
