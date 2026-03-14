@@ -1,0 +1,16 @@
+author: InterceptSuite
+name: ProxyBridge
+logo: https://raw.githubusercontent.com/InterceptSuite/ProxyBridge/master/img/logo.png
+description: Proxifier alternative to redirect Windows/macOS/Linux TCP and UDP traffic to HTTP/SOCKS5 proxies.
+category: network
+version: 3.2.0
+platform: mac
+url:
+  - https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-v3.2.0-Universal-Installer.pkg
+homepage: https://github.com/InterceptSuite/ProxyBridge
+script:
+  args:
+    url: github://InterceptSuite/ProxyBridge
+    autoupdate:
+      - https://github.com/InterceptSuite/ProxyBridge/releases/download/v${version}/ProxyBridge-v${version}-Universal-Installer.pkg
+  name: appfork-check-update
