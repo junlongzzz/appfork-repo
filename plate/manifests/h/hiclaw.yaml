@@ -1,0 +1,16 @@
+author: Alibaba
+name: HiClaw
+logo: https://hiclaw.io/logo-full.png
+description: Open source multi-agent OS that lets AI agents collaborate in Matrix rooms with human supervision.
+category: tools
+version: 1.0.8
+platform: other
+url:
+  Docs: https://github.com/alibaba/hiclaw/tree/main/docs
+homepage: https://hiclaw.io
+script:
+  args:
+    autoupdate:
+      Docs: https://github.com/alibaba/hiclaw/tree/main/docs
+    url: github://alibaba/hiclaw
+  name: appfork-check-update
