@@ -4,11 +4,11 @@ logo: https://avatars.githubusercontent.com/u/233033915?s=200&v=4
 description: OpenAI/Gemini/Claude/Codex compatible API proxy service for CLI tools.
 homepage: https://github.com/router-for-me/CLIProxyAPI
 category: tools
-version: 6.9.12
+version: 6.9.13
 platform: windows
 url:
-  - https://github.com/router-for-me/CLIProxyAPI/releases/download/v6.9.12/CLIProxyAPI_6.9.12_windows_amd64.zip
-  - https://github.com/router-for-me/CLIProxyAPI/releases/download/v6.9.12/CLIProxyAPI_6.9.12_windows_arm64.zip
+  - https://github.com/router-for-me/CLIProxyAPI/releases/download/v6.9.13/CLIProxyAPI_6.9.13_windows_amd64.zip
+  - https://github.com/router-for-me/CLIProxyAPI/releases/download/v6.9.13/CLIProxyAPI_6.9.13_windows_arm64.zip
 script:
   name: appfork-check-update
   args:
