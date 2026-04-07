@@ -8,7 +8,7 @@
 	"platform":"mac",
 	"script":"bdnetdisk",
 	"url":{
-		"x64":"https://pkg-ant.baidu.com/issue/netdisk/MACguanjia/8.3.6/BaiduNetdisk_mac_8.3.6_x64.dmg",
+		"x64":"https://pkg-ant.baidu.com/issue/netdisk/MACguanjia/8.3.6/BaiduNetdisk_mac_8.3.6.dmg",
 		"arm64":"https://pkg-ant.baidu.com/issue/netdisk/MACguanjia/8.3.6/BaiduNetdisk_mac_8.3.6_arm64.dmg"
 	},
 	"homepage":"https://pan.baidu.com/"
