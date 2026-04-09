@@ -4,13 +4,13 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/rider/rider.svg",
 	"description":"全球最受喜爱的 .NET 和游戏开发 IDE。",
 	"category":"development",
-	"version":"2026.1(261.22158.335)",
+	"version":"2026.1.0.1(261.22158.394)",
 	"platform":"windows",
 	"url":[
-		"https://download.jetbrains.com/rider/JetBrains.Rider-2026.1.exe",
-		"https://download.jetbrains.com/rider/JetBrains.Rider-2026.1.win.zip",
-		"https://download.jetbrains.com/rider/JetBrains.Rider-2026.1-aarch64.exe",
-		"https://download.jetbrains.com/rider/JetBrains.Rider-2026.1-aarch64.win.zip"
+		"https://download.jetbrains.com/rider/JetBrains.Rider-2026.1.0.1.exe",
+		"https://download.jetbrains.com/rider/JetBrains.Rider-2026.1.0.1.win.zip",
+		"https://download.jetbrains.com/rider/JetBrains.Rider-2026.1.0.1-aarch64.exe",
+		"https://download.jetbrains.com/rider/JetBrains.Rider-2026.1.0.1-aarch64.win.zip"
 	],
 	"homepage":"https://www.jetbrains.com/zh-cn/rider/",
 	"script":{
