@@ -7,12 +7,11 @@
 	"version":"6.7.5",
 	"platform":"windows",
 	"url":{
-		"Windows on ARM: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.5/tportable-arm64.6.7.5.zip",
-		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.5/tportable-x64.6.7.5.zip",
-		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.5/tportable.6.7.5.zip",
-		"Windows on ARM: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.5/tsetup-arm64.6.7.5.exe",
+		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.5/tsetup.6.7.5.exe",
 		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.5/tsetup-x64.6.7.5.exe",
-		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.5/tsetup.6.7.5.exe"
+		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.5/tportable-x64.6.7.5.zip",
+		"Windows on ARM: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.5/tsetup-arm64.6.7.5.exe",
+		"Windows on ARM: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.5/tportable-arm64.6.7.5.zip"
 	},
 	"homepage":"https://telegram.org",
 	"script":{
