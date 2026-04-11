@@ -4,11 +4,11 @@ logo: https://github.com/openai.png
 description: OpenAI's open source coding agent that runs in your terminal.
 homepage: https://github.com/openai/codex
 category: development
-version: 0.118.0
+version: 0.120.0
 platform: windows
 url:
-  - https://github.com/openai/codex/releases/download/rust-v0.118.0/codex-x86_64-pc-windows-msvc.exe
-  - https://github.com/openai/codex/releases/download/rust-v0.118.0/codex-aarch64-pc-windows-msvc.exe
+  - https://github.com/openai/codex/releases/download/rust-v0.120.0/codex-x86_64-pc-windows-msvc.exe
+  - https://github.com/openai/codex/releases/download/rust-v0.120.0/codex-aarch64-pc-windows-msvc.exe
 script:
   name: appfork-check-update
   args:
