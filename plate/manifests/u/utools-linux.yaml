@@ -3,10 +3,10 @@ name: uTools
 logo: https://www.u-tools.cn/assets/favicon.png
 description: 新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持UOS, Deepin, Ubuntu
 category: tools
-version: 7.7.0
+version: 7.8.0
 platform: linux
 url:
-  - https://open.u-tools.cn/download/utools_7.7.0_amd64.deb
+  - https://open.u-tools.cn/download/utools_7.8.0_amd64.deb
 homepage: https://www.u-tools.cn
 script:
   args:
