@@ -5,11 +5,11 @@ description: Clash.Meta Kernel, Another Mihomo Kernel
 category: network
 platform: windows
 homepage: https://github.com/MetaCubeX/mihomo
-version: alpha-e38aa82
+version: alpha-7ab4eed
 url:
-  - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-alpha-e38aa82.zip
-  - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-compatible-alpha-e38aa82.zip
-  - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-arm64-alpha-e38aa82.zip
+  - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-alpha-7ab4eed.zip
+  - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-compatible-alpha-7ab4eed.zip
+  - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-arm64-alpha-7ab4eed.zip
 script:
   args:
     regex: (?<version>(?i)alpha-[a-f0-9]+)
