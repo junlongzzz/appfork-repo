@@ -4,13 +4,11 @@
 	"logo":"https://adoptium.net/images/adoptium-icon.png",
 	"description":"Eclipse Temurin JDK 21 (LTS) - 开源免费的 Java 开发工具包，基于 OpenJDK 构建",
 	"category":"development",
-	"version":"21.0.10+7",
+	"version":"21.0.11+10",
 	"platform":"windows",
 	"url":{
-		"OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.10_7.msi":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.10_7.msi",
-		"OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.10_7.zip":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.10_7.zip",
-		"OpenJDK21U-jdk_x64_windows_hotspot_21.0.10_7.msi":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_x64_windows_hotspot_21.0.10_7.msi",
-		"OpenJDK21U-jdk_x64_windows_hotspot_21.0.10_7.zip":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.10%2B7/OpenJDK21U-jdk_x64_windows_hotspot_21.0.10_7.zip"
+		"OpenJDK21U-jdk_x64_windows_hotspot_21.0.11_10.msi":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.11%2B10/OpenJDK21U-jdk_x64_windows_hotspot_21.0.11_10.msi",
+		"OpenJDK21U-jdk_x64_windows_hotspot_21.0.11_10.zip":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.11%2B10/OpenJDK21U-jdk_x64_windows_hotspot_21.0.11_10.zip"
 	},
 	"homepage":"https://adoptium.net/",
 	"script":{
