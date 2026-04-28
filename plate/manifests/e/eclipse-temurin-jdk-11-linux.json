@@ -4,11 +4,10 @@
 	"logo":"https://adoptium.net/images/adoptium-icon.png",
 	"description":"Eclipse Temurin JDK 11 (LTS) - 开源免费的 Java 开发工具包，基于 OpenJDK 构建",
 	"category":"development",
-	"version":"11.0.30+7",
+	"version":"11.0.31+11",
 	"platform":"linux",
 	"url":{
-		"OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.30_7.tar.gz":"https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.30_7.tar.gz",
-		"OpenJDK11U-jdk_x64_linux_hotspot_11.0.30_7.tar.gz":"https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_x64_linux_hotspot_11.0.30_7.tar.gz"
+		"OpenJDK11U-jdk_x64_linux_hotspot_11.0.31_11.tar.gz":"https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.31%2B11/OpenJDK11U-jdk_x64_linux_hotspot_11.0.31_11.tar.gz"
 	},
 	"homepage":"https://adoptium.net/",
 	"script":{
