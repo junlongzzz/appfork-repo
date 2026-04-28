@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/pycharm/pycharm.svg",
 	"description":"适用于 数据科学 和 Web 开发的 Python IDE。",
 	"category":"development",
-	"version":"2026.1(261.22158.340)",
+	"version":"2026.1.1(261.23567.174)",
 	"platform":"mac",
 	"url":[
-		"https://download.jetbrains.com/python/pycharm-2026.1.dmg",
-		"https://download.jetbrains.com/python/pycharm-2026.1-aarch64.dmg"
+		"https://download.jetbrains.com/python/pycharm-2026.1.1.dmg",
+		"https://download.jetbrains.com/python/pycharm-2026.1.1-aarch64.dmg"
 	],
 	"homepage":"https://www.jetbrains.com/zh-cn/pycharm/",
 	"script":{

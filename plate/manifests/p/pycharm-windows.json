@@ -4,13 +4,13 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/pycharm/pycharm.svg",
 	"description":"适用于 数据科学 和 Web 开发的 Python IDE。",
 	"category":"development",
-	"version":"2026.1(261.22158.340)",
+	"version":"2026.1.1(261.23567.174)",
 	"platform":"windows",
 	"url":[
-		"https://download.jetbrains.com/python/pycharm-2026.1.exe",
-		"https://download.jetbrains.com/python/pycharm-2026.1.win.zip",
-		"https://download.jetbrains.com/python/pycharm-2026.1-aarch64.exe",
-		"https://download.jetbrains.com/python/pycharm-2026.1-aarch64.win.zip"
+		"https://download.jetbrains.com/python/pycharm-2026.1.1.exe",
+		"https://download.jetbrains.com/python/pycharm-2026.1.1.win.zip",
+		"https://download.jetbrains.com/python/pycharm-2026.1.1-aarch64.exe",
+		"https://download.jetbrains.com/python/pycharm-2026.1.1-aarch64.win.zip"
 	],
 	"homepage":"https://www.jetbrains.com/zh-cn/pycharm/",
 	"script":{
