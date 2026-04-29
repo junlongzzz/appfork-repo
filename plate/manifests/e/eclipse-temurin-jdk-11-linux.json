@@ -7,6 +7,7 @@
 	"version":"11.0.31+11",
 	"platform":"linux",
 	"url":{
+		"OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.31_11.tar.gz":"https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.31%2B11/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.31_11.tar.gz",
 		"OpenJDK11U-jdk_x64_linux_hotspot_11.0.31_11.tar.gz":"https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.31%2B11/OpenJDK11U-jdk_x64_linux_hotspot_11.0.31_11.tar.gz"
 	},
 	"homepage":"https://adoptium.net/",
