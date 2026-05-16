@@ -5,10 +5,10 @@ description: Wrapper for [Mihomo](https://github.com/MetaCubeX/mihomo) written i
 category: network
 platform: windows
 homepage: https://github.com/junlongzzz/gohomo
-version: '20260514'
+version: '20260516'
 url:
-  - https://github.com/junlongzzz/gohomo/releases/download/20260514/gohomo-windows-amd64-20260514.zip
-  - https://github.com/junlongzzz/gohomo/releases/download/20260514/gohomo-windows-arm64-20260514.zip
+  - https://github.com/junlongzzz/gohomo/releases/download/20260516/gohomo-windows-amd64-20260516.zip
+  - https://github.com/junlongzzz/gohomo/releases/download/20260516/gohomo-windows-arm64-20260516.zip
 script:
   args:
     autoupdate:
