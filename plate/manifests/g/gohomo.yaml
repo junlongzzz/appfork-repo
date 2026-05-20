@@ -5,13 +5,13 @@ description: Wrapper for [Mihomo](https://github.com/MetaCubeX/mihomo) written i
 category: network
 platform: windows
 homepage: https://github.com/junlongzzz/gohomo
-version: '20260519'
+version: 1.0.0
 url:
-  - https://github.com/junlongzzz/gohomo/releases/download/20260519/gohomo-windows-amd64-20260519.zip
-  - https://github.com/junlongzzz/gohomo/releases/download/20260519/gohomo-windows-arm64-20260519.zip
+  - https://github.com/junlongzzz/gohomo/releases/download/v1.0.0/gohomo-windows-amd64-v1.0.0.zip
+  - https://github.com/junlongzzz/gohomo/releases/download/v1.0.0/gohomo-windows-arm64-v1.0.0.zip
 script:
   args:
     autoupdate:
-      - https://github.com/junlongzzz/gohomo/releases/download/${version}/gohomo-windows-amd64-${version}.zip
-      - https://github.com/junlongzzz/gohomo/releases/download/${version}/gohomo-windows-arm64-${version}.zip
+      - https://github.com/junlongzzz/gohomo/releases/download/v${version}/gohomo-windows-amd64-v${version}.zip
+      - https://github.com/junlongzzz/gohomo/releases/download/v${version}/gohomo-windows-arm64-v${version}.zip
   name: appfork-check-update
