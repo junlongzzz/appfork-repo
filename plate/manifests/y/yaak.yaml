@@ -9,8 +9,10 @@ script:
   args:
     url: github://mountain-loop/yaak
     autoupdate:
-      - https://github.com/mountain-loop/yaak/releases/download/v${version}/Yaak_${version}_x64-setup_windows.exe
+      - https://github.com/mountain-loop/yaak/releases/download/v${version}/Yaak_${version}_x64-setup.exe
+      - https://github.com/mountain-loop/yaak/releases/download/v${version}/Yaak_${version}_arm64-setup.exe
   name: appfork-check-update
 url:
-  - https://github.com/mountain-loop/yaak/releases/download/v2026.4.0/Yaak_2026.4.0_x64-setup_windows.exe
+  - https://github.com/mountain-loop/yaak/releases/download/v2026.4.0/Yaak_2026.4.0_x64-setup.exe
+  - https://github.com/mountain-loop/yaak/releases/download/v2026.4.0/Yaak_2026.4.0_arm64-setup.exe
 homepage: https://yaak.app
