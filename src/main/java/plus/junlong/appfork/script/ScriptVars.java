@@ -19,6 +19,11 @@ public final class ScriptVars {
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36";
 
     /**
+     * HTTP请求 空 User-Agent
+     */
+    public static final String USER_AGENT_NONE = "";
+
+    /**
      * HTTP 请求默认超时时间（从请求发出到收到响应的总时长），防止服务端接受连接后不返回数据导致无限等待
      */
     public static final Duration REQUEST_TIMEOUT = Duration.ofSeconds(90);
