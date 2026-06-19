@@ -21,7 +21,9 @@
 				"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-aarch64.7z"
 			],
 			"url":"https://sourceforge.net/projects/mpv-player-windows/files/release/",
-			"headers":{}
+			"headers":{
+				"User-Agent":""
+            }
 		},
 		"name":"appfork-check-update"
 	}
