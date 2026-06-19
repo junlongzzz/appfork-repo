@@ -1,6 +1,6 @@
+import com.alibaba.fastjson2.JSON
 import com.alibaba.fastjson2.JSONObject
 import com.jayway.jsonpath.JsonPath
-import groovy.json.JsonSlurper
 import org.dom4j.DocumentHelper
 import plus.junlong.appfork.script.ScriptUpdater
 import plus.junlong.appfork.script.ScriptVars
@@ -37,8 +37,6 @@ class UpdateScript implements ScriptUpdater {
         }
 
         def httpClient = ScriptVars.HTTP_CLIENT
-        // 默认的user-agent
-        def userAgent = ScriptVars.USER_AGENT
 
         // 判断是不是腾讯软件中心的检测方式链接，格式为 tsc://<分类ID>/<应用ID>
         // tsc为Tencent Software Center的缩写
@@ -48,11 +46,10 @@ class UpdateScript implements ScriptUpdater {
             def categoryId = urlMatcher.group('categoryId')
             def appId = urlMatcher.group('appId')
 
-            def response = new JsonSlurper().parseText(httpClient.send(HttpRequest.newBuilder()
+            def response = JSON.parseObject(httpClient.send(ScriptVars.newRequestBuilder()
                     .uri("https://luban.m.qq.com/api/public/software-manager/softwareProxy".toURI())
                     .header('Content-Type', 'application/x-www-form-urlencoded')
                     .header('Accept-Language', 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6')
-                    .header('User-Agent', userAgent)
                     .POST(HttpRequest.BodyPublishers.ofString("cmdid=3318&jprxReq[req][soft_id_list][]=${appId}")).build(),
                     HttpResponse.BodyHandlers.ofString()).body())
             if (response.resp == null || response.resp.retCode != 0 ||
@@ -121,25 +118,28 @@ class UpdateScript implements ScriptUpdater {
             }
         }
 
-        def request = HttpRequest.newBuilder().uri(checkUrl.toURI()).GET()
+        def request = ScriptVars.newRequestBuilder().uri(checkUrl.toURI()).GET()
         if (headers != null) {
             for (header in headers) {
-                request.header(header.key as String, header.value ? header.value as String : '')
+                request.setHeader(header.key as String, header.value ? header.value as String : '')
             }
-        } else {
-            request.header('User-Agent', userAgent)
         }
-        def response = httpClient.send(request.build(), HttpResponse.BodyHandlers.ofString()).body()
+        def httpResponse = httpClient.send(request.build(), HttpResponse.BodyHandlers.ofString())
+        // 非 2xx 视为检测失败，返回错误而非静默当成"无更新"，避免掩盖 404/限流/故障等问题
+        if (httpResponse.statusCode() < 200 || httpResponse.statusCode() >= 300) {
+            return [error: "Request to ${checkUrl} returned HTTP ${httpResponse.statusCode()}" as String]
+        }
+        def response = httpResponse.body()
         // 开始用对应方式查找版本号
         if (githubPreRelease) { // github预发布版本
-            def result = JsonPath.read(response, '$.*[?(@.prerelease == true)]')
-            if (result instanceof List && !result.isEmpty()) {
-                result = result[0]
-            } else {
+            def preReleases = JsonPath.read(response, '$.*[?(@.prerelease == true)]')
+            if (!(preReleases instanceof List) || preReleases.isEmpty()) {
                 return null
             }
-            version = result.tag_name as String
-            response = result
+            def latestPreRelease = preReleases[0]
+            version = latestPreRelease.tag_name as String
+            // 序列化为合法 JSON 字符串，使 response 始终为 String，且后续 assets 提取能正确解析
+            response = JSON.toJSONString(latestPreRelease)
         } else if (regex) { // 正则
             def matcher = response =~ regex
             if (!matcher.find()) {
@@ -218,15 +218,14 @@ class UpdateScript implements ScriptUpdater {
         if (str == null || str.isEmpty() || version == null || version.isEmpty()) {
             return str
         }
-        def matcher = str =~ '\\$\\{?(?<versionType>[a-zA-Z]+)}?'
         // 匹配语义化版本号 major.minor.patch-prerelease+buildmetadata
         def semVerMatcher = version =~ '^(?<major>0|[1-9]\\d*)\\.(?<minor>0|[1-9]\\d*)\\.(?<patch>0|[1-9]\\d*)' +
                 '(?:-(?<prerelease>(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?' +
                 '(?:\\+(?<buildmetadata>[0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$'
         def isSemVer = semVerMatcher.find()
-        while (matcher.find()) {
-            def versionType = matcher.group('versionType').toLowerCase()
-            def versionReplace = switch (versionType) {
+        // 将 $version、${clean}、${major} 等占位符替换为对应版本号片段，未识别的占位符保持原样
+        return str.replaceAll('\\$\\{?(?<versionType>[a-zA-Z]+)}?') { all, versionType ->
+            def versionReplace = switch (versionType.toLowerCase()) {
                 case 'version' -> version
                 case 'cleanversion', 'clean' -> version.replaceAll('\\D', '') // 只有纯数字的版本号
                 case 'majorversion', 'major' -> isSemVer ? semVerMatcher.group('major') : null
@@ -236,11 +235,8 @@ class UpdateScript implements ScriptUpdater {
                 case 'buildmetadataversion', 'buildmetadata' -> isSemVer ? semVerMatcher.group('buildmetadata') : null
                 default -> null
             }
-            if (versionReplace != null) {
-                str = str.replace(matcher.group(), versionReplace)
-            }
+            versionReplace != null ? versionReplace : all
         }
-        return str
     }
 
 }

@@ -2,6 +2,7 @@ package plus.junlong.appfork;
 
 import cn.hutool.core.date.BetweenFormatter;
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.exceptions.ExceptionUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.ReUtil;
 import cn.hutool.core.util.StrUtil;
@@ -19,7 +20,7 @@ import org.yaml.snakeyaml.Yaml;
 import plus.junlong.appfork.script.ScriptUpdater;
 
 import java.io.File;
-import java.io.Serial;
+import java.io.IOException;
 import java.lang.reflect.Modifier;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -36,41 +37,32 @@ import java.util.regex.Pattern;
 public final class Updater implements CommandLineRunner {
 
     // 平台列表
-    private final Map<String, String> platforms = new LinkedHashMap<>() {
-        @Serial
-        private static final long serialVersionUID = 1L;
-
-        {
-            this.put("windows", "Windows");
-            this.put("linux", "Linux");
-            this.put("mac", "macOS");
-            this.put("android", "Android");
-            this.put("extensions", "浏览器扩展");
-            this.put("other", "Other");
-        }
-    };
-
+    private static final Map<String, String> platforms = new LinkedHashMap<>();
     // 分类列表
-    private final Map<String, String> categories = new LinkedHashMap<>() {
-        @Serial
-        private static final long serialVersionUID = 1L;
+    private static final Map<String, String> categories = new LinkedHashMap<>();
 
-        {
-            this.put("network", "网络应用");
-            this.put("chat", "社交沟通");
-            this.put("music", "音乐欣赏");
-            this.put("video", "视频播放");
-            this.put("graphics", "图形图像");
-            this.put("games", "游戏娱乐");
-            this.put("office", "办公学习");
-            this.put("reading", "阅读翻译");
-            this.put("development", "编程开发");
-            this.put("tools", "系统工具");
-            this.put("beautify", "主题美化");
-            this.put("others", "其他应用");
-            this.put("image", "系统镜像");
-        }
-    };
+    static {
+        platforms.put("windows", "Windows");
+        platforms.put("linux", "Linux");
+        platforms.put("mac", "macOS");
+        platforms.put("android", "Android");
+        platforms.put("extensions", "浏览器扩展");
+        platforms.put("other", "Other");
+
+        categories.put("network", "网络应用");
+        categories.put("chat", "社交沟通");
+        categories.put("music", "音乐欣赏");
+        categories.put("video", "视频播放");
+        categories.put("graphics", "图形图像");
+        categories.put("games", "游戏娱乐");
+        categories.put("office", "办公学习");
+        categories.put("reading", "阅读翻译");
+        categories.put("development", "编程开发");
+        categories.put("tools", "系统工具");
+        categories.put("beautify", "主题美化");
+        categories.put("others", "其他应用");
+        categories.put("image", "系统镜像");
+    }
 
     // 正常完成同步但未更新
     private final int SYNC_NONE = 0;
@@ -127,16 +119,20 @@ public final class Updater implements CommandLineRunner {
         Semaphore semaphore = new Semaphore(20);
 
         long startTime = System.currentTimeMillis();
-        try (GroovyClassLoader groovyClassLoader = new GroovyClassLoader();
-             ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
+        GroovyClassLoader groovyClassLoader = new GroovyClassLoader();
+        ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
+        try {
             List<CompletableFuture<Void>> futures = manifests.stream()
                     .map(file -> CompletableFuture.runAsync(() -> {
                         try {
                             semaphore.acquire();
-                            int result = sync(file, groovyClassLoader);
-                            counters[result].increment();
                         } catch (InterruptedException e) {
+                            // 获取许可前被中断，未持有许可，直接退出且不释放
                             Thread.currentThread().interrupt();
+                            return;
+                        }
+                        try {
+                            counters[sync(file, groovyClassLoader)].increment();
                         } catch (Exception e) {
                             log.error("处理文件 [{}] 失败: {}", file.getName(), getBetterExceptionMessage(e));
                             counters[SYNC_ERROR].increment();
@@ -148,8 +144,18 @@ public final class Updater implements CommandLineRunner {
 
             // 等待所有异步任务结束，并设置总超时保护
             CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).get(3, TimeUnit.HOURS);
+        } catch (TimeoutException e) {
+            log.error("同步超时（3小时），强制终止未完成的任务");
         } catch (Exception e) {
             log.error("同步出错: {}", getBetterExceptionMessage(e));
+        } finally {
+            // 主动关闭：shutdownNow 会中断仍在运行的虚拟线程，避免卡死任务导致迟迟无法退出
+            executor.shutdownNow();
+            try {
+                groovyClassLoader.close();
+            } catch (IOException e) {
+                log.error("关闭 GroovyClassLoader 失败: {}", getBetterExceptionMessage(e));
+            }
         }
         log.info("同步完成: 更新 {} 个, 失败 {} 个, 未更新 {} 个",
                 counters[SYNC_UPDATE].sum(), counters[SYNC_ERROR].sum(), counters[SYNC_NONE].sum());
@@ -300,30 +306,10 @@ public final class Updater implements CommandLineRunner {
                         boolean correctUrl = switch (value) {
                             // 只有一个链接，直接检查是否是合法链接形式
                             case String updateUrlStr -> isUrl(updateUrlStr);
-                            // 有多个链接，循环检查是否是合法链接形式
-                            case Map<?, ?> updateUrlMap -> {
-                                if (updateUrlMap.isEmpty()) {
-                                    yield false;
-                                }
-                                for (Object v : updateUrlMap.values()) {
-                                    if (!(v instanceof String str) || !isUrl(str)) {
-                                        yield false;
-                                    }
-                                }
-                                yield true;
-                            }
-                            // 有多个链接，循环检查是否是合法链接形式
-                            case List<?> updateUrlList -> {
-                                if (updateUrlList.isEmpty()) {
-                                    yield false;
-                                }
-                                for (Object v : updateUrlList) {
-                                    if (!(v instanceof String str) || !isUrl(str)) {
-                                        yield false;
-                                    }
-                                }
-                                yield true;
-                            }
+                            // 有多个链接，检查是否都是合法链接形式
+                            case Map<?, ?> updateUrlMap -> allUrls(updateUrlMap.values());
+                            // 有多个链接，检查是否都是合法链接形式
+                            case List<?> updateUrlList -> allUrls(updateUrlList);
                             default -> false;
                         };
                         if (!correctUrl) {
@@ -373,6 +359,13 @@ public final class Updater implements CommandLineRunner {
     }
 
     /**
+     * 判断集合内的值是否全部为合法url地址（集合为空时返回 false）
+     */
+    private boolean allUrls(Collection<?> values) {
+        return !values.isEmpty() && values.stream().allMatch(v -> v instanceof String str && isUrl(str));
+    }
+
+    /**
      * 判断是否是合法url地址，不匹配 localhost
      */
     public boolean isUrl(String text) {
@@ -383,7 +376,7 @@ public final class Updater implements CommandLineRunner {
      * 获取更好的异常信息
      */
     private String getBetterExceptionMessage(Exception e) {
-        return Optional.ofNullable(e.getCause()).orElse(e).toString();
+        return ExceptionUtil.getRootCause(e).toString();
     }
 
 }

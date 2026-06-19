@@ -1,6 +1,7 @@
 package plus.junlong.appfork.script;
 
 import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
 import java.time.Duration;
 import java.util.concurrent.Executors;
 
@@ -15,7 +16,12 @@ public final class ScriptVars {
      * HTTP请求 User-Agent
      */
     public static final String USER_AGENT =
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36";
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36";
+
+    /**
+     * HTTP 请求默认超时时间（从请求发出到收到响应的总时长），防止服务端接受连接后不返回数据导致无限等待
+     */
+    public static final Duration REQUEST_TIMEOUT = Duration.ofSeconds(90);
 
     /**
      * 默认的 HttpClient
@@ -31,9 +37,19 @@ public final class ScriptVars {
     public static HttpClient.Builder newHttpClientBuilder() {
         return HttpClient.newBuilder()
                 .followRedirects(HttpClient.Redirect.ALWAYS)
-                .connectTimeout(Duration.ofMillis(30000))
+                .connectTimeout(Duration.ofSeconds(30))
                 // 虚拟线程
                 .executor(Executors.newVirtualThreadPerTaskExecutor());
+    }
+
+    /**
+     * 创建一个预设了请求超时与默认 User-Agent 的 HttpRequest.Builder
+     * 脚本可在其基础上设置 uri 与请求方法，避免遗漏超时设置
+     */
+    public static HttpRequest.Builder newRequestBuilder() {
+        return HttpRequest.newBuilder()
+                .timeout(REQUEST_TIMEOUT)
+                .header("User-Agent", USER_AGENT);
     }
 
 }
