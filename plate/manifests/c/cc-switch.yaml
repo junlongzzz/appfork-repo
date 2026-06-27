@@ -4,11 +4,11 @@ logo: https://ccswitch.io/favicon.png
 description: A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent.
 homepage: https://ccswitch.io
 category: tools
-version: 3.16.3
+version: 3.16.4
 platform: windows
 url:
-  - https://github.com/farion1231/cc-switch/releases/download/v3.16.3/CC-Switch-v3.16.3-Windows.msi
-  - https://github.com/farion1231/cc-switch/releases/download/v3.16.3/CC-Switch-v3.16.3-Windows-Portable.zip
+  - https://github.com/farion1231/cc-switch/releases/download/v3.16.4/CC-Switch-v3.16.4-Windows.msi
+  - https://github.com/farion1231/cc-switch/releases/download/v3.16.4/CC-Switch-v3.16.4-Windows-Portable.zip
 script:
   name: appfork-check-update
   args:
