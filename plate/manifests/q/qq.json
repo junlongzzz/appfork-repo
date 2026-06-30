@@ -6,7 +6,10 @@
 	"category":"chat",
 	"version":"9.9.31",
 	"platform":"windows",
-	"url":"https://qqdl.gtimg.cn/qqfile/qq/PCQQ/PCQQ9.7.25/QQ9.7.25.29417.exe",
+	"url":{
+		"x64":"https://qqdl.gtimg.cn/qqfile/QQNT/9.9.31/release/092069d7/QQ_9.9.31_260528_x64_01.exe",
+		"arm64":"https://qqdl.gtimg.cn/qqfile/QQNT/9.9.31/release/092069d7/QQ_9.9.31_260528_arm64_01.exe"
+	},
 	"homepage":"https://im.qq.com",
 	"script":"qq"
 }
