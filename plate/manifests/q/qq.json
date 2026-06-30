@@ -1,17 +1,12 @@
 {
 	"author":"Tencent",
 	"name":"QQ",
-	"logo":"https://qzonestyle.gtimg.cn/qzone/qzact/act/external/tiqq/logo.png",
-	"description":"无论何时何地，都能自由享受QQ在各类终端的高清通话，通过QQ，电脑和手机上的文件都能收发自如。",
+	"logo":"https://static-res.qq.com/static-res/imqq/qq-logo.png",
+	"description":"QQ 轻松做自己",
 	"category":"chat",
 	"version":"9.9.31",
 	"platform":"windows",
 	"url":"https://qqdl.gtimg.cn/qqfile/qq/PCQQ/PCQQ9.7.25/QQ9.7.25.29417.exe",
-	"homepage":"https://im.qq.com/pcqq/index.shtml",
-	"script":{
-		"args":{
-			"nt":false
-		},
-		"name":"qq-nt"
-	}
+	"homepage":"https://im.qq.com",
+	"script":"qq"
 }

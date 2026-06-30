@@ -1,16 +1,16 @@
 {
 	"author":"Tencent",
 	"name":"QQ Linux版",
-	"logo":"https://qzonestyle.gtimg.cn/qzone/qzact/act/external/tiqq/logo.png",
-	"description":"![p1](https://im.qq.com/linuxqq/images/linuxqq/mobile/p1.png)",
+	"logo":"https://static-res.qq.com/static-res/imqq/qq-logo.png",
+	"description":"QQ 轻松做自己",
 	"category":"chat",
 	"platform":"linux",
-	"homepage":"https://im.qq.com/linuxqq/index.shtml",
+	"homepage":"https://im.qq.com",
 	"version":"3.2.29",
 	"url":{
 		"deb":"https://qqdl.gtimg.cn/qqfile/QQNT/9.9.31/release/00e6a3e7/QQ_3.2.29_260528_amd64_01.deb",
 		"appimage":"https://qqdl.gtimg.cn/qqfile/QQNT/9.9.31/release/00e6a3e7/QQ_3.2.29_260528_x86_64_01.AppImage",
 		"rpm":"https://qqdl.gtimg.cn/qqfile/QQNT/9.9.31/release/00e6a3e7/QQ_3.2.29_260528_x86_64_01.rpm"
 	},
-	"script":"qq-nt"
+	"script":"qq"
 }
