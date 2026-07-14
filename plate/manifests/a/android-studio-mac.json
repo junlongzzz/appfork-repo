@@ -6,9 +6,9 @@
 	"platform":"mac",
 	"script":"android-studio",
 	"homepage":"https://developer.android.com/studio",
-	"version":"2026.1.1.10",
+	"version":"2026.1.2.10",
 	"url":{
-		"Android Studio 2026.1.1.10":"https://edgedl.me.gvt1.com/android/studio/install/2026.1.1.10/android-studio-quail1-patch2-mac.dmg",
-		"Android Studio 2026.1.1.10 (arm)":"https://edgedl.me.gvt1.com/android/studio/install/2026.1.1.10/android-studio-quail1-patch2-mac_arm.dmg"
+		"Android Studio 2026.1.2.10":"https://edgedl.me.gvt1.com/android/studio/install/2026.1.2.10/android-studio-quail2-mac.dmg",
+		"Android Studio 2026.1.2.10 (arm)":"https://edgedl.me.gvt1.com/android/studio/install/2026.1.2.10/android-studio-quail2-mac_arm.dmg"
 	}
 }

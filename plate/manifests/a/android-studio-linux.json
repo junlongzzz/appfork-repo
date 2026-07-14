@@ -6,8 +6,8 @@
 	"platform":"linux",
 	"script":"android-studio",
 	"homepage":"https://developer.android.com/studio",
-	"version":"2026.1.1.10",
+	"version":"2026.1.2.10",
 	"url":{
-		"Android Studio 2026.1.1.10":"https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.1.1.10/android-studio-quail1-patch2-linux.tar.gz"
+		"Android Studio 2026.1.2.10":"https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.1.2.10/android-studio-quail2-linux.tar.gz"
 	}
 }
