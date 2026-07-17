@@ -4,8 +4,8 @@
 	"logo":"https://www.google.cn/chrome/static/images/chrome-logo.svg",
 	"description":"由 Google 打造的网络浏览器",
 	"category":"network",
-	"version":"150.0.7871.125",
+	"version":"150.0.7871.129",
 	"platform":"windows",
-	"url":"https://dl.google.com/release2/chrome/acujxecy6mtzxbrq3kv5npnyzyoa_150.0.7871.125/150.0.7871.125_chrome_installer_uncompressed.exe",
+	"url":"https://dl.google.com/release2/chrome/acyfzdooxjhnaladzsvqy5vjwtfq_150.0.7871.129/150.0.7871.129_chrome_installer_uncompressed.exe",
 	"homepage":"https://www.google.cn/chrome/index.html"
 }
