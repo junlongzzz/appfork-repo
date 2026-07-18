@@ -1,0 +1,22 @@
+name: Multica
+author: multica-ai
+logo: https://avatars.githubusercontent.com/u/254743058
+description: The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.
+homepage: https://multica.ai
+category: development
+version: 0.4.4
+platform: mac
+url:
+  - https://github.com/multica-ai/multica/releases/download/v0.4.4/multica-desktop-0.4.4-mac-x64.dmg
+  - https://github.com/multica-ai/multica/releases/download/v0.4.4/multica-desktop-0.4.4-mac-arm64.dmg
+  - https://github.com/multica-ai/multica/releases/download/v0.4.4/multica-cli-0.4.4-darwin-amd64.tar.gz
+  - https://github.com/multica-ai/multica/releases/download/v0.4.4/multica-cli-0.4.4-darwin-arm64.tar.gz
+script:
+  name: appfork-check-update
+  args:
+    url: github://multica-ai/multica
+    autoupdate:
+      - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-mac-x64.dmg
+      - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-mac-arm64.dmg
+      - https://github.com/multica-ai/multica/releases/download/v${version}/multica-cli-${version}-darwin-amd64.tar.gz
+      - https://github.com/multica-ai/multica/releases/download/v${version}/multica-cli-${version}-darwin-arm64.tar.gz
