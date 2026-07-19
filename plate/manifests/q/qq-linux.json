@@ -6,11 +6,11 @@
 	"category":"chat",
 	"platform":"linux",
 	"homepage":"https://im.qq.com",
-	"version":"3.2.29",
+	"version":"3.2.31",
 	"url":{
-		"deb":"https://qqdl.gtimg.cn/qqfile/QQNT/9.9.31/release/00e6a3e7/QQ_3.2.29_260528_amd64_01.deb",
-		"appimage":"https://qqdl.gtimg.cn/qqfile/QQNT/9.9.31/release/00e6a3e7/QQ_3.2.29_260528_x86_64_01.AppImage",
-		"rpm":"https://qqdl.gtimg.cn/qqfile/QQNT/9.9.31/release/00e6a3e7/QQ_3.2.29_260528_x86_64_01.rpm"
+		"deb":"https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.32/release/c390e792/QQ_3.2.31_260710_amd64_01.deb",
+		"appimage":"https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.32/release/c390e792/QQ_3.2.31_260710_x86_64_01.AppImage",
+		"rpm":"https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.32/release/c390e792/QQ_3.2.31_260710_x86_64_01.rpm"
 	},
 	"script":"qq"
 }
