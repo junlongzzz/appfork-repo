@@ -4,17 +4,17 @@ logo: https://avatars.githubusercontent.com/u/254743058
 description: The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.
 homepage: https://multica.ai
 category: development
-version: 0.4.7
+version: 0.4.8
 platform: linux
 url:
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-desktop-0.4.7-linux-amd64.deb
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-desktop-0.4.7-linux-arm64.deb
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-desktop-0.4.7-linux-x86_64.AppImage
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-desktop-0.4.7-linux-x86_64.rpm
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-desktop-0.4.7-linux-arm64.AppImage
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-desktop-0.4.7-linux-aarch64.rpm
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-cli-0.4.7-linux-amd64.tar.gz
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-cli-0.4.7-linux-arm64.tar.gz
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-desktop-0.4.8-linux-amd64.deb
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-desktop-0.4.8-linux-arm64.deb
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-desktop-0.4.8-linux-x86_64.AppImage
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-desktop-0.4.8-linux-x86_64.rpm
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-desktop-0.4.8-linux-arm64.AppImage
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-desktop-0.4.8-linux-aarch64.rpm
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-cli-0.4.8-linux-amd64.tar.gz
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-cli-0.4.8-linux-arm64.tar.gz
 script:
   name: appfork-check-update
   args:

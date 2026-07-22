@@ -4,13 +4,13 @@ logo: https://avatars.githubusercontent.com/u/254743058
 description: The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.
 homepage: https://multica.ai
 category: development
-version: 0.4.7
+version: 0.4.8
 platform: windows
 url:
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-desktop-0.4.7-windows-x64.exe
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-desktop-0.4.7-windows-arm64.exe
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-cli-0.4.7-windows-amd64.zip
-  - https://github.com/multica-ai/multica/releases/download/v0.4.7/multica-cli-0.4.7-windows-arm64.zip
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-desktop-0.4.8-windows-x64.exe
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-desktop-0.4.8-windows-arm64.exe
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-cli-0.4.8-windows-amd64.zip
+  - https://github.com/multica-ai/multica/releases/download/v0.4.8/multica-cli-0.4.8-windows-arm64.zip
 script:
   name: appfork-check-update
   args:
