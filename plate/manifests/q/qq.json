@@ -7,8 +7,8 @@
 	"version":"9.9.32",
 	"platform":"windows",
 	"url":{
-		"x64":"https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.32/release/9d4083e2/QQ_9.9.32_260716_x64_01.exe",
-		"arm64":"https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.32/release/9d4083e2/QQ_9.9.32_260716_arm64_01.exe"
+		"x64":"https://qqdl.gtimg.cn/qqfile/QQNT/9.9.32/release/9d4083e2/QQ_9.9.32_260716_x64_01.exe",
+		"arm64":"https://qqdl.gtimg.cn/qqfile/QQNT/9.9.32/release/9d4083e2/QQ_9.9.32_260716_arm64_01.exe"
 	},
 	"homepage":"https://im.qq.com",
 	"script":"qq"
