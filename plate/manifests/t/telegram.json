@@ -7,9 +7,10 @@
 	"version":"7.0.8",
 	"platform":"windows",
 	"url":{
-		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.0.8/tsetup.7.0.8.exe",
+		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.0.8/tportable-x64.7.0.8.zip",
 		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.0.8/tportable.7.0.8.zip",
-		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.0.8/tsetup-x64.7.0.8.exe"
+		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.0.8/tsetup-x64.7.0.8.exe",
+		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.0.8/tsetup.7.0.8.exe"
 	},
 	"homepage":"https://telegram.org",
 	"script":{
