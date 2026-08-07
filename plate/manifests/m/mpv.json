@@ -8,22 +8,16 @@
 	"homepage":"https://mpv.io",
 	"version":"0.41.0",
 	"url":[
-		"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.41.0-x86_64.7z",
-		"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.41.0-i686.7z",
-		"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.41.0-aarch64.7z"
+		"https://github.com/mpv-player/mpv/releases/download/v0.41.0/mpv-v0.41.0-x86_64-pc-windows-msvc.zip",
+		"https://github.com/mpv-player/mpv/releases/download/v0.41.0/mpv-v0.41.0-aarch64-pc-windows-msvc.zip"
 	],
 	"script":{
 		"args":{
-			"regex":"mpv-([\\d.]+)-",
 			"autoupdate":[
-				"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-x86_64.7z",
-				"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-i686.7z",
-				"https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-${version}-aarch64.7z"
+				"https://github.com/mpv-player/mpv/releases/download/v${version}/mpv-v${version}-x86_64-pc-windows-msvc.zip",
+				"https://github.com/mpv-player/mpv/releases/download/v${version}/mpv-v${version}-aarch64-pc-windows-msvc.zip"
 			],
-			"url":"https://sourceforge.net/projects/mpv-player-windows/files/release/",
-			"headers":{
-				"User-Agent":""
-            }
+			"url":"github://mpv-player/mpv"
 		},
 		"name":"appfork-check-update"
 	}
