@@ -13,7 +13,7 @@
 	"script":{
 		"name":"appfork-check-update",
 		"args":{
-			"url":"https://dorado-api.deno.dev/edge?arch=64&channel=stable",
+			"url":"https://dorado-api.chawyehsu.deno.net/edge?arch=64&channel=stable",
 			"jsonpath":"$.Version",
 			"autoupdate":{
 				"官网下载":"https://www.microsoft.com/zh-cn/edge/download"
