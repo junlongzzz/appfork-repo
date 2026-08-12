@@ -6,9 +6,9 @@
 	"author":"Obsidian Team",
 	"category":"reading",
 	"platform":"windows",
-	"version":"1.13.6",
+	"version":"1.13.7",
 	"url":{
-		"Obsidian-1.13.6.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.13.6/Obsidian-1.13.6.exe"
+		"Obsidian-1.13.7.exe":"https://github.com/obsidianmd/obsidian-releases/releases/download/v1.13.7/Obsidian-1.13.7.exe"
 	},
 	"script":{
 		"args":{
