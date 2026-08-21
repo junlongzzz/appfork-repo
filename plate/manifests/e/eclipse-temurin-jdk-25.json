@@ -4,11 +4,11 @@
 	"logo":"https://adoptium.net/images/adoptium-icon.png",
 	"description":"Eclipse Temurin JDK 25 - 开源免费的 Java 开发工具包，基于 OpenJDK 构建",
 	"category":"development",
-	"version":"25.0.4+7",
+	"version":"25.0.4.1+1",
 	"platform":"windows",
 	"url":{
-		"OpenJDK25U-jdk_x64_windows_hotspot_25.0.4_7.msi":"https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4%2B7/OpenJDK25U-jdk_x64_windows_hotspot_25.0.4_7.msi",
-		"OpenJDK25U-jdk_x64_windows_hotspot_25.0.4_7.zip":"https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4%2B7/OpenJDK25U-jdk_x64_windows_hotspot_25.0.4_7.zip"
+		"OpenJDK25U-jdk_x64_windows_hotspot_25.0.4.1_1.msi":"https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%2B1/OpenJDK25U-jdk_x64_windows_hotspot_25.0.4.1_1.msi",
+		"OpenJDK25U-jdk_x64_windows_hotspot_25.0.4.1_1.zip":"https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%2B1/OpenJDK25U-jdk_x64_windows_hotspot_25.0.4.1_1.zip"
 	},
 	"homepage":"https://adoptium.net/",
 	"script":{
