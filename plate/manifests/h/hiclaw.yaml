@@ -3,7 +3,7 @@ name: HiClaw
 logo: https://hiclaw.io/logo-full.png
 description: Open source multi-agent OS that lets AI agents collaborate in Matrix rooms with human supervision.
 category: tools
-version: 1.2.2
+version: 1.2.3
 platform: other
 url:
   Docs: https://github.com/alibaba/hiclaw/tree/main/docs

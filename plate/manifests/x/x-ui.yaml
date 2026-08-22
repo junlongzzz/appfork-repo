@@ -4,10 +4,10 @@ description: An Advanced Web Panel • Built on Xray Core
 category: network
 platform: linux
 homepage: https://github.com/alireza0/x-ui
-version: 1.11.4
+version: 1.12.0
 url:
-  - https://github.com/alireza0/x-ui/releases/download/1.11.4/x-ui-linux-amd64.tar.gz
-  - https://github.com/alireza0/x-ui/releases/download/1.11.4/x-ui-linux-arm64.tar.gz
+  - https://github.com/alireza0/x-ui/releases/download/1.12.0/x-ui-linux-amd64.tar.gz
+  - https://github.com/alireza0/x-ui/releases/download/1.12.0/x-ui-linux-arm64.tar.gz
 script:
   args:
     autoupdate:
