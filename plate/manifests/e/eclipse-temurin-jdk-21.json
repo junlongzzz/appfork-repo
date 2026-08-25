@@ -7,6 +7,8 @@
 	"version":"21.0.12.1+1",
 	"platform":"windows",
 	"url":{
+		"OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.12.1_1.msi":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.12.1_1.msi",
+		"OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.12.1_1.zip":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.12.1_1.zip",
 		"OpenJDK21U-jdk_x64_windows_hotspot_21.0.12.1_1.msi":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_windows_hotspot_21.0.12.1_1.msi",
 		"OpenJDK21U-jdk_x64_windows_hotspot_21.0.12.1_1.zip":"https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_windows_hotspot_21.0.12.1_1.zip"
 	},
