@@ -4,11 +4,11 @@
 	"logo":"https://adoptium.net/images/adoptium-icon.png",
 	"description":"Eclipse Temurin JDK 8 (LTS) - 开源免费的 Java 开发工具包，基于 OpenJDK 构建",
 	"category":"development",
-	"version":"jdk8u502-b07",
+	"version":"jdk8u504-b01",
 	"platform":"windows",
 	"url":{
-		"OpenJDK8U-jdk_x64_windows_hotspot_8u502b07.msi":"https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u502-b07/OpenJDK8U-jdk_x64_windows_hotspot_8u502b07.msi",
-		"OpenJDK8U-jdk_x64_windows_hotspot_8u502b07.zip":"https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u502-b07/OpenJDK8U-jdk_x64_windows_hotspot_8u502b07.zip"
+		"OpenJDK8U-jdk_x64_windows_hotspot_8u504b01.msi":"https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u504-b01/OpenJDK8U-jdk_x64_windows_hotspot_8u504b01.msi",
+		"OpenJDK8U-jdk_x64_windows_hotspot_8u504b01.zip":"https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u504-b01/OpenJDK8U-jdk_x64_windows_hotspot_8u504b01.zip"
 	},
 	"homepage":"https://adoptium.net/",
 	"script":{
