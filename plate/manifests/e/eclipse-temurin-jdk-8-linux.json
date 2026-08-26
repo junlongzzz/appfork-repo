@@ -7,6 +7,7 @@
 	"version":"jdk8u504-b01",
 	"platform":"linux",
 	"url":{
+		"OpenJDK8U-jdk_aarch64_linux_hotspot_8u504b01.tar.gz":"https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u504-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u504b01.tar.gz",
 		"OpenJDK8U-jdk_x64_linux_hotspot_8u504b01.tar.gz":"https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u504-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u504b01.tar.gz"
 	},
 	"homepage":"https://adoptium.net/",
