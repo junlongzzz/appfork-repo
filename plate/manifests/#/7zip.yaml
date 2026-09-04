@@ -3,12 +3,12 @@ name: 7-Zip
 logo: https://www.7-zip.org/7ziplogo.png
 description: 7-Zip是一款拥有极高压缩比的开源压缩软件
 category: tools
-version: '26.02'
+version: '26.03'
 platform: windows
 url:
-  7z2602-x64.exe: https://www.7-zip.org/a/7z2602-x64.exe
-  7z2602.exe: https://www.7-zip.org/a/7z2602.exe
-  7z2602-arm64.exe: https://www.7-zip.org/a/7z2602-arm64.exe
+  7z2603-x64.exe: https://www.7-zip.org/a/7z2603-x64.exe
+  7z2603.exe: https://www.7-zip.org/a/7z2603.exe
+  7z2603-arm64.exe: https://www.7-zip.org/a/7z2603-arm64.exe
 homepage: https://www.7-zip.org
 script:
   args:
