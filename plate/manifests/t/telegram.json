@@ -4,15 +4,15 @@
 	"logo":"https://avatars.githubusercontent.com/u/6113871?s=200&v=4",
 	"description":"Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
 	"category":"chat",
-	"version":"7.2.7",
+	"version":"7.2.8",
 	"platform":"windows",
 	"url":{
-		"Windows on ARM: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.7/td-portable-win-arm-7.2.7.zip",
-		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.7/td-portable-win-x64-7.2.7.zip",
-		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.7/td-portable-win-x86-7.2.7.zip",
-		"Windows on ARM: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.7/td-setup-win-arm-7.2.7.exe",
-		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.7/td-setup-win-x64-7.2.7.exe",
-		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.7/td-setup-win-x86-7.2.7.exe"
+		"Windows on ARM: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.8/td-portable-win-arm-7.2.8.zip",
+		"Windows 64 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.8/td-portable-win-x64-7.2.8.zip",
+		"Windows 32 bit: Portable":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.8/td-portable-win-x86-7.2.8.zip",
+		"Windows on ARM: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.8/td-setup-win-arm-7.2.8.exe",
+		"Windows 64 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.8/td-setup-win-x64-7.2.8.exe",
+		"Windows 32 bit: Installer":"https://github.com/telegramdesktop/tdesktop/releases/download/v7.2.8/td-setup-win-x86-7.2.8.exe"
 	},
 	"homepage":"https://telegram.org",
 	"script":{
