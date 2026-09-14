@@ -6,11 +6,11 @@
 	"category":"network",
 	"platform":"windows",
 	"homepage":"https://github.com/MetaCubeX/mihomo",
-	"version":"1.19.30",
+	"version":"1.19.31",
 	"url":[
-		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.30/mihomo-windows-amd64-v1.19.30.zip",
-		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.30/mihomo-windows-amd64-compatible-v1.19.30.zip",
-		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.30/mihomo-windows-arm64-v1.19.30.zip"
+		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.31/mihomo-windows-amd64-v1.19.31.zip",
+		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.31/mihomo-windows-amd64-compatible-v1.19.31.zip",
+		"https://github.com/MetaCubeX/mihomo/releases/download/v1.19.31/mihomo-windows-arm64-v1.19.31.zip"
 	],
 	"script":{
 		"args":{
