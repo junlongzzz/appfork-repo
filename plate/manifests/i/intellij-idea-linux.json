@@ -4,11 +4,11 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/intellij-idea/intellij-idea.svg",
 	"description":"领先的 Java 和 Kotlin IDE，使开发更高效、更愉快的 IDE。",
 	"category":"development",
-	"version":"2026.2.2(262.10315.125)",
+	"version":"2026.2.3(262.10968.63)",
 	"platform":"linux",
 	"url":[
-		"https://download.jetbrains.com/idea/idea-2026.2.2-aarch64.tar.gz",
-		"https://download.jetbrains.com/idea/idea-2026.2.2.tar.gz"
+		"https://download.jetbrains.com/idea/idea-2026.2.3-aarch64.tar.gz",
+		"https://download.jetbrains.com/idea/idea-2026.2.3.tar.gz"
 	],
 	"homepage":"https://www.jetbrains.com/zh-cn/idea/",
 	"script":{
