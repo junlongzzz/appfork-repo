@@ -4,12 +4,12 @@
 	"logo":"https://resources.jetbrains.com/storage/logos/web/datagrip/datagrip.svg",
 	"description":"适用于关系数据库和 NoSQL 数据库的强大跨平台工具。",
 	"category":"development",
-	"version":"2026.2.5(262.10315.132)",
+	"version":"2026.2.6(262.10968.148)",
 	"platform":"windows",
 	"url":[
-		"https://download.jetbrains.com/datagrip/datagrip-2026.2.5.exe",
-		"https://download.jetbrains.com/datagrip/datagrip-2026.2.5.win.zip",
-		"https://download.jetbrains.com/datagrip/datagrip-2026.2.5-aarch64.exe"
+		"https://download.jetbrains.com/datagrip/datagrip-2026.2.6.exe",
+		"https://download.jetbrains.com/datagrip/datagrip-2026.2.6.win.zip",
+		"https://download.jetbrains.com/datagrip/datagrip-2026.2.6-aarch64.exe"
 	],
 	"homepage":"https://www.jetbrains.com/zh-cn/datagrip/",
 	"script":{
