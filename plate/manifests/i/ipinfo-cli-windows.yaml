@@ -4,10 +4,10 @@ description: Official Command Line Interface for the [IPinfo.io](https://ipinfo.
 category: network
 platform: windows
 homepage: https://github.com/ipinfo/cli
-version: 3.3.2
+version: 3.3.3
 url:
-  - https://github.com/ipinfo/cli/releases/download/ipinfo-3.3.2/ipinfo_3.3.2_windows_amd64.zip
-  - https://github.com/ipinfo/cli/releases/download/ipinfo-3.3.2/ipinfo_3.3.2_windows_arm64.zip
+  - https://github.com/ipinfo/cli/releases/download/ipinfo-3.3.3/ipinfo_3.3.3_windows_amd64.zip
+  - https://github.com/ipinfo/cli/releases/download/ipinfo-3.3.3/ipinfo_3.3.3_windows_arm64.zip
 script:
   args:
     url: github://ipinfo/cli
