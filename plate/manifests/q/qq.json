@@ -4,11 +4,11 @@
 	"logo":"https://static-res.qq.com/static-res/imqq/qq-logo.png",
 	"description":"QQ 轻松做自己",
 	"category":"chat",
-	"version":"9.9.35",
+	"version":"9.9.36",
 	"platform":"windows",
 	"url":{
-		"x64":"https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.35/release/8a8b2a64/QQ_9.9.35_260902_x64_01.exe",
-		"arm64":"https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.35/release/8a8b2a64/QQ_9.9.35_260902_arm64_01.exe"
+		"x64":"https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.36/release/e8e54bbb/QQ_9.9.36_260924_x64_01.exe",
+		"arm64":"https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.36/release/e8e54bbb/QQ_9.9.36_260924_arm64_01.exe"
 	},
 	"homepage":"https://im.qq.com",
 	"script":"qq"
