@@ -3,10 +3,10 @@ name: ProxyBridge
 logo: https://raw.githubusercontent.com/InterceptSuite/ProxyBridge/master/img/logo.png
 description: Proxifier alternative to redirect Windows/macOS/Linux TCP and UDP traffic to HTTP/SOCKS5 proxies.
 category: network
-version: 4.0.0_Linux
+version: 4.3.0_Windows
 platform: mac
 url:
-  - https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.0.0_Linux/ProxyBridge-v4.0.0_Linux-Universal-Installer.pkg
+  - https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.3.0_Windows/ProxyBridge-v4.3.0_Windows-Universal-Installer.pkg
 homepage: https://github.com/InterceptSuite/ProxyBridge
 script:
   args:
