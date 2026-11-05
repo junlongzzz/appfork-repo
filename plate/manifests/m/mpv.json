@@ -6,10 +6,10 @@
 	"category":"video",
 	"platform":"windows",
 	"homepage":"https://mpv.io",
-	"version":"0.41.0",
+	"version":"0.42.0",
 	"url":[
-		"https://github.com/mpv-player/mpv/releases/download/v0.41.0/mpv-v0.41.0-x86_64-pc-windows-msvc.zip",
-		"https://github.com/mpv-player/mpv/releases/download/v0.41.0/mpv-v0.41.0-aarch64-pc-windows-msvc.zip"
+		"https://github.com/mpv-player/mpv/releases/download/v0.42.0/mpv-v0.42.0-x86_64-pc-windows-msvc.zip",
+		"https://github.com/mpv-player/mpv/releases/download/v0.42.0/mpv-v0.42.0-aarch64-pc-windows-msvc.zip"
 	],
 	"script":{
 		"args":{
