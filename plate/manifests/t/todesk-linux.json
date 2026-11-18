@@ -4,7 +4,7 @@
 	"logo":"https://www.todesk.com/dist/img/71cec72.svg",
 	"description":"ToDesk 是一款免费不限速的远程控制软件，支持在内网、外网和移动网络环境下，随时随地发起远程控制。如遇软件使用问题请移步官网查找解决方法。",
 	"category":"tools",
-	"version":"4.7.2.0",
+	"version":"5.2.3.0",
 	"platform":"linux",
 	"script":"todesk",
 	"url":{
