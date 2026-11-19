@@ -7,10 +7,10 @@ categories:
   - tools
 platforms:
   windows:
-    version: 4.0.31
+    version: 4.0.35
     url:
-      - https://github.com/farion1231/cc-switch/releases/download/v4.0.31/CC-Switch-v4.0.31-Windows.msi
-      - https://github.com/farion1231/cc-switch/releases/download/v4.0.31/CC-Switch-v4.0.31-Windows-Portable.zip
+      - https://github.com/farion1231/cc-switch/releases/download/v4.0.35/CC-Switch-v4.0.35-Windows.msi
+      - https://github.com/farion1231/cc-switch/releases/download/v4.0.35/CC-Switch-v4.0.35-Windows-Portable.zip
 script:
   name: appfork-check-update
   args:

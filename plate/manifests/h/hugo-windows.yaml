@@ -7,12 +7,12 @@ categories:
   - reading
 platforms:
   windows:
-    version: 0.170.0
+    version: 0.170.1
     url:
-      hugo_0.170.0_windows-amd64.zip: https://github.com/gohugoio/hugo/releases/download/v0.170.0/hugo_0.170.0_windows-amd64.zip
-      hugo_0.170.0_windows-arm64.zip: https://github.com/gohugoio/hugo/releases/download/v0.170.0/hugo_0.170.0_windows-arm64.zip
-      hugo_extended_0.170.0_windows-amd64.zip: https://github.com/gohugoio/hugo/releases/download/v0.170.0/hugo_extended_0.170.0_windows-amd64.zip
-      hugo_withdeploy_0.170.0_windows-amd64.zip: https://github.com/gohugoio/hugo/releases/download/v0.170.0/hugo_withdeploy_0.170.0_windows-amd64.zip
+      hugo_0.170.1_windows-amd64.zip: https://github.com/gohugoio/hugo/releases/download/v0.170.1/hugo_0.170.1_windows-amd64.zip
+      hugo_0.170.1_windows-arm64.zip: https://github.com/gohugoio/hugo/releases/download/v0.170.1/hugo_0.170.1_windows-arm64.zip
+      hugo_extended_0.170.1_windows-amd64.zip: https://github.com/gohugoio/hugo/releases/download/v0.170.1/hugo_extended_0.170.1_windows-amd64.zip
+      hugo_withdeploy_0.170.1_windows-amd64.zip: https://github.com/gohugoio/hugo/releases/download/v0.170.1/hugo_withdeploy_0.170.1_windows-amd64.zip
 script:
   args:
     url: gh://gohugoio/hugo

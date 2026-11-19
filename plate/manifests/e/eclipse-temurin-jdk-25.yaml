@@ -7,10 +7,9 @@ categories:
   - development
 platforms:
   linux:
-    version: 25.0.5+8
+    version: 25.0.5.1+2
     url:
-      OpenJDK25U-jdk_aarch64_linux_hotspot_25.0.5_8.tar.gz: https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5%2B8/OpenJDK25U-jdk_aarch64_linux_hotspot_25.0.5_8.tar.gz
-      OpenJDK25U-jdk_x64_linux_hotspot_25.0.5_8.tar.gz: https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5%2B8/OpenJDK25U-jdk_x64_linux_hotspot_25.0.5_8.tar.gz
+      OpenJDK25U-jdk_x64_linux_hotspot_25.0.5.1_2.tar.gz: https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5.1%2B2/OpenJDK25U-jdk_x64_linux_hotspot_25.0.5.1_2.tar.gz
     script:
       args:
         url: github://adoptium/temurin25-binaries

@@ -7,7 +7,7 @@ categories:
   - development
 platforms:
   linux:
-    version: 21.0.13.0.3
+    version: 21.0.13.1
     url:
       x64 (tar.gz): https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz
       x64 (rpm): https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm
@@ -26,7 +26,7 @@ platforms:
         url: https://www.oracle.com/java/technologies/downloads/
       name: appfork-check-update
   windows:
-    version: 21.0.13.0.3
+    version: 21.0.13.1
     url:
       x64 (zip): https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip
       x64 (exe): https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe

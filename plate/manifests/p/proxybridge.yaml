@@ -7,9 +7,9 @@ categories:
   - network
 platforms:
   linux:
-    version: 4.0.1_Linux
+    version: 4.1.0_Linux
     url:
-      - https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.0.1_Linux/ProxyBridge-Linux-v4.0.1_Linux.tar.gz
+      - https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.1.0_Linux/ProxyBridge-Linux-v4.1.0_Linux.tar.gz
     script:
       args:
         url: github://InterceptSuite/ProxyBridge
@@ -17,9 +17,9 @@ platforms:
           - https://github.com/InterceptSuite/ProxyBridge/releases/download/v${version}/ProxyBridge-Linux-v${version}.tar.gz
       name: appfork-check-update
   mac:
-    version: 4.0.1_Linux
+    version: 4.1.0_Linux
     url:
-      - https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.0.1_Linux/ProxyBridge-v4.0.1_Linux-Universal-Installer.pkg
+      - https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.1.0_Linux/ProxyBridge-v4.1.0_Linux-Universal-Installer.pkg
     script:
       args:
         url: github://InterceptSuite/ProxyBridge
@@ -27,9 +27,9 @@ platforms:
           - https://github.com/InterceptSuite/ProxyBridge/releases/download/v${version}/ProxyBridge-v${version}-Universal-Installer.pkg
       name: appfork-check-update
   windows:
-    version: 4.0.1_Linux
+    version: 4.1.0_Linux
     url:
-      - https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.0.1_Linux/ProxyBridge-Setup-4.0.1_Linux.exe
+      - https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.1.0_Linux/ProxyBridge-Setup-4.1.0_Linux.exe
     script:
       args:
         url: github://InterceptSuite/ProxyBridge

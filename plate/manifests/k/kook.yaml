@@ -7,7 +7,7 @@ categories:
   - chat
 platforms:
   android:
-    version: 1.90.0
+    version: 1.91.0
     url:
       官网下载: https://www.kookapp.cn
     script:
@@ -18,7 +18,7 @@ platforms:
         jsonpath: $.number
       name: appfork-check-update
   windows:
-    version: 0.112.0
+    version: 0.113.0
     url:
       官网下载: https://www.kookapp.cn
     script:

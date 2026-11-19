@@ -7,12 +7,12 @@ categories:
   - development
 platforms:
   linux:
-    version: 5.7.1
+    version: 5.8.0
     url:
-      armv6: https://github.com/docker/compose/releases/download/v5.7.1/docker-compose-linux-armv6
-      armv7: https://github.com/docker/compose/releases/download/v5.7.1/docker-compose-linux-armv7
-      aarch64: https://github.com/docker/compose/releases/download/v5.7.1/docker-compose-linux-aarch64
-      x86_64: https://github.com/docker/compose/releases/download/v5.7.1/docker-compose-linux-x86_64
+      armv6: https://github.com/docker/compose/releases/download/v5.8.0/docker-compose-linux-armv6
+      armv7: https://github.com/docker/compose/releases/download/v5.8.0/docker-compose-linux-armv7
+      aarch64: https://github.com/docker/compose/releases/download/v5.8.0/docker-compose-linux-aarch64
+      x86_64: https://github.com/docker/compose/releases/download/v5.8.0/docker-compose-linux-x86_64
 script:
   args:
     autoupdate:

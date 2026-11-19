@@ -7,13 +7,13 @@ categories:
   - tools
 platforms:
   windows:
-    version: '4.15'
+    version: '4.16'
     url:
-      - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15p.exe
-      - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15.exe
-      - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15_x86.exe
-      - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15_arm.exe
-      - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15_arm64.exe
+      - https://github.com/pbatard/rufus/releases/download/v4.16/rufus-4.16p.exe
+      - https://github.com/pbatard/rufus/releases/download/v4.16/rufus-4.16.exe
+      - https://github.com/pbatard/rufus/releases/download/v4.16/rufus-4.16_x86.exe
+      - https://github.com/pbatard/rufus/releases/download/v4.16/rufus-4.16_arm.exe
+      - https://github.com/pbatard/rufus/releases/download/v4.16/rufus-4.16_arm64.exe
 script:
   args:
     url: github://pbatard/rufus

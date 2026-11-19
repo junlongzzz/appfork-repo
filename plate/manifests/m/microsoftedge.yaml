@@ -7,7 +7,7 @@ categories:
   - network
 platforms:
   windows:
-    version: 157.0.4341.46
+    version: 157.0.4341.60
     url:
       官网下载: https://www.microsoft.com/zh-cn/edge/download
 script:

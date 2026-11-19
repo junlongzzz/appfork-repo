@@ -7,11 +7,11 @@ categories:
   - network
 platforms:
   windows:
-    version: alpha-12b81d4
+    version: alpha-2be2f08
     url:
-      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-alpha-12b81d4.zip
-      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-compatible-alpha-12b81d4.zip
-      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-arm64-alpha-12b81d4.zip
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-alpha-2be2f08.zip
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-compatible-alpha-2be2f08.zip
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-arm64-alpha-2be2f08.zip
 script:
   args:
     regex: (?<version>(?i)alpha-[a-f0-9]+)

@@ -7,11 +7,11 @@ categories:
   - development
 platforms:
   windows:
-    version: 10.1.61
+    version: 10.1.62
     url:
-      apache-tomcat-10.1.61.exe: https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.61/bin/apache-tomcat-10.1.61.exe
-      apache-tomcat-10.1.61-windows-x64.zip: https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.61/bin/apache-tomcat-10.1.61-windows-x64.zip
-      apache-tomcat-10.1.61-windows-x86.zip: https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.61/bin/apache-tomcat-10.1.61-windows-x86.zip
+      apache-tomcat-10.1.62.exe: https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.62/bin/apache-tomcat-10.1.62.exe
+      apache-tomcat-10.1.62-windows-x64.zip: https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.62/bin/apache-tomcat-10.1.62-windows-x64.zip
+      apache-tomcat-10.1.62-windows-x86.zip: https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.62/bin/apache-tomcat-10.1.62-windows-x86.zip
 script:
   args:
     url: https://archive.apache.org/dist/tomcat/tomcat-10/?C=M;O=D

@@ -7,22 +7,22 @@ categories:
   - development
 platforms:
   linux:
-    version: 2026.3(263.7307.258)
+    version: 2026.3.0.1(263.7307.325)
     url:
-      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3-aarch64.tar.gz
-      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.tar.gz
+      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.0.1-aarch64.tar.gz
+      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.0.1.tar.gz
   mac:
-    version: 2026.3(263.7307.258)
+    version: 2026.3.0.1(263.7307.325)
     url:
-      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.dmg
-      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3-aarch64.dmg
+      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.0.1.dmg
+      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.0.1-aarch64.dmg
   windows:
-    version: 2026.3(263.7307.258)
+    version: 2026.3.0.1(263.7307.325)
     url:
-      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.exe
-      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.win.zip
-      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3-aarch64.exe
-      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3-aarch64.win.zip
+      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.0.1.exe
+      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.0.1.win.zip
+      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.0.1-aarch64.exe
+      - https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.0.1-aarch64.win.zip
 script:
   args:
     codes: RD
