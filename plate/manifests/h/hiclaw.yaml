@@ -7,7 +7,7 @@ categories:
   - tools
 platforms:
   other:
-    version: 1.2.7
+    version: 1.2.8
     url:
       Docs: https://github.com/alibaba/hiclaw/tree/main/docs
 script:

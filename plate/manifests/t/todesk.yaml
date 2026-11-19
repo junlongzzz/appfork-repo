@@ -24,7 +24,7 @@ platforms:
     version: 4.8.1.0
     url: https://dl.todesk.com/macos/ToDesk_4.8.1.0.pkg
   windows:
-    version: 5.3.1.0
+    version: 5.3.4.0
     url:
       在线安装包: https://dl.todesk.com/windows/ToDesk.exe
       离线安装包: https://dl.todesk.com/windows/ToDesk_Setup.exe
