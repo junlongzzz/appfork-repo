@@ -1,0 +1,28 @@
+name: CLion
+author: JetBrains
+homepage: https://www.jetbrains.com/zh-cn/clion/
+description: 适用于 C 和 C++ 的跨平台 IDE，自如掌控，化繁为简。
+logo: https://resources.jetbrains.com/storage/logos/web/clion/clion.svg
+categories:
+  - development
+platforms:
+  linux:
+    version: 2026.3.0.1(263.7307.257)
+    url:
+      - https://download.jetbrains.com/cpp/CLion-2026.3.0.1-aarch64.tar.gz
+      - https://download.jetbrains.com/cpp/CLion-2026.3.0.1.tar.gz
+  mac:
+    version: 2026.3.0.1(263.7307.257)
+    url:
+      - https://download.jetbrains.com/cpp/CLion-2026.3.0.1.dmg
+      - https://download.jetbrains.com/cpp/CLion-2026.3.0.1-aarch64.dmg
+  windows:
+    version: 2026.3.0.1(263.7307.257)
+    url:
+      - https://download.jetbrains.com/cpp/CLion-2026.3.0.1.exe
+      - https://download.jetbrains.com/cpp/CLion-2026.3.0.1.win.zip
+      - https://download.jetbrains.com/cpp/CLion-2026.3.0.1-aarch64.exe
+script:
+  args:
+    codes: CL
+  name: jetbrains-product

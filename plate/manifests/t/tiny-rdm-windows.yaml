@@ -1,0 +1,20 @@
+name: Tiny RDM
+author: Tiny Craft
+homepage: https://github.com/tiny-craft/tiny-rdm
+description: Tiny RDM is a modern lightweight cross-platform Redis desktop manager available for Mac, Windows, and Linux.
+logo: https://redis.tinycraft.cc/images/logo.svg
+categories:
+  - development
+platforms:
+  windows:
+    version: 1.2.7
+    url:
+      TinyRDM_Setup_1.2.7_windows_amd64.exe: https://github.com/tiny-craft/tiny-rdm/releases/download/v1.2.7/TinyRDM_Setup_1.2.7_windows_amd64.exe
+      TinyRDM_Portable_1.2.7_windows_amd64.zip: https://github.com/tiny-craft/tiny-rdm/releases/download/v1.2.7/TinyRDM_Portable_1.2.7_windows_amd64.zip
+script:
+  args:
+    autoupdate:
+      TinyRDM_Setup_${version}_windows_amd64.exe: https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/TinyRDM_Setup_${version}_windows_amd64.exe
+      TinyRDM_Portable_${version}_windows_amd64.zip: https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/TinyRDM_Portable_${version}_windows_amd64.zip
+    url: gh://tiny-craft/tiny-rdm
+  name: appfork-check-update

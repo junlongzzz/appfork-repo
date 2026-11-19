@@ -1,0 +1,17 @@
+name: Steam
+author: Valve
+homepage: https://store.steampowered.com
+description: Steam 是畅玩游戏、讨论游戏、创造游戏的快乐所在。
+logo: https://store.steampowered.com/favicon.ico
+categories:
+  - games
+platforms:
+  linux:
+    version: upstream
+    url: https://media.st.dl.eccdnx.com/client/installer/steam.deb
+  mac:
+    version: upstream
+    url: https://media.st.dl.eccdnx.com/client/installer/steam.dmg
+  windows:
+    version: upstream
+    url: https://media.st.dl.eccdnx.com/client/installer/SteamSetup.exe

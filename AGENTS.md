@@ -80,9 +80,9 @@ Updater flow (high level):
 
 1. Resolve manifest directory (`manifests` or `manifests-test` by profile).
 2. Scan `.json`/`.yaml` files with Hutool `FileUtil.loopFiles`.
-3. Resolve script from `script` field or fallback to manifest filename.
-4. Parse/load Groovy class with cache and lock protection.
-5. Execute `checkUpdate` and validate returned values.
+3. Validate manifest-level fields (`categories`, `platforms`) and resolve the top-level default `script`.
+4. For each platform: resolve platform-level `script` (falling back to the top-level one), load the Groovy class with cache and lock protection.
+5. Build a single-platform view (`platform` / `version` / `url`) and execute `checkUpdate`; validate returned values. Platforms are processed serially per manifest.
 6. Write back updated manifest (JSON pretty print or YAML dump options).
 
 ## Java Style Guidelines
@@ -127,12 +127,18 @@ Follow existing style in `Updater` and tests:
 ## Manifest Conventions
 
 - Supported formats: `.json` and `.yaml` (`.yaml` is the top priority).
-- Directory pattern: `plate/manifests/<letter-or-#>/<name>.<ext>`.
-- Required keys: `name`, `homepage`, `author`, `description`, `category`, `platform`, `version`, `url`.
-- Optional keys: `logo`, `script`.
+- Directory pattern: `plate/manifests/<letter-or-#>/<name>.<ext>`; names starting with a digit or any non-letter go under `#/`.
+- One manifest may cover one or more platforms of the same app.
+- Required keys: `name`, `homepage`, `author`, `description`, `categories`, `platforms`.
+  - `categories`: non-empty array of allowed category keys.
+  - `platforms`: non-empty map keyed by platform; each value requires `version` and `url`, and may contain `script`.
+- Optional keys: `logo`, `script` (top-level default for all platforms).
 - `script` can be:
+  - absent (default script = manifest filename without extension),
   - string script name, or
   - object with `name` and optional `args`.
+  - A platform-level `script` replaces the top-level one for that platform and uses the same shape.
+- Scripts receive a single-platform view: `platforms` is flattened so `manifest.platform`, `manifest.version`, `manifest.url` belong to the current platform.
 - JSON formatting in repo typically uses tabs and compact key/value spacing.
 - Keep category/platform values aligned with existing allowed sets in `Updater`.
 

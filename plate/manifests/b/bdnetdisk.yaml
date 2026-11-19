@@ -1,0 +1,24 @@
+name: 百度网盘
+author: 北京度友科技有限公司
+homepage: https://pan.baidu.com/
+description: 百度网盘是一款国民级产品，已连续9年为超过7亿用户提供稳定、安全的个人云存储服务，已实现电脑、手机、电视等多种终端场景的覆盖和互联，并支持多类型文件的备份、分享、查看和处理。
+logo: https://imgsa.baidu.com/forum/pic/item/b166c31fbe096b63d8757d021b338744ebf8ac10.jpg
+categories:
+  - network
+platforms:
+  android:
+    version: 13.37.3
+    url: https://downpack.baidu.com/Baidunetdisk_AndroidPhone_1026962m.apk
+  linux:
+    version: 8.9.7
+    url:
+      .rpm: https://pkg-ant.baidu.com/issue/netdisk/LinuxGuanjia/8.9.7/baidunetdisk-8.9.7.x86_64.rpm
+      .deb: https://pkg-ant.baidu.com/issue/netdisk/LinuxGuanjia/8.9.7/baidunetdisk_8.9.7_amd64.deb
+  mac:
+    version: 8.10.3
+    url:
+      x64: https://pkg-ant.baidu.com/issue/netdisk/MACguanjia/8.10.3/BaiduNetdisk_mac_8.10.3_x64.dmg
+      arm64: https://pkg-ant.baidu.com/issue/netdisk/MACguanjia/8.10.3/BaiduNetdisk_mac_8.10.3_arm64.dmg
+  windows:
+    version: 8.10.3.103
+    url: https://issuepcdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_8.10.3.103.exe

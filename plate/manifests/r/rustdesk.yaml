@@ -1,0 +1,16 @@
+name: RustDesk
+author: open-source
+homepage: https://rustdesk.com
+description: An open-source remote desktop, and alternative to TeamViewer.
+logo: https://raw.githubusercontent.com/rustdesk/rustdesk/refs/heads/master/res/logo.svg
+categories:
+  - tools
+platforms:
+  windows:
+    version: 1.5.3
+    url: https://github.com/rustdesk/rustdesk/releases/download/1.5.3/rustdesk-1.5.3-x86_64.exe
+script:
+  args:
+    autoupdate: https://github.com/rustdesk/rustdesk/releases/download/${version}/rustdesk-${version}-x86_64.exe
+    url: gh://rustdesk/rustdesk
+  name: appfork-check-update

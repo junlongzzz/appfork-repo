@@ -1,0 +1,28 @@
+name: PhpStorm
+author: JetBrains
+homepage: https://www.jetbrains.com/zh-cn/phpstorm/
+description: 为 PHP 开发者赋能，使用 PHP IDE 更智能地编写代码。
+logo: https://resources.jetbrains.com/storage/logos/web/phpstorm/phpstorm.svg
+categories:
+  - development
+platforms:
+  linux:
+    version: 2026.3(263.7307.215)
+    url:
+      - https://download.jetbrains.com/webide/PhpStorm-2026.3-aarch64.tar.gz
+      - https://download.jetbrains.com/webide/PhpStorm-2026.3.tar.gz
+  mac:
+    version: 2026.3(263.7307.215)
+    url:
+      - https://download.jetbrains.com/webide/PhpStorm-2026.3.dmg
+      - https://download.jetbrains.com/webide/PhpStorm-2026.3-aarch64.dmg
+  windows:
+    version: 2026.3(263.7307.215)
+    url:
+      - https://download.jetbrains.com/webide/PhpStorm-2026.3.exe
+      - https://download.jetbrains.com/webide/PhpStorm-2026.3.win.zip
+      - https://download.jetbrains.com/webide/PhpStorm-2026.3-aarch64.exe
+script:
+  args:
+    codes: PS
+  name: jetbrains-product

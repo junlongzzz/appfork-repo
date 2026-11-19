@@ -1,0 +1,11 @@
+name: Google Chrome
+author: Google
+homepage: https://www.google.cn/chrome/index.html
+description: 由 Google 打造的网络浏览器
+logo: https://www.google.cn/chrome/static/images/chrome-logo.svg
+categories:
+  - network
+platforms:
+  windows:
+    version: 152.0.7977.65
+    url: https://dl.google.com/release2/chrome/adkv2xogzxg7wnm7qpc3uyq346kq_152.0.7977.65/152.0.7977.65_chrome_installer_uncompressed.exe

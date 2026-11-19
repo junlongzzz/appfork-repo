@@ -1,0 +1,20 @@
+name: PotPlayer
+author: Daum Communications
+homepage: https://potplayer.daum.net
+description: Highly customizable multimedia player.
+categories:
+  - video
+platforms:
+  windows:
+    version: '261021'
+    url:
+      64Bit: https://t1.daumcdn.net/potplayer/PotPlayer/Version/261021/PotPlayerSetup64.exe
+      32Bit: https://t1.daumcdn.net/potplayer/PotPlayer/Version/261021/PotPlayerSetup.exe
+script:
+  args:
+    regex: \[(\d+)]
+    autoupdate:
+      64Bit: https://t1.daumcdn.net/potplayer/PotPlayer/Version/${version}/PotPlayerSetup64.exe
+      32Bit: https://t1.daumcdn.net/potplayer/PotPlayer/Version/${version}/PotPlayerSetup.exe
+    url: https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html
+  name: appfork-check-update

@@ -1,0 +1,13 @@
+name: Listen1
+author: Listen1 Contributors
+homepage: https://listen1.github.io/listen1
+description: One for all free music in China.
+logo: https://avatars.githubusercontent.com/u/18599108?v=4
+categories:
+  - music
+platforms:
+  android:
+    version: 0.8.2
+    url:
+      listen1_0.8.2.apk.zip: https://github.com/listen1/listen1_mobile/releases/download/v0.8.2/listen1_0.8.2.apk.zip
+script: listen1

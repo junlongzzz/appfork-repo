@@ -1,0 +1,24 @@
+name: Ventoy
+author: longpanda <admin@ventoy.net>
+homepage: https://www.ventoy.net/cn/index.html
+description: 新一代多系统启动U盘解决方案。简单来说，Ventoy是一个制作可启动U盘的开源工具。
+logo: https://www.ventoy.net/static/img/ventoy.png?v=1
+categories:
+  - tools
+platforms:
+  linux:
+    version: 1.1.18
+    url: https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz
+    script:
+      args:
+        autoupdate: https://github.com/ventoy/Ventoy/releases/download/v${version}/ventoy-${version}-linux.tar.gz
+        url: gh://ventoy/Ventoy
+      name: appfork-check-update
+  windows:
+    version: 1.1.18
+    url: https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-windows.zip
+    script:
+      args:
+        autoupdate: https://github.com/ventoy/Ventoy/releases/download/v${version}/ventoy-${version}-windows.zip
+        url: gh://ventoy/Ventoy
+      name: appfork-check-update

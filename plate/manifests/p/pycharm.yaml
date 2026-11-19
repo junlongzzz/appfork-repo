@@ -1,0 +1,30 @@
+name: PyCharm
+author: JetBrains
+homepage: https://www.jetbrains.com/zh-cn/pycharm/
+description: 适用于 数据科学 和 Web 开发的 Python IDE。
+logo: https://resources.jetbrains.com/storage/logos/web/pycharm/pycharm.svg
+categories:
+  - development
+platforms:
+  linux:
+    version: 2026.3(263.7307.206)
+    url:
+      - https://download.jetbrains.com/python/pycharm-2026.3-aarch64.tar.gz
+      - https://download.jetbrains.com/python/pycharm-2026.3.tar.gz
+  mac:
+    version: 2026.3(263.7307.206)
+    url:
+      - https://download.jetbrains.com/python/pycharm-2026.3.dmg
+      - https://download.jetbrains.com/python/pycharm-2026.3-aarch64.dmg
+  windows:
+    version: 2026.3(263.7307.206)
+    url:
+      - https://download.jetbrains.com/python/pycharm-2026.3.exe
+      - https://download.jetbrains.com/python/pycharm-2026.3.win.zip
+      - https://download.jetbrains.com/python/pycharm-2026.3-aarch64.exe
+      - https://download.jetbrains.com/python/pycharm-2026.3-aarch64.win.zip
+script:
+  args:
+    codes: PCP
+    '#': Community Edition,Professional Edition
+  name: jetbrains-product

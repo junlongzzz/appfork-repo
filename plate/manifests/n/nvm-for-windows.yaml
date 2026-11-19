@@ -1,0 +1,21 @@
+name: NVM for Windows
+author: Open Source Contributors
+homepage: https://github.com/coreybutler/nvm-windows
+description: A node.js version management utility for Windows. Ironically written in Go.
+categories:
+  - development
+platforms:
+  windows:
+    version: 2.0.1
+    url:
+      nvm-noinstall.zip: https://github.com/coreybutler/nvm-windows/releases/download/2.0.1/nvm-noinstall.zip
+      nvm-setup.exe: https://github.com/coreybutler/nvm-windows/releases/download/2.0.1/nvm-setup.exe
+      nvm-setup.zip: https://github.com/coreybutler/nvm-windows/releases/download/2.0.1/nvm-setup.zip
+script:
+  args:
+    url: gh://coreybutler/nvm-windows
+    autoupdate:
+      nvm-noinstall.zip: https://github.com/coreybutler/nvm-windows/releases/download/${version}/nvm-noinstall.zip
+      nvm-setup.exe: https://github.com/coreybutler/nvm-windows/releases/download/${version}/nvm-setup.exe
+      nvm-setup.zip: https://github.com/coreybutler/nvm-windows/releases/download/${version}/nvm-setup.zip
+  name: appfork-check-update

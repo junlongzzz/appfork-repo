@@ -1,0 +1,20 @@
+name: Caddy
+author: open source project
+homepage: https://caddyserver.com
+description: Caddy 2 is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go.
+logo: https://caddyserver.com/resources/images/favicon.png
+categories:
+  - development
+platforms:
+  windows:
+    version: 2.11.9
+    url:
+      arm64: https://github.com/caddyserver/caddy/releases/download/v2.11.9/caddy_2.11.9_windows_arm64.zip
+      amd64: https://github.com/caddyserver/caddy/releases/download/v2.11.9/caddy_2.11.9_windows_amd64.zip
+script:
+  args:
+    autoupdate:
+      arm64: https://github.com/caddyserver/caddy/releases/download/v${version}/caddy_${version}_windows_arm64.zip
+      amd64: https://github.com/caddyserver/caddy/releases/download/v${version}/caddy_${version}_windows_amd64.zip
+    url: gh://caddyserver/caddy
+  name: appfork-check-update

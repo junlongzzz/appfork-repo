@@ -1,19 +1,45 @@
-author: 福州猿力信息科技有限公司
 name: uTools
-logo: https://www.u-tools.cn/assets/favicon.png
-description: 新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持Windows 7, 10, 11
-category: tools
-version: 8.0.2
-platform: windows
-url:
-  - https://open.u-tools.cn/download/uTools-8.0.2.exe
-  - https://open.u-tools.cn/download/uTools-8.0.2-ia32.exe
+author: 福州猿力信息科技有限公司
 homepage: https://www.u-tools.cn
-script:
-  args:
-    regex: uTools-([\d.]+)(?:-ia32)?\.exe
-    autoupdate:
-      - https://open.u-tools.cn/download/uTools-${version}.exe
-      - https://open.u-tools.cn/download/uTools-${version}-ia32.exe
-    url: https://www.u-tools.cn/download/
-  name: appfork-check-update
+description: 新一代效率工具平台，自由组合插件应用，打造专属你的趁手工具集。支持Windows 7, 10, 11
+logo: https://www.u-tools.cn/assets/favicon.png
+categories:
+  - tools
+platforms:
+  linux:
+    version: 8.0.2
+    url:
+      - https://open.u-tools.cn/download/utools_8.0.2_amd64.deb
+    script:
+      args:
+        regex: utools_([\d.]+)_amd64\.deb
+        autoupdate:
+          - https://open.u-tools.cn/download/utools_${version}_amd64.deb
+        url: https://www.u-tools.cn/download/
+      name: appfork-check-update
+  mac:
+    version: 8.0.2
+    url:
+      - https://open.u-tools.cn/download/uTools-8.0.2.dmg
+      - https://open.u-tools.cn/download/uTools-8.0.2-arm64.dmg
+    script:
+      args:
+        regex: uTools-([\d.]+)(?:-arm64)?\.dmg
+        autoupdate:
+          - https://open.u-tools.cn/download/uTools-${version}.dmg
+          - https://open.u-tools.cn/download/uTools-${version}-arm64.dmg
+        url: https://www.u-tools.cn/download/
+      name: appfork-check-update
+  windows:
+    version: 8.0.2
+    url:
+      - https://open.u-tools.cn/download/uTools-8.0.2.exe
+      - https://open.u-tools.cn/download/uTools-8.0.2-ia32.exe
+    script:
+      args:
+        regex: uTools-([\d.]+)(?:-ia32)?\.exe
+        autoupdate:
+          - https://open.u-tools.cn/download/uTools-${version}.exe
+          - https://open.u-tools.cn/download/uTools-${version}-ia32.exe
+        url: https://www.u-tools.cn/download/
+      name: appfork-check-update

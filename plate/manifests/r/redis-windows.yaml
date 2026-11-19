@@ -1,0 +1,19 @@
+name: Redis
+author: Redis
+homepage: https://redis.io
+description: Redis is an open source (BSD licensed), in-memory data structure store used as a database, cache, message broker, and streaming engine.
+categories:
+  - development
+platforms:
+  windows:
+    version: 8.10.3
+    url:
+      Redis-8.10.3-Windows-x64-with-Service.tar.gz: https://github.com/redis-windows/redis-windows/releases/download/8.10.3/Redis-8.10.3-Windows-x64-with-Service.tar.gz
+      Redis-8.10.3-Windows-x64.tar.gz: https://github.com/redis-windows/redis-windows/releases/download/8.10.3/Redis-8.10.3-Windows-x64.tar.gz
+script:
+  args:
+    url: gh://redis-windows/redis-windows
+    autoupdate:
+      Redis-${version}-Windows-x64-with-Service.tar.gz: https://github.com/redis-windows/redis-windows/releases/download/${version}/Redis-${version}-Windows-x64-with-Service.tar.gz
+      Redis-${version}-Windows-x64.tar.gz: https://github.com/redis-windows/redis-windows/releases/download/${version}/Redis-${version}-Windows-x64.tar.gz
+  name: appfork-check-update

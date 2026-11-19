@@ -1,0 +1,42 @@
+name: MinIO Client
+author: MinIO, Inc.
+homepage: https://min.io
+description: The MinIO Client `mc` command line tool provides a modern alternative to UNIX commands like `ls`, `cat`, `cp`, `mirror`, and `diff` with support for both filesystems and Amazon S3-compatible cloud storage services.
+logo: https://min.io/resources/img/logo.svg
+categories:
+  - network
+platforms:
+  linux:
+    version: RELEASE.2025-08-13T08-35-41Z
+    url:
+      mc (amd64): https://dl.min.io/client/mc/release/linux-amd64/mc
+      mc (arm64): https://dl.min.io/client/mc/release/linux-arm64/mc
+    script:
+      args:
+        autoupdate:
+          mc (amd64): https://dl.min.io/client/mc/release/linux-amd64/mc
+          mc (arm64): https://dl.min.io/client/mc/release/linux-arm64/mc
+        url: github://minio/mc
+      name: appfork-check-update
+  mac:
+    version: RELEASE.2025-08-13T08-35-41Z
+    url:
+      mc (amd64): https://dl.min.io/client/mc/release/darwin-amd64/mc
+      mc (arm64): https://dl.min.io/client/mc/release/darwin-arm64/mc
+    script:
+      args:
+        autoupdate:
+          mc (amd64): https://dl.min.io/client/mc/release/darwin-amd64/mc
+          mc (arm64): https://dl.min.io/client/mc/release/darwin-arm64/mc
+        url: github://minio/mc
+      name: appfork-check-update
+  windows:
+    version: RELEASE.2025-08-13T08-35-41Z
+    url:
+      mc.exe (amd64): https://dl.minio.io/client/mc/release/windows-amd64/mc.exe
+    script:
+      args:
+        autoupdate:
+          mc.exe (amd64): https://dl.minio.io/client/mc/release/windows-amd64/mc.exe
+        url: github://minio/mc
+      name: appfork-check-update

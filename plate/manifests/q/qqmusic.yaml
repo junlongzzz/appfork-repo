@@ -1,0 +1,16 @@
+name: QQ音乐
+author: Tencent
+homepage: https://y.qq.com
+description: 千万高品质曲库尽享，3000万正版歌曲，社交互动分享你的音乐感动。智能推荐遇见喜欢的音乐，多终端云同步设备切换。
+logo: https://pc3.gtimg.com/softmgr/logo/48/10_48_1539156989.png
+categories:
+  - music
+platforms:
+  windows:
+    version: 22.81.0.0
+    url:
+      前往下载: https://pc.qq.com/detail/10/detail_10.html
+script:
+  args:
+    url: tsc://10/10
+  name: appfork-check-update

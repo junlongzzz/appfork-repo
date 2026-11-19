@@ -1,0 +1,21 @@
+name: Geek Uninstaller Free
+author: Thomas Koen <thomas@geekuninstaller.com>
+homepage: https://geekuninstaller.com
+description: Basic uninstaller though powerful and lightning fast.(for personal use)
+logo: https://geekuninstaller.com/assets/images/boxshot.png
+categories:
+  - tools
+platforms:
+  windows:
+    version: 1.6.0.200
+    url:
+      geek.zip: https://geekuninstaller.com/geek.zip
+      geek.7z: https://geekuninstaller.com/geek.7z
+script:
+  args:
+    regex: '>([\d.]+)</b>'
+    windows:
+      geek.zip: https://geekuninstaller.com/geek.zip
+      geek.7z: https://geekuninstaller.com/geek.7z
+    url: https://geekuninstaller.com/download
+  name: appfork-check-update

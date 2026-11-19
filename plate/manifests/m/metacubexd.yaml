@@ -1,16 +1,18 @@
 name: MetaCubeXD
 author: MetaCubeX
-logo: https://raw.githubusercontent.com/MetaCubeX/metacubexd/refs/heads/main/public/favicon.svg
-description: Mihomo Dashboard, The Official One, XD
-category: network
-platform: other
 homepage: https://github.com/MetaCubeX/metacubexd
-version: 1.274.6
-url:
-  compressed-dist.tgz: https://github.com/MetaCubeX/metacubexd/releases/download/v1.274.6/compressed-dist.tgz
-  Official: https://d.metacubex.one
-  GH Pages: https://metacubex.github.io/metacubexd
-  Cloudflare Pages: https://metacubexd.pages.dev
+description: Mihomo Dashboard, The Official One, XD
+logo: https://raw.githubusercontent.com/MetaCubeX/metacubexd/refs/heads/main/public/favicon.svg
+categories:
+  - network
+platforms:
+  other:
+    version: 1.274.6
+    url:
+      compressed-dist.tgz: https://github.com/MetaCubeX/metacubexd/releases/download/v1.274.6/compressed-dist.tgz
+      Official: https://d.metacubex.one
+      GH Pages: https://metacubex.github.io/metacubexd
+      Cloudflare Pages: https://metacubexd.pages.dev
 script:
   args:
     autoupdate:

@@ -1,0 +1,21 @@
+name: Android Studio
+author: Google
+homepage: https://developer.android.com/studio
+description: 用于开发 Android 应用的官方集成开发环境 (IDE)。
+categories:
+  - development
+platforms:
+  linux:
+    version: 2026.2.2.9
+    url:
+      Android Studio 2026.2.2.9: https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.2.2.9/android-studio-rabbit2-patch1-linux.tar.gz
+  mac:
+    version: 2026.2.2.9
+    url:
+      Android Studio 2026.2.2.9: https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.9/android-studio-rabbit2-patch1-mac.dmg
+      Android Studio 2026.2.2.9 (arm): https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.9/android-studio-rabbit2-patch1-mac_arm.dmg
+  windows:
+    version: 2026.2.2.9
+    url:
+      Android Studio 2026.2.2.9 (zip): https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.2.2.9/android-studio-rabbit2-patch1-windows.zip
+      Android Studio 2026.2.2.9: https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.9/android-studio-rabbit2-patch1-windows.exe

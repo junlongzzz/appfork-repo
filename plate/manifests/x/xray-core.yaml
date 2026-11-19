@@ -1,0 +1,18 @@
+name: Xray-core
+author: Project X Community
+homepage: https://github.com/XTLS/Xray-core
+description: Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.
+categories:
+  - network
+platforms:
+  windows:
+    version: 26.11.9
+    url:
+      - https://github.com/XTLS/Xray-core/releases/download/v26.11.9/Xray-windows-32.zip
+      - https://github.com/XTLS/Xray-core/releases/download/v26.11.9/Xray-windows-64.zip
+script:
+  args:
+    autoupdate:
+      - https://github.com/XTLS/Xray-core/releases/download/v${version}/Xray-windows-32.zip
+      - https://github.com/XTLS/Xray-core/releases/download/v${version}/Xray-windows-64.zip
+  name: appfork-check-update

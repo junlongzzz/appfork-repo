@@ -1,15 +1,17 @@
-author: MetaCubeX
 name: Mihomo (Prerelease-Alpha)
-logo: https://raw.githubusercontent.com/MetaCubeX/mihomo/Alpha/Meta.png
-description: Clash.Meta Kernel, Another Mihomo Kernel
-category: network
-platform: windows
+author: MetaCubeX
 homepage: https://github.com/MetaCubeX/mihomo
-version: alpha-12b81d4
-url:
-  - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-alpha-12b81d4.zip
-  - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-compatible-alpha-12b81d4.zip
-  - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-arm64-alpha-12b81d4.zip
+description: Clash.Meta Kernel, Another Mihomo Kernel
+logo: https://raw.githubusercontent.com/MetaCubeX/mihomo/Alpha/Meta.png
+categories:
+  - network
+platforms:
+  windows:
+    version: alpha-12b81d4
+    url:
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-alpha-12b81d4.zip
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-compatible-alpha-12b81d4.zip
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-arm64-alpha-12b81d4.zip
 script:
   args:
     regex: (?<version>(?i)alpha-[a-f0-9]+)

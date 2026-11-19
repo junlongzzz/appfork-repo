@@ -1,0 +1,19 @@
+name: QQ
+author: Tencent
+homepage: https://im.qq.com
+description: QQ 轻松做自己
+logo: https://static-res.qq.com/static-res/imqq/qq-logo.png
+categories:
+  - chat
+platforms:
+  linux:
+    version: 3.2.35
+    url:
+      deb: https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.37/release/816b3c79/QQ_3.2.35_261103_amd64_01.deb
+      appimage: https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.37/release/816b3c79/QQ_3.2.35_261103_x86_64_01.AppImage
+      rpm: https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.37/release/816b3c79/QQ_3.2.35_261103_x86_64_01.rpm
+  windows:
+    version: 9.9.37
+    url:
+      x64: https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.37/release/a2ca1b61/QQ_9.9.37_261103_x64_01.exe
+      arm64: https://qqdl.gtimg.cn/qqfile/QQNTV2/9.9.37/release/a2ca1b61/QQ_9.9.37_261103_arm64_01.exe

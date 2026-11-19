@@ -1,0 +1,14 @@
+name: Foxmail
+author: Tencent
+homepage: https://www.foxmail.com
+description: 一款电子邮件客户端。
+logo: https://www.foxmail.com/favicon.ico
+categories:
+  - office
+platforms:
+  mac:
+    version: 1.5.8.95111
+    url: https://www.foxmail.com/mac/download
+  windows:
+    version: 7.2.25.587
+    url: https://www.foxmail.com/win/download

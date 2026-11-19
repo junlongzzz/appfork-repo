@@ -1,17 +1,19 @@
-author: open source project
 name: YesPlayMusic
-logo: https://raw.githubusercontent.com/qier222/YesPlayMusic/master/images/logo.png
+author: open source project
+homepage: https://github.com/qier222/YesPlayMusic
 description: 高颜值的第三方网易云音乐播放器
-category: music
-version: 0.4.11
-platform: windows
+logo: https://raw.githubusercontent.com/qier222/YesPlayMusic/master/images/logo.png
+categories:
+  - music
+platforms:
+  windows:
+    version: 0.4.11
+    url:
+      - https://github.com/qier222/YesPlayMusic/releases/download/v0.4.11/YesPlayMusic.0.4.11.exe
+      - https://github.com/qier222/YesPlayMusic/releases/download/v0.4.11/YesPlayMusic.Setup.0.4.11.exe
 script:
   args:
     autoupdate:
       - https://github.com/qier222/YesPlayMusic/releases/download/v${version}/YesPlayMusic.${major}.${minor}.${patch}.exe
       - https://github.com/qier222/YesPlayMusic/releases/download/v${version}/YesPlayMusic.Setup.${major}.${minor}.${patch}.exe
   name: appfork-check-update
-url:
-  - https://github.com/qier222/YesPlayMusic/releases/download/v0.4.11/YesPlayMusic.0.4.11.exe
-  - https://github.com/qier222/YesPlayMusic/releases/download/v0.4.11/YesPlayMusic.Setup.0.4.11.exe
-homepage: https://github.com/qier222/YesPlayMusic

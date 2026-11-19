@@ -1,13 +1,15 @@
-author: FIT2CLOUD 飞致云
 name: 1Panel
-logo: https://1panel.cn/img/favicon.png
-description: 1Panel 是新一代现代化、开源的 Linux 服务器运维管理面板。
-category: tools
-version: 2.5.1
-platform: linux
-url:
-  在线文档: https://1panel.cn/docs/
+author: FIT2CLOUD 飞致云
 homepage: https://1panel.cn
+description: 1Panel 是新一代现代化、开源的 Linux 服务器运维管理面板。
+logo: https://1panel.cn/img/favicon.png
+categories:
+  - tools
+platforms:
+  linux:
+    version: 2.5.1
+    url:
+      在线文档: https://1panel.cn/docs/
 script:
   args:
     autoupdate:

@@ -1,0 +1,64 @@
+name: Multica
+author: multica-ai
+homepage: https://multica.ai
+description: The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.
+logo: https://avatars.githubusercontent.com/u/254743058
+categories:
+  - development
+platforms:
+  linux:
+    version: 0.9.0
+    url:
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-desktop-0.9.0-linux-amd64.deb
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-desktop-0.9.0-linux-arm64.deb
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-desktop-0.9.0-linux-x86_64.AppImage
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-desktop-0.9.0-linux-x86_64.rpm
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-desktop-0.9.0-linux-arm64.AppImage
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-desktop-0.9.0-linux-aarch64.rpm
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-cli-0.9.0-linux-amd64.tar.gz
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-cli-0.9.0-linux-arm64.tar.gz
+    script:
+      name: appfork-check-update
+      args:
+        url: github://multica-ai/multica
+        autoupdate:
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-linux-amd64.deb
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-linux-arm64.deb
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-linux-x86_64.AppImage
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-linux-x86_64.rpm
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-linux-arm64.AppImage
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-linux-aarch64.rpm
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-cli-${version}-linux-amd64.tar.gz
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-cli-${version}-linux-arm64.tar.gz
+  mac:
+    version: 0.9.0
+    url:
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-desktop-0.9.0-mac-x64.dmg
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-desktop-0.9.0-mac-arm64.dmg
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-cli-0.9.0-darwin-amd64.tar.gz
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-cli-0.9.0-darwin-arm64.tar.gz
+    script:
+      name: appfork-check-update
+      args:
+        url: github://multica-ai/multica
+        autoupdate:
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-mac-x64.dmg
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-mac-arm64.dmg
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-cli-${version}-darwin-amd64.tar.gz
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-cli-${version}-darwin-arm64.tar.gz
+  windows:
+    version: 0.9.0
+    url:
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-desktop-0.9.0-windows-x64.exe
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-desktop-0.9.0-windows-arm64.exe
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-cli-0.9.0-windows-amd64.zip
+      - https://github.com/multica-ai/multica/releases/download/v0.9.0/multica-cli-0.9.0-windows-arm64.zip
+    script:
+      name: appfork-check-update
+      args:
+        url: github://multica-ai/multica
+        autoupdate:
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-windows-x64.exe
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-desktop-${version}-windows-arm64.exe
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-cli-${version}-windows-amd64.zip
+          - https://github.com/multica-ai/multica/releases/download/v${version}/multica-cli-${version}-windows-arm64.zip

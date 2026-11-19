@@ -1,14 +1,16 @@
 name: OpenClaw
 author: OpenClaw
-logo: https://openclaw.ai/favicon.svg
-description: Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞
 homepage: https://openclaw.ai
-category: tools
-version: 2026.11.3
-platform: other
-url:
-  Documentation: https://docs.openclaw.ai
-  ClawHub: https://clawhub.ai
+description: Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞
+logo: https://openclaw.ai/favicon.svg
+categories:
+  - tools
+platforms:
+  other:
+    version: 2026.11.3
+    url:
+      Documentation: https://docs.openclaw.ai
+      ClawHub: https://clawhub.ai
 script:
   name: appfork-check-update
   args:

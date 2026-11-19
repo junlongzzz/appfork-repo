@@ -1,0 +1,24 @@
+name: gsudo
+author: Gerardo Grignoli <gerardog@gmail.com>
+homepage: https://gerardog.github.io/gsudo
+description: A Sudo for Windows.
+logo: https://gerardog.github.io/gsudo/img/AnimatedPrompt.gif
+categories:
+  - development
+platforms:
+  windows:
+    version: 2.6.1
+    url:
+      gsudo.portable.zip: https://github.com/gerardog/gsudo/releases/download/v2.6.1/gsudo.portable.zip
+      gsudo.setup.arm64.msi: https://github.com/gerardog/gsudo/releases/download/v2.6.1/gsudo.setup.arm64.msi
+      gsudo.setup.x64.msi: https://github.com/gerardog/gsudo/releases/download/v2.6.1/gsudo.setup.x64.msi
+      gsudo.setup.x86.msi: https://github.com/gerardog/gsudo/releases/download/v2.6.1/gsudo.setup.x86.msi
+script:
+  args:
+    autoupdate:
+      gsudo.portable.zip: https://github.com/gerardog/gsudo/releases/download/v${version}/gsudo.portable.zip
+      gsudo.setup.arm64.msi: https://github.com/gerardog/gsudo/releases/download/v${version}/gsudo.setup.arm64.msi
+      gsudo.setup.x64.msi: https://github.com/gerardog/gsudo/releases/download/v${version}/gsudo.setup.x64.msi
+      gsudo.setup.x86.msi: https://github.com/gerardog/gsudo/releases/download/v${version}/gsudo.setup.x86.msi
+    url: github://gerardog/gsudo
+  name: appfork-check-update

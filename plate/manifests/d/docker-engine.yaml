@@ -1,0 +1,18 @@
+name: Docker Engine
+author: Docker Inc.
+homepage: https://www.docker.com
+description: Docker Engine is an open source containerization technology for building and containerizing your applications.
+logo: https://avatars.githubusercontent.com/u/5429470?s=200&v=4
+categories:
+  - development
+platforms:
+  linux:
+    version: docker-v29.9.3
+    url:
+      Install Docker Engine: https://docs.docker.com/engine/install/
+script:
+  args:
+    autoupdate:
+      Install Docker Engine: https://docs.docker.com/engine/install/
+    url: github://moby/moby
+  name: appfork-check-update

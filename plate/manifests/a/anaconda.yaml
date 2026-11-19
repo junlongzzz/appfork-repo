@@ -1,0 +1,18 @@
+name: Anaconda
+author: Anaconda Inc.
+homepage: https://www.anaconda.com
+description: Anaconda is a data science platform that supports Python and other AI tools for data science projects.
+categories:
+  - development
+platforms:
+  windows:
+    version: 2026.07-1
+    url:
+      - https://repo.anaconda.com/archive/Anaconda3-2026.07-1-Windows-x86_64.exe
+script:
+  args:
+    regex: Anaconda3-([\d.-]+)-Windows
+    autoupdate:
+      - https://repo.anaconda.com/archive/Anaconda3-${version}-Windows-x86_64.exe
+    url: https://repo.anaconda.com/archive/
+  name: appfork-check-update

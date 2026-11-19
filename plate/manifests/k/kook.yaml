@@ -1,0 +1,30 @@
+name: KOOK
+author: 北京逍遥一下科技有限公司
+homepage: https://www.kookapp.cn
+description: 一个好用的语音沟通工具，无广告、不掉线、低占用、不延迟。
+logo: https://www.kookapp.cn/favicon.ico
+categories:
+  - chat
+platforms:
+  android:
+    version: 1.90.0
+    url:
+      官网下载: https://www.kookapp.cn
+    script:
+      args:
+        autoupdate:
+          官网下载: https://www.kookapp.cn
+        url: https://www.kookapp.cn/api/v2/updates/latest-version?platform=android
+        jsonpath: $.number
+      name: appfork-check-update
+  windows:
+    version: 0.112.0
+    url:
+      官网下载: https://www.kookapp.cn
+    script:
+      args:
+        autoupdate:
+          官网下载: https://www.kookapp.cn
+        url: https://www.kookapp.cn/api/v2/updates/latest-version?platform=windows
+        jsonpath: $.number
+      name: appfork-check-update

@@ -1,0 +1,21 @@
+name: Clash Verge Rev
+author: Open Source Software
+homepage: https://github.com/clash-verge-rev/clash-verge-rev
+description: Continuation of [Clash Verge](https://github.com/zzzgydi/clash-verge) - A [Clash.Meta](https://github.com/MetaCubeX/mihomo) GUI based on Tauri (Windows, MacOS, Linux)
+logo: https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev/main/src-tauri/icons/icon.png
+categories:
+  - network
+platforms:
+  windows:
+    version: 2.5.10
+    url:
+      - https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.5.10/Clash.Verge_2.5.10_x64-setup.exe
+      - https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.5.10/Clash.Verge_2.5.10_arm64-setup.exe
+script:
+  args:
+    autoupdate:
+      - https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_x64-setup.exe
+      - https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${version}/Clash.Verge_${version}_arm64-setup.exe
+    url: https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/latest.json
+    jsonpath: $.version
+  name: appfork-check-update

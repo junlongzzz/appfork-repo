@@ -1,0 +1,19 @@
+name: Angie
+author: Web Server LLC
+homepage: https://en.angie.software
+description: Angie /ˈendʒi/ is an efficient, powerful, and scalable web server that was forked from nginx to act as a drop-in replacement, so you can use existing setups without major changes to module layout or configuration.
+logo: https://en.angie.software/_static/icons/logo.svg
+categories:
+  - development
+platforms:
+  windows:
+    version: 1.12.4
+    url:
+      Installation Doc: https://en.angie.software/angie/docs/installation/
+script:
+  name: appfork-check-update
+  args:
+    url: github://webserver-llc/angie
+    regex: /releases/tag/Angie-(?<version>[\w.]+)
+    autoupdate:
+      Installation Doc: https://en.angie.software/angie/docs/installation/

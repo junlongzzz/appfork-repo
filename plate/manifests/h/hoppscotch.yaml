@@ -1,14 +1,16 @@
-author: Open Source Software
 name: Hoppscotch
-logo: https://hoppscotch.io/icons/pwa-192x192.png
-description: Hoppscotch is a lightweight, web-based API development suite.  It was built from the ground up with ease of use and accessibility in mind  providing all the functionality needed for developers with minimalist, unobtrusive UI.
-category: development
-version: 26.10.1-0
-platform: windows
-url:
-  - https://github.com/hoppscotch/releases/releases/download/v26.10.1-0/Hoppscotch_win_x64.msi
-  - https://hoppscotch.io
+author: Open Source Software
 homepage: https://hoppscotch.com
+description: Hoppscotch is a lightweight, web-based API development suite.  It was built from the ground up with ease of use and accessibility in mind  providing all the functionality needed for developers with minimalist, unobtrusive UI.
+logo: https://hoppscotch.io/icons/pwa-192x192.png
+categories:
+  - development
+platforms:
+  windows:
+    version: 26.10.1-0
+    url:
+      - https://github.com/hoppscotch/releases/releases/download/v26.10.1-0/Hoppscotch_win_x64.msi
+      - https://hoppscotch.io
 script:
   args:
     autoupdate:

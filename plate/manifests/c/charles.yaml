@@ -1,0 +1,20 @@
+name: Charles
+author: XK72
+homepage: https://www.charlesproxy.com
+description: Charles is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet.
+categories:
+  - tools
+platforms:
+  windows:
+    version: 5.2.3
+    url:
+      - https://www.charlesproxy.com/assets/release/5.2.3/charles-proxy-5.2.3-win-x86_64.appx
+      - https://www.charlesproxy.com/assets/release/5.2.3/charles-proxy-5.2.3-win-arm64.appx
+script:
+  args:
+    url: https://www.charlesproxy.com/download/
+    regex: The latest version of Charles is ([\d.]+)\.
+    autoupdate:
+      - https://www.charlesproxy.com/assets/release/${version}/charles-proxy-${version}-win-x86_64.appx
+      - https://www.charlesproxy.com/assets/release/${version}/charles-proxy-${version}-win-arm64.appx
+  name: appfork-check-update

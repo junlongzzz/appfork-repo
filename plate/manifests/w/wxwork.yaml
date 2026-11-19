@@ -1,0 +1,16 @@
+name: 企业微信
+author: Tencent
+homepage: https://work.weixin.qq.com
+description: 企业微信是腾讯微信团队为企业打造的专业办公管理工具，与微信一致的沟通体验，丰富免费的OA应用，并与微信消息、小程序、微信支付等互通，助力企业高效办公和管理。全面安全保障，国际权威认证，银行级别加密水平，保障企业数据安全。
+logo: https://pc3.gtimg.com/softmgr/logo/48/22554_48_1591253397.png
+categories:
+  - office
+platforms:
+  windows:
+    version: 5.0.13.6005
+    url:
+      前往下载: https://pc.qq.com/detail/14/detail_22554.html
+script:
+  args:
+    url: tsc://14/22554
+  name: appfork-check-update

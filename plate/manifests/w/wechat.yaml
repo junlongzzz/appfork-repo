@@ -1,0 +1,16 @@
+name: 微信
+author: Tencent
+homepage: https://pc.weixin.qq.com
+description: 超过十亿人使用，可以群聊支持发送语音短信、视频、图片和文字
+logo: https://pc3.gtimg.com/softmgr/logo/48/11488_48_1616464914.png
+categories:
+  - chat
+platforms:
+  windows:
+    version: 4.2.0.52
+    url:
+      前往下载: https://pc.qq.com/detail/8/detail_11488.html
+script:
+  args:
+    url: tsc://8/11488
+  name: appfork-check-update

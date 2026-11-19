@@ -1,0 +1,22 @@
+name: AList
+author: AList
+homepage: https://alistgo.com
+description: 🗂️ 一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs。
+logo: https://avatars.githubusercontent.com/u/184931308?s=200&v=4
+categories:
+  - network
+platforms:
+  windows:
+    version: 3.66.0
+    url:
+      - https://github.com/AlistGo/alist/releases/download/v3.66.0/alist-windows-amd64.zip
+      - https://github.com/AlistGo/alist/releases/download/v3.66.0/alist-windows-arm64.zip
+      - https://github.com/AlistGo/alist/releases/download/v3.66.0/alist-windows-386.zip
+script:
+  args:
+    url: github://AlistGo/alist
+    autoupdate:
+      - https://github.com/AlistGo/alist/releases/download/v${version}/alist-windows-amd64.zip
+      - https://github.com/AlistGo/alist/releases/download/v${version}/alist-windows-arm64.zip
+      - https://github.com/AlistGo/alist/releases/download/v${version}/alist-windows-386.zip
+  name: appfork-check-update

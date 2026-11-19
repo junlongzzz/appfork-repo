@@ -1,17 +1,19 @@
 name: Rufus
-logo: https://rufus.ie/pics/rufus-128.png
 author: Pete Batard <pete@akeo.ie>
-description: Rufus 是一款格式化和创建 USB 启动盘的辅助工具。
-category: tools
-platform: windows
 homepage: https://rufus.ie
-version: '4.15'
-url:
-  - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15p.exe
-  - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15.exe
-  - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15_x86.exe
-  - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15_arm.exe
-  - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15_arm64.exe
+description: Rufus 是一款格式化和创建 USB 启动盘的辅助工具。
+logo: https://rufus.ie/pics/rufus-128.png
+categories:
+  - tools
+platforms:
+  windows:
+    version: '4.15'
+    url:
+      - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15p.exe
+      - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15.exe
+      - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15_x86.exe
+      - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15_arm.exe
+      - https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15_arm64.exe
 script:
   args:
     url: github://pbatard/rufus

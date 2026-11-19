@@ -1,0 +1,36 @@
+name: Telegram
+author: tdesktop Contributors
+homepage: https://telegram.org
+description: Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.
+logo: https://avatars.githubusercontent.com/u/6113871?s=200&v=4
+categories:
+  - chat
+platforms:
+  android:
+    version: 13.2.2
+    url:
+      Apk Installer: https://telegram.org/dl/android/apk
+      Download from Google Play: https://telegram.org/dl/android
+    script:
+      args:
+        url: https://raw.githubusercontent.com/DrKLO/Telegram/master/gradle.properties
+        regex: APP_VERSION_NAME=([\d.]+)
+        autoupdate:
+          Apk Installer: https://telegram.org/dl/android/apk
+          Download from Google Play: https://telegram.org/dl/android
+      name: appfork-check-update
+  windows:
+    version: 7.4.4
+    url:
+      'Windows on ARM: Portable': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-portable-win-arm-7.4.4.zip
+      'Windows 64 bit: Portable': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-portable-win-x64-7.4.4.zip
+      'Windows 32 bit: Portable': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-portable-win-x86-7.4.4.zip
+      'Windows on ARM: Installer': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-setup-win-arm-7.4.4.exe
+      'Windows 64 bit: Installer': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-setup-win-x64-7.4.4.exe
+      'Windows 32 bit: Installer': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-setup-win-x86-7.4.4.exe
+    script:
+      args:
+        url: gh://telegramdesktop/tdesktop
+        gh:
+          assets_jsonpath: $.assets[?(@.label =~ /windows.*/i)]
+      name: appfork-check-update

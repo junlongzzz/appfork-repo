@@ -1,0 +1,25 @@
+name: Golang SDK
+author: Google
+homepage: https://go.dev
+description: Build fast, reliable, and efficient software at scale
+logo: https://golang.google.cn/images/gophers/pilot-bust.svg
+categories:
+  - development
+platforms:
+  windows:
+    version: 1.27.4
+    url:
+      amd64_msi: https://dl.google.com/go/go1.27.4.windows-amd64.msi
+      amd64_zip: https://dl.google.com/go/go1.27.4.windows-amd64.zip
+      arm64_msi: https://dl.google.com/go/go1.27.4.windows-arm64.msi
+      arm64_zip: https://dl.google.com/go/go1.27.4.windows-arm64.zip
+script:
+  args:
+    regex: go([\d.]+)\.windows-
+    autoupdate:
+      amd64_msi: https://dl.google.com/go/go${version}.windows-amd64.msi
+      amd64_zip: https://dl.google.com/go/go${version}.windows-amd64.zip
+      arm64_msi: https://dl.google.com/go/go${version}.windows-arm64.msi
+      arm64_zip: https://dl.google.com/go/go${version}.windows-arm64.zip
+    url: https://go.dev/dl/
+  name: appfork-check-update

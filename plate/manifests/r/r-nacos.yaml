@@ -1,14 +1,16 @@
 name: R-Nacos
-logo: https://r-nacos.github.io/docs/logo.svg
 author: R-Nacos
-description: Rust 语言实现的 Nacos 服务平台，兼容 Nacos(Java)，启动更快、占用系统资源更小（初始内存小于10M）、性能更高、运行更稳定的服务。
-category: development
-platform: other
 homepage: https://github.com/nacos-group/r-nacos
-version: 0.8.8
-url:
-  via GitHub Release: https://github.com/nacos-group/r-nacos/releases/latest
-  via Docker: https://hub.docker.com/r/qingpan/rnacos
+description: Rust 语言实现的 Nacos 服务平台，兼容 Nacos(Java)，启动更快、占用系统资源更小（初始内存小于10M）、性能更高、运行更稳定的服务。
+logo: https://r-nacos.github.io/docs/logo.svg
+categories:
+  - development
+platforms:
+  other:
+    version: 0.8.8
+    url:
+      via GitHub Release: https://github.com/nacos-group/r-nacos/releases/latest
+      via Docker: https://hub.docker.com/r/qingpan/rnacos
 script:
   args:
     autoupdate:

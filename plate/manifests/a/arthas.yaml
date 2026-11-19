@@ -1,0 +1,17 @@
+name: Arthas
+author: Alibaba Middleware Group, and contributors
+homepage: https://arthas.aliyun.com
+description: Java 应用诊断利器
+logo: https://arthas.aliyun.com/images/arthas_dark.png
+categories:
+  - development
+platforms:
+  other:
+    version: 4.3.5
+    url: https://arthas.aliyun.com/download/4.3.5?mirror=aliyun
+script:
+  args:
+    url: gh://alibaba/arthas
+    regex: /releases/tag/arthas-all-([\d.]+)
+    autoupdate: https://arthas.aliyun.com/download/${version}?mirror=aliyun
+  name: appfork-check-update

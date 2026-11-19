@@ -22,6 +22,7 @@ import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -47,7 +48,7 @@ public class AppForkTests {
     }
 
     /**
-     * 验证指定清单文件：执行脚本检查更新 + HEAD 请求验证下载链接可用性
+     * 验证指定清单文件：逐平台执行脚本检查更新 + HEAD 请求验证下载链接可用性
      * <p>
      * 使用方法：修改 manifestPaths 数组为需要验证的清单文件路径，然后运行此测试
      */
@@ -55,7 +56,7 @@ public class AppForkTests {
     public void verifyManifests() throws Exception {
         // ====== 在这里指定需要验证的清单文件路径 ======
         String[] manifestPaths = {
-                "plate/manifests/g/git-for-windows.json",
+                "plate/manifests/g/git-for-windows.yaml",
         };
         // =============================================
 
@@ -102,18 +103,43 @@ public class AppForkTests {
         assertFalse(manifestJson.isEmpty(), "清单文件解析结果为空对象");
 
         String name = manifestJson.getString("name");
-        String version = manifestJson.getString("version");
-        log.info("清单: name={}, version={}, platform={}", name, version, manifestJson.getString("platform"));
+        String code = FileUtil.mainName(file).toLowerCase();
+        log.info("清单: name={}, code={}", name, code);
 
         // 3. 验证必填字段
-        assertFalse(StrUtil.isBlank(manifestJson.getString("name")), "缺少必填字段: name");
+        assertFalse(StrUtil.isBlank(name), "缺少必填字段: name");
         assertFalse(StrUtil.isBlank(manifestJson.getString("homepage")), "缺少必填字段: homepage");
         assertFalse(StrUtil.isBlank(manifestJson.getString("author")), "缺少必填字段: author");
         assertFalse(StrUtil.isBlank(manifestJson.getString("description")), "缺少必填字段: description");
-        assertFalse(StrUtil.isBlank(manifestJson.getString("category")), "缺少必填字段: category");
-        assertFalse(StrUtil.isBlank(manifestJson.getString("platform")), "缺少必填字段: platform");
 
-        // 3.1 校验 logo（如果存在）
+        // 3.1 校验 categories
+        assertInstanceOf(List.class, manifestJson.get("categories"), "categories 必须是数组");
+        List<?> categories = (List<?>) manifestJson.get("categories");
+        assertFalse(categories.isEmpty(), "categories 不能为空");
+        for (Object category : categories) {
+            assertInstanceOf(String.class, category, "categories 元素必须是字符串");
+            assertTrue(Updater.CATEGORIES.containsKey(((String) category).toLowerCase()),
+                    "分类非法: " + category);
+        }
+
+        // 3.2 校验 platforms
+        assertInstanceOf(Map.class, manifestJson.get("platforms"), "platforms 必须是映射");
+        Map<?, ?> platformsJson = (Map<?, ?>) manifestJson.get("platforms");
+        assertFalse(platformsJson.isEmpty(), "platforms 不能为空");
+        Map<String, JSONObject> platforms = new LinkedHashMap<>();
+        for (Map.Entry<?, ?> entry : platformsJson.entrySet()) {
+            assertInstanceOf(String.class, entry.getKey(), "platforms 的键必须是字符串");
+            String platform = (String) entry.getKey();
+            assertTrue(Updater.PLATFORMS.containsKey(platform), "未知平台: " + platform);
+            assertInstanceOf(Map.class, entry.getValue(), "平台配置必须是映射: " + platform);
+            JSONObject block = new JSONObject((Map<String, Object>) entry.getValue());
+            assertFalse(StrUtil.isBlank(block.getString("version")), "缺少平台版本号: " + platform);
+            assertNotNull(block.get("url"), "缺少平台下载地址: " + platform);
+            platforms.put(platform, block);
+        }
+        log.info("平台: {}", platforms.keySet());
+
+        // 3.3 校验 logo（如果存在）
         String logo = manifestJson.getString("logo");
         if (StrUtil.isNotBlank(logo)) {
             if (logo.startsWith("//")) {
@@ -122,103 +148,40 @@ public class AppForkTests {
             assertTrue(ReUtil.isMatch(URL_PATTERN, logo), "logo URL 格式不合法: " + logo);
         }
 
-        // 4. 解析 script 配置
-        String code = FileUtil.mainName(file).toLowerCase();
-        Object scriptValue = manifestJson.get("script");
-        String scriptName = code;
-        JSONObject scriptArgs = null;
-
-        if (scriptValue instanceof String s) {
-            scriptName = s;
-        } else if (scriptValue instanceof Map<?, ?> m) {
-            if (m.get("name") instanceof String s) {
-                scriptName = s;
-            }
-            if (m.get("args") instanceof Map<?, ?> argsMap) {
-                scriptArgs = new JSONObject(argsMap);
-            }
-        }
-
-        // 5. 加载并执行 Groovy 脚本
-        File scriptFile = new File(SCRIPTS_DIR, scriptName.toLowerCase() + ".groovy");
-        assertTrue(scriptFile.exists(), "脚本文件不存在: " + scriptFile.getPath());
-
-        log.info("执行脚本: {}, args={}", scriptFile.getName(), scriptArgs);
-
-        Object result;
-        try (GroovyClassLoader groovyClassLoader = new GroovyClassLoader()) {
-            String original = FileUtil.readUtf8String(scriptFile);
-            if (!original.trim().startsWith("package ")) {
-                original = "package scripts.auto.p" + DigestUtil.md5Hex(scriptFile.getAbsolutePath()) + ";" + original;
-            }
-            Class<?> clazz = groovyClassLoader.parseClass(original, scriptFile.getName());
-            assertTrue(ScriptUpdater.class.isAssignableFrom(clazz),
-                    "脚本类未实现 ScriptUpdater 接口");
-
-            ScriptUpdater updater = (ScriptUpdater) clazz.getDeclaredConstructor().newInstance();
-            JSONObject manifestClone = manifestJson.clone();
-            manifestClone.remove("script");
-            result = updater.checkUpdate(manifestClone, scriptArgs);
-        }
-
-        // 6. 验证脚本返回结果
-        assertNotNull(result, "脚本返回 null，未检测到更新信息");
-        assertInstanceOf(Map.class, result, "脚本返回类型不是 Map");
-
-        @SuppressWarnings("unchecked")
-        Map<String, Object> resultMap = (Map<String, Object>) result;
-
-        // 检查是否返回了错误
-        assertFalse(resultMap.containsKey("error"),
-                "脚本返回错误: " + resultMap.get("error"));
-
-        // 验证 version
-        Object resultVersion = resultMap.get("version");
-        assertNotNull(resultVersion, "脚本返回的 version 为 null");
-        assertInstanceOf(String.class, resultVersion, "脚本返回的 version 不是 String 类型");
-        assertFalse(((String) resultVersion).isBlank(), "脚本返回的 version 为空字符串");
-        log.info("检查更新结果: version={}", resultVersion);
-
-        // 验证 url
-        Object resultUrl = resultMap.get("url");
-        assertNotNull(resultUrl, "脚本返回的 url 为 null");
-
-        // 收集所有需要验证的 URL
+        // 4. 逐平台执行更新脚本
+        ScriptConfig defaultScript = parseScript(manifestJson, code);
         List<String> urlsToVerify = new ArrayList<>();
         if (StrUtil.isNotBlank(logo)) {
             urlsToVerify.add(logo);
         }
-        switch (resultUrl) {
-            case String s -> {
-                assertTrue(ReUtil.isMatch(URL_PATTERN, s), "URL 格式不合法: " + s);
-                urlsToVerify.add(s);
-            }
-            case Map<?, ?> m -> {
-                assertFalse(m.isEmpty(), "URL Map 为空");
-                for (Map.Entry<?, ?> entry : m.entrySet()) {
-                    assertInstanceOf(String.class, entry.getValue(),
-                            "URL Map 中 key=[" + entry.getKey() + "] 的值不是 String 类型");
-                    String url = (String) entry.getValue();
-                    assertTrue(ReUtil.isMatch(URL_PATTERN, url),
-                            "URL 格式不合法: " + entry.getKey() + " -> " + url);
-                    urlsToVerify.add(url);
-                }
-                log.info("URL Map 包含 {} 个下载链接", m.size());
-            }
-            case List<?> l -> {
-                assertFalse(l.isEmpty(), "URL List 为空");
-                for (Object item : l) {
-                    assertInstanceOf(String.class, item, "URL List 中的元素不是 String 类型");
-                    String url = (String) item;
-                    assertTrue(ReUtil.isMatch(URL_PATTERN, url), "URL 格式不合法: " + url);
-                    urlsToVerify.add(url);
-                }
-                log.info("URL List 包含 {} 个下载链接", l.size());
-            }
-            default -> fail("URL 类型不合法，应为 String/Map/List，实际为: " + resultUrl.getClass().getName());
+        for (Map.Entry<String, JSONObject> entry : platforms.entrySet()) {
+            String platform = entry.getKey();
+            JSONObject block = entry.getValue();
+            ScriptConfig scriptConfig = block.containsKey("script") ? parseScript(block, code) : defaultScript;
+            log.info("========== 平台 [{}] version={} ==========", platform, block.getString("version"));
+
+            // 构造单平台视图，与 Updater 执行脚本时保持一致
+            JSONObject view = manifestJson.clone();
+            view.remove("script");
+            view.remove("categories");
+            view.remove("platforms");
+            view.put("platform", platform);
+            view.put("version", block.get("version"));
+            view.put("url", block.get("url"));
+
+            Map<String, Object> result = executeScript(scriptConfig, view);
+            assertFalse(result.containsKey("error"), "脚本返回错误: " + result.get("error"));
+
+            Object resultVersion = result.get("version");
+            assertInstanceOf(String.class, resultVersion, "脚本返回的 version 不是 String 类型");
+            assertFalse(((String) resultVersion).isBlank(), "脚本返回的 version 为空字符串");
+            log.info("检查更新结果: version={}", resultVersion);
+
+            // 收集脚本返回的下载链接
+            collectUrls(result.get("url"), platform + " 返回的 url", urlsToVerify);
         }
 
-        // 7. HEAD 请求验证下载链接可用性
+        // 5. HEAD 请求验证下载链接可用性
         log.info("开始验证 {} 个下载链接的可用性...", urlsToVerify.size());
         var httpClient = ScriptVars.HTTP_CLIENT;
         List<String> failedUrls = new ArrayList<>();
@@ -288,9 +251,99 @@ public class AppForkTests {
         log.info("全部下载链接验证完成: {} 个成功, {} 个网络异常(跳过)", urlsToVerify.size() - networkErrorUrls.size(), networkErrorUrls.size());
     }
 
+    /**
+     * 解析脚本配置，缺省时脚本名为清单文件名
+     */
+    private ScriptConfig parseScript(JSONObject json, String defaultName) {
+        Object scriptValue = json.get("script");
+        String scriptName = defaultName;
+        JSONObject scriptArgs = null;
+        if (scriptValue instanceof String s) {
+            scriptName = s;
+        } else if (scriptValue instanceof Map<?, ?> m) {
+            if (m.get("name") instanceof String s) {
+                scriptName = s;
+            }
+            if (m.get("args") instanceof Map<?, ?> argsMap) {
+                scriptArgs = new JSONObject(argsMap);
+            }
+        } else if (scriptValue != null) {
+            fail("script 配置类型不合法: " + scriptValue.getClass().getName());
+        }
+        return new ScriptConfig(scriptName, scriptArgs);
+    }
+
+    /**
+     * 加载并执行 Groovy 更新脚本
+     */
+    private Map<String, Object> executeScript(ScriptConfig scriptConfig, JSONObject manifestView) throws Exception {
+        File scriptFile = new File(SCRIPTS_DIR, scriptConfig.name().toLowerCase() + ".groovy");
+        assertTrue(scriptFile.exists(), "脚本文件不存在: " + scriptFile.getPath());
+        log.info("执行脚本: {}, args={}", scriptFile.getName(), scriptConfig.args());
+
+        Object result;
+        try (GroovyClassLoader groovyClassLoader = new GroovyClassLoader()) {
+            String original = FileUtil.readUtf8String(scriptFile);
+            if (!original.trim().startsWith("package ")) {
+                original = "package scripts.auto.p" + DigestUtil.md5Hex(scriptFile.getAbsolutePath()) + ";" + original;
+            }
+            Class<?> clazz = groovyClassLoader.parseClass(original, scriptFile.getName());
+            assertTrue(ScriptUpdater.class.isAssignableFrom(clazz),
+                    "脚本类未实现 ScriptUpdater 接口");
+
+            ScriptUpdater updater = (ScriptUpdater) clazz.getDeclaredConstructor().newInstance();
+            result = updater.checkUpdate(manifestView, scriptConfig.args());
+        }
+
+        assertNotNull(result, "脚本返回 null，未检测到更新信息");
+        assertInstanceOf(Map.class, result, "脚本返回类型不是 Map");
+        @SuppressWarnings("unchecked")
+        Map<String, Object> resultMap = (Map<String, Object>) result;
+        return resultMap;
+    }
+
+    /**
+     * 收集并校验 URL（字符串、列表或键值映射）
+     */
+    private void collectUrls(Object urlValue, String source, List<String> urlsToVerify) {
+        assertNotNull(urlValue, source + " 为 null");
+        switch (urlValue) {
+            case String s -> {
+                assertTrue(ReUtil.isMatch(URL_PATTERN, s), source + " 格式不合法: " + s);
+                urlsToVerify.add(s);
+            }
+            case Map<?, ?> m -> {
+                assertFalse(m.isEmpty(), source + " Map 为空");
+                for (Map.Entry<?, ?> entry : m.entrySet()) {
+                    assertInstanceOf(String.class, entry.getValue(),
+                            source + " 中 key=[" + entry.getKey() + "] 的值不是 String 类型");
+                    String url = (String) entry.getValue();
+                    assertTrue(ReUtil.isMatch(URL_PATTERN, url),
+                            source + " 格式不合法: " + entry.getKey() + " -> " + url);
+                    urlsToVerify.add(url);
+                }
+                log.info("{} Map 包含 {} 个下载链接", source, m.size());
+            }
+            case List<?> l -> {
+                assertFalse(l.isEmpty(), source + " List 为空");
+                for (Object item : l) {
+                    assertInstanceOf(String.class, item, source + " 中的元素不是 String 类型");
+                    String url = (String) item;
+                    assertTrue(ReUtil.isMatch(URL_PATTERN, url), source + " 格式不合法: " + url);
+                    urlsToVerify.add(url);
+                }
+                log.info("{} List 包含 {} 个下载链接", source, l.size());
+            }
+            default -> fail(source + " 类型不合法，应为 String/Map/List，实际为: " + urlValue.getClass().getName());
+        }
+    }
+
+    private record ScriptConfig(String name, JSONObject args) {
+    }
+
     @Test
     public void convertJsonOrYaml() {
-        Path path = Path.of("plate/manifests/b/bing-wallpaper.json");
+        Path path = Path.of("plate/manifests/b/bing-wallpaper.yaml");
         if (!Files.exists(path) || !Files.isRegularFile(path)) {
             log.error("文件不存在: {}", path);
             return;

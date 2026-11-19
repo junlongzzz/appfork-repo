@@ -1,16 +1,18 @@
 name: Etcher
-logo: https://etcher.balena.io/images/balenaEtcher_logo_white.svg
 author: Balena
+homepage: https://etcher.balena.io
 description: |-
   Flash OS images to SD cards & USB drives, safely and easily.
   ![steps](https://etcher.balena.io/images/Etcher_steps.gif)
-category: tools
-platform: windows
-homepage: https://etcher.balena.io
-version: 2.1.9
-url:
-  - https://github.com/balena-io/etcher/releases/download/v2.1.9/balenaEtcher-2.1.9.Setup.exe
-  - https://github.com/balena-io/etcher/releases/download/v2.1.9/balenaEtcher-win32-x64-2.1.9.zip
+logo: https://etcher.balena.io/images/balenaEtcher_logo_white.svg
+categories:
+  - tools
+platforms:
+  windows:
+    version: 2.1.9
+    url:
+      - https://github.com/balena-io/etcher/releases/download/v2.1.9/balenaEtcher-2.1.9.Setup.exe
+      - https://github.com/balena-io/etcher/releases/download/v2.1.9/balenaEtcher-win32-x64-2.1.9.zip
 script:
   args:
     url: github://balena-io/etcher

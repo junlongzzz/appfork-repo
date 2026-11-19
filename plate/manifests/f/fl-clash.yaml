@@ -1,0 +1,59 @@
+name: FlClash
+author: open source software
+homepage: https://github.com/chen08209/FlClash
+description: A multi-platform proxy client based on ClashMeta, simple and easy to use, open-source and ad-free.
+categories:
+  - network
+platforms:
+  android:
+    version: 0.9.3
+    url:
+      FlClash-0.9.3-android-arm64-v8a.apk: https://github.com/chen08209/FlClash/releases/download/v0.9.3/FlClash-0.9.3-android-arm64-v8a.apk
+      FlClash-0.9.3-android-armeabi-v7a.apk: https://github.com/chen08209/FlClash/releases/download/v0.9.3/FlClash-0.9.3-android-armeabi-v7a.apk
+      FlClash-0.9.3-android-x86_64.apk: https://github.com/chen08209/FlClash/releases/download/v0.9.3/FlClash-0.9.3-android-x86_64.apk
+    script:
+      args:
+        autoupdate:
+          FlClash-${version}-android-arm64-v8a.apk: https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-android-arm64-v8a.apk
+          FlClash-${version}-android-armeabi-v7a.apk: https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-android-armeabi-v7a.apk
+          FlClash-${version}-android-x86_64.apk: https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-android-x86_64.apk
+        url: github://chen08209/FlClash
+      name: appfork-check-update
+  linux:
+    version: 0.9.3
+    url:
+      FlClash-0.9.3-linux-amd64.deb: https://github.com/chen08209/FlClash/releases/download/v0.9.3/FlClash-0.9.3-linux-amd64.deb
+      FlClash-0.9.3-linux-amd64.rpm: https://github.com/chen08209/FlClash/releases/download/v0.9.3/FlClash-0.9.3-linux-amd64.rpm
+      FlClash-0.9.3-linux-amd64.AppImage: https://github.com/chen08209/FlClash/releases/download/v0.9.3/FlClash-0.9.3-linux-amd64.AppImage
+    script:
+      args:
+        autoupdate:
+          FlClash-${version}-linux-amd64.deb: https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-linux-amd64.deb
+          FlClash-${version}-linux-amd64.rpm: https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-linux-amd64.rpm
+          FlClash-${version}-linux-amd64.AppImage: https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-linux-amd64.AppImage
+        url: github://chen08209/FlClash
+      name: appfork-check-update
+  mac:
+    version: 0.9.3
+    url:
+      FlClash-0.9.3-macos-amd64.dmg: https://github.com/chen08209/FlClash/releases/download/v0.9.3/FlClash-0.9.3-macos-amd64.dmg
+      FlClash-0.9.3-macos-arm64.dmg: https://github.com/chen08209/FlClash/releases/download/v0.9.3/FlClash-0.9.3-macos-arm64.dmg
+    script:
+      args:
+        autoupdate:
+          FlClash-${version}-macos-amd64.dmg: https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-macos-amd64.dmg
+          FlClash-${version}-macos-arm64.dmg: https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-macos-arm64.dmg
+        url: github://chen08209/FlClash
+      name: appfork-check-update
+  windows:
+    version: 0.9.3
+    url:
+      FlClash-0.9.3-windows-amd64-setup.exe: https://github.com/chen08209/FlClash/releases/download/v0.9.3/FlClash-0.9.3-windows-amd64-setup.exe
+      FlClash-0.9.3-windows-amd64.zip: https://github.com/chen08209/FlClash/releases/download/v0.9.3/FlClash-0.9.3-windows-amd64.zip
+    script:
+      args:
+        autoupdate:
+          FlClash-${version}-windows-amd64-setup.exe: https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-windows-amd64-setup.exe
+          FlClash-${version}-windows-amd64.zip: https://github.com/chen08209/FlClash/releases/download/v${version}/FlClash-${version}-windows-amd64.zip
+        url: github://chen08209/FlClash
+      name: appfork-check-update

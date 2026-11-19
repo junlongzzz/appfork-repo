@@ -1,0 +1,34 @@
+name: 宝塔Linux面板
+author: 广东堡塔安全技术有限公司
+homepage: https://www.bt.cn/new/product_linux.html
+description: 安全高效的服务器运维面板。
+logo: https://www.bt.cn/static/new/images/logo.svg
+categories:
+  - tools
+platforms:
+  linux:
+    version: 11.5.0
+    url:
+      官方下载安装: https://www.bt.cn/new/download.html
+    script:
+      args:
+        autoupdate:
+          官方下载安装: https://www.bt.cn/new/download.html
+        url: https://www.bt.cn/new/download.html
+        regex: var[0-9a-zA-Z= ]+'(?<version>[\d.]+)'
+      name: appfork-check-update
+  windows:
+    version: 8.4.6
+    url:
+      官方下载安装: https://www.bt.cn/new/download.html
+      BtSoft.exe: https://download.bt.cn/win/panel/go/BtSoft.exe
+      BtSoft.zip: https://download.bt.cn/win/panel/BtSoft.zip
+    script:
+      args:
+        autoupdate:
+          官方下载安装: https://www.bt.cn/new/download.html
+          BtSoft.exe: https://download.bt.cn/win/panel/go/BtSoft.exe
+          BtSoft.zip: https://download.bt.cn/win/panel/BtSoft.zip
+        url: https://www.bt.cn/new/download.html
+        regex: Windows面板 (?<version>[\d.]+)
+      name: appfork-check-update

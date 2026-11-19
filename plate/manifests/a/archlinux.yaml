@@ -1,0 +1,16 @@
+name: Arch Linux
+author: Arch Linux Developers
+homepage: https://archlinux.org
+description: A lightweight and flexible Linux® distribution that tries to Keep It Simple.
+categories:
+  - image
+platforms:
+  linux:
+    version: 2026.11.01
+    url: https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/archlinux-2026.11.01-x86_64.iso
+script:
+  args:
+    regex: '>([\d.]+)</a>'
+    autoupdate: https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/archlinux-${version}-x86_64.iso
+    url: https://archlinux.org/releng/releases/
+  name: appfork-check-update

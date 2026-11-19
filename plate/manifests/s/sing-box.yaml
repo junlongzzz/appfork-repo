@@ -1,0 +1,61 @@
+name: sing-box
+author: SagerNet
+homepage: https://github.com/SagerNet/sing-box
+description: The universal proxy platform.
+logo: https://raw.githubusercontent.com/SagerNet/sing-box-for-android/main/app/src/main/ic_launcher-playstore.png
+categories:
+  - network
+platforms:
+  android:
+    version: 1.14.4
+    url:
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-android-amd64.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-android-arm64.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-android-armv7.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/SFA-1.14.4-arm64-v8a.apk
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/SFA-1.14.4-armeabi-v7a.apk
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/SFA-1.14.4-foss-universal.apk
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/SFA-1.14.4-universal.apk
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/SFA-1.14.4-x86.apk
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/SFA-1.14.4-x86_64.apk
+    script:
+      args:
+        autoupdate:
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-android-amd64.tar.gz
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-android-arm64.tar.gz
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-android-armv7.tar.gz
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/SFA-${version}-arm64-v8a.apk
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/SFA-${version}-armeabi-v7a.apk
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/SFA-${version}-foss-universal.apk
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/SFA-${version}-universal.apk
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/SFA-${version}-x86.apk
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/SFA-${version}-x86_64.apk
+      name: appfork-check-update
+  mac:
+    version: 1.14.4
+    url:
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-darwin-amd64.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-darwin-amd64-legacy.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-darwin-arm64.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/SFM-1.14.4-universal.dmg
+    script:
+      args:
+        autoupdate:
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-darwin-amd64.tar.gz
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-darwin-amd64-legacy.tar.gz
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-darwin-arm64.tar.gz
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/SFM-${version}-universal.dmg
+      name: appfork-check-update
+  windows:
+    version: 1.14.4
+    url:
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-windows-amd64.zip
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-windows-amd64-legacy.zip
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-windows-arm64.zip
+    script:
+      args:
+        autoupdate:
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-windows-amd64.zip
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-windows-amd64-legacy.zip
+          - https://github.com/SagerNet/sing-box/releases/download/v${version}/sing-box-${version}-windows-arm64.zip
+      name: appfork-check-update

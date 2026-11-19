@@ -1,0 +1,20 @@
+name: Halo
+author: Halo Team
+homepage: https://www.halo.run
+description: Halo [ˈheɪloʊ]，强大易用的开源建站工具。
+logo: https://www.halo.run/logo
+categories:
+  - reading
+platforms:
+  other:
+    version: 2.27.3
+    url:
+      via Docker: https://hub.docker.com/r/halohub/halo
+      Halo Docs: https://docs.halo.run
+script:
+  args:
+    autoupdate:
+      via Docker: https://hub.docker.com/r/halohub/halo
+      Halo Docs: https://docs.halo.run
+    url: gh://halo-dev/halo
+  name: appfork-check-update

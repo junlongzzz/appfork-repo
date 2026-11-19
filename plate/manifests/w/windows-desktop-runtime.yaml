@@ -1,0 +1,23 @@
+name: Microsoft Windows Desktop Runtime
+author: 微软Microsoft
+homepage: https://dotnet.microsoft.com
+description: .NET 桌面运行时使用户能够运行现有 Windows 桌面应用程序。
+logo: https://dotnet.microsoft.com/favicon.ico
+categories:
+  - tools
+platforms:
+  windows:
+    version: 11.0.0
+    url:
+      - https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/11.0.0/windowsdesktop-runtime-11.0.0-win-x64.exe
+      - https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/11.0.0/windowsdesktop-runtime-11.0.0-win-x86.exe
+      - https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/11.0.0/windowsdesktop-runtime-11.0.0-win-arm64.exe
+script:
+  args:
+    url: https://raw.githubusercontent.com/dotnet/core/refs/heads/main/release-notes/releases-index.json
+    jsonpath: $.releases-index[?(@.release-type == "sts" && @.support-phase == "active")].latest-runtime
+    autoupdate:
+      - https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x64.exe
+      - https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-x86.exe
+      - https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/${version}/windowsdesktop-runtime-${version}-win-arm64.exe
+  name: appfork-check-update

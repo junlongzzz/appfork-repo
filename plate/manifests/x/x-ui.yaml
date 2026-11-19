@@ -1,13 +1,15 @@
 name: X-UI
 author: Alireza Ahmadi <alireza7@gmail.com>
-description: An Advanced Web Panel • Built on Xray Core
-category: network
-platform: linux
 homepage: https://github.com/alireza0/x-ui
-version: 1.15.0
-url:
-  - https://github.com/alireza0/x-ui/releases/download/1.15.0/x-ui-linux-amd64.tar.gz
-  - https://github.com/alireza0/x-ui/releases/download/1.15.0/x-ui-linux-arm64.tar.gz
+description: An Advanced Web Panel • Built on Xray Core
+categories:
+  - network
+platforms:
+  linux:
+    version: 1.15.0
+    url:
+      - https://github.com/alireza0/x-ui/releases/download/1.15.0/x-ui-linux-amd64.tar.gz
+      - https://github.com/alireza0/x-ui/releases/download/1.15.0/x-ui-linux-arm64.tar.gz
 script:
   args:
     autoupdate:

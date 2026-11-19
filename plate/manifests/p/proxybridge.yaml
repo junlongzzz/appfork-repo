@@ -1,0 +1,38 @@
+name: ProxyBridge
+author: InterceptSuite
+homepage: https://github.com/InterceptSuite/ProxyBridge
+description: Proxifier alternative to redirect Windows/macOS/Linux TCP and UDP traffic to HTTP/SOCKS5 proxies.
+logo: https://raw.githubusercontent.com/InterceptSuite/ProxyBridge/master/img/logo.png
+categories:
+  - network
+platforms:
+  linux:
+    version: 4.0.1_Linux
+    url:
+      - https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.0.1_Linux/ProxyBridge-Linux-v4.0.1_Linux.tar.gz
+    script:
+      args:
+        url: github://InterceptSuite/ProxyBridge
+        autoupdate:
+          - https://github.com/InterceptSuite/ProxyBridge/releases/download/v${version}/ProxyBridge-Linux-v${version}.tar.gz
+      name: appfork-check-update
+  mac:
+    version: 4.0.1_Linux
+    url:
+      - https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.0.1_Linux/ProxyBridge-v4.0.1_Linux-Universal-Installer.pkg
+    script:
+      args:
+        url: github://InterceptSuite/ProxyBridge
+        autoupdate:
+          - https://github.com/InterceptSuite/ProxyBridge/releases/download/v${version}/ProxyBridge-v${version}-Universal-Installer.pkg
+      name: appfork-check-update
+  windows:
+    version: 4.0.1_Linux
+    url:
+      - https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.0.1_Linux/ProxyBridge-Setup-4.0.1_Linux.exe
+    script:
+      args:
+        url: github://InterceptSuite/ProxyBridge
+        autoupdate:
+          - https://github.com/InterceptSuite/ProxyBridge/releases/download/v${version}/ProxyBridge-Setup-${version}.exe
+      name: appfork-check-update

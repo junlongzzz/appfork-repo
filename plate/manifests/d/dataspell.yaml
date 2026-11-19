@@ -1,0 +1,27 @@
+name: DataSpell
+author: JetBrains
+homepage: https://www.jetbrains.com/zh-cn/dataspell/
+description: 轻松将数据转化为洞察。
+logo: https://resources.jetbrains.com/storage/logos/web/dataspell/dataspell.svg
+categories:
+  - development
+platforms:
+  linux:
+    version: 2026.1.3.1(261.27258.145)
+    url:
+      - https://download.jetbrains.com/python/dataspell-2026.1.3.1-aarch64.tar.gz
+      - https://download.jetbrains.com/python/dataspell-2026.1.3.1.tar.gz
+  mac:
+    version: 2026.1.3.1(261.27258.145)
+    url:
+      - https://download.jetbrains.com/python/dataspell-2026.1.3.1.dmg
+      - https://download.jetbrains.com/python/dataspell-2026.1.3.1-aarch64.dmg
+  windows:
+    version: 2026.1.3.1(261.27258.145)
+    url:
+      - https://download.jetbrains.com/python/dataspell-2026.1.3.1.exe
+      - https://download.jetbrains.com/python/dataspell-2026.1.3.1-aarch64.exe
+script:
+  args:
+    codes: DS
+  name: jetbrains-product

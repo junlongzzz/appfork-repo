@@ -1,0 +1,17 @@
+name: Maven
+author: Apache Software Foundation
+homepage: https://maven.apache.org
+description: Apache Maven is a software project management and comprehension tool.
+logo: https://maven.apache.org/images/maven-logo-black-on-white.png
+categories:
+  - development
+platforms:
+  windows:
+    version: 3.10.0
+    url: https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.10.0/binaries/apache-maven-3.10.0-bin.zip
+script:
+  args:
+    regex: <b>([\d.]+)</b>
+    autoupdate: https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/${version}/binaries/apache-maven-${version}-bin.zip
+    url: https://maven.apache.org/docs/history.html
+  name: appfork-check-update

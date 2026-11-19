@@ -1,0 +1,36 @@
+name: Listen1
+author: listen1 Contributors
+homepage: https://listen1.github.io/listen1
+description: One for all free music in China.
+logo: https://avatars.githubusercontent.com/u/18599108?v=4
+categories:
+  - music
+platforms:
+  extensions:
+    version: 2.33.0
+    url:
+      Install on Chrome: https://chrome.google.com/webstore/detail/listen-1/indecfegkejajpaipjipfkkbedgaodbp
+      Install on Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/bcneiehcbgahghfmgigmblcgkhihehad
+      Install on FireFox: https://addons.mozilla.org/zh-CN/firefox/addon/listen1/
+  linux:
+    version: 2.33.0
+    url:
+      listen1_2.33.0_linux_amd64.deb: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_linux_amd64.deb
+      listen1_2.33.0_linux_x64.tar.gz: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_linux_x64.tar.gz
+      listen1_2.33.0_linux_x86_64.AppImage: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_linux_x86_64.AppImage
+  mac:
+    version: 2.33.0
+    url:
+      listen1_2.33.0_mac_arm64.dmg: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_mac_arm64.dmg
+      listen1_2.33.0_mac_universal.dmg: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_mac_universal.dmg
+      listen1_2.33.0_mac_x64.dmg: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_mac_x64.dmg
+  windows:
+    version: 2.33.0
+    url:
+      listen1_2.33.0_win.exe: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_win.exe
+      listen1_2.33.0_win_arm64.7z: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_win_arm64.7z
+      listen1_2.33.0_win_arm64.exe: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_win_arm64.exe
+      listen1_2.33.0_win_ia32.7z: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_win_ia32.7z
+      listen1_2.33.0_win_ia32.exe: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_win_ia32.exe
+      listen1_2.33.0_win_x64.7z: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_win_x64.7z
+      listen1_2.33.0_win_x64.exe: https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_win_x64.exe

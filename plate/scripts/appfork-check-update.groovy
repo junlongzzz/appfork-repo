@@ -19,12 +19,17 @@ class UpdateScript implements ScriptUpdater {
         def version = manifest.version as String
         def platform = manifest.platform as String
 
-        // 检测更新url不存在就默认使用主页地址
-        def checkUrl = args.url ? args.url as String : manifest.homepage as String
+        // 检测更新url不存在就默认使用主页地址，支持按平台配置
+        def checkUrlArg = (args.url instanceof Map) ? args.url[platform] : args.url
+        def checkUrl = checkUrlArg ? checkUrlArg as String : manifest.homepage as String
         def regex = args.regex as String
         def jsonpath = args.jsonpath as String
         def xpath = args.xpath as String
-        def updateUrl = args.autoupdate ? args.autoupdate : args[platform]
+        // autoupdate 支持全局配置或按平台映射
+        def autoupdate = args.autoupdate
+        def updateUrl = (autoupdate instanceof Map)
+                ? (autoupdate[platform] ?: args[platform])
+                : (autoupdate ?: args[platform])
         def headers = args.headers as Map
 
         def githubParams = args.gh == null ? args.github : args.gh

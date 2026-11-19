@@ -1,19 +1,24 @@
 {
-	"author":"Author",
-	"name":"App Name",
-	"logo":"<logo url here>",
-	"description":"Description",
-	"category":"others",
-	"version":"beta",
-	"platform":"windows",
-	"url":"https://junlong.plus/ztool/appfork",
-	"homepage":"https://junlong.plus",
-	"script":{
-		"args":{
-			"key":123,
-			"str":"this is json format manifest",
-			"headers":{
-				"name":"value"
+	"author": "Author",
+	"name": "App Name",
+	"logo": "<logo url here>",
+	"description": "Description",
+	"categories": [
+		"others"
+	],
+	"homepage": "https://junlong.plus",
+	"platforms": {
+		"windows": {
+			"version": "beta",
+			"url": "https://junlong.plus/ztool/appfork"
+		}
+	},
+	"script": {
+		"args": {
+			"key": 123,
+			"str": "this is json format manifest",
+			"headers": {
+				"name": "value"
 			}
 		}
 	}

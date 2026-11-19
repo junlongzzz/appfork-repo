@@ -1,0 +1,23 @@
+name: v2rayN
+author: 2dust
+homepage: https://github.com/2dust/v2rayN
+description: A V2Ray client for Windows, support Xray core and v2fly core.
+logo: https://raw.githubusercontent.com/2dust/v2rayN/master/v2rayN/v2rayN/Resources/v2rayN.ico
+categories:
+  - network
+platforms:
+  windows:
+    version: 7.25.6
+    url:
+      v2rayN-windows-64-desktop.zip: https://github.com/2dust/v2rayN/releases/download/7.25.6/v2rayN-windows-64-desktop.zip
+      v2rayN-windows-64.zip: https://github.com/2dust/v2rayN/releases/download/7.25.6/v2rayN-windows-64.zip
+      v2rayN-windows-86-desktop.zip: https://github.com/2dust/v2rayN/releases/download/7.25.6/v2rayN-windows-86-desktop.zip
+      v2rayN-windows-86.zip: https://github.com/2dust/v2rayN/releases/download/7.25.6/v2rayN-windows-86.zip
+      v2rayN-windows-arm64-desktop.zip: https://github.com/2dust/v2rayN/releases/download/7.25.6/v2rayN-windows-arm64-desktop.zip
+      v2rayN-windows-arm64.zip: https://github.com/2dust/v2rayN/releases/download/7.25.6/v2rayN-windows-arm64.zip
+script:
+  args:
+    url: github://2dust/v2rayN
+    gh:
+      assets_jsonpath: $.assets[?(@.name =~ /.*-windows-.*(.zip|.7z)/i)]
+  name: appfork-check-update

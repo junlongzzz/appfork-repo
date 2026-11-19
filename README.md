@@ -29,7 +29,8 @@
 #### 1) 清单文件（`plate/manifests`）
 
 - 一个软件对应一个清单文件，推荐使用 `yaml`（也支持 `json`）
-- 文件路径建议：`plate/manifests/<首字母或#>/<软件名>.yaml`
+- 一个清单可同时承载同一软件的多个平台，每个平台可拥有独立的版本与下载地址
+- 文件路径建议：`plate/manifests/<首字母或#>/<软件名>.yaml`，首字母为数字或其他非字母字符时统一放入 `#` 目录
 - 文件名应与软件标识一致，尽量全小写，单词用 `-` 连接（如 `git-for-windows.yaml`）
 
 必填字段：
@@ -38,14 +39,15 @@
 - `homepage`：官网或项目主页
 - `author`：作者/组织
 - `description`：简短描述（1 句话，支持 `markdown` 语法）
-- `category`：软件分类
-- `platform`：软件平台
-- `version`：当前版本号（不要加多余文本）
-- `url`：下载地址（字符串、列表或键值映射）
+- `categories`：软件分类数组，至少一项
+- `platforms`：平台映射，至少一个平台；每个平台包含：
+  - `version`：当前版本号（不要加多余文本）
+  - `url`：下载地址（字符串、列表或键值映射）
+  - `script`：可选，平台级更新脚本配置，覆盖顶层 `script`
 
 固定值字段的可用取值（必填且区分拼写，建议全小写）：
 
-- `category`（软件分类）：
+- `categories`（软件分类，可多选）：
   - `network` 网络应用
   - `chat` 社交沟通
   - `music` 音乐欣赏
@@ -59,7 +61,7 @@
   - `beautify` 主题美化
   - `others` 其他应用
   - `image` 系统镜像
-- `platform`（运行平台）：
+- `platforms` 的键（运行平台）：
   - `windows` Windows
   - `linux` Linux
   - `mac` macOS
@@ -70,43 +72,40 @@
 可选字段：
 
 - `logo`：图标 URL
-- `script`：更新脚本配置，支持 3 种写法：
+- `script`：顶层更新脚本配置，作为所有平台的默认值，支持 3 种写法：
   - 不指定：默认使用与清单文件同名的脚本（如 `git-for-windows.yaml` 对应 `plate/scripts/git-for-windows.groovy`）
   - 字符串：直接指定脚本名（如 `script: appfork-check-update`，对应 `plate/scripts/appfork-check-update.groovy`）
   - 对象（Map）：`name` 指定脚本名，`args` 传递脚本参数（可选）
 
-`script` 对象（Map）示例：
-
-```yaml
-script:
-  name: appfork-check-update
-  args:
-    url: https://example.com/api/v1/check_update?app=demoapp
-    autoupdate:
-      - https://example.com/downloads/demoapp_${version}_windows_amd64.zip
-      - https://example.com/downloads/demoapp_${version}_windows_arm64.zip
-```
+> 脚本执行时始终只感知当前平台：清单会被展开为单平台视图，`manifest.platform`、`manifest.version`、`manifest.url` 均为当前平台的取值，脚本无需自行处理多平台逻辑。平台级 `script` 与顶层 `script` 结构完全一致。
 
 推荐示例（YAML）：
 
 ```yaml
 name: DemoApp
 author: Demo
-homepage: https://example.com/logo
+homepage: https://example.com
 description: This is a demo app.
-category: development
-platform: windows
-version: 1.0.0
-url:
-  - https://example.com/downloads/demoapp_1.0.0_windows_amd64.zip
-  - https://example.com/downloads/demoapp_1.0.0_windows_arm64.zip
+categories:
+  - development
+  - tools
+logo: https://example.com/logo.png
 script:
   name: appfork-check-update
   args:
     url: https://example.com/api/v1/check_update?app=demoapp
-    autoupdate:
-      - https://example.com/downloads/demoapp_${version}_windows_amd64.zip
-      - https://example.com/downloads/demoapp_${version}_windows_arm64.zip
+platforms:
+  windows:
+    version: 1.0.0
+    url:
+      x64: https://example.com/downloads/demoapp_1.0.0_windows_amd64.zip
+      arm64: https://example.com/downloads/demoapp_1.0.0_windows_arm64.zip
+    script:
+      args:
+        url: https://example.com/api/v1/check_update?app=demoapp&os=windows
+  linux:
+    version: 1.0.0
+    url: https://example.com/downloads/demoapp_1.0.0_linux_amd64.tar.gz
 ```
 
 #### 2) 更新脚本（`plate/scripts`）
@@ -136,7 +135,8 @@ script:
 
 - GitHub 最新正式版：`url: github://owner/repo`
 - 自定义提取规则：可补充 `regex` / `jsonpath` / `xpath`
-- 多平台多架构：`autoupdate` 使用列表或映射
+- 多架构：`autoupdate` 使用列表或映射
+- 多平台：顶层 `script` 作为默认配置；如各平台检测逻辑不同，在 `platforms.<平台>.script` 中覆盖。`appfork-check-update` 的 `url` / `autoupdate` 也支持按平台配置映射（如 `url: {windows: ..., linux: ...}`）
 
 #### 4) 编写与维护建议
 
@@ -149,7 +149,8 @@ script:
 #### 5) 提交前自检清单
 
 - 清单字段完整、缩进正确、无语法错误
-- `version` 与 `url` 当前可用
+- `categories` 取值合法，`platforms` 至少包含一个平台
+- 每个平台的 `version` 与 `url` 当前可用
 - `autoupdate` 模板可正确替换 `${version}`
 - 脚本（如有）返回值符合约定
 - 本地执行测试通过（至少验证相关测试项）

@@ -1,0 +1,16 @@
+name: Magisk
+author: open source software
+homepage: https://github.com/topjohnwu/Magisk
+description: Magisk is a suite of open source software for customizing Android, supporting devices higher than Android 6.0.
+logo: https://raw.githubusercontent.com/topjohnwu/Magisk/master/docs/images/logo.png
+categories:
+  - tools
+platforms:
+  android:
+    version: '31.1'
+    url: https://github.com/topjohnwu/Magisk/releases/download/v31.1/Magisk-v31.1.apk
+script:
+  args:
+    autoupdate: https://github.com/topjohnwu/Magisk/releases/download/v${version}/Magisk-v${version}.apk
+    url: github://topjohnwu/Magisk
+  name: appfork-check-update

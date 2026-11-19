@@ -1,9 +1,14 @@
-author: '360'
 name: 360压缩
-logo: https://p5.ssl.qhimg.com/t018cd3d0fc6cd1793f.png
-description: 压缩解压一键处理，助力办公安全省时
-category: tools
-version: 4.0.0.1470
-platform: windows
-url: //dl.360safe.com/360zip_setup.exe
+author: '360'
 homepage: https://yasuo.360.cn
+description: 压缩解压一键处理，助力办公安全省时
+logo: https://p5.ssl.qhimg.com/t018cd3d0fc6cd1793f.png
+categories:
+  - tools
+platforms:
+  mac:
+    version: 1.0.4
+    url: http://se.360.cn/mys/web/360zip_v1.0.4.dmg
+  windows:
+    version: 4.0.0.1470
+    url: //dl.360safe.com/360zip_setup.exe

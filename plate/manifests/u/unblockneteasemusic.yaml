@@ -1,0 +1,31 @@
+name: UnblockNeteaseMusic
+author: Unblock Netease Music 维护小组
+homepage: https://github.com/UnblockNeteaseMusic/server
+description: Revive unavailable songs for Netease Cloud Music (Refactored & Enhanced version)
+categories:
+  - music
+platforms:
+  linux:
+    version: 0.28.0
+    url:
+      amd64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.28.0/unblockneteasemusic-linux-x64
+      arm64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.28.0/unblockneteasemusic-linux-arm64
+    script:
+      args:
+        autoupdate:
+          amd64: https://github.com/UnblockNeteaseMusic/server/releases/download/v${version}/unblockneteasemusic-linux-x64
+          arm64: https://github.com/UnblockNeteaseMusic/server/releases/download/v${version}/unblockneteasemusic-linux-arm64
+        url: gh://UnblockNeteaseMusic/server
+      name: appfork-check-update
+  windows:
+    version: 0.28.0
+    url:
+      amd64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.28.0/unblockneteasemusic-win-x64.exe
+      arm64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.28.0/unblockneteasemusic-win-arm64.exe
+    script:
+      args:
+        autoupdate:
+          amd64: https://github.com/UnblockNeteaseMusic/server/releases/download/v${version}/unblockneteasemusic-win-x64.exe
+          arm64: https://github.com/UnblockNeteaseMusic/server/releases/download/v${version}/unblockneteasemusic-win-arm64.exe
+        url: gh://UnblockNeteaseMusic/server
+      name: appfork-check-update

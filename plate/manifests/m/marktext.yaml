@@ -1,0 +1,54 @@
+name: MarkText
+author: open source project
+homepage: https://www.marktext.cc
+description: Simple and Elegant Markdown Editor Focused on speed and usability, available for Linux, macOS and Windows.
+logo: https://raw.githubusercontent.com/marktext/marktext/develop/static/logo-96px.png
+categories:
+  - reading
+platforms:
+  linux:
+    version: 0.23.0
+    url:
+      marktext-amd64.deb: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-amd64.deb
+      marktext-x86_64.AppImage: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-x86_64.AppImage
+      marktext-x86_64.rpm: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-x86_64.rpm
+      marktext-x64.tar.gz: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-x64.tar.gz
+    script:
+      args:
+        autoupdate:
+          marktext-amd64.deb: https://github.com/marktext/marktext/releases/download/v${version}/marktext-amd64.deb
+          marktext-x86_64.AppImage: https://github.com/marktext/marktext/releases/download/v${version}/marktext-x86_64.AppImage
+          marktext-x86_64.rpm: https://github.com/marktext/marktext/releases/download/v${version}/marktext-x86_64.rpm
+          marktext-x64.tar.gz: https://github.com/marktext/marktext/releases/download/v${version}/marktext-x64.tar.gz
+        url: gh://marktext/marktext
+      name: appfork-check-update
+  mac:
+    version: 0.23.0
+    url:
+      marktext-x64.dmg: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-x64.dmg
+      marktext-arm64.dmg: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-arm64.dmg
+      marktext-x64-mac.zip: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-x64-mac.zip
+      marktext-arm64-mac.zip: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-arm64-mac.zip
+    script:
+      args:
+        autoupdate:
+          marktext-x64.dmg: https://github.com/marktext/marktext/releases/download/v${version}/marktext-x64.dmg
+          marktext-arm64.dmg: https://github.com/marktext/marktext/releases/download/v${version}/marktext-arm64.dmg
+          marktext-x64-mac.zip: https://github.com/marktext/marktext/releases/download/v${version}/marktext-x64-mac.zip
+          marktext-arm64-mac.zip: https://github.com/marktext/marktext/releases/download/v${version}/marktext-arm64-mac.zip
+        url: gh://marktext/marktext
+      name: appfork-check-update
+  windows:
+    version: 0.23.0
+    url:
+      marktext-setup.exe: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-setup.exe
+      marktext-x64-win.zip: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-x64-win.zip
+      marktext-ia32-win.zip: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-ia32-win.zip
+    script:
+      args:
+        autoupdate:
+          marktext-setup.exe: https://github.com/marktext/marktext/releases/download/v${version}/marktext-setup.exe
+          marktext-x64-win.zip: https://github.com/marktext/marktext/releases/download/v${version}/marktext-x64-win.zip
+          marktext-ia32-win.zip: https://github.com/marktext/marktext/releases/download/v${version}/marktext-ia32-win.zip
+        url: gh://marktext/marktext
+      name: appfork-check-update

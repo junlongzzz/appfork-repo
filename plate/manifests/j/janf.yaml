@@ -1,0 +1,15 @@
+name: ja-netfilter
+author: ja-netfilter
+homepage: https://gitee.com/ja-netfilter/ja-netfilter
+description: A Java Instrumentation Framework. [More introduction](https://zhile.io/2021/11/29/ja-netfilter-javaagent-lib.html)
+categories:
+  - development
+platforms:
+  other:
+    version: 2025.3.0
+    url: https://gitee.com/ja-netfilter/ja-netfilter/releases/download/2025.3.0/ja-netfilter-2025.3.0.zip
+script:
+  args:
+    autoupdate: https://gitee.com/ja-netfilter/ja-netfilter/releases/download/${version}/ja-netfilter-${version}.zip
+    url: gitee://ja-netfilter/ja-netfilter
+  name: appfork-check-update

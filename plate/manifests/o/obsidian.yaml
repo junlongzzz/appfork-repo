@@ -1,0 +1,20 @@
+name: Obsidian
+author: Obsidian Team
+homepage: https://obsidian.md
+description: |-
+  **A second brain, for you, forever.**
+  Obsidian is a powerful and extensible knowledge base that works on top of your local folder of plain text files.
+logo: https://obsidian.md/favicon.ico
+categories:
+  - reading
+platforms:
+  windows:
+    version: 1.15.1
+    url:
+      Obsidian-1.15.1.exe: https://github.com/obsidianmd/obsidian-releases/releases/download/v1.15.1/Obsidian-1.15.1.exe
+script:
+  args:
+    url: gh://obsidianmd/obsidian-releases
+    gh:
+      assets_jsonpath: $.assets[?(@.name =~ /.*.exe/i)]
+  name: appfork-check-update

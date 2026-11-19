@@ -1,0 +1,21 @@
+name: RESP(Redis Desktop Manager)
+author: RedisInsight
+homepage: https://resp.app
+description: RESP.app - GUI for Redis ® (Formerly RedisDesktopManager)
+categories:
+  - development
+platforms:
+  windows:
+    version: '2022.5'
+    url:
+      Get it on Microsoft Store: https://www.microsoft.com/store/apps/9NDK76ZVZ3TM
+      resp-2022.5-src.zip: https://github.com/lework/RedisDesktopManager-Windows/releases/download/2022.5/resp-2022.5-src.zip
+      resp-2022.5.zip: https://github.com/lework/RedisDesktopManager-Windows/releases/download/2022.5/resp-2022.5.zip
+script:
+  args:
+    url: gh://lework/RedisDesktopManager-Windows
+    autoupdate:
+      Get it on Microsoft Store: https://www.microsoft.com/store/apps/9NDK76ZVZ3TM
+      resp-${version}-src.zip: https://github.com/lework/RedisDesktopManager-Windows/releases/download/${version}/resp-${version}-src.zip
+      resp-${version}.zip: https://github.com/lework/RedisDesktopManager-Windows/releases/download/${version}/resp-${version}.zip
+  name: appfork-check-update

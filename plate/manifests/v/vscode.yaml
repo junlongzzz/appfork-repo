@@ -1,0 +1,35 @@
+name: Visual Studio Code
+author: 微软Microsoft
+homepage: https://code.visualstudio.com
+description: Code editing. Redefined. Free. Built on open source. Runs everywhere.
+logo: https://code.visualstudio.com/assets/favicon.ico
+categories:
+  - development
+platforms:
+  linux:
+    version: 1.146.0
+    url:
+      Linux .deb (x64): https://update.code.visualstudio.com/1.146.0/linux-deb-x64/stable
+      Linux .rpm (x64): https://update.code.visualstudio.com/1.146.0/linux-rpm-x64/stable
+      Linux .tar.gz (x64): https://update.code.visualstudio.com/1.146.0/linux-x64/stable
+      Linux .tar.gz (Arm32): https://update.code.visualstudio.com/1.146.0/linux-armhf/stable
+      Linux .deb (Arm32): https://update.code.visualstudio.com/1.146.0/linux-deb-armhf/stable
+      Linux .rpm (Arm32): https://update.code.visualstudio.com/1.146.0/linux-rpm-armhf/stable
+      Linux .tar.gz (Arm64): https://update.code.visualstudio.com/1.146.0/linux-arm64/stable
+      Linux .deb (Arm64): https://update.code.visualstudio.com/1.146.0/linux-deb-arm64/stable
+      Linux .rpm (Arm64): https://update.code.visualstudio.com/1.146.0/linux-rpm-arm64/stable
+  mac:
+    version: 1.146.0
+    url:
+      Mac for Apple silicon: https://update.code.visualstudio.com/1.146.0/darwin-arm64-dmg/stable
+      Mac for Intel chip: https://update.code.visualstudio.com/1.146.0/darwin-x64-dmg/stable
+      Mac Universal Build: https://update.code.visualstudio.com/1.146.0/darwin-universal-dmg/stable
+  windows:
+    version: 1.146.0
+    url:
+      Windows User Installer (x64): https://update.code.visualstudio.com/1.146.0/win32-x64-user/stable
+      Windows System Installer (x64): https://update.code.visualstudio.com/1.146.0/win32-x64/stable
+      Windows .zip (x64): https://update.code.visualstudio.com/1.146.0/win32-x64-archive/stable
+      Windows User Installer (Arm64): https://update.code.visualstudio.com/1.146.0/win32-arm64-user/stable
+      Windows .zip (Arm64): https://update.code.visualstudio.com/1.146.0/win32-arm64-archive/stable
+      Windows System Installer (Arm64): https://update.code.visualstudio.com/1.146.0/win32-arm64/stable
