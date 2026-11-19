@@ -25,10 +25,10 @@ class UpdateScript implements ScriptUpdater {
         def regex = args.regex as String
         def jsonpath = args.jsonpath as String
         def xpath = args.xpath as String
-        // autoupdate 支持全局配置或按平台映射
+        // autoupdate 支持按平台映射（顶层共享脚本）或扁平模板映射（平台块内配置）
         def autoupdate = args.autoupdate
-        def updateUrl = (autoupdate instanceof Map)
-                ? (autoupdate[platform] ?: args[platform])
+        def updateUrl = (autoupdate instanceof Map && autoupdate.containsKey(platform))
+                ? autoupdate[platform]
                 : (autoupdate ?: args[platform])
         def headers = args.headers as Map
 
@@ -205,6 +205,12 @@ class UpdateScript implements ScriptUpdater {
                     url << handleVersionReplace(item, version)
                 })
             }
+        }
+
+        // 没有解析到任何下载地址（如该版本未发布当前平台的安装包）时视为无需更新，
+        // 避免返回空地址让上层误判为非法链接，同时防止版本与下载地址不一致
+        if (url != null && url.isEmpty()) {
+            return null
         }
 
         return [

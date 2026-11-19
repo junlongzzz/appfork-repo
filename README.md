@@ -136,7 +136,9 @@ platforms:
 - GitHub 最新正式版：`url: github://owner/repo`
 - 自定义提取规则：可补充 `regex` / `jsonpath` / `xpath`
 - 多架构：`autoupdate` 使用列表或映射
-- 多平台：顶层 `script` 作为默认配置；如各平台检测逻辑不同，在 `platforms.<平台>.script` 中覆盖。`appfork-check-update` 的 `url` / `autoupdate` 也支持按平台配置映射（如 `url: {windows: ..., linux: ...}`）
+- 多平台：顶层 `script` 作为默认配置；如各平台检测逻辑不同，在 `platforms.<平台>.script` 中覆盖
+- `autoupdate` 两种写法：顶层 `script` 中可按平台映射（如 `{windows: ..., linux: ...}`，含当前平台键时按平台取值）；平台块内直接写扁平映射（`文件名: 地址`），整体作为当前平台的模板
+- 某版本未提供当前平台的下载文件时（如 JDK 补丁版没有 Windows 安装包）视为无更新，不会写入空地址
 
 #### 4) 编写与维护建议
 

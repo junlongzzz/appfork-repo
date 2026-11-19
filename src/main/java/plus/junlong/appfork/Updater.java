@@ -28,7 +28,6 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.LongAdder;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 /**
  * @author Junlong
@@ -269,7 +268,6 @@ public final class Updater implements CommandLineRunner {
                 default -> read;
             };
             FileUtil.writeUtf8String(write, manifest);
-            log.info("manifest [{}] updated: {}", manifest.getName(), summarizeVersions(platforms));
             return SYNC_UPDATE;
         } catch (Exception e) {
             log.error("sync [{}] error: {}", manifest.getName(), getBetterExceptionMessage(e));
@@ -282,8 +280,8 @@ public final class Updater implements CommandLineRunner {
      *
      * @return 是否有属性变更
      */
-    private boolean applyUpdate(File manifest, JSONObject manifestJson, JSONObject block,
-                                String platform, Map<?, ?> checkUpdate) {
+    boolean applyUpdate(File manifest, JSONObject manifestJson, JSONObject block,
+                        String platform, Map<?, ?> checkUpdate) {
         boolean changed = false;
 
         // 版本号变更，x.y.z 类型版本号不允许降级
@@ -364,7 +362,8 @@ public final class Updater implements CommandLineRunner {
     /**
      * 解析并校验平台，按字典顺序返回
      */
-    private Map<String, JSONObject> parsePlatforms(Object value) {
+    @SuppressWarnings("unchecked")
+    Map<String, JSONObject> parsePlatforms(Object value) {
         if (!(value instanceof Map<?, ?> raw) || raw.isEmpty()) {
             return null;
         }
@@ -374,9 +373,11 @@ public final class Updater implements CommandLineRunner {
                 return null;
             }
         }
+        // 保持对原始 Map 的引用，转换后的数据块需要写回，否则修改无法体现在清单结构中
+        Map<String, Object> rawMap = (Map<String, Object>) raw;
         Map<String, JSONObject> result = new LinkedHashMap<>();
         for (String platform : PLATFORMS.keySet()) {
-            Object blockValue = raw.get(platform);
+            Object blockValue = rawMap.get(platform);
             if (blockValue == null) {
                 continue;
             }
@@ -384,6 +385,9 @@ public final class Updater implements CommandLineRunner {
             if (block == null) {
                 return null;
             }
+            // YAML 解析出的嵌套 Map 是 LinkedHashMap，JSONObject 构造时会复制一份，
+            // 必须写回原结构，否则后续更新版本/地址只会改到副本，落盘内容不会变化
+            rawMap.put(platform, block);
             String version = block.getString("version");
             Object url = block.get("url");
             if (StrUtil.isBlank(version) || !isCorrectUrl(url)) {
@@ -460,15 +464,6 @@ public final class Updater implements CommandLineRunner {
     private boolean jsonEquals(Object oldValue, Object newValue) {
         return JSON.toJSONString(oldValue, JSONWriter.Feature.SortMapEntriesByKeys)
                 .equals(JSON.toJSONString(newValue, JSONWriter.Feature.SortMapEntriesByKeys));
-    }
-
-    /**
-     * 各平台版本摘要，用于日志输出
-     */
-    private String summarizeVersions(Map<String, JSONObject> platforms) {
-        return platforms.entrySet().stream()
-                .map(entry -> entry.getKey() + "=" + entry.getValue().getString("version"))
-                .collect(Collectors.joining(", "));
     }
 
     /**

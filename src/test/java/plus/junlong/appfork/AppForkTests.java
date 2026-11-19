@@ -48,6 +48,30 @@ public class AppForkTests {
     }
 
     /**
+     * 平台级更新必须写回 YAML 清单结构，否则落盘内容不变，Actions 检测不到变更
+     */
+    @Test
+    @SuppressWarnings("unchecked")
+    public void platformUpdatePersistsToYamlManifest() {
+        File file = new File("plate/manifests/f/fl-clash.yaml");
+        JSONObject manifestJson = new Yaml().loadAs(FileUtil.readUtf8String(file), JSONObject.class);
+
+        Updater updater = new Updater();
+        Map<String, JSONObject> platforms = updater.parsePlatforms(manifestJson.get("platforms"));
+        assertNotNull(platforms, "platforms 解析失败");
+
+        JSONObject block = platforms.get("windows");
+        String newVersion = block.getString("version") + ".1";
+        assertTrue(updater.applyUpdate(file, manifestJson, block, "windows", Map.of("version", newVersion)),
+                "版本变更应返回 true");
+
+        // 修改必须体现在清单原始结构中，dump 后才会真正写入文件
+        Map<String, Object> rawPlatforms = (Map<String, Object>) manifestJson.get("platforms");
+        assertEquals(newVersion, ((Map<String, Object>) rawPlatforms.get("windows")).get("version"),
+                "平台版本未写回清单结构");
+    }
+
+    /**
      * 验证指定清单文件：逐平台执行脚本检查更新 + HEAD 请求验证下载链接可用性
      * <p>
      * 使用方法：修改 manifestPaths 数组为需要验证的清单文件路径，然后运行此测试
