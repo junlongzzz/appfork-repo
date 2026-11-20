@@ -7,11 +7,11 @@ categories:
   - image
 platforms:
   linux:
-    version: '25.04'
-    url: https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/25.04/ubuntu-25.04-desktop-amd64.iso
+    version: '26.10'
+    url: https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/26.10/ubuntu-26.10-desktop-amd64.iso
 script:
   args:
-    regex: '>(?<version>[\d.]+)<'
+    regex: '>Ubuntu (?<version>[\d.]+)<'
     autoupdate: https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/${version}/ubuntu-${version}-desktop-amd64.iso
-    url: https://wiki.ubuntu.com/Releases
+    url: https://ubuntu.com/download/desktop
   name: appfork-check-update

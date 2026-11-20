@@ -7,29 +7,29 @@ categories:
 platforms:
   linux:
     version: 1.7.4
-    url: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.7.4/Another-Redis-Desktop-Manager.1.7.4.AppImage
+    url: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.7.4/Another-Redis-Desktop-Manager-linux-1.7.4-x86_64.AppImage
     script:
       args:
-        autoupdate: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager.${version}.AppImage
+        autoupdate: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager-linux-${version}-x86_64.AppImage
         url: gh://qishibo/AnotherRedisDesktopManager
       name: appfork-check-update
   mac:
     version: 1.7.4
     url:
-      Intel Chip: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.7.4/Another-Redis-Desktop-Manager.1.7.4.dmg
-      M1 Chip: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.7.4/Another-Redis-Desktop-Manager-M1-arm64-1.7.4.dmg
+      Intel Chip: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.7.4/Another-Redis-Desktop-Manager-mac-1.7.4-x64.dmg
+      M1 Chip: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.7.4/Another-Redis-Desktop-Manager-mac-1.7.4-arm64.dmg
     script:
       args:
         autoupdate:
-          Intel Chip: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager.${version}.dmg
-          M1 Chip: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager-M1-arm64-${version}.dmg
+          Intel Chip: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager-mac-${version}-x64.dmg
+          M1 Chip: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager-mac-${version}-arm64.dmg
         url: gh://qishibo/AnotherRedisDesktopManager
       name: appfork-check-update
   windows:
     version: 1.7.4
-    url: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.7.4/Another-Redis-Desktop-Manager.1.7.4.exe
+    url: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.7.4/Another-Redis-Desktop-Manager-win-1.7.4.exe
     script:
       args:
-        autoupdate: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager.${version}.exe
+        autoupdate: https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v${version}/Another-Redis-Desktop-Manager-win-${version}.exe
         url: gh://qishibo/AnotherRedisDesktopManager
       name: appfork-check-update
