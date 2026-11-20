@@ -18,10 +18,10 @@ platforms:
           assets_jsonpath: $.assets[?(@.name =~ /OpenJDK25U-jdk_(x64|aarch64)_linux_hotspot_[\d._]+\.tar\.gz$/i)]
       name: appfork-check-update
   windows:
-    version: 25.0.5+8
+    version: 25.0.5.1+2
     url:
-      OpenJDK25U-jdk_x64_windows_hotspot_25.0.5_8.msi: https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5%2B8/OpenJDK25U-jdk_x64_windows_hotspot_25.0.5_8.msi
-      OpenJDK25U-jdk_x64_windows_hotspot_25.0.5_8.zip: https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5%2B8/OpenJDK25U-jdk_x64_windows_hotspot_25.0.5_8.zip
+      OpenJDK25U-jdk_x64_windows_hotspot_25.0.5.1_2.msi: https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5.1%2B2/OpenJDK25U-jdk_x64_windows_hotspot_25.0.5.1_2.msi
+      OpenJDK25U-jdk_x64_windows_hotspot_25.0.5.1_2.zip: https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5.1%2B2/OpenJDK25U-jdk_x64_windows_hotspot_25.0.5.1_2.zip
     script:
       args:
         url: github://adoptium/temurin25-binaries
