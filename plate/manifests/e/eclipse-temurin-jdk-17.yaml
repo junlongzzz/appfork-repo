@@ -9,6 +9,7 @@ platforms:
   linux:
     version: 17.0.21.1+2
     url:
+      OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.21.1_2.tar.gz: https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.21.1%2B2/OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.21.1_2.tar.gz
       OpenJDK17U-jdk_x64_linux_hotspot_17.0.21.1_2.tar.gz: https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.21.1%2B2/OpenJDK17U-jdk_x64_linux_hotspot_17.0.21.1_2.tar.gz
     script:
       args:
@@ -18,10 +19,10 @@ platforms:
           assets_jsonpath: $.assets[?(@.name =~ /OpenJDK17U-jdk_(x64|aarch64)_linux_hotspot_[\d._]+\.tar\.gz$/i)]
       name: appfork-check-update
   windows:
-    version: 17.0.21+9
+    version: 17.0.21.1+2
     url:
-      OpenJDK17U-jdk_x64_windows_hotspot_17.0.21_9.msi: https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.21%2B9/OpenJDK17U-jdk_x64_windows_hotspot_17.0.21_9.msi
-      OpenJDK17U-jdk_x64_windows_hotspot_17.0.21_9.zip: https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.21%2B9/OpenJDK17U-jdk_x64_windows_hotspot_17.0.21_9.zip
+      OpenJDK17U-jdk_x64_windows_hotspot_17.0.21.1_2.msi: https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.21.1%2B2/OpenJDK17U-jdk_x64_windows_hotspot_17.0.21.1_2.msi
+      OpenJDK17U-jdk_x64_windows_hotspot_17.0.21.1_2.zip: https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.21.1%2B2/OpenJDK17U-jdk_x64_windows_hotspot_17.0.21.1_2.zip
     script:
       args:
         url: github://adoptium/temurin17-binaries

@@ -7,12 +7,12 @@ categories:
   - tools
 platforms:
   windows:
-    version: 33.0.1
+    version: 33.0.2
     url:
-      Installer (32-bit): https://cdn-fastly.obsproject.com/downloads/OBS-Studio-33.0.1-Full-Installer-x86.exe
-      Zip (64-bit): https://cdn-fastly.obsproject.com/downloads/OBS-Studio-33.0.1-Full-x64.zip
-      Installer (64-bit): https://cdn-fastly.obsproject.com/downloads/OBS-Studio-33.0.1-Full-Installer-x64.exe
-      Zip (32-bit): https://cdn-fastly.obsproject.com/downloads/OBS-Studio-33.0.1-Full-x86.zip
+      Installer (32-bit): https://cdn-fastly.obsproject.com/downloads/OBS-Studio-33.0.2-Full-Installer-x86.exe
+      Zip (64-bit): https://cdn-fastly.obsproject.com/downloads/OBS-Studio-33.0.2-Full-x64.zip
+      Installer (64-bit): https://cdn-fastly.obsproject.com/downloads/OBS-Studio-33.0.2-Full-Installer-x64.exe
+      Zip (32-bit): https://cdn-fastly.obsproject.com/downloads/OBS-Studio-33.0.2-Full-x86.zip
 script:
   args:
     autoupdate:

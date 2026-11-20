@@ -7,7 +7,7 @@ categories:
   - network
 platforms:
   extensions:
-    version: 1.76.4
+    version: 1.76.6
     url:
       Install on FireFox: https://addons.mozilla.org/addon/ublock-origin/
       Install on Chrome: https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm

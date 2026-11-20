@@ -7,8 +7,8 @@ categories:
   - tools
 platforms:
   windows:
-    version: 5.1.1
-    url: https://files.gpg4win.org/gpg4win-5.1.1.exe
+    version: 5.1.2
+    url: https://files.gpg4win.org/gpg4win-5.1.2.exe
 script:
   args:
     url: https://www.gpg4win.org/get-gpg4win.html

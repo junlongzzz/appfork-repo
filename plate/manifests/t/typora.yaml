@@ -10,8 +10,8 @@ platforms:
     version: 1.14.9
     url: https://download2.typoraio.cn/linux/Typora-linux-x64-1.14.9.tar.gz
   mac:
-    version: 1.14.10
-    url: https://download2.typoraio.cn/mac/Typora-1.14.10.dmg
+    version: 1.14.16
+    url: https://download2.typoraio.cn/mac/Typora-1.14.16.dmg
   windows:
-    version: 1.14.10
-    url: https://download2.typoraio.cn/windows/typora-setup-x64-1.14.10.exe
+    version: 1.14.16
+    url: https://download2.typoraio.cn/windows/typora-setup-x64-1.14.16.exe
