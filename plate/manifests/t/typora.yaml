@@ -13,5 +13,5 @@ platforms:
     version: 1.14.16
     url: https://download2.typoraio.cn/mac/Typora-1.14.16.dmg
   windows:
-    version: 1.14.16
-    url: https://download2.typoraio.cn/windows/typora-setup-x64-1.14.16.exe
+    version: 1.14.17
+    url: https://download2.typoraio.cn/windows/typora-setup-x64-1.14.17.exe
