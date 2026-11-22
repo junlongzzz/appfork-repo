@@ -7,8 +7,8 @@ categories:
   - development
 platforms:
   windows:
-    version: 3.10.1
-    url: https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.10.1/binaries/apache-maven-3.10.1-bin.zip
+    version: 3.10.2
+    url: https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.10.2/binaries/apache-maven-3.10.2-bin.zip
 script:
   args:
     regex: <b>([\d.]+)</b>
