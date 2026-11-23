@@ -7,7 +7,7 @@ categories:
   - tools
 platforms:
   other:
-    version: 2026.11.6
+    version: 2026.11.7
     url:
       Documentation: https://docs.openclaw.ai
       ClawHub: https://clawhub.ai
