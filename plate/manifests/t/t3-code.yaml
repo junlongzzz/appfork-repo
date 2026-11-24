@@ -1,0 +1,48 @@
+name: T3 Code
+author: T3 Tools Inc
+homepage: https://t3.codes
+description: T3 Code 是开源的编码代理控制中枢，可在任意电脑或手机上控制 Claude Code、Codex、Cursor、OpenCode 等编码代理。
+logo: https://raw.githubusercontent.com/pingdotgg/t3code/main/assets/prod/logo.svg
+categories:
+  - development
+platforms:
+  windows:
+    version: 0.1.11
+    url:
+      - https://github.com/pingdotgg/t3code/releases/download/v0.1.11/T3-Code-0.1.11-x64.exe
+      - https://github.com/pingdotgg/t3code/releases/download/v0.1.11/T3-Code-0.1.11-arm64.exe
+    script:
+      name: appfork-check-update
+      args:
+        url: gh://pingdotgg/t3code
+        autoupdate:
+          - https://github.com/pingdotgg/t3code/releases/download/v${version}/T3-Code-${version}-x64.exe
+          - https://github.com/pingdotgg/t3code/releases/download/v${version}/T3-Code-${version}-arm64.exe
+  mac:
+    version: 0.1.11
+    url:
+      - https://github.com/pingdotgg/t3code/releases/download/v0.1.11/T3-Code-0.1.11-arm64.dmg
+      - https://github.com/pingdotgg/t3code/releases/download/v0.1.11/T3-Code-0.1.11-x64.dmg
+    script:
+      name: appfork-check-update
+      args:
+        url: gh://pingdotgg/t3code
+        autoupdate:
+          - https://github.com/pingdotgg/t3code/releases/download/v${version}/T3-Code-${version}-arm64.dmg
+          - https://github.com/pingdotgg/t3code/releases/download/v${version}/T3-Code-${version}-x64.dmg
+  linux:
+    version: 0.1.11
+    url:
+      - https://github.com/pingdotgg/t3code/releases/download/v0.1.11/T3-Code-0.1.11-amd64.deb
+      - https://github.com/pingdotgg/t3code/releases/download/v0.1.11/T3-Code-0.1.11-arm64.deb
+      - https://github.com/pingdotgg/t3code/releases/download/v0.1.11/T3-Code-x86_64.AppImage
+      - https://github.com/pingdotgg/t3code/releases/download/v0.1.11/T3-Code-arm64.AppImage
+    script:
+      name: appfork-check-update
+      args:
+        url: gh://pingdotgg/t3code
+        autoupdate:
+          - https://github.com/pingdotgg/t3code/releases/download/v${version}/T3-Code-${version}-amd64.deb
+          - https://github.com/pingdotgg/t3code/releases/download/v${version}/T3-Code-${version}-arm64.deb
+          - https://github.com/pingdotgg/t3code/releases/download/v${version}/T3-Code-x86_64.AppImage
+          - https://github.com/pingdotgg/t3code/releases/download/v${version}/T3-Code-arm64.AppImage

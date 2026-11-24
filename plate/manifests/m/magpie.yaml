@@ -1,0 +1,44 @@
+name: magpie
+author: yetone
+homepage: https://usemagpie.ai
+description: magpie 是一个本地模型网关与菜单栏应用，可在一处为各种编码代理选择模型（如 Claude Code 用 Kimi、Codex 用 DeepSeek），额度用尽时自动切换账号。
+logo: https://usemagpie.ai/img/icon-256.png
+categories:
+  - development
+platforms:
+  windows:
+    version: 0.1.4730
+    url:
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4730/magpie-windows-amd64.exe
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4730/magpie-windows-arm64.exe
+    script:
+      name: appfork-check-update
+      args:
+        url: gh://yetone/magpie-releases
+        autoupdate:
+          - https://github.com/yetone/magpie-releases/releases/download/v${version}/magpie-windows-amd64.exe
+          - https://github.com/yetone/magpie-releases/releases/download/v${version}/magpie-windows-arm64.exe
+  mac:
+    version: 0.1.4730
+    url:
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4730/magpie-darwin-arm64.dmg
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4730/magpie-darwin-amd64.dmg
+    script:
+      name: appfork-check-update
+      args:
+        url: gh://yetone/magpie-releases
+        autoupdate:
+          - https://github.com/yetone/magpie-releases/releases/download/v${version}/magpie-darwin-arm64.dmg
+          - https://github.com/yetone/magpie-releases/releases/download/v${version}/magpie-darwin-amd64.dmg
+  linux:
+    version: 0.1.4730
+    url:
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4730/magpie-linux-amd64
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4730/magpie-linux-arm64
+    script:
+      name: appfork-check-update
+      args:
+        url: gh://yetone/magpie-releases
+        autoupdate:
+          - https://github.com/yetone/magpie-releases/releases/download/v${version}/magpie-linux-amd64
+          - https://github.com/yetone/magpie-releases/releases/download/v${version}/magpie-linux-arm64
