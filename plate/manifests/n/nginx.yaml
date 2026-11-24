@@ -7,7 +7,7 @@ categories:
   - development
 platforms:
   windows:
-    version: 1.31.9/1.30.7
+    version: 1.31.10/1.30.8
     url:
-      nginx-1.31.9.zip (mainline): https://nginx.org/download/nginx-1.31.9.zip
-      nginx-1.30.7.zip (stable): https://nginx.org/download/nginx-1.30.7.zip
+      nginx-1.31.10.zip (mainline): https://nginx.org/download/nginx-1.31.10.zip
+      nginx-1.30.8.zip (stable): https://nginx.org/download/nginx-1.30.8.zip

@@ -7,10 +7,10 @@ categories:
   - music
 platforms:
   windows:
-    version: 0.4.11
+    version: 3.0.0
     url:
-      - https://github.com/qier222/YesPlayMusic/releases/download/v0.4.11/YesPlayMusic.0.4.11.exe
-      - https://github.com/qier222/YesPlayMusic/releases/download/v0.4.11/YesPlayMusic.Setup.0.4.11.exe
+      - https://github.com/qier222/YesPlayMusic/releases/download/v3.0.0/YesPlayMusic.3.0.0.exe
+      - https://github.com/qier222/YesPlayMusic/releases/download/v3.0.0/YesPlayMusic.Setup.3.0.0.exe
 script:
   args:
     autoupdate:

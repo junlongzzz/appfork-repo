@@ -7,9 +7,9 @@ categories:
   - development
 platforms:
   windows:
-    version: 26.10.1-0
+    version: 26.11.0-0
     url:
-      - https://github.com/hoppscotch/releases/releases/download/v26.10.1-0/Hoppscotch_win_x64.msi
+      - https://github.com/hoppscotch/releases/releases/download/v26.11.0-0/Hoppscotch_win_x64.msi
       - https://hoppscotch.io
 script:
   args:

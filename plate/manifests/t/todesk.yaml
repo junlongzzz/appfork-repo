@@ -14,6 +14,7 @@ platforms:
     url:
       todesk-v5.2.4.0-amd64.deb: https://dl.todesk.com/linux/todesk-v5.2.4.0-amd64.deb
       todesk-v5.2.4.0-x86_64.rpm: https://dl.todesk.com/linux/todesk-v5.2.4.0-x86_64.rpm
+      www.todesk.com: https://www.todesk.com
       todesk_4.1.0_x86_64.pkg.tar.zst: https://dl.todesk.com/linux/todesk_4.1.0_x86_64.pkg.tar.zst
       todesk_4.1.0_armv7l.deb: https://dl.todesk.com/linux/todesk_4.1.0_armv7l.deb
       todesk-v4.7.2.0-arm64.rpm: https://dl.todesk.com/linux/todesk-v4.7.2.0-arm64.rpm

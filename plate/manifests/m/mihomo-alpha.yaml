@@ -7,11 +7,11 @@ categories:
   - network
 platforms:
   windows:
-    version: alpha-100ff73
+    version: alpha-e13f0f1
     url:
-      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-alpha-100ff73.zip
-      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-compatible-alpha-100ff73.zip
-      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-arm64-alpha-100ff73.zip
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-alpha-e13f0f1.zip
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-compatible-alpha-e13f0f1.zip
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-arm64-alpha-e13f0f1.zip
 script:
   args:
     regex: (?<version>(?i)alpha-[a-f0-9]+)

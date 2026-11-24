@@ -20,14 +20,14 @@ platforms:
           Download from Google Play: https://telegram.org/dl/android
       name: appfork-check-update
   windows:
-    version: 7.4.4
+    version: 7.4.6
     url:
-      'Windows on ARM: Portable': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-portable-win-arm-7.4.4.zip
-      'Windows 64 bit: Portable': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-portable-win-x64-7.4.4.zip
-      'Windows 32 bit: Portable': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-portable-win-x86-7.4.4.zip
-      'Windows on ARM: Installer': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-setup-win-arm-7.4.4.exe
-      'Windows 64 bit: Installer': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-setup-win-x64-7.4.4.exe
-      'Windows 32 bit: Installer': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.4/td-setup-win-x86-7.4.4.exe
+      'Windows on ARM: Portable': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.6/td-portable-win-arm-7.4.6.zip
+      'Windows 64 bit: Portable': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.6/td-portable-win-x64-7.4.6.zip
+      'Windows 32 bit: Portable': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.6/td-portable-win-x86-7.4.6.zip
+      'Windows on ARM: Installer': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.6/td-setup-win-arm-7.4.6.exe
+      'Windows 64 bit: Installer': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.6/td-setup-win-x64-7.4.6.exe
+      'Windows 32 bit: Installer': https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.6/td-setup-win-x86-7.4.6.exe
     script:
       args:
         url: gh://telegramdesktop/tdesktop
