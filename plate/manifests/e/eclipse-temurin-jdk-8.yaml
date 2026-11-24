@@ -9,6 +9,7 @@ platforms:
   linux:
     version: jdk8u514-b01
     url:
+      OpenJDK8U-jdk_aarch64_linux_hotspot_8u514b01.tar.gz: https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u514-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u514b01.tar.gz
       OpenJDK8U-jdk_x64_linux_hotspot_8u514b01.tar.gz: https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u514-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u514b01.tar.gz
     script:
       args:

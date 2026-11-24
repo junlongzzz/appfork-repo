@@ -7,20 +7,20 @@ categories:
   - development
 platforms:
   linux:
-    version: 3.9.1.89198
+    version: 3.9.2.89815
     url:
-      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.1.89198-arm64.tar.gz
-      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.1.89198.tar.gz
+      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.2.89815-arm64.tar.gz
+      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.2.89815.tar.gz
   mac:
-    version: 3.9.1.89198
+    version: 3.9.2.89815
     url:
-      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.1.89198.dmg
-      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.1.89198-arm64.dmg
+      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.2.89815.dmg
+      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.2.89815-arm64.dmg
   windows:
-    version: 3.9.1.89198
+    version: 3.9.2.89815
     url:
-      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.1.89198.exe
-      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.1.89198-arm64.exe
+      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.2.89815.exe
+      - https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.2.89815-arm64.exe
 script:
   args:
     codes: TBA

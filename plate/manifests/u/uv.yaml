@@ -7,10 +7,10 @@ categories:
   - development
 platforms:
   windows:
-    version: 0.13.9
+    version: 0.13.10
     url:
-      - https://github.com/astral-sh/uv/releases/download/0.13.9/uv-x86_64-pc-windows-msvc.zip
-      - https://github.com/astral-sh/uv/releases/download/0.13.9/uv-aarch64-pc-windows-msvc.zip
+      - https://github.com/astral-sh/uv/releases/download/0.13.10/uv-x86_64-pc-windows-msvc.zip
+      - https://github.com/astral-sh/uv/releases/download/0.13.10/uv-aarch64-pc-windows-msvc.zip
 script:
   args:
     autoupdate:

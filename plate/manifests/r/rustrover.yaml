@@ -7,21 +7,21 @@ categories:
   - development
 platforms:
   linux:
-    version: 2026.3.1(263.7307.313)
+    version: 2026.3.1.1(263.7307.349)
     url:
-      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1-aarch64.tar.gz
-      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1.tar.gz
+      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1.1-aarch64.tar.gz
+      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1.1.tar.gz
   mac:
-    version: 2026.3.1(263.7307.313)
+    version: 2026.3.1.1(263.7307.349)
     url:
-      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1-aarch64.dmg
-      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1.dmg
+      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1.1-aarch64.dmg
+      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1.1.dmg
   windows:
-    version: 2026.3.1(263.7307.313)
+    version: 2026.3.1.1(263.7307.349)
     url:
-      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1.exe
-      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1.win.zip
-      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1-aarch64.exe
+      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1.1.exe
+      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1.1.win.zip
+      - https://download.jetbrains.com/rustrover/RustRover-2026.3.1.1-aarch64.exe
 script:
   args:
     codes: RR

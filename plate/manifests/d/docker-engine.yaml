@@ -7,7 +7,7 @@ categories:
   - development
 platforms:
   linux:
-    version: docker-v29.10.0
+    version: docker-v29.10.1
     url:
       Install Docker Engine: https://docs.docker.com/engine/install/
 script:

@@ -7,10 +7,10 @@ categories:
   - development
 platforms:
   windows:
-    version: 4.3.0
+    version: 4.4.0
     url:
-      bruno_4.3.0_x64_win.exe: https://github.com/usebruno/bruno/releases/download/v4.3.0/bruno_4.3.0_x64_win.exe
-      bruno_4.3.0_x64_win.zip: https://github.com/usebruno/bruno/releases/download/v4.3.0/bruno_4.3.0_x64_win.zip
+      bruno_4.4.0_x64_win.exe: https://github.com/usebruno/bruno/releases/download/v4.4.0/bruno_4.4.0_x64_win.exe
+      bruno_4.4.0_x64_win.zip: https://github.com/usebruno/bruno/releases/download/v4.4.0/bruno_4.4.0_x64_win.zip
 script:
   args:
     autoupdate:

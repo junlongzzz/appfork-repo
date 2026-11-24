@@ -7,7 +7,7 @@ categories:
   - development
 platforms:
   windows:
-    version: 1.31.5/1.30.2
+    version: 1.31.6/1.30.3
     url:
-      freenginx-1.31.5.zip (Mainline): https://freenginx.org/download/freenginx-1.31.5.zip
-      freenginx-1.30.2.zip (Stable): https://freenginx.org/download/freenginx-1.30.2.zip
+      freenginx-1.31.6.zip (Mainline): https://freenginx.org/download/freenginx-1.31.6.zip
+      freenginx-1.30.3.zip (Stable): https://freenginx.org/download/freenginx-1.30.3.zip
