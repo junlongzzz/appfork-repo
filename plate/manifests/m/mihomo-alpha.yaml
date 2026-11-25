@@ -7,11 +7,11 @@ categories:
   - network
 platforms:
   windows:
-    version: alpha-c7af25c
+    version: alpha-53f61d4
     url:
-      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-alpha-c7af25c.zip
-      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-compatible-alpha-c7af25c.zip
-      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-arm64-alpha-c7af25c.zip
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-alpha-53f61d4.zip
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-amd64-compatible-alpha-53f61d4.zip
+      - https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-windows-arm64-alpha-53f61d4.zip
 script:
   args:
     regex: (?<version>(?i)alpha-[a-f0-9]+)

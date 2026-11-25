@@ -6,10 +6,10 @@ categories:
   - music
 platforms:
   linux:
-    version: 0.28.0
+    version: 0.29.0
     url:
-      amd64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.28.0/unblockneteasemusic-linux-x64
-      arm64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.28.0/unblockneteasemusic-linux-arm64
+      amd64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.29.0/unblockneteasemusic-linux-x64
+      arm64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.29.0/unblockneteasemusic-linux-arm64
     script:
       args:
         autoupdate:
@@ -18,10 +18,10 @@ platforms:
         url: gh://UnblockNeteaseMusic/server
       name: appfork-check-update
   windows:
-    version: 0.28.0
+    version: 0.29.0
     url:
-      amd64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.28.0/unblockneteasemusic-win-x64.exe
-      arm64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.28.0/unblockneteasemusic-win-arm64.exe
+      amd64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.29.0/unblockneteasemusic-win-x64.exe
+      arm64: https://github.com/UnblockNeteaseMusic/server/releases/download/v0.29.0/unblockneteasemusic-win-arm64.exe
     script:
       args:
         autoupdate:

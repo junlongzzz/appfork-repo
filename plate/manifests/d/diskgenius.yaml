@@ -7,7 +7,7 @@ categories:
   - tools
 platforms:
   windows:
-    version: 6.2.0.1829
+    version: 6.3.0.1908
     url:
       64位版本: https://www.diskgenius.cn/download/downloadURL.php?Name=DG_64
       32位版本: https://www.diskgenius.cn/download/downloadURL.php?Name=DG_32
