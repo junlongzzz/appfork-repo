@@ -6,16 +6,16 @@ categories:
   - development
 platforms:
   linux:
-    version: 2026.2.2.10
+    version: 2026.2.2.11
     url:
-      Android Studio 2026.2.2.10: https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.2.2.10/android-studio-rabbit2-patch2-linux.tar.gz
+      Android Studio 2026.2.2.11: https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.2.2.11/android-studio-rabbit2-patch3-linux.tar.gz
   mac:
-    version: 2026.2.2.10
+    version: 2026.2.2.11
     url:
-      Android Studio 2026.2.2.10: https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.10/android-studio-rabbit2-patch2-mac.dmg
-      Android Studio 2026.2.2.10 (arm): https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.10/android-studio-rabbit2-patch2-mac_arm.dmg
+      Android Studio 2026.2.2.11: https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.11/android-studio-rabbit2-patch3-mac.dmg
+      Android Studio 2026.2.2.11 (arm): https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.11/android-studio-rabbit2-patch3-mac_arm.dmg
   windows:
-    version: 2026.2.2.10
+    version: 2026.2.2.11
     url:
-      Android Studio 2026.2.2.10 (zip): https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.2.2.10/android-studio-rabbit2-patch2-windows.zip
-      Android Studio 2026.2.2.10: https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.10/android-studio-rabbit2-patch2-windows.exe
+      Android Studio 2026.2.2.11 (zip): https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.2.2.11/android-studio-rabbit2-patch3-windows.zip
+      Android Studio 2026.2.2.11: https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.11/android-studio-rabbit2-patch3-windows.exe

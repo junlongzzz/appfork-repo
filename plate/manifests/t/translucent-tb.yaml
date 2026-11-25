@@ -7,7 +7,7 @@ categories:
   - beautify
 platforms:
   windows:
-    version: '2026.2'
+    version: '2026.4'
     url:
       Get it on Microsoft Store: https://apps.microsoft.com/store/detail/9PF4KZ2VN4W9
 script:
