@@ -7,7 +7,7 @@ categories:
   - development
 platforms:
   windows:
-    version: 1.12.5
+    version: 1.12.6
     url:
       Installation Doc: https://en.angie.software/angie/docs/installation/
 script:
