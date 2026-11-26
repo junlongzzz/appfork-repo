@@ -7,9 +7,9 @@ categories:
   - network
 platforms:
   other:
-    version: 1.277.0
+    version: 1.277.1
     url:
-      compressed-dist.tgz: https://github.com/MetaCubeX/metacubexd/releases/download/v1.277.0/compressed-dist.tgz
+      compressed-dist.tgz: https://github.com/MetaCubeX/metacubexd/releases/download/v1.277.1/compressed-dist.tgz
       Official: https://d.metacubex.one
       GH Pages: https://metacubex.github.io/metacubexd
       Cloudflare Pages: https://metacubexd.pages.dev

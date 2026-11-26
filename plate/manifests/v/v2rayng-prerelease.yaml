@@ -7,18 +7,18 @@ categories:
   - network
 platforms:
   android:
-    version: 2.4.1
+    version: 2.4.2
     url:
-      v2rayNG_2.4.1-fdroid_arm64-v8a.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.1/v2rayNG_2.4.1-fdroid_arm64-v8a.apk
-      v2rayNG_2.4.1-fdroid_armeabi-v7a.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.1/v2rayNG_2.4.1-fdroid_armeabi-v7a.apk
-      v2rayNG_2.4.1-fdroid_universal.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.1/v2rayNG_2.4.1-fdroid_universal.apk
-      v2rayNG_2.4.1-fdroid_x86.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.1/v2rayNG_2.4.1-fdroid_x86.apk
-      v2rayNG_2.4.1-fdroid_x86_64.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.1/v2rayNG_2.4.1-fdroid_x86_64.apk
-      v2rayNG_2.4.1_arm64-v8a.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.1/v2rayNG_2.4.1_arm64-v8a.apk
-      v2rayNG_2.4.1_armeabi-v7a.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.1/v2rayNG_2.4.1_armeabi-v7a.apk
-      v2rayNG_2.4.1_universal.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.1/v2rayNG_2.4.1_universal.apk
-      v2rayNG_2.4.1_x86.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.1/v2rayNG_2.4.1_x86.apk
-      v2rayNG_2.4.1_x86_64.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.1/v2rayNG_2.4.1_x86_64.apk
+      v2rayNG_2.4.2-fdroid_arm64-v8a.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.2/v2rayNG_2.4.2-fdroid_arm64-v8a.apk
+      v2rayNG_2.4.2-fdroid_armeabi-v7a.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.2/v2rayNG_2.4.2-fdroid_armeabi-v7a.apk
+      v2rayNG_2.4.2-fdroid_universal.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.2/v2rayNG_2.4.2-fdroid_universal.apk
+      v2rayNG_2.4.2-fdroid_x86.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.2/v2rayNG_2.4.2-fdroid_x86.apk
+      v2rayNG_2.4.2-fdroid_x86_64.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.2/v2rayNG_2.4.2-fdroid_x86_64.apk
+      v2rayNG_2.4.2_arm64-v8a.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.2/v2rayNG_2.4.2_arm64-v8a.apk
+      v2rayNG_2.4.2_armeabi-v7a.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.2/v2rayNG_2.4.2_armeabi-v7a.apk
+      v2rayNG_2.4.2_universal.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.2/v2rayNG_2.4.2_universal.apk
+      v2rayNG_2.4.2_x86.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.2/v2rayNG_2.4.2_x86.apk
+      v2rayNG_2.4.2_x86_64.apk: https://github.com/2dust/v2rayNG/releases/download/2.4.2/v2rayNG_2.4.2_x86_64.apk
 script:
   args:
     url: gh://2dust/v2rayNG
