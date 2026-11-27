@@ -7,10 +7,10 @@ categories:
   - development
 platforms:
   windows:
-    version: 0.1.4915
+    version: 0.1.4948
     url:
-      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4915/magpie-windows-amd64.exe
-      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4915/magpie-windows-arm64.exe
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4948/magpie-windows-amd64.exe
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4948/magpie-windows-arm64.exe
     script:
       name: appfork-check-update
       args:
@@ -19,10 +19,10 @@ platforms:
           - https://github.com/yetone/magpie-releases/releases/download/v${version}/magpie-windows-amd64.exe
           - https://github.com/yetone/magpie-releases/releases/download/v${version}/magpie-windows-arm64.exe
   mac:
-    version: 0.1.4915
+    version: 0.1.4948
     url:
-      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4915/magpie-darwin-arm64.dmg
-      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4915/magpie-darwin-amd64.dmg
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4948/magpie-darwin-arm64.dmg
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4948/magpie-darwin-amd64.dmg
     script:
       name: appfork-check-update
       args:
@@ -31,10 +31,10 @@ platforms:
           - https://github.com/yetone/magpie-releases/releases/download/v${version}/magpie-darwin-arm64.dmg
           - https://github.com/yetone/magpie-releases/releases/download/v${version}/magpie-darwin-amd64.dmg
   linux:
-    version: 0.1.4915
+    version: 0.1.4948
     url:
-      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4915/magpie-linux-amd64
-      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4915/magpie-linux-arm64
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4948/magpie-linux-amd64
+      - https://github.com/yetone/magpie-releases/releases/download/v0.1.4948/magpie-linux-arm64
     script:
       name: appfork-check-update
       args:

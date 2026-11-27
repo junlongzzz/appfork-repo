@@ -6,10 +6,10 @@ categories:
   - development
 platforms:
   other:
-    version: 3.3.0
+    version: 3.3.1
     url:
-      - https://github.com/alibaba/nacos/releases/download/3.3.0/nacos-server-3.3.0.tar.gz
-      - https://github.com/alibaba/nacos/releases/download/3.3.0/nacos-server-3.3.0.zip
+      - https://github.com/alibaba/nacos/releases/download/3.3.1/nacos-server-3.3.1.tar.gz
+      - https://github.com/alibaba/nacos/releases/download/3.3.1/nacos-server-3.3.1.zip
 script:
   args:
     autoupdate:

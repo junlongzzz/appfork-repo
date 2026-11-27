@@ -7,7 +7,7 @@ categories:
   - network
 platforms:
   windows:
-    version: 22.4.7010.400
+    version: 22.5.7002.400
     url:
       前往下载: https://pc.qq.com/detail/11/detail_351.html
 script:
