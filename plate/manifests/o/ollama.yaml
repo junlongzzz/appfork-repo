@@ -7,11 +7,11 @@ categories:
   - tools
 platforms:
   windows:
-    version: 0.40.18
+    version: 0.40.19
     url:
-      - https://github.com/ollama/ollama/releases/download/v0.40.18/OllamaSetup.exe
-      - https://github.com/ollama/ollama/releases/download/v0.40.18/ollama-windows-amd64.zip
-      - https://github.com/ollama/ollama/releases/download/v0.40.18/ollama-windows-arm64.zip
+      - https://github.com/ollama/ollama/releases/download/v0.40.19/OllamaSetup.exe
+      - https://github.com/ollama/ollama/releases/download/v0.40.19/ollama-windows-amd64.zip
+      - https://github.com/ollama/ollama/releases/download/v0.40.19/ollama-windows-arm64.zip
 script:
   args:
     autoupdate:

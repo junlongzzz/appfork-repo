@@ -7,10 +7,10 @@ categories:
   - tools
 platforms:
   windows:
-    version: 8.1.7
+    version: 8.1.8
     url:
-      - https://github.com/router-for-me/CLIProxyAPI/releases/download/v8.1.7/CLIProxyAPI_8.1.7_windows_amd64.zip
-      - https://github.com/router-for-me/CLIProxyAPI/releases/download/v8.1.7/CLIProxyAPI_8.1.7_windows_arm64.zip
+      - https://github.com/router-for-me/CLIProxyAPI/releases/download/v8.1.8/CLIProxyAPI_8.1.8_windows_amd64.zip
+      - https://github.com/router-for-me/CLIProxyAPI/releases/download/v8.1.8/CLIProxyAPI_8.1.8_windows_arm64.zip
 script:
   name: appfork-check-update
   args:
