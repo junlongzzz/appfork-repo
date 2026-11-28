@@ -7,17 +7,17 @@ categories:
   - network
 platforms:
   android:
-    version: 1.14.5
+    version: 1.14.6
     url:
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/sing-box-1.14.5-android-amd64.tar.gz
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/sing-box-1.14.5-android-arm64.tar.gz
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/sing-box-1.14.5-android-armv7.tar.gz
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/SFA-1.14.5-arm64-v8a.apk
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/SFA-1.14.5-armeabi-v7a.apk
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/SFA-1.14.5-foss-universal.apk
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/SFA-1.14.5-universal.apk
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/SFA-1.14.5-x86.apk
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/SFA-1.14.5-x86_64.apk
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/sing-box-1.14.6-android-amd64.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/sing-box-1.14.6-android-arm64.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/sing-box-1.14.6-android-armv7.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/SFA-1.14.6-arm64-v8a.apk
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/SFA-1.14.6-armeabi-v7a.apk
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/SFA-1.14.6-foss-universal.apk
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/SFA-1.14.6-universal.apk
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/SFA-1.14.6-x86.apk
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/SFA-1.14.6-x86_64.apk
     script:
       args:
         autoupdate:
@@ -32,12 +32,12 @@ platforms:
           - https://github.com/SagerNet/sing-box/releases/download/v${version}/SFA-${version}-x86_64.apk
       name: appfork-check-update
   mac:
-    version: 1.14.5
+    version: 1.14.6
     url:
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/sing-box-1.14.5-darwin-amd64.tar.gz
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/sing-box-1.14.5-darwin-amd64-legacy.tar.gz
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/sing-box-1.14.5-darwin-arm64.tar.gz
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/SFM-1.14.5-universal.dmg
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/sing-box-1.14.6-darwin-amd64.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/sing-box-1.14.6-darwin-amd64-legacy.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/sing-box-1.14.6-darwin-arm64.tar.gz
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/SFM-1.14.6-universal.dmg
     script:
       args:
         autoupdate:
@@ -47,11 +47,11 @@ platforms:
           - https://github.com/SagerNet/sing-box/releases/download/v${version}/SFM-${version}-universal.dmg
       name: appfork-check-update
   windows:
-    version: 1.14.5
+    version: 1.14.6
     url:
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/sing-box-1.14.5-windows-amd64.zip
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/sing-box-1.14.5-windows-amd64-legacy.zip
-      - https://github.com/SagerNet/sing-box/releases/download/v1.14.5/sing-box-1.14.5-windows-arm64.zip
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/sing-box-1.14.6-windows-amd64.zip
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/sing-box-1.14.6-windows-amd64-legacy.zip
+      - https://github.com/SagerNet/sing-box/releases/download/v1.14.6/sing-box-1.14.6-windows-arm64.zip
     script:
       args:
         autoupdate:
